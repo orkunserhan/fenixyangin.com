@@ -1,0 +1,946 @@
+/**
+ * FENIX.COM — Sektör Koruma Sayfaları Özel Stilleri (css/sector-detail.css)
+ * media_1789926729870.png referansına dayalı kurumsal mühendislik tasarımı.
+ * Sadece 6 sektör detay sayfasında yüklenir.
+ */
+
+:root {
+  --fx-sec-red: #A90432;
+  --fx-sec-red-dark: #870327;
+  --fx-sec-red-tint: #FDF2F4;
+  --fx-sec-dark: #121418;
+  --fx-sec-navy: #0F172A;
+  --fx-sec-text: #1F2937;
+  --fx-sec-text-muted: #4B5563;
+  --fx-sec-gray-soft: #6B7280;
+  --fx-sec-border: #E5E7EB;
+  --fx-sec-border-light: #F3F4F6;
+  --fx-sec-bg-soft: #F8FAFC;
+  --fx-sec-radius: 8px;
+  --fx-sec-radius-lg: 12px;
+}
+
+/* ==========================================================================
+   1. GENEL SAYFA VE WRAPPER
+   ========================================================================== */
+
+.fx-sec-page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4.5rem;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. HERO BÖLÜMÜ (SPLIT HERO)
+   ========================================================================== */
+
+.fx-sec-hero {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-bottom: 2.75rem;
+  padding: 0.5rem 0 1rem;
+}
+
+.fx-sec-hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-sec-hero__tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fx-sec-red);
+  margin: 0 0 0.75rem;
+  font-family: var(--fx-font-mono, monospace);
+}
+
+.fx-sec-hero__title {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--fx-sec-dark);
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem;
+}
+
+.fx-sec-hero__title span {
+  display: block;
+  color: var(--fx-sec-red);
+}
+
+.fx-sec-hero__desc {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--fx-sec-text-muted);
+  margin: 0 0 1.75rem;
+  max-width: 580px;
+}
+
+.fx-sec-hero__desc strong {
+  color: var(--fx-sec-dark);
+  font-weight: 700;
+}
+
+.fx-sec-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  align-items: center;
+}
+
+.fx-sec-btn--primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--fx-sec-red);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.625rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid var(--fx-sec-red);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.fx-sec-btn--primary:hover {
+  background: var(--fx-sec-red-dark);
+  border-color: var(--fx-sec-red-dark);
+  transform: translateY(-1px);
+}
+
+.fx-sec-btn--secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #FFFFFF;
+  color: var(--fx-sec-dark);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.375rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid #D1D5DB;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.fx-sec-btn--secondary:hover {
+  border-color: #9CA3AF;
+  background: #F9FAFB;
+}
+
+.fx-sec-btn--secondary svg {
+  color: var(--fx-sec-red);
+  flex-shrink: 0;
+}
+
+/* Hero Görseli & Alt Özellik Bandı */
+.fx-sec-hero__visual {
+  border-radius: var(--fx-sec-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--fx-sec-border);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  background: var(--fx-sec-navy);
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-sec-hero__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.fx-sec-hero__bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--fx-sec-navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.875rem 1rem;
+  gap: 0.75rem;
+}
+
+.fx-sec-hero__bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #F3F4F6;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.fx-sec-hero__bar-icon {
+  color: #FCA5A5;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   3. İKİ KOLONLU ANA YAPI (STICKY SIDEBAR + İÇERİK)
+   ========================================================================== */
+
+.fx-sec-layout {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 3.25rem;
+  align-items: start;
+}
+
+/* ==========================================================================
+   4. SOL STICKY SIDEBAR (TOC + MİNİ CTA)
+   ========================================================================== */
+
+.fx-sec-sidebar {
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.fx-sec-toc {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius);
+  padding: 1.125rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.fx-sec-toc__label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9CA3AF;
+  margin: 0 0 0.75rem;
+  font-family: var(--fx-font-mono, monospace);
+}
+
+.fx-sec-toc__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.fx-sec-toc__link {
+  display: block;
+  padding: 0.45rem 0.65rem;
+  color: var(--fx-sec-text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.fx-sec-toc__link:hover {
+  color: var(--fx-sec-red);
+  background: var(--fx-sec-red-tint);
+}
+
+.fx-sec-mini-cta {
+  background: #FAFAFA;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius);
+  padding: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.fx-sec-mini-cta__icon {
+  color: var(--fx-sec-red);
+}
+
+.fx-sec-mini-cta__title {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--fx-sec-dark);
+  margin: 0;
+}
+
+.fx-sec-mini-cta__desc {
+  font-size: 0.8125rem;
+  color: var(--fx-sec-gray-soft);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.fx-sec-mini-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--fx-sec-red);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  padding: 0.45rem 0.875rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 0.35rem;
+  transition: background 0.15s ease;
+}
+
+.fx-sec-mini-cta__btn:hover {
+  background: var(--fx-sec-red-dark);
+}
+
+/* ==========================================================================
+   5. SAĞ ANA İÇERİK BÖLÜMÜ
+   ========================================================================== */
+
+.fx-sec-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25rem;
+  min-width: 0;
+}
+
+.fx-sec-section {
+  scroll-margin-top: 100px;
+}
+
+.fx-sec-section__title {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--fx-sec-dark);
+  letter-spacing: -0.015em;
+  margin: 0 0 0.875rem;
+}
+
+.fx-sec-section__lead {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--fx-sec-text-muted);
+  margin: 0 0 1.25rem;
+}
+
+/* 5.1 GENEL BAKIŞ & DEĞER ÖNERİSİ KARTLARI (4'LÜ GRID) */
+.fx-sec-overview__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.875rem;
+  margin-top: 1.25rem;
+}
+
+.fx-sec-card {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius);
+  padding: 1.125rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.fx-sec-card:hover {
+  border-color: #CBD5E1;
+  transform: translateY(-2px);
+}
+
+.fx-sec-card__icon {
+  color: var(--fx-sec-red);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.fx-sec-card__title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--fx-sec-dark);
+  margin: 0;
+}
+
+.fx-sec-card__desc {
+  font-size: 0.8125rem;
+  color: var(--fx-sec-gray-soft);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* 5.2 BAŞLICA RİSKLER (2 KOLONLU LİSTE) */
+.fx-sec-risks__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.875rem 2rem;
+  margin-top: 1rem;
+}
+
+.fx-sec-risk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--fx-sec-text);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.fx-sec-risk-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--fx-sec-red);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* 5.3 ÖNERİLEN SİSTEMLER (4 KART) */
+.fx-sec-systems__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.875rem;
+  margin-top: 1rem;
+}
+
+.fx-sec-system-card {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius);
+  padding: 1.125rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fx-sec-system-card:hover {
+  border-color: var(--fx-sec-red);
+  box-shadow: 0 4px 12px rgba(169, 4, 50, 0.08);
+  transform: translateY(-2px);
+}
+
+.fx-sec-system-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.fx-sec-system-card__title {
+  font-weight: 800;
+  font-size: 0.9375rem;
+  color: var(--fx-sec-dark);
+  margin: 0;
+}
+
+.fx-sec-system-card__desc {
+  font-size: 0.8125rem;
+  color: var(--fx-sec-gray-soft);
+  margin: 0;
+}
+
+.fx-sec-system-card__arrow {
+  color: var(--fx-sec-red);
+  font-weight: 800;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  margin-left: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.fx-sec-system-card:hover .fx-sec-system-card__arrow {
+  transform: translateX(3px);
+}
+
+/* 5.4 SÜREÇ (6 ADIMLI ZAMAN ÇİZELGESİ) */
+.fx-sec-process {
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.fx-sec-process__line {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  right: 15px;
+  height: 2px;
+  background: var(--fx-sec-border);
+  z-index: 0;
+}
+
+.fx-sec-process__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.625rem;
+  position: relative;
+  z-index: 1;
+}
+
+.fx-sec-process__step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease;
+}
+
+.fx-sec-process__step:hover {
+  transform: translateY(-2px);
+}
+
+.fx-sec-process__num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--fx-sec-red);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  font-family: var(--fx-font-mono, monospace);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.625rem;
+  box-shadow: 0 0 0 4px #FFFFFF;
+  flex-shrink: 0;
+}
+
+.fx-sec-process__title {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--fx-sec-dark);
+  margin: 0 0 0.2rem;
+}
+
+.fx-sec-process__desc {
+  font-size: 0.75rem;
+  color: var(--fx-sec-gray-soft);
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* 5.5 İKİ KOLONLU BÖLÜM: UYGULAMA ALANLARI & STANDARTLAR */
+.fx-sec-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.fx-sec-areas__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.fx-sec-area-chip {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: 6px;
+  padding: 0.65rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--fx-sec-text);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.fx-sec-area-icon {
+  color: var(--fx-sec-red);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fx-sec-standards__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.fx-sec-standard-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--fx-sec-text);
+  line-height: 1.4;
+}
+
+.fx-sec-standard-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--fx-sec-red);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* 5.6 İKİ KOLONLU BÖLÜM: SIK SORULAN SORULAR & İLGİLİ İÇERİKLER */
+.fx-sec-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.fx-sec-faq {
+  border-bottom: 1px solid var(--fx-sec-border-light);
+  padding-bottom: 0.25rem;
+}
+
+.fx-sec-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--fx-sec-dark);
+  padding: 0.625rem 0;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: color 0.15s ease;
+}
+
+.fx-sec-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.fx-sec-faq summary:hover {
+  color: var(--fx-sec-red);
+}
+
+.fx-sec-faq__toggle {
+  color: var(--fx-sec-red);
+  font-weight: 800;
+  font-size: 1.125rem;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.fx-sec-faq[open] .fx-sec-faq__toggle {
+  transform: rotate(45deg);
+}
+
+.fx-sec-faq__ans {
+  font-size: 0.8125rem;
+  color: var(--fx-sec-text-muted);
+  line-height: 1.55;
+  padding: 0.25rem 0 0.875rem;
+  margin: 0;
+}
+
+.fx-sec-all-faq-link {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--fx-sec-red);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.75rem;
+  transition: gap 0.15s ease;
+}
+
+.fx-sec-all-faq-link:hover {
+  gap: 0.45rem;
+}
+
+.fx-sec-related__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.fx-sec-related-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.875rem;
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--fx-sec-dark);
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fx-sec-related-item:hover {
+  border-color: var(--fx-sec-red);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.fx-sec-related-item__left {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-width: 0;
+}
+
+.fx-sec-related-item__icon {
+  color: var(--fx-sec-red);
+  flex-shrink: 0;
+}
+
+.fx-sec-related-item__arrow {
+  color: var(--fx-sec-red);
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  transition: transform 0.15s ease;
+}
+
+.fx-sec-related-item:hover .fx-sec-related-item__arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   6. ALT CTA BANDI (KOYU ANTRASİT)
+   ========================================================================== */
+
+.fx-sec-cta-band {
+  background: var(--fx-sec-dark);
+  border-radius: var(--fx-sec-radius-lg);
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: #FFFFFF;
+  margin-top: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.fx-sec-cta-band__left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.fx-sec-cta-band__icon {
+  color: #F87171;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fx-sec-cta-band__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.fx-sec-cta-band__title {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.fx-sec-cta-band__desc {
+  font-size: 0.9375rem;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+.fx-sec-cta-band__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  flex-shrink: 0;
+}
+
+.fx-sec-cta-band__btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--fx-sec-red);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.625rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid var(--fx-sec-red);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.fx-sec-cta-band__btn-primary:hover {
+  background: var(--fx-sec-red-dark);
+  border-color: var(--fx-sec-red-dark);
+  transform: translateY(-1px);
+}
+
+.fx-sec-cta-band__btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 0.75rem 1.375rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.fx-sec-cta-band__btn-secondary:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.fx-sec-cta-band__btn-secondary svg {
+  color: #F87171;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   7. DUYARLI KIRILMA NOKTALARI (RESPONSIVE)
+   ========================================================================== */
+
+/* 1024px altı */
+@media (max-width: 1024px) {
+  .fx-sec-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .fx-sec-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .fx-sec-sidebar {
+    position: static;
+    display: none; /* Mobilde ve tablette hero CTA ve sayfa içi hiyerarşi yeterli */
+  }
+  .fx-sec-overview__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fx-sec-systems__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 768px altı */
+@media (max-width: 768px) {
+  .fx-sec-page {
+    padding: 1rem 1rem 3.5rem;
+  }
+  .fx-sec-hero__title {
+    font-size: 2rem;
+  }
+  .fx-sec-hero__bar {
+    grid-template-columns: 1fr;
+    gap: 0.625rem;
+  }
+  .fx-sec-process__line {
+    display: none;
+  }
+  .fx-sec-process__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .fx-sec-risks__grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .fx-sec-split-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .fx-sec-cta-band {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem 1.25rem;
+    gap: 1.5rem;
+  }
+  .fx-sec-cta-band__left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .fx-sec-cta-band__actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .fx-sec-cta-band__btn-primary,
+  .fx-sec-cta-band__btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 480px altı */
+@media (max-width: 480px) {
+  .fx-sec-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .fx-sec-btn--primary,
+  .fx-sec-btn--secondary {
+    width: 100%;
+    text-align: center;
+  }
+  .fx-sec-overview__grid {
+    grid-template-columns: 1fr;
+  }
+  .fx-sec-systems__grid {
+    grid-template-columns: 1fr;
+  }
+  .fx-sec-areas__grid {
+    grid-template-columns: 1fr;
+  }
+  .fx-sec-process__grid {
+    grid-template-columns: 1fr;
+  }
+}
