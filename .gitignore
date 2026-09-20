@@ -1,0 +1,59 @@
+# FENIX.COM — Production .gitignore
+# Strictly excludes secrets, build state, local audit dumps, and temporary test artifacts.
+
+# Environment & Secret Protection
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+secrets.*
+
+# Node & Package Managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build State & Output
+dist/
+build/.state
+build/.qa.json
+coverage/
+.cache/
+.parcel-cache/
+.turbo/
+
+# Operating System & Editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+*.log
+
+# Local Audit, Browser Testing & Headless Profiles
+scratch_audit/
+scratch_*/
+cdp_tmp*/
+chrome_profile/
+*.screenshot.png
+*.trace.json
+
+# Local Python & Test Scripts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+measure_vp.py
+test_*.py
+test_*.js

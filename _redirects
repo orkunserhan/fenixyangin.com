@@ -1,0 +1,20 @@
+# FENIX.COM Legacy 301 Redirect Rules
+# Maps old WordPress URLs to new FENIX.COM canonical structure
+# Source of truth: FENIX_OLD_COM_301_MAP.md
+
+/fm200-gazli-sondurme-sistemi/                     /sistemler/fm200/                              301
+/novec-1230-yangin-sondurme-sistemleri/            /sistemler/novec-1230/                         301
+/hizmetler/novec-1230-gazli-sondurme-sistemi/      /sistemler/novec-1230/                         301
+/hizmetler/co2-gazli-sondurme-sistemleri/          /sistemler/co2/                                301
+/hizmetler/karbondioksit-gazli-sondurme-sistemleri/ /sistemler/co2/                               301
+/hizmetler/elektrik-panosu-yangin-sondurme-sistemleri/ /sistemler/pano-ici/                       301
+/hizmetler/davlumbaz-sondurme-sistemi-2/           /sistemler/davlumbaz/                          301
+/hizmetler/su-sisi-sondurme-sistemleri/            /sistemler/aerosol/                            301
+/hizmetler/fm200-yangin-sondurme-sistemleri-dolumu/ /hizmetler/dolum/                             301
+/hizmetler/novec-1230-gazli-sondurme-sistemi-dolumu/ /hizmetler/dolum/                            301
+/hizmetler/gazli-yangin-sondurme-sistemleri-bakimi/ /hizmetler/bakim/                             301
+/hizmetler/door-fan-test-oda-sizdirmazlik-testi/   /teknik-icerikler/oda-sizdirmazlik-testi-yontemi/ 301
+/hizmetler/gazli-sondurme-sistemleri/              /sistemler/                                    301
+/hakkimizda/                                       /kurumsal/hakkimizda/                          301
+/galeri/                                           /projeler/                                     301
+/referans/                                         /referanslar/                                  301

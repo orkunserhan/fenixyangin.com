@@ -1,0 +1,374 @@
+/* FENIX.COM — TEKNİK UI BİLEŞENLERİ
+   Claude Design bileşen kitaplığından birebir taşındı. */
+
+/* ── TEKNİK HERO ── */
+.fx-hero { background: var(--fx-surface); border-bottom: 1px solid var(--fx-line); }
+.fx-hero__inner {
+  max-width: var(--fx-max); margin: 0 auto;
+  padding: clamp(30px, 5vw, 56px) var(--fx-pad-x) clamp(26px, 4vw, 44px);
+}
+.fx-hero__eyebrow { margin: 0 0 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.fx-label {
+  font-family: var(--fx-mono); font-size: var(--fx-label); font-weight: 500;
+  letter-spacing: var(--fx-ls-label); color: var(--fx-red);
+}
+.fx-hero h1 {
+  margin: 0 0 18px; max-width: 26ch;
+  font-size: var(--fx-h1); font-weight: 800;
+  letter-spacing: var(--fx-ls-tight); line-height: var(--fx-lh-tight);
+  color: var(--fx-ink); text-wrap: pretty;
+}
+.fx-hero__answer {
+  margin: 0; max-width: 72ch;
+  font-size: var(--fx-lede); line-height: 1.68; color: var(--fx-ink-2); text-wrap: pretty;
+}
+.fx-hero__decision {
+  margin: 20px 0 0; max-width: 68ch; padding: 14px 18px;
+  background: var(--fx-white); border-left: 3px solid var(--fx-red);
+  font-size: clamp(14px, 1.4vw, 15.5px); font-weight: 600; line-height: 1.6; color: var(--fx-ink);
+}
+.fx-hero__meta { margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 0 clamp(20px, 3vw, 40px); }
+.fx-hero__meta dt { font-family: var(--fx-mono); font-size: 9px; letter-spacing: 0.12em; color: var(--fx-muted-2); }
+.fx-hero__meta dd { margin: 4px 0 0; font-size: 12.5px; font-weight: 600; color: var(--fx-ink); }
+
+/* ── ROZET ── */
+.fx-badge {
+  font-family: var(--fx-mono); font-size: 8.5px; font-weight: 500;
+  letter-spacing: 0.1em; padding: 3px 7px;
+}
+.fx-badge--spec { background: var(--fx-ok-bg); color: var(--fx-ok-ink); }
+.fx-badge--blocked { background: #FFF3CC; color: var(--fx-gate-ink); }
+.fx-badge--hub { background: #EEF0F1; color: var(--fx-ink-3); }
+
+/* ── SAYFA IZGARASI + STICKY TOC ── */
+.fx-page {
+  max-width: var(--fx-max); margin: 0 auto;
+  padding: var(--fx-pad-y) var(--fx-pad-x) clamp(40px, 6vw, 72px);
+  display: grid; grid-template-columns: minmax(0, 1fr);
+  gap: var(--fx-gap-l); align-items: start;
+}
+.fx-toc {
+  min-width: 0; margin-bottom: 26px;
+  padding: 15px 17px; background: var(--fx-surface); border: 1px solid var(--fx-line);
+}
+.fx-toc__label { margin: 0 0 12px; font-family: var(--fx-mono); font-size: 9.5px; letter-spacing: 0.12em; color: var(--fx-muted-2); }
+.fx-toc ol { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.fx-toc a { font-size: 12.5px; line-height: 1.45; color: var(--fx-ink-3); }
+.fx-toc a:hover, .fx-toc a[aria-current="true"] { color: var(--fx-red); }
+.fx-body { min-width: 0; max-width: var(--fx-text); }
+
+@media (min-width: 1060px) {
+  .fx-page { grid-template-columns: var(--fx-toc) minmax(0, 1fr); }
+  .fx-toc {
+    position: sticky; top: 90px;
+    margin-bottom: 0; padding: 0 6px 0 0;
+    background: none; border: 0;
+  }
+}
+
+/* ── BÖLÜM ── */
+.fx-sec { margin: 0 0 var(--fx-sec); scroll-margin-top: 90px; }
+.fx-sec h2 {
+  margin: 0 0 6px; display: flex; align-items: center; gap: 14px;
+  font-size: var(--fx-h2); font-weight: 700;
+  letter-spacing: -0.02em; line-height: var(--fx-lh-head); color: var(--fx-ink);
+}
+.fx-sec h2::after { content: ''; flex: 1; height: 1px; background: var(--fx-line-2); }
+.fx-sec p { margin: 14px 0 0; max-width: 74ch; font-size: var(--fx-body); line-height: var(--fx-lh-body); color: var(--fx-ink-2); text-wrap: pretty; }
+.fx-sec ul, .fx-sec ol.fx-list { margin: 16px 0 0; padding-left: 19px; max-width: 74ch; display: flex; flex-direction: column; gap: 8px; }
+.fx-sec li { font-size: clamp(13.5px, 1.35vw, 15px); line-height: 1.68; color: var(--fx-ink-2); }
+
+/* ── TEKNİK TABLO ── */
+.fx-table-wrap { margin: 20px 0 0; overflow-x: auto; border: 1px solid var(--fx-line); }
+.fx-table { width: 100%; min-width: 520px; font-size: 13px; }
+.fx-table caption {
+  padding: 11px 14px; text-align: left;
+  font-family: var(--fx-mono); font-size: 9.5px; letter-spacing: 0.1em;
+  color: var(--fx-muted-2); background: var(--fx-surface); border-bottom: 1px solid var(--fx-line);
+}
+.fx-table th[scope="col"] {
+  padding: 11px 14px; text-align: left;
+  font-size: 11.5px; font-weight: 700; color: var(--fx-ink);
+  background: var(--fx-surface-2); border-bottom: 1px solid var(--fx-line);
+}
+.fx-table th[scope="row"] {
+  padding: 12px 14px; text-align: left;
+  font-size: 12.5px; font-weight: 700; color: var(--fx-ink);
+  border-bottom: 1px solid var(--fx-line-3); vertical-align: top;
+}
+.fx-table td {
+  padding: 12px 14px; font-size: 12.5px; line-height: 1.55;
+  color: var(--fx-ink-3); border-bottom: 1px solid var(--fx-line-3); vertical-align: top;
+}
+
+/* ── TEKNİK NOT / UYARI ── */
+.fx-note, .fx-warn {
+  margin: 20px 0 0; max-width: 74ch; padding: 15px 18px;
+}
+.fx-note { background: var(--fx-surface-2); border-left: 3px solid var(--fx-ink); }
+.fx-warn { background: var(--fx-warn-bg); border-left: 3px solid var(--fx-red); }
+.fx-note__label, .fx-warn__label {
+  margin: 0 0 7px; display: flex; align-items: center; gap: 8px;
+  font-family: var(--fx-mono); font-size: 9px; letter-spacing: 0.12em;
+}
+.fx-note__label { color: var(--fx-muted); }
+.fx-warn__label { color: var(--fx-red-dark); }
+.fx-warn__label::before { content: ''; display: inline-block; width: 8px; height: 8px; background: var(--fx-red); }
+.fx-note p, .fx-warn p { margin: 0; font-size: 13.5px; line-height: 1.7; }
+.fx-note p { color: var(--fx-ink-2); }
+.fx-warn p { color: var(--fx-warn-ink); }
+
+/* ── SÜREÇ ADIMLARI ── */
+.fx-steps {
+  margin: 20px 0 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 1px;
+  background: var(--fx-line); border: 1px solid var(--fx-line);
+}
+.fx-steps li { display: flex; gap: 14px; padding: 15px 17px; background: var(--fx-white); }
+.fx-steps__n {
+  flex-shrink: 0; padding-top: 2px;
+  font-family: var(--fx-mono); font-size: 11px; font-weight: 500; color: var(--fx-red);
+}
+.fx-steps__t { display: block; font-size: 14px; font-weight: 700; color: var(--fx-ink); }
+.fx-steps__d { display: block; margin-top: 5px; font-size: 13px; line-height: 1.65; color: var(--fx-ink-3); }
+
+/* ── KAYNAK / KANIT ── */
+.fx-source { margin: 20px 0 0; max-width: 74ch; padding: 14px 17px; background: var(--fx-dark); }
+.fx-source__row { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+.fx-source dt { font-family: var(--fx-mono); font-size: 8.5px; letter-spacing: 0.12em; color: var(--fx-muted-2); }
+.fx-source dd { margin: 3px 0 0; font-family: var(--fx-mono); font-size: 11.5px; }
+.fx-source dd.is-verified { color: #7FD4A0; }
+.fx-source dd.is-toverify { color: var(--fx-yellow); }
+.fx-source dd.is-legal { color: #FF9A6B; }
+
+/* ── İÇERİK KAPISI (BLOCKED) ── */
+.fx-gate {
+  margin: 0 0 30px; padding: clamp(18px, 2.5vw, 26px);
+  background: var(--fx-gate-bg); border: 1px solid var(--fx-gate-line);
+  scroll-margin-top: 90px;
+}
+.fx-gate__label {
+  margin: 0 0 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 9px;
+  font-family: var(--fx-mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.12em; color: var(--fx-gate-ink);
+}
+.fx-gate__label::before { content: ''; display: inline-block; width: 9px; height: 9px; background: var(--fx-yellow); flex-shrink: 0; }
+.fx-gate__why { margin: 0 0 14px; max-width: 68ch; font-size: 13.5px; line-height: 1.7; color: var(--fx-gate-ink-2); }
+.fx-gate__cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 14px; }
+.fx-gate__h { margin: 0 0 7px; font-family: var(--fx-mono); font-size: 9px; letter-spacing: 0.1em; }
+.fx-gate__h--ok { color: var(--fx-gate-ink); }
+.fx-gate__h--no { color: var(--fx-red-dark); }
+.fx-gate ul { margin: 0; padding-left: 17px; font-size: 12.5px; line-height: 1.65; }
+.fx-gate__ok ul { color: var(--fx-gate-ink-2); }
+.fx-gate__no ul { color: #6B2030; }
+.fx-gate__need {
+  margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--fx-gate-line);
+  font-size: 12.5px; line-height: 1.6; color: var(--fx-gate-ink-2);
+}
+
+/* ── KART IZGARASI (ayırıcı çocukta — auto-fit sızma kuralı) ── */
+.fx-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 248px), 1fr)); gap: 0; }
+.fx-cards--sm { grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); }
+.fx-card {
+  display: flex; flex-direction: column; gap: 7px; min-width: 0;
+  padding: 18px 17px; background: var(--fx-white);
+  box-shadow: var(--fx-hairline);
+  transition: background var(--fx-t);
+}
+.fx-card:hover { background: var(--fx-surface); }
+.fx-card__top { display: flex; align-items: center; gap: 9px; }
+.fx-card__id { font-family: var(--fx-mono); font-size: 9.5px; letter-spacing: 0.1em; color: var(--fx-red); }
+.fx-card__t { font-size: 14.5px; font-weight: 700; line-height: 1.35; color: var(--fx-ink); }
+.fx-card__d { font-size: 12.5px; line-height: 1.55; color: var(--fx-muted); }
+
+/* ── SONRAKİ TEKNİK ADIM ── */
+.fx-next { margin: var(--fx-sec) 0 0; padding-top: clamp(24px, 3vw, 34px); border-top: 1px solid var(--fx-line); }
+.fx-next__label { margin: 0 0 16px; font-family: var(--fx-mono); font-size: 9.5px; letter-spacing: 0.12em; color: var(--fx-muted-2); }
+
+/* ── CTA ── */
+.fx-cta { margin: var(--fx-sec) 0 0; padding: clamp(20px, 3vw, 30px); background: var(--fx-dark); color: var(--fx-white); }
+.fx-cta h2 { margin: 0 0 9px; font-size: clamp(16px, 1.9vw, 19px); font-weight: 700; letter-spacing: -0.01em; }
+.fx-cta p { margin: 0 0 18px; max-width: 58ch; font-size: 13.5px; line-height: 1.65; color: #B9BEC2; }
+.fx-cta__row { display: flex; flex-wrap: wrap; gap: 10px; }
+.fx-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: var(--fx-tap); padding: 0 20px;
+  font-size: 13.5px; font-weight: 700; white-space: nowrap;
+  transition: background var(--fx-t), border-color var(--fx-t);
+}
+.fx-btn--primary { background: var(--fx-red); color: var(--fx-white); }
+.fx-btn--primary:hover { background: var(--fx-red-dark); color: var(--fx-white); }
+.fx-btn--ghost-dark { border: 1px solid rgba(255,255,255,0.28); color: var(--fx-white); }
+.fx-btn--ghost-dark:hover { border-color: var(--fx-white); color: var(--fx-white); }
+.fx-btn--ghost { border: 1px solid #C9CDD0; color: var(--fx-ink); }
+.fx-btn--ghost:hover { border-color: var(--fx-ink); color: var(--fx-ink); }
+
+/* ── GÖRSEL YER TUTUCU ── */
+.fx-ph {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px; text-align: center; padding: 8px;
+  background: repeating-linear-gradient(135deg, #23262A 0 9px, #1B1E21 9px 18px);
+  font-family: var(--fx-mono); font-size: 10px; line-height: 1.45;
+  letter-spacing: 0.04em; color: #8B9298;
+}
+.fx-ph span:last-child { opacity: 0.72; }
+.fx-ph--16x9 { aspect-ratio: 16 / 9; }
+.fx-ph--16x11 { aspect-ratio: 16 / 11; }
+.fx-ph--4x3 { aspect-ratio: 4 / 3; }
+
+/* ── REFERANS LOGOLARI ── */
+.fx-refs {
+  margin-top: clamp(24px, 3.5vw, 36px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(33%, 150px), 1fr));
+  gap: 0;
+}
+.fx-refs div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 84px;
+  padding: 14px 18px;
+  background: var(--fx-white);
+  box-shadow: var(--fx-hairline);
+  transition: background var(--fx-t);
+}
+.fx-refs div:hover {
+  background: var(--fx-surface);
+}
+.fx-refs img {
+  max-width: 84%;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.82;
+  transition: filter var(--fx-t), opacity var(--fx-t), transform var(--fx-t);
+}
+.fx-refs div:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* ── PREMIUM FLOATING WHATSAPP BUTTON ── */
+.fx-whatsapp-floating {
+  position: fixed;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  right: 24px;
+  z-index: 995;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.fx-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  pointer-events: auto;
+  color: #ffffff;
+  outline-offset: 4px;
+}
+
+.fx-whatsapp-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(37, 211, 102, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+  flex-shrink: 0;
+}
+
+.fx-whatsapp-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.fx-whatsapp-tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  background: #111417;
+  color: #ffffff;
+  font-family: var(--fx-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 8px 14px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(8px);
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+}
+
+.fx-whatsapp-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #111417;
+}
+
+.fx-whatsapp-btn:hover .fx-whatsapp-icon,
+.fx-whatsapp-btn:focus-visible .fx-whatsapp-icon {
+  transform: scale(1.06);
+  background: #20ba5a;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.26), 0 3px 8px rgba(37, 211, 102, 0.45);
+}
+
+.fx-whatsapp-btn:hover .fx-whatsapp-tooltip,
+.fx-whatsapp-btn:focus .fx-whatsapp-tooltip,
+.fx-whatsapp-btn:focus-visible .fx-whatsapp-tooltip,
+.fx-whatsapp-btn:focus-within .fx-whatsapp-tooltip,
+.fx-whatsapp-floating:hover .fx-whatsapp-tooltip,
+.fx-whatsapp-floating:focus-within .fx-whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .fx-whatsapp-floating {
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    right: 16px;
+  }
+  .fx-whatsapp-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .fx-whatsapp-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+  .fx-whatsapp-tooltip {
+    font-size: 12px;
+    padding: 6px 11px;
+    right: calc(100% + 10px);
+  }
+}
+
+@media (max-width: 1059.98px) {
+  body.has-actionbar .fx-whatsapp-floating,
+  body:has(.fx-actionbar) .fx-whatsapp-floating {
+    bottom: calc(var(--fx-tap-lg, 54px) + 14px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+

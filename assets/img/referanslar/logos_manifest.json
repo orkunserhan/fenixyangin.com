@@ -1,0 +1,792 @@
+[
+  {
+    "num": 1,
+    "orig": "01 baykar.png",
+    "slug": "ref-01-baykar",
+    "filename": "ref-01-baykar.webp",
+    "title": "Baykar",
+    "width": 320,
+    "height": 38,
+    "bytes": 3186
+  },
+  {
+    "num": 2,
+    "orig": "02 turk hava yollari.png",
+    "slug": "ref-02-turk-hava-yollari",
+    "filename": "ref-02-turk-hava-yollari.webp",
+    "title": "Turk Hava Yollari",
+    "width": 305,
+    "height": 90,
+    "bytes": 6722
+  },
+  {
+    "num": 10,
+    "orig": "10 trendyol.png",
+    "slug": "ref-10-trendyol",
+    "filename": "ref-10-trendyol.webp",
+    "title": "Trendyol",
+    "width": 259,
+    "height": 90,
+    "bytes": 3900
+  },
+  {
+    "num": 14,
+    "orig": "14 türk havacılık uzay sanayii.png",
+    "slug": "ref-14-turk-havacilik-uzay-sanayii",
+    "filename": "ref-14-turk-havacilik-uzay-sanayii.webp",
+    "title": "Türk Havacılık Uzay Sanayii",
+    "width": 227,
+    "height": 90,
+    "bytes": 3324
+  },
+  {
+    "num": 15,
+    "orig": "15 İETT.png",
+    "slug": "ref-15-iett",
+    "filename": "ref-15-iett.webp",
+    "title": "İETT",
+    "width": 102,
+    "height": 90,
+    "bytes": 1816
+  },
+  {
+    "num": 16,
+    "orig": "16 ulaştırma bakanlığı.png",
+    "slug": "ref-16-ulastirma-bakanligi",
+    "filename": "ref-16-ulastirma-bakanligi.webp",
+    "title": "Ulaştırma Bakanlığı",
+    "width": 119,
+    "height": 90,
+    "bytes": 4592
+  },
+  {
+    "num": 17,
+    "orig": "17 iş bankası.png",
+    "slug": "ref-17-is-bankasi",
+    "filename": "ref-17-is-bankasi.webp",
+    "title": "Iş Bankası",
+    "width": 320,
+    "height": 86,
+    "bytes": 4852
+  },
+  {
+    "num": 18,
+    "orig": "18 odeabank.png",
+    "slug": "ref-18-odeabank",
+    "filename": "ref-18-odeabank.webp",
+    "title": "Odeabank",
+    "width": 223,
+    "height": 90,
+    "bytes": 3772
+  },
+  {
+    "num": 19,
+    "orig": "19 türk telekom.png",
+    "slug": "ref-19-turk-telekom",
+    "filename": "ref-19-turk-telekom.webp",
+    "title": "Türk Telekom",
+    "width": 274,
+    "height": 90,
+    "bytes": 7754
+  },
+  {
+    "num": 20,
+    "orig": "20 iron mountain.png",
+    "slug": "ref-20-iron-mountain",
+    "filename": "ref-20-iron-mountain.webp",
+    "title": "Iron Mountain",
+    "width": 320,
+    "height": 83,
+    "bytes": 6166
+  },
+  {
+    "num": 21,
+    "orig": "21 aselsan.png",
+    "slug": "ref-21-aselsan",
+    "filename": "ref-21-aselsan.webp",
+    "title": "Aselsan",
+    "width": 320,
+    "height": 68,
+    "bytes": 6962
+  },
+  {
+    "num": 22,
+    "orig": "22 türkiye maarif vakfı.png",
+    "slug": "ref-22-turkiye-maarif-vakfi",
+    "filename": "ref-22-turkiye-maarif-vakfi.webp",
+    "title": "Türkiye Maarif Vakfı",
+    "width": 320,
+    "height": 88,
+    "bytes": 17522
+  },
+  {
+    "num": 23,
+    "orig": "23 philip morris.png",
+    "slug": "ref-23-philip-morris",
+    "filename": "ref-23-philip-morris.webp",
+    "title": "Philip Morris",
+    "width": 320,
+    "height": 73,
+    "bytes": 17866
+  },
+  {
+    "num": 24,
+    "orig": "24 tulomsaş.png",
+    "slug": "ref-24-tulomsas",
+    "filename": "ref-24-tulomsas.webp",
+    "title": "Tulomsaş",
+    "width": 320,
+    "height": 79,
+    "bytes": 13010
+  },
+  {
+    "num": 25,
+    "orig": "25 türkiye denizcilik.png",
+    "slug": "ref-25-turkiye-denizcilik",
+    "filename": "ref-25-turkiye-denizcilik.webp",
+    "title": "Türkiye Denizcilik",
+    "width": 71,
+    "height": 90,
+    "bytes": 4944
+  },
+  {
+    "num": 26,
+    "orig": "26 İSKİ.png",
+    "slug": "ref-26-iski",
+    "filename": "ref-26-iski.webp",
+    "title": "İSKİ",
+    "width": 320,
+    "height": 72,
+    "bytes": 5170
+  },
+  {
+    "num": 27,
+    "orig": "27 MSA.png",
+    "slug": "ref-27-msa",
+    "filename": "ref-27-msa.webp",
+    "title": "MSA",
+    "width": 171,
+    "height": 90,
+    "bytes": 3208
+  },
+  {
+    "num": 28,
+    "orig": "28 hürriyet.png",
+    "slug": "ref-28-hurriyet",
+    "filename": "ref-28-hurriyet.webp",
+    "title": "Hürriyet",
+    "width": 320,
+    "height": 89,
+    "bytes": 4086
+  },
+  {
+    "num": 29,
+    "orig": "29 vodafone.png",
+    "slug": "ref-29-vodafone",
+    "filename": "ref-29-vodafone.webp",
+    "title": "Vodafone",
+    "width": 320,
+    "height": 83,
+    "bytes": 8322
+  },
+  {
+    "num": 30,
+    "orig": "30 BRT.png",
+    "slug": "ref-30-brt",
+    "filename": "ref-30-brt.webp",
+    "title": "BRT",
+    "width": 256,
+    "height": 90,
+    "bytes": 5054
+  },
+  {
+    "num": 31,
+    "orig": "31 gökbora.png",
+    "slug": "ref-31-gokbora",
+    "filename": "ref-31-gokbora.webp",
+    "title": "Gökbora",
+    "width": 320,
+    "height": 86,
+    "bytes": 4342
+  },
+  {
+    "num": 32,
+    "orig": "32 çevre ve şehircilik.png",
+    "slug": "ref-32-cevre-ve-sehircilik",
+    "filename": "ref-32-cevre-ve-sehircilik.webp",
+    "title": "Çevre Ve Şehircilik",
+    "width": 318,
+    "height": 90,
+    "bytes": 16690
+  },
+  {
+    "num": 33,
+    "orig": "33 Hilton-Garden-Inn-Logo.png",
+    "slug": "ref-33-hilton-garden-inn-logo",
+    "filename": "ref-33-hilton-garden-inn-logo.webp",
+    "title": "Hilton Garden Inn Logo",
+    "width": 230,
+    "height": 90,
+    "bytes": 10220
+  },
+  {
+    "num": 34,
+    "orig": "34 adalet bakanlığı.png",
+    "slug": "ref-34-adalet-bakanligi",
+    "filename": "ref-34-adalet-bakanligi.webp",
+    "title": "Adalet Bakanlığı",
+    "width": 171,
+    "height": 90,
+    "bytes": 1784
+  },
+  {
+    "num": 35,
+    "orig": "35 bahcesehir koleji.png",
+    "slug": "ref-35-bahcesehir-koleji",
+    "filename": "ref-35-bahcesehir-koleji.webp",
+    "title": "Bahcesehir Koleji",
+    "width": 112,
+    "height": 90,
+    "bytes": 2172
+  },
+  {
+    "num": 36,
+    "orig": "36 the marmara.png",
+    "slug": "ref-36-the-marmara",
+    "filename": "ref-36-the-marmara.webp",
+    "title": "The Marmara",
+    "width": 225,
+    "height": 55,
+    "bytes": 2646
+  },
+  {
+    "num": 37,
+    "orig": "37 tübitak.png",
+    "slug": "ref-37-tubitak",
+    "filename": "ref-37-tubitak.webp",
+    "title": "Tübitak",
+    "width": 252,
+    "height": 90,
+    "bytes": 4396
+  },
+  {
+    "num": 38,
+    "orig": "38 gümrük.png",
+    "slug": "ref-38-gumruk",
+    "filename": "ref-38-gumruk.webp",
+    "title": "Gümrük",
+    "width": 201,
+    "height": 90,
+    "bytes": 1926
+  },
+  {
+    "num": 39,
+    "orig": "39 şenpiliç.png",
+    "slug": "ref-39-senpilic",
+    "filename": "ref-39-senpilic.webp",
+    "title": "Şenpiliç",
+    "width": 144,
+    "height": 90,
+    "bytes": 3522
+  },
+  {
+    "num": 40,
+    "orig": "40 vakıf pazarlama.png",
+    "slug": "ref-40-vakif-pazarlama",
+    "filename": "ref-40-vakif-pazarlama.webp",
+    "title": "Vakıf Pazarlama",
+    "width": 320,
+    "height": 79,
+    "bytes": 8430
+  },
+  {
+    "num": 41,
+    "orig": "41 sağlık bakanlığı.jpg",
+    "slug": "ref-41-saglik-bakanligi",
+    "filename": "ref-41-saglik-bakanligi.webp",
+    "title": "Sağlık Bakanlığı",
+    "width": 205,
+    "height": 90,
+    "bytes": 6358
+  },
+  {
+    "num": 42,
+    "orig": "42 bilgi üni.jpg",
+    "slug": "ref-42-bilgi-uni",
+    "filename": "ref-42-bilgi-uni.webp",
+    "title": "Bilgi Üni",
+    "width": 320,
+    "height": 74,
+    "bytes": 4532
+  },
+  {
+    "num": 43,
+    "orig": "43 ford.png",
+    "slug": "ref-43-ford",
+    "filename": "ref-43-ford.webp",
+    "title": "Ford",
+    "width": 227,
+    "height": 90,
+    "bytes": 10042
+  },
+  {
+    "num": 44,
+    "orig": "44 mark antalya.png",
+    "slug": "ref-44-mark-antalya",
+    "filename": "ref-44-mark-antalya.webp",
+    "title": "Mark Antalya",
+    "width": 303,
+    "height": 90,
+    "bytes": 9210
+  },
+  {
+    "num": 45,
+    "orig": "45 istek okulları.png",
+    "slug": "ref-45-istek-okullari",
+    "filename": "ref-45-istek-okullari.webp",
+    "title": "Istek Okulları",
+    "width": 138,
+    "height": 90,
+    "bytes": 3714
+  },
+  {
+    "num": 46,
+    "orig": "46 ramada.png",
+    "slug": "ref-46-ramada",
+    "filename": "ref-46-ramada.webp",
+    "title": "Ramada",
+    "width": 288,
+    "height": 82,
+    "bytes": 6488
+  },
+  {
+    "num": 47,
+    "orig": "47 renannissance.png",
+    "slug": "ref-47-renannissance",
+    "filename": "ref-47-renannissance.webp",
+    "title": "Renannissance",
+    "width": 170,
+    "height": 90,
+    "bytes": 6020
+  },
+  {
+    "num": 48,
+    "orig": "48 Yapı_kredi_logo.png",
+    "slug": "ref-48-yapi-kredi-logo",
+    "filename": "ref-48-yapi-kredi-logo.webp",
+    "title": "Yapı Kredi Logo",
+    "width": 320,
+    "height": 56,
+    "bytes": 10080
+  },
+  {
+    "num": 49,
+    "orig": "49 112.jpg",
+    "slug": "ref-49-112",
+    "filename": "ref-49-112.webp",
+    "title": "112",
+    "width": 90,
+    "height": 90,
+    "bytes": 2332
+  },
+  {
+    "num": 50,
+    "orig": "50 aslan çimento.jpg",
+    "slug": "ref-50-aslan-cimento",
+    "filename": "ref-50-aslan-cimento.webp",
+    "title": "Aslan Çimento",
+    "width": 197,
+    "height": 90,
+    "bytes": 3952
+  },
+  {
+    "num": 51,
+    "orig": "51 kasap döner.png",
+    "slug": "ref-51-kasap-doner",
+    "filename": "ref-51-kasap-doner.webp",
+    "title": "Kasap Döner",
+    "width": 206,
+    "height": 90,
+    "bytes": 6952
+  },
+  {
+    "num": 52,
+    "orig": "52 batman üni.png",
+    "slug": "ref-52-batman-uni",
+    "filename": "ref-52-batman-uni.webp",
+    "title": "Batman Üni",
+    "width": 90,
+    "height": 90,
+    "bytes": 6216
+  },
+  {
+    "num": 53,
+    "orig": "53 sushico.png",
+    "slug": "ref-53-sushico",
+    "filename": "ref-53-sushico.webp",
+    "title": "Sushico",
+    "width": 255,
+    "height": 90,
+    "bytes": 4448
+  },
+  {
+    "num": 54,
+    "orig": "54 tavuk dünyası.png",
+    "slug": "ref-54-tavuk-dunyasi",
+    "filename": "ref-54-tavuk-dunyasi.webp",
+    "title": "Tavuk Dünyası",
+    "width": 166,
+    "height": 90,
+    "bytes": 2088
+  },
+  {
+    "num": 55,
+    "orig": "55 dürümle.jpeg",
+    "slug": "ref-55-durumle",
+    "filename": "ref-55-durumle.webp",
+    "title": "Dürümle",
+    "width": 240,
+    "height": 90,
+    "bytes": 3214
+  },
+  {
+    "num": 55,
+    "orig": "55 simit sarayı.png",
+    "slug": "ref-55-simit-sarayi",
+    "filename": "ref-55-simit-sarayi.webp",
+    "title": "Simit Sarayı",
+    "width": 288,
+    "height": 74,
+    "bytes": 5086
+  },
+  {
+    "num": 56,
+    "orig": "56 pizza hut.png",
+    "slug": "ref-56-pizza-hut",
+    "filename": "ref-56-pizza-hut.webp",
+    "title": "Pizza Hut",
+    "width": 88,
+    "height": 90,
+    "bytes": 3020
+  },
+  {
+    "num": 57,
+    "orig": "57 tefal.jpg",
+    "slug": "ref-57-tefal",
+    "filename": "ref-57-tefal.webp",
+    "title": "Tefal",
+    "width": 320,
+    "height": 69,
+    "bytes": 3110
+  },
+  {
+    "num": 58,
+    "orig": "58 türkiye petrolleri.png",
+    "slug": "ref-58-turkiye-petrolleri",
+    "filename": "ref-58-turkiye-petrolleri.webp",
+    "title": "Türkiye Petrolleri",
+    "width": 186,
+    "height": 90,
+    "bytes": 7748
+  },
+  {
+    "num": 59,
+    "orig": "59 sofra grup.jpg",
+    "slug": "ref-59-sofra-grup",
+    "filename": "ref-59-sofra-grup.webp",
+    "title": "Sofra Grup",
+    "width": 176,
+    "height": 90,
+    "bytes": 2614
+  },
+  {
+    "num": 60,
+    "orig": "60 bay döner.png",
+    "slug": "ref-60-bay-doner",
+    "filename": "ref-60-bay-doner.webp",
+    "title": "Bay Döner",
+    "width": 320,
+    "height": 74,
+    "bytes": 5892
+  },
+  {
+    "num": 61,
+    "orig": "61 jandarma.jpg",
+    "slug": "ref-61-jandarma",
+    "filename": "ref-61-jandarma.webp",
+    "title": "Jandarma",
+    "width": 73,
+    "height": 90,
+    "bytes": 3656
+  },
+  {
+    "num": 62,
+    "orig": "62 KFC.png",
+    "slug": "ref-62-kfc",
+    "filename": "ref-62-kfc.webp",
+    "title": "KFC",
+    "width": 90,
+    "height": 90,
+    "bytes": 3980
+  },
+  {
+    "num": 63,
+    "orig": "63 gözen air.png",
+    "slug": "ref-63-gozen-air",
+    "filename": "ref-63-gozen-air.webp",
+    "title": "Gözen Air",
+    "width": 320,
+    "height": 79,
+    "bytes": 9026
+  },
+  {
+    "num": 64,
+    "orig": "64 excelsior hotel bakü.png",
+    "slug": "ref-64-excelsior-hotel-baku",
+    "filename": "ref-64-excelsior-hotel-baku.webp",
+    "title": "Excelsior Hotel Bakü",
+    "width": 120,
+    "height": 90,
+    "bytes": 6844
+  },
+  {
+    "num": 65,
+    "orig": "65 ensar.jpeg",
+    "slug": "ref-65-ensar",
+    "filename": "ref-65-ensar.webp",
+    "title": "Ensar",
+    "width": 112,
+    "height": 90,
+    "bytes": 2860
+  },
+  {
+    "num": 66,
+    "orig": "66 migros.png",
+    "slug": "ref-66-migros",
+    "filename": "ref-66-migros.webp",
+    "title": "Migros",
+    "width": 320,
+    "height": 61,
+    "bytes": 4476
+  },
+  {
+    "num": 67,
+    "orig": "67 sinefekt.png",
+    "slug": "ref-67-sinefekt",
+    "filename": "ref-67-sinefekt.webp",
+    "title": "Sinefekt",
+    "width": 122,
+    "height": 90,
+    "bytes": 5538
+  },
+  {
+    "num": 68,
+    "orig": "68 anadolu üniversitesi.png",
+    "slug": "ref-68-anadolu-universitesi",
+    "filename": "ref-68-anadolu-universitesi.webp",
+    "title": "Anadolu Üniversitesi",
+    "width": 242,
+    "height": 90,
+    "bytes": 5440
+  },
+  {
+    "num": 69,
+    "orig": "69 mapfre.png",
+    "slug": "ref-69-mapfre",
+    "filename": "ref-69-mapfre.webp",
+    "title": "Mapfre",
+    "width": 200,
+    "height": 90,
+    "bytes": 5182
+  },
+  {
+    "num": 70,
+    "orig": "70 Yıldız_Technical_University_Logo.png",
+    "slug": "ref-70-yildiz-technical-university-logo",
+    "filename": "ref-70-yildiz-technical-university-logo.webp",
+    "title": "Yıldız Technical University Logo",
+    "width": 90,
+    "height": 90,
+    "bytes": 5422
+  },
+  {
+    "num": 71,
+    "orig": "71 sosyal tesisler ibb.png",
+    "slug": "ref-71-sosyal-tesisler-ibb",
+    "filename": "ref-71-sosyal-tesisler-ibb.webp",
+    "title": "Sosyal Tesisler Ibb",
+    "width": 135,
+    "height": 90,
+    "bytes": 6538
+  },
+  {
+    "num": 72,
+    "orig": "72 Odtü.png",
+    "slug": "ref-72-odtu",
+    "filename": "ref-72-odtu.webp",
+    "title": "Odtü",
+    "width": 220,
+    "height": 90,
+    "bytes": 6344
+  },
+  {
+    "num": 73,
+    "orig": "73 eskişehir büyükşehir.png",
+    "slug": "ref-73-eskisehir-buyuksehir",
+    "filename": "ref-73-eskisehir-buyuksehir.webp",
+    "title": "Eskişehir Büyükşehir",
+    "width": 90,
+    "height": 90,
+    "bytes": 6964
+  },
+  {
+    "num": 74,
+    "orig": "74 ETİ.png",
+    "slug": "ref-74-eti",
+    "filename": "ref-74-eti.webp",
+    "title": "ETİ",
+    "width": 114,
+    "height": 90,
+    "bytes": 3884
+  },
+  {
+    "num": 75,
+    "orig": "75 TÜRSAB.png",
+    "slug": "ref-75-tursab",
+    "filename": "ref-75-tursab.webp",
+    "title": "TÜRSAB",
+    "width": 231,
+    "height": 90,
+    "bytes": 13088
+  },
+  {
+    "num": 75,
+    "orig": "75 İBB KÜLTÜR.jpg",
+    "slug": "ref-75-ibb-kultur",
+    "filename": "ref-75-ibb-kultur.webp",
+    "title": "İBB KÜLTÜR",
+    "width": 312,
+    "height": 90,
+    "bytes": 5472
+  },
+  {
+    "num": 76,
+    "orig": "76 UNILEVER.png",
+    "slug": "ref-76-unilever",
+    "filename": "ref-76-unilever.webp",
+    "title": "UNILEVER",
+    "width": 82,
+    "height": 90,
+    "bytes": 4266
+  },
+  {
+    "num": 77,
+    "orig": "77 arel üniversitesi.png",
+    "slug": "ref-77-arel-universitesi",
+    "filename": "ref-77-arel-universitesi.webp",
+    "title": "Arel Üniversitesi",
+    "width": 320,
+    "height": 90,
+    "bytes": 9832
+  },
+  {
+    "num": 77,
+    "orig": "77 TOTAL ENERGY.jpeg",
+    "slug": "ref-77-total-energy",
+    "filename": "ref-77-total-energy.webp",
+    "title": "TOTAL ENERGY",
+    "width": 123,
+    "height": 90,
+    "bytes": 3514
+  },
+  {
+    "num": 78,
+    "orig": "78  Grohe.png",
+    "slug": "ref-78-grohe",
+    "filename": "ref-78-grohe.webp",
+    "title": "Grohe",
+    "width": 212,
+    "height": 90,
+    "bytes": 10776
+  },
+  {
+    "num": 79,
+    "orig": "79 Fırat üniversitesi.png",
+    "slug": "ref-79-firat-universitesi",
+    "filename": "ref-79-firat-universitesi.webp",
+    "title": "Fırat Üniversitesi",
+    "width": 90,
+    "height": 90,
+    "bytes": 3024
+  },
+  {
+    "num": 80,
+    "orig": "80 wyndham.png",
+    "slug": "ref-80-wyndham",
+    "filename": "ref-80-wyndham.webp",
+    "title": "Wyndham",
+    "width": 320,
+    "height": 73,
+    "bytes": 6426
+  },
+  {
+    "num": 81,
+    "orig": "81 gülermak.jpg",
+    "slug": "ref-81-gulermak",
+    "filename": "ref-81-gulermak.webp",
+    "title": "Gülermak",
+    "width": 209,
+    "height": 90,
+    "bytes": 3508
+  },
+  {
+    "num": 81,
+    "orig": "81 koçtaş.png",
+    "slug": "ref-81-koctas",
+    "filename": "ref-81-koctas.webp",
+    "title": "Koçtaş",
+    "width": 168,
+    "height": 90,
+    "bytes": 984
+  },
+  {
+    "num": 83,
+    "orig": "83 yılmaz redüktör.png",
+    "slug": "ref-83-yilmaz-reduktor",
+    "filename": "ref-83-yilmaz-reduktor.webp",
+    "title": "Yılmaz Redüktör",
+    "width": 320,
+    "height": 61,
+    "bytes": 9024
+  },
+  {
+    "num": 84,
+    "orig": "84 cengiz makina.png",
+    "slug": "ref-84-cengiz-makina",
+    "filename": "ref-84-cengiz-makina.webp",
+    "title": "Cengiz Makina",
+    "width": 218,
+    "height": 90,
+    "bytes": 6490
+  },
+  {
+    "num": 85,
+    "orig": "85 park inn radisson hotel.png",
+    "slug": "ref-85-park-inn-radisson-hotel",
+    "filename": "ref-85-park-inn-radisson-hotel.webp",
+    "title": "Park Inn Radisson Hotel",
+    "width": 267,
+    "height": 90,
+    "bytes": 8164
+  },
+  {
+    "num": 86,
+    "orig": "86 hyundai.png",
+    "slug": "ref-86-hyundai",
+    "filename": "ref-86-hyundai.webp",
+    "title": "Hyundai",
+    "width": 192,
+    "height": 90,
+    "bytes": 6310
+  }
+]

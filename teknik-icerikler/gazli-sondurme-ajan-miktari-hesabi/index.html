@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gazlı Söndürme ve FM200 Gazı Hesaplama Rehberi | Fenix</title>
+<meta name="description" content="FM200 ve temiz gazlı söndürmede ajan miktarı ve gaz hesaplama yöntemi: NFPA 2001 formülü, tasarım konsantrasyonu, sıcaklık ve hacim hesabı." />
+<link rel="canonical" href="https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-ajan-miktari-hesabi/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-ajan-miktari-hesabi/" />
+<meta property="og:title" content="Gazlı Söndürme ve FM200 Gazı Hesaplama Rehberi | Fenix" />
+<meta property="og:description" content="FM200 ve temiz gazlı söndürmede ajan miktarı ve gaz hesaplama yöntemi: NFPA 2001 formülü, tasarım konsantrasyonu, sıcaklık ve hacim hesabı." />
+<meta property="og:image" content="https://fenixyangin.com.tr/assets/img/hero-fenix-yangin.webp" />
+<meta property="og:image:width" content="1920" />
+<meta property="og:image:height" content="1062" />
+<meta property="og:image:alt" content="FM200 gazlı söndürme silindir bataryası ve dağıtım borulaması" />
+<meta property="og:locale" content="tr_TR" />
+<meta property="og:site_name" content="Fenix Yangın" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gazlı Söndürme ve FM200 Gazı Hesaplama Rehberi | Fenix" />
+<meta name="twitter:description" content="FM200 ve temiz gazlı söndürmede ajan miktarı ve gaz hesaplama yöntemi: NFPA 2001 formülü, tasarım konsantrasyonu, sıcaklık ve hacim hesabı." />
+<meta name="twitter:image" content="https://fenixyangin.com.tr/assets/img/hero-fenix-yangin.webp" />
+<link rel="icon" href="/assets/fenix-logo.png" />
+<link rel="apple-touch-icon" href="/assets/fenix-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../css/tokens.css" />
+<link rel="stylesheet" href="../../css/base.css" />
+<link rel="stylesheet" href="../../css/layout.css" />
+<link rel="stylesheet" href="../../css/components.css" />
+<link rel="stylesheet" href="../../css/tech-reading.css" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.fenixyangin.com/#organization","name":"Fenix Yangın","legalName":"Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş.","foundingDate":"2011","url":"https://www.fenixyangin.com/","logo":{"@type":"ImageObject","url":"https://www.fenixyangin.com/assets/fenix-logo.png","width":1200,"height":223},"telephone":"+902126180701","email":"info@fenixyangin.com.tr","areaServed":{"@type":"Country","name":"Türkiye"},"contactPoint":[{"@type":"ContactPoint","telephone":"+902126180701","contactType":"customer service","areaServed":"TR","availableLanguage":"Turkish"},{"@type":"ContactPoint","telephone":"+902126180702","contactType":"customer service","areaServed":"TR","availableLanguage":"Turkish"},{"@type":"ContactPoint","telephone":"+905327409097","contactType":"technical support","areaServed":"TR","availableLanguage":"Turkish"}],"address":{"@type":"PostalAddress","streetAddress":"Yıldırım Mah. Buğday Sok. No:16","addressLocality":"Bayrampaşa","addressRegion":"İstanbul","postalCode":"34405","addressCountry":"TR"}},{"@type":"WebSite","@id":"https://www.fenixyangin.com/#website","url":"https://www.fenixyangin.com/","name":"Fenix Yangın","publisher":{"@id":"https://www.fenixyangin.com/#organization"},"inLanguage":"tr-TR"},{"@type":"WebPage","@id":"https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-ajan-miktari-hesabi/#webpage","url":"https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-ajan-miktari-hesabi/","name":"Gazlı Söndürmede Ajan Miktarı Nasıl Hesaplanır? | Fenix","isPartOf":{"@id":"https://www.fenixyangin.com/#website"},"about":{"@id":"https://www.fenixyangin.com/#organization"},"inLanguage":"tr-TR"},{"@type":"BreadcrumbList","@id":"https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-ajan-miktari-hesabi/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://www.fenixyangin.com/"},{"@type":"ListItem","position":2,"name":"Teknik İçerikler","item":"https://www.fenixyangin.com/teknik-icerikler/"},{"@type":"ListItem","position":3,"name":"Ajan Miktarı Hesabı"}]}]}</script>
+</head>
+<body>
+<a class="fx-skip" href="#icerik">İçeriğe geç</a>
+<header class="fx-header">
+  <div class="fx-header__inner">
+    <a class="fx-logo" href="/" aria-label="Fenix Yangın ana sayfa"><img src="https://www.fenixyangin.com/assets/fenix-logo.png" alt="Fenix Yangın" width="1200" height="223" /></a>
+    <nav class="fx-nav" aria-label="Ana menü">
+      <a href="/sistemler/">Sistemler</a>
+      <a href="/hizmetler/">Hizmetler</a>
+      <a href="/sektorler/">Sektörler</a>
+      <a href="/projeler/">Projeler</a>
+      <a href="/referanslar/">Referanslar</a>
+      <a href="/teknik-icerikler/" aria-current="page">Teknik İçerikler</a>
+      <a href="/kurumsal/">Kurumsal</a>
+      <a href="/iletisim/">İletişim</a>
+    </nav>
+    <a class="fx-header__tel" href="tel:+902126180701">0212 618 07 01</a>
+    <button class="fx-burger" type="button" data-burger aria-label="Menüyü aç" aria-expanded="false" aria-controls="fx-drawer"><span></span></button>
+  </div>
+</header>
+
+<div class="fx-drawer" id="fx-drawer" data-drawer hidden role="dialog" aria-modal="true" aria-label="Mobil menü">
+  <div class="fx-drawer__top">
+    <a class="fx-logo" href="/"><img src="https://www.fenixyangin.com/assets/fenix-logo.png" alt="Fenix Yangın" width="1200" height="223" /></a>
+    <button class="fx-drawer__close" type="button" data-drawer-close aria-label="Menüyü kapat">×</button>
+  </div>
+  <nav aria-label="Mobil menü bağlantıları"><ul class="fx-drawer__list">
+    <li><a href="/sistemler/">Sistemler</a></li>
+    <li><a href="/hizmetler/">Hizmetler</a></li>
+    <li><a href="/sektorler/">Sektörler</a></li>
+    <li><a href="/projeler/">Projeler</a></li>
+    <li><a href="/referanslar/">Referanslar</a></li>
+    <li><a href="/teknik-icerikler/">Teknik İçerikler</a></li>
+    <li><a href="/kurumsal/">Kurumsal</a></li>
+    <li><a href="/iletisim/">İletişim</a></li>
+  </ul></nav>
+  <div class="fx-drawer__actions">
+    <a href="tel:+902126180701">Ara</a>
+    <a href="https://wa.me/905327409097">WhatsApp</a>
+    <a href="/iletisim/" style="background:var(--fx-red);color:#fff">Teklif Al</a>
+  </div>
+</div>
+
+<nav class="fx-crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Ana Sayfa</a></li>
+  <li><span class="fx-crumb__sep" aria-hidden="true">/</span><a href="/teknik-icerikler/">Teknik İçerikler</a></li>
+  <li><span class="fx-crumb__sep" aria-hidden="true">/</span><span aria-current="page">Ajan Miktarı Hesabı</span></li>
+</ol></nav>
+
+<main id="icerik">
+  <article>
+    <!-- Technical Hero Section -->
+    <header class="fx-tech-hero">
+      <div class="fx-tech-hero__inner">
+        <div class="fx-tech-hero__content">
+          <div class="fx-eyebrow-accent">TEKNİK İÇERİK</div>
+          <h1 class="fx-tech-hero__title">Gazlı Söndürmede Ajan Miktarı Nasıl Hesaplanır?</h1>
+          <p class="fx-tech-hero__lead">Ajan miktarı, mahal hacmi ile tasarım konsantrasyonundan türetilir; ancak hesap tek formülle bitmez — sızdırmazlık, sıcaklık, irtifa ve borulama hesabın parçasıdır.</p>
+          
+          <div class="fx-tech-meta">
+            <div class="fx-tech-meta__item">
+              <span class="fx-tech-meta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </span>
+              <div>
+                <p class="fx-tech-meta__val">Şubat 2026</p>
+                <p class="fx-tech-meta__lbl">Mühendislik İncelemesi</p>
+              </div>
+            </div>
+            <div class="fx-tech-meta__item">
+              <span class="fx-tech-meta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </span>
+              <div>
+                <p class="fx-tech-meta__val">Hesaplama Metodolojisi</p>
+                <p class="fx-tech-meta__lbl">Normatif Değerlendirme</p>
+              </div>
+            </div>
+            <div class="fx-tech-meta__item">
+              <span class="fx-tech-meta__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </span>
+              <div>
+                <p class="fx-tech-meta__val">~8 Dakika</p>
+                <p class="fx-tech-meta__lbl">Teknik Düzey</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fx-tech-hero__media">
+          <div class="fx-tech-hero__media-wrap">
+            <img class="fx-tech-hero__img" src="https://fenixyangin.com.tr/assets/img/hero-fenix-yangin.webp" alt="Gazlı söndürme silindir bataryası ve dağıtım borulaması" width="1920" height="1062" fetchpriority="high" />
+          </div>
+          <div class="fx-tech-hero-badge">
+            <p>HİDROLİK HESAP OLMADAN SİSTEM ÇALIŞMAZ</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3-Column Technical Reading Layout -->
+    <div class="fx-tech-layout">
+      <!-- Left Column: Sticky TOC -->
+      <aside class="fx-tech-sidebar-left">
+        <nav class="fx-tech-toc" data-toc aria-label="Bu sayfada">
+          <p class="fx-tech-toc__title">BU SAYFADA</p>
+          <ul class="fx-tech-toc__list">
+            <li><a href="#girdi" class="is-active">Mühendislik girdileri</a></li>
+            <li><a href="#varsayim">Varsayımlar</a></li>
+            <li><a href="#formul">Formül ve yöntem</a></li>
+            <li><a href="#hidrolik">Hidrolik bağlam</a></li>
+            <li><a href="#boru">Boru ve nozul</a></li>
+            <li><a href="#vent">Vent / basınç tahliyesi</a></li>
+            <li><a href="#dogrulama">Doğrulama adımları</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Center Column: Article Reading Content -->
+      <div class="fx-tech-article">
+        <!-- Section 1: Mühendislik Girdileri -->
+        <section class="fx-tech-section" id="girdi">
+          <h2 class="fx-tech-h2">Mühendislik girdileri</h2>
+          <p class="fx-tech-p">Hesap dört temel girdiyle başlar. Bu girdilerden herhangi biri eksik veya yanlışsa sonuç güvenilir değildir.</p>
+          <div class="fx-tech-table-wrap" role="region" aria-label="Ajan miktarı hesabının temel girdileri" tabindex="0">
+            <table class="fx-tech-table">
+              <caption>Ajan miktarı hesabının temel girdileri</caption>
+              <thead><tr><th scope="col">Girdi</th><th scope="col">Neden gerekli</th><th scope="col">Kaynak</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Net mahal hacmi</th><td>Ajan miktarının doğrudan çarpanı</td><td>Mimari proje + saha ölçümü</td></tr>
+                <tr><th scope="row">Tasarım sıcaklığı</th><td>Ajan yoğunluğunu etkiler</td><td>Mahal işletme koşulları</td></tr>
+                <tr><th scope="row">İrtifa</th><td>Atmosfer basıncı düzeltmesi</td><td>Tesis konumu</td></tr>
+                <tr><th scope="row">Sızdırmazlık</th><td>Tutma süresini belirler</td><td><a href="/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/">Door fan testi</a></td></tr>
+                <tr><th scope="row">Mahal içi hacimler</th><td>Net hacimden düşülür veya düşülmez</td><td>Saha tespiti</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 2: Varsayımlar -->
+        <section class="fx-tech-section" id="varsayim">
+          <h2 class="fx-tech-h2">Varsayımlar</h2>
+          <p class="fx-tech-p">Her hesap bir varsayım kümesi üzerine kuruludur. Varsayımlar yazılı hâle getirilmezse, sistemin ömrü boyunca değişen koşullarda hesabın hâlâ geçerli olup olmadığı bilinemez.</p>
+          <ul class="fx-tech-list">
+            <li>Mahal hacmi sistemin ömrü boyunca değişmeyecek</li>
+            <li>Havalandırma boşalma anında duracak ve damperler kapanacak</li>
+            <li>Kapılar kapalı olacak veya otomatik kapanma mekanizması devrede olacak</li>
+            <li>Tasarım sıcaklığı aralığı işletme süresince aşılmayacak</li>
+          </ul>
+        </section>
+
+        <!-- Section 3: Formül ve Yöntem -->
+        <section class="fx-tech-section" id="formul">
+          <h2 class="fx-tech-h2">Formül ve yöntem</h2>
+          <p class="fx-tech-p">Ajan miktarı, net hacim ile tasarım konsantrasyonunun ajan özgül hacmi üzerinden ilişkilendirilmesiyle bulunur. ISO 14520 ve NFPA 2001 standartlarında tanımlanan temel bağıntı şöyledir:</p>
+          
+          <div class="fx-calc-box">
+            <div class="fx-calc-box__formula">
+              W = (V / s) · [ c / (100 - c) ]
+            </div>
+            <dl class="fx-calc-box__vars">
+              <div>
+                <dt>W (kg)</dt>
+                <dd>Gereken net söndürücü ajan miktarı</dd>
+              </div>
+              <div>
+                <dt>V (m³)</dt>
+                <dd>Mahalin net korunan hacmi</dd>
+              </div>
+              <div>
+                <dt>s (m³/kg)</dt>
+                <dd>Ajan buharı özgül hacmi (k₁ + k₂ · T)</dd>
+              </div>
+              <div>
+                <dt>c (%)</dt>
+                <dd>Tasarım söndürme konsantrasyonu</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="fx-tech-badge-strip">
+            <div class="fx-tech-badge-strip__item">
+              <span>YÖNTEM</span>
+              <strong>NFPA 2001</strong>
+            </div>
+            <div class="fx-tech-badge-strip__item">
+              <span>YÖNTEM</span>
+              <strong>ISO 14520-1</strong>
+            </div>
+            <div class="fx-tech-badge-strip__item fx-tech-badge-strip__item--warn">
+              <span>SABİTLER</span>
+              <strong>LİSANSLI STANDART</strong>
+            </div>
+          </div>
+          <p class="fx-tech-p">Formülün sayısal katsayıları, tasarım konsantrasyonu değerleri ve özgül hacim sabitleri lisanslı standart metnine tabidir. Bu sayfada yapısal yöntem anlatılır; lisanssız sayısal değer yayınlanmaz.</p>
+        </section>
+
+        <!-- Section 4: Hidrolik Bağlam -->
+        <section class="fx-tech-section" id="hidrolik">
+          <h2 class="fx-tech-h2">Hidrolik bağlam</h2>
+          <p class="fx-tech-p">Doğru miktarda ajan, yanlış borulamayla mahale ulaşmaz. Hidrolik hesap boşalma süresi boyunca her nozulda hedeflenen debinin sağlanıp sağlanmadığını doğrular.</p>
+          <ul class="fx-tech-list">
+            <li>Boru güzergâhı ve toplam eşdeğer uzunluk</li>
+            <li>Dirsek, T ve vana sürtünme kayıpları</li>
+            <li>Nozullar arası debi ve basınç dengesi</li>
+            <li>Maksimum 10 saniye boşalma süresi boyunca basınç profili</li>
+          </ul>
+        </section>
+
+        <!-- Section 5: Boru ve Nozul -->
+        <section class="fx-tech-section" id="boru">
+          <h2 class="fx-tech-h2">Boru ve nozul</h2>
+          <p class="fx-tech-p">Boru çapı hidrolik hesabın çıktısıdır, girdisi değil. Nozul tipi ve sayısı mahal geometrisine, tavan yüksekliğine ve ajan dağılım desenine göre belirlenir.</p>
+          <p class="fx-tech-p">Saha koşulları nedeniyle güzergâh değiştirildiğinde hidrolik hesap yetkili yazılımla yeniden yapılmalıdır. Boru çapını sahada "yakın ölçüye" çevirmek sistem güvenliğini doğrudan tehlikeye atar.</p>
+        </section>
+
+        <!-- Section 6: Vent / Basınç Tahliyesi -->
+        <section class="fx-tech-section" id="vent">
+          <h2 class="fx-tech-h2">Vent / basınç tahliyesi</h2>
+          <p class="fx-tech-p">Ajan boşalması mahalde ani pozitif ve negatif basınç değişimi üretir. Basınç tahliye damperi (overpressure damper) bu değişimi yapısal hasara ve kapı deformasyonuna yol açmadan dengeler.</p>
+          <div class="fx-tech-badge-strip">
+            <div class="fx-tech-badge-strip__item">
+              <span>STANDART</span>
+              <strong>ISO 14520-1 VENTING</strong>
+            </div>
+            <div class="fx-tech-badge-strip__item">
+              <span>HESAP</span>
+              <strong>EN 15004 BASINÇ DENGESİ</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 7: Doğrulama Adımları -->
+        <section class="fx-tech-section" id="dogrulama">
+          <h2 class="fx-tech-h2">Doğrulama adımları</h2>
+          <p class="fx-tech-p">Hesap, kâğıt üzerinde doğru olmakla tamamlanmaz. Sahada doğrulanması gereken kontrol noktaları vardır. Şartnamede bu maddelerin nasıl denetlendiği <a href="/fm-200-gazli-sondurme-sistemleri-teknik-sartnamesi/">teknik şartname sayfasındadır</a>.</p>
+          
+          <div class="fx-tech-flow">
+            <div class="fx-tech-step">
+              <div class="fx-tech-step__top">
+                <span class="fx-tech-step__num">01</span>
+                <span class="fx-tech-step__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg>
+                </span>
+              </div>
+              <h3>Net Hacmi Doğrula</h3>
+              <p>Proje hacmi ile gerçekleşen saha hacmi farkı.</p>
+            </div>
+            <span class="fx-tech-step-arrow" aria-hidden="true">→</span>
+            <div class="fx-tech-step">
+              <div class="fx-tech-step__top">
+                <span class="fx-tech-step__num">02</span>
+                <span class="fx-tech-step__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </span>
+              </div>
+              <h3>Sızdırmazlığı Ölç</h3>
+              <p>Door fan testi ile tutma süresi kontrolü.</p>
+            </div>
+            <span class="fx-tech-step-arrow" aria-hidden="true">→</span>
+            <div class="fx-tech-step">
+              <div class="fx-tech-step__top">
+                <span class="fx-tech-step__num">03</span>
+                <span class="fx-tech-step__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </span>
+              </div>
+              <h3>Tahliyeyi Kontrol Et</h3>
+              <p>Açıklık boyutu ve damper tepkisi.</p>
+            </div>
+            <span class="fx-tech-step-arrow" aria-hidden="true">→</span>
+            <div class="fx-tech-step">
+              <div class="fx-tech-step__top">
+                <span class="fx-tech-step__num">04</span>
+                <span class="fx-tech-step__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                </span>
+              </div>
+              <h3>Ajan Tartımını Onayla</h3>
+              <p>Silindir dolum miktarı ve basınç göstergesi.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Column: Engineering Notes & Limitations -->
+      <aside class="fx-tech-sidebar-right">
+        <div class="fx-eng-note">
+          <div class="fx-eng-note__head">
+            <span class="fx-eng-note__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </span>
+            <h3 class="fx-eng-note__title">Sık Yapılan Hata</h3>
+          </div>
+          <p class="fx-eng-note__text">Brüt hacim ile net hacim karıştırılır. Mahal içindeki kalıcı yapıların hacimden düşülüp düşülmeyeceği standart metnine bağlıdır ve varsayımla belirlenmez.</p>
+        </div>
+
+        <div class="fx-related-box">
+          <h3 class="fx-related-box__title">İlgili Teknik İçerikler</h3>
+          <ul class="fx-related-box__list">
+            <li class="fx-related-box__item">
+              <a href="/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/">
+                <span class="fx-related-box__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                </span>
+                <span>Oda Sızdırmazlık Testi</span>
+              </a>
+            </li>
+            <li class="fx-related-box__item">
+              <a href="/teknik-icerikler/mahal-bazli-sondurme-sistemi-secimi/">
+                <span class="fx-related-box__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                </span>
+                <span>Mahal Bazlı Sistem Seçimi</span>
+              </a>
+            </li>
+            <li class="fx-related-box__item">
+              <a href="/fm-200-gazli-sondurme-sistemleri-teknik-sartnamesi/">
+                <span class="fx-related-box__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                </span>
+                <span>Teknik Şartname Denetimi</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="fx-limitation-box">
+          <h3 class="fx-limitation-box__title">Sınırlama</h3>
+          <p class="fx-limitation-box__text">Mahalde sonradan yapılan bölme, asma tavan veya kablo geçişi değişikliği hesabı geçersiz kılabilir. Bu durumda hem hesap hem sızdırmazlık testi tekrarlanır.</p>
+        </div>
+
+        <div class="fx-dark-callout">
+          <img class="fx-dark-callout__bg" src="https://fenixyangin.com.tr/assets/img/hero-fenix-yangin.webp" alt="" aria-hidden="true" loading="lazy" />
+          <h3 class="fx-dark-callout__title">HİDROLİK DOĞRULAMA VE NOZUL KALİBRASYONU</h3>
+        </div>
+
+        <div class="fx-expert-quote">
+          <div class="fx-expert-quote__head">
+            <span class="fx-expert-quote__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </span>
+            <h3 class="fx-expert-quote__title">Uzman Görüşü</h3>
+          </div>
+          <p class="fx-expert-quote__text">Boru çapı hidrolik hesabın çıktısıdır, girdisi değil. Sahada boru güzergâhı değişirse yazılımla yeniden hesaplama zorunludur.</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Master Dark CTA -->
+    <section class="fx-container" style="max-width:1240px;margin:0 auto;padding:0 24px;">
+      <div class="fx-dark-cta">
+        <div class="fx-dark-cta__left">
+          <span class="fx-dark-cta__eyebrow">PROJENİZ İÇİN DOĞRU HESAPLAMA</span>
+          <h2 class="fx-dark-cta__title">Mahal verilerinizle ajan miktarını birlikte hesaplayalım.</h2>
+        </div>
+        <div class="fx-dark-cta__right">
+          <p class="fx-dark-cta__desc">Uzman mühendislerimiz mahalinize özel net hacim tespiti ve hidrolik simülasyonu gerçekleştirsin.</p>
+          <div class="fx-dark-cta__btns">
+            <a class="fx-btn-red" href="/iletisim/">Teklif Al <span aria-hidden="true">→</span></a>
+            <a class="fx-btn-outline-red" href="tel:+902126180701">0212 618 07 01</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer class="fx-footer">
+  <span class="fx-footer__texture" aria-hidden="true"></span>
+  <div class="fx-footer__inner">
+    <div class="fx-footer__brand">
+      <img class="fx-footer__logo" src="https://www.fenixyangin.com/assets/fenix-logo.png" alt="Fenix Yangın" width="1200" height="223" />
+      <nav aria-label="Alt menü">
+        <a href="/sistemler/">Sistemler</a>
+        <a href="/hizmetler/">Hizmetler</a>
+        <a href="/sektorler/">Sektörler</a>
+        <a href="/teknik-icerikler/">Teknik İçerikler</a>
+        <a href="/kurumsal/">Kurumsal</a>
+        <a href="/iletisim/">İletişim</a>
+      </nav>
+    </div>
+    <p class="fx-footer__legal">© 2026 Fenix Yangın. Tüm hakları saklıdır. · Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş.</p>
+  </div>
+</footer>
+
+<script src="../../js/config.js"></script>
+<script src="../../js/main.js" defer></script>
+<script src="../../js/nav.js" defer></script>
+<script src="../../js/toc.js" defer></script>
+
+<aside class="fx-whatsapp-floating" aria-label="Doğrudan İletişim">
+  <a href="https://wa.me/905327409097" class="fx-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp üzerinden 7/24 ulaşın">
+    <span class="fx-whatsapp-tooltip" role="tooltip">7/24 Ulaşabilirsiniz</span>
+    <span class="fx-whatsapp-icon" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.89 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.952 3.71 1.453 5.711 1.454h.005c6.554 0 11.89-5.336 11.893-11.893a11.82 11.82 0 00-3.48-8.413z" fill="currentColor"/>
+      </svg>
+    </span>
+  </a>
+</aside>
+
+</body>
+</html>

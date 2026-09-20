@@ -1,0 +1,83 @@
+/* FENIX.COM — DESIGN TOKENS
+   KAYNAK: Claude Design .com projesi. Değer değiştirilmedi. */
+
+:root {
+  /* Renk — marka */
+  --fx-red: #A90432;
+  --fx-red-dark: #8A0328;
+  --fx-red-deep: #7A0125;
+  --fx-red-on-dark: #FF7A9C;   /* koyu zeminde kontrast kuralı */
+  --fx-yellow: #FDB912;         /* yalnızca küçük teknik vurgu */
+
+  /* Renk — nötr */
+  --fx-ink: #16181A;
+  --fx-ink-2: #3D4347;
+  --fx-ink-3: #4D5358;
+  --fx-muted: #6B7176;
+  --fx-muted-2: #8A9095;
+  --fx-line: #E4E6E8;
+  --fx-line-2: #EBECED;
+  --fx-line-3: #F0F1F2;
+  --fx-surface: #FAFAFB;
+  --fx-surface-2: #F5F6F7;
+  --fx-white: #fff;
+  --fx-dark: #15171A;
+  --fx-darker: #0D0E10;
+
+  /* Renk — durum */
+  --fx-gate-bg: #FFF9E6;
+  --fx-gate-line: #F0DFA8;
+  --fx-gate-ink: #7A5A00;
+  --fx-gate-ink-2: #4A3D14;
+  --fx-warn-bg: #FDF6F8;
+  --fx-warn-ink: #4D3038;
+  --fx-ok-bg: #E8F5EC;
+  --fx-ok-ink: #1E6B3A;
+
+  /* Tipografi */
+  --fx-sans: 'Archivo', Helvetica, Arial, sans-serif;
+  --fx-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --fx-h1: clamp(25px, 4.6vw, 44px);
+  --fx-h2: clamp(18px, 2.2vw, 23px);
+  --fx-h3: clamp(15px, 1.7vw, 17px);
+  --fx-lede: clamp(14.5px, 1.5vw, 17px);
+  --fx-body: clamp(14px, 1.4vw, 15.5px);
+  --fx-small: 13px;
+  --fx-label: 10px;
+
+  --fx-lh-tight: 1.08;
+  --fx-lh-head: 1.25;
+  --fx-lh-body: 1.76;
+  --fx-ls-tight: -0.03em;
+  --fx-ls-label: 0.14em;
+
+  /* Boşluk */
+  --fx-gap-xs: 6px;
+  --fx-gap-s: 10px;
+  --fx-gap-m: 16px;
+  --fx-gap-l: clamp(24px, 3.5vw, 48px);
+  --fx-sec: clamp(30px, 4vw, 46px);
+  --fx-pad-x: clamp(16px, 3vw, 28px);
+  --fx-pad-y: clamp(26px, 4vw, 48px);
+
+  /* Konteyner */
+  --fx-max: 1200px;
+  --fx-text: 820px;
+  --fx-toc: 180px;
+
+  /* Kenar / gölge */
+  --fx-radius: 0;
+  --fx-hairline: 0 0 0 1px var(--fx-line-2);  /* auto-fit grid ayırıcı kuralı */
+
+  /* Hareket */
+  --fx-t: 160ms;
+  --fx-t-slow: 300ms;
+
+  /* Dokunma */
+  --fx-tap: 44px;
+  --fx-tap-lg: 46px;
+
+  /* Kırılma noktası (JS ile paylaşılır) */
+  --fx-bp-desktop: 1060px;
+}

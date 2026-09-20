@@ -1,0 +1,577 @@
+/* FENIX.COM — REFERANSLAR SAYFASI 2026 TASARIM SİSTEMİ
+   Scope: references page only. Minimalist, premium engineering, high-trust. */
+
+.fx-ref-page {
+  background: #ffffff;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1. HERO BÖLÜMÜ
+   ========================================================================== */
+.fx-ref-hero {
+  position: relative;
+  padding: clamp(36px, 4.5vw, 60px) 0 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.fx-ref-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(0, 0, 0, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.fx-ref-hero__inner {
+  max-width: var(--fx-site-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--fx-gutter, 24px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.fx-ref-hero__content {
+  max-width: 640px;
+}
+
+.fx-ref-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--fx-red, #d91438);
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.fx-ref-hero__title {
+  font-family: var(--fx-font-display, 'Archivo', sans-serif);
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.fx-ref-hero__desc {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.fx-ref-hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+  padding-bottom: 6px;
+}
+
+.fx-ref-hero__stat-block {
+  text-align: left;
+}
+
+.fx-ref-hero__num {
+  font-family: var(--fx-font-display, 'Archivo', sans-serif);
+  font-size: clamp(48px, 5.5vw, 68px);
+  font-weight: 800;
+  color: var(--fx-red, #d91438);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  display: block;
+}
+
+.fx-ref-hero__num-lbl {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 6px;
+  display: block;
+}
+
+.fx-ref-hero__divider {
+  width: 1px;
+  height: 52px;
+  background: #e5e7eb;
+}
+
+.fx-ref-hero__slogan {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   2. FİLTRELER VE ARAMA (TOOLBAR)
+   ========================================================================== */
+.fx-ref-toolbar-wrap {
+  padding: 32px 0 24px;
+  background: #ffffff;
+}
+
+.fx-ref-toolbar {
+  max-width: var(--fx-site-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--fx-gutter, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fx-ref-filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.fx-ref-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.fx-ref-filter__btn {
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 6.5px 10.5px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #4b5563;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.18s ease;
+  font-family: inherit;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.fx-ref-filter__btn:hover {
+  border-color: #cbd5e1;
+  color: #111827;
+  background: #fafafa;
+}
+
+.fx-ref-filter__btn.is-active {
+  background: var(--fx-red, #d91438);
+  color: #ffffff;
+  border-color: var(--fx-red, #d91438);
+}
+
+.fx-ref-search {
+  position: relative;
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.fx-ref-search__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.fx-ref-search__input {
+  width: 100%;
+  height: 36px;
+  padding: 0 12px 0 34px;
+  font-size: 12.5px;
+  font-family: inherit;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.fx-ref-search__input:focus {
+  border-color: var(--fx-red, #d91438);
+  box-shadow: 0 0 0 2px rgba(217, 20, 56, 0.08);
+}
+
+.fx-ref-search__input::placeholder {
+  color: #9ca3af;
+}
+
+/* ==========================================================================
+   3. LOGO GRID ALANI (5 KOLON MASAÜSTÜ)
+   ========================================================================== */
+.fx-ref-grid-section {
+  max-width: var(--fx-site-width, 1200px);
+  margin: 0 auto 52px;
+  padding: 0 var(--fx-gutter, 24px);
+}
+
+.fx-ref-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid #ededed;
+  border-left: 1px solid #ededed;
+  background: #ffffff;
+}
+
+.fx-ref-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 116px;
+  padding: 20px 24px;
+  background: #ffffff;
+  border-right: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  transition: background 0.18s ease;
+  position: relative;
+}
+
+.fx-ref-card img {
+  max-width: 76%;
+  max-height: 52px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.88;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.fx-ref-card:hover {
+  background: #fafbfc;
+}
+
+.fx-ref-card:hover img {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* Boş arama durumu */
+.fx-ref-empty {
+  grid-column: 1 / -1;
+  padding: 64px 24px;
+  text-align: center;
+  background: #ffffff;
+  border-right: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+
+.fx-ref-empty__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px;
+}
+
+.fx-ref-empty__desc {
+  font-size: 13.5px;
+  color: #6b7280;
+  margin: 0 0 16px;
+}
+
+.fx-ref-empty__btn {
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--fx-red, #d91438);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.18s ease;
+}
+
+.fx-ref-empty__btn:hover {
+  background: #fdf2f4;
+  border-color: var(--fx-red, #d91438);
+}
+
+/* ==========================================================================
+   4. LOGO KULLANIM POLİTİKASI ÇAĞRI KARTI
+   ========================================================================== */
+.fx-ref-policy-wrap {
+  max-width: var(--fx-site-width, 1200px);
+  margin: 0 auto 56px;
+  padding: 0 var(--fx-gutter, 24px);
+}
+
+.fx-ref-policy {
+  background: #f8f9fa;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.fx-ref-policy__left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.fx-ref-policy__icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #4b5563;
+}
+
+.fx-ref-policy__title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.fx-ref-policy__desc {
+  font-size: 13px;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.fx-ref-policy__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--fx-red, #d91438);
+  text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: transform 0.18s ease;
+}
+
+.fx-ref-policy__link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   5. CTA BÖLÜMÜ
+   ========================================================================== */
+.fx-ref-cta {
+  border-top: 1px solid #ededed;
+  padding: 52px 0;
+  background: #ffffff;
+}
+
+.fx-ref-cta__inner {
+  max-width: var(--fx-site-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--fx-gutter, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.fx-ref-cta__content {
+  max-width: 520px;
+}
+
+.fx-ref-cta__eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--fx-red, #d91438);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.fx-ref-cta__title {
+  font-family: var(--fx-font-display, 'Archivo', sans-serif);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.fx-ref-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--fx-red, #d91438);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.18s ease;
+}
+
+.fx-ref-cta__btn:hover {
+  background: #b90e2d;
+  color: #ffffff;
+}
+
+.fx-ref-cta__helper {
+  max-width: 260px;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.45;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE MEDIA QUERIES (320px - 1024px)
+   ========================================================================== */
+
+/* Tablet (1024px altı) */
+@media (max-width: 1024px) {
+  .fx-ref-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .fx-ref-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .fx-ref-search {
+    width: 100%;
+  }
+
+  .fx-ref-cta__inner {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .fx-ref-cta__helper {
+    max-width: 100%;
+    order: 3;
+    width: 100%;
+  }
+}
+
+/* Mobil / Tablet (768px altı) */
+@media (max-width: 768px) {
+  .fx-ref-hero__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .fx-ref-hero__stats {
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .fx-ref-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+
+  .fx-ref-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fx-ref-card {
+    min-height: 100px;
+    padding: 16px 16px;
+  }
+
+  .fx-ref-card img {
+    max-height: 44px;
+  }
+
+  .fx-ref-policy {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .fx-ref-policy__left {
+    align-items: flex-start;
+  }
+
+  .fx-ref-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .fx-ref-cta__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Küçük Mobil (480px altı) */
+@media (max-width: 480px) {
+  .fx-ref-hero {
+    padding: 28px 0 24px;
+  }
+
+  .fx-ref-card {
+    min-height: 90px;
+    padding: 14px 10px;
+  }
+
+  .fx-ref-card img {
+    max-width: 82%;
+    max-height: 38px;
+  }
+
+  .fx-ref-hero__num {
+    font-size: 44px;
+  }
+
+  .fx-ref-hero__slogan {
+    font-size: 10px;
+  }
+}

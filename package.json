@@ -1,0 +1,19 @@
+{
+  "name": "fenix-com",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fenix Yangın .com — teknik/mühendislik platformu. Statik site, sıfır runtime dependency.",
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes serve . -l 3000",
+    "start": "npx --yes serve . -l 3000",
+    "build": "node build/generate.js",
+    "preview": "npx --yes serve . -l 4000",
+    "qa:links": "node build/qa-links.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

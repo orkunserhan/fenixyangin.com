@@ -1,0 +1,193 @@
+/* FENIX.COM — HEADER · BREADCRUMB · FOOTER */
+
+/* ── HEADER ── */
+.fx-header {
+  position: sticky; top: 0; z-index: 60;
+  background: var(--fx-white);
+  border-bottom: 1px solid var(--fx-line);
+}
+.fx-header__inner {
+  max-width: var(--fx-max); margin: 0 auto;
+  padding: 0 var(--fx-pad-x);
+  height: 68px;
+  display: flex; align-items: center;
+  gap: clamp(14px, 2.5vw, 30px);
+}
+.fx-logo { display: block; flex-shrink: 0; }
+.fx-logo img { display: block; height: 38px; width: auto; }
+
+.fx-nav { margin-left: auto; display: none; align-items: center; gap: clamp(12px, 1.6vw, 22px); min-width: 0; }
+.fx-nav a { font-size: 13.5px; font-weight: 600; color: var(--fx-ink); white-space: nowrap; }
+.fx-nav a:hover { color: var(--fx-red); }
+.fx-nav a[aria-current="page"] { color: var(--fx-red); font-weight: 700; }
+
+.fx-header__tel {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--fx-ink);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.fx-header__tel:hover { color: var(--fx-red); }
+
+.fx-header__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--fx-red);
+  color: var(--fx-white);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 3px;
+  white-space: nowrap;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.fx-header__cta:hover { background: var(--fx-red-dark); color: var(--fx-white); }
+
+.fx-burger {
+  margin-left: auto;
+  width: var(--fx-tap); height: var(--fx-tap);
+  display: inline-flex; align-items: center; justify-content: center;
+  background: none; border: 1px solid var(--fx-line); cursor: pointer;
+  flex-shrink: 0;
+}
+.fx-burger span { display: block; width: 18px; height: 1.5px; background: var(--fx-ink); position: relative; }
+.fx-burger span::before, .fx-burger span::after {
+  content: ''; position: absolute; left: 0; width: 18px; height: 1.5px; background: var(--fx-ink);
+}
+.fx-burger span::before { top: -6px; }
+.fx-burger span::after { top: 6px; }
+
+@media (min-width: 1060px) {
+  .fx-nav { display: flex; }
+  .fx-burger { display: none; }
+}
+
+/* Mobil header: logo 1200x223 oranıyla 38px'te 205px genişler.
+   Üç çocuk da flex-shrink:0 olduğu için satır 402px ister — 320px'te taşar.
+   Telefon bağlantısı çekmecedeki "Ara" ve footer'da zaten erişilebilir. */
+@media (max-width: 1059px) {
+  .fx-header__tel { display: none !important; }
+  .fx-header__cta { display: none !important; }
+  .fx-logo img { height: 32px; }
+}
+@media (max-width: 479px) {
+  .fx-logo img { height: 28px; }
+}
+
+/* ── MOBİL ÇEKMECE ── */
+.fx-drawer {
+  position: fixed; inset: 0; z-index: 90;
+  background: var(--fx-white);
+  display: flex; flex-direction: column;
+  overflow-y: auto;
+}
+.fx-drawer[hidden] { display: none; }
+.fx-drawer__top {
+  display: flex; align-items: center; gap: 16px;
+  padding: 14px var(--fx-pad-x);
+  border-bottom: 1px solid var(--fx-line);
+}
+.fx-drawer__close {
+  margin-left: auto;
+  width: var(--fx-tap); height: var(--fx-tap);
+  display: inline-flex; align-items: center; justify-content: center;
+  background: none; border: 1px solid var(--fx-line); cursor: pointer;
+  font-size: 18px; color: var(--fx-ink);
+}
+.fx-drawer__list { list-style: none; margin: 0; padding: 0; }
+.fx-drawer__list a {
+  display: block; padding: 15px var(--fx-pad-x);
+  font-size: 16px; font-weight: 600; color: var(--fx-ink);
+  border-bottom: 1px solid var(--fx-line-3);
+  min-height: 48px;
+}
+.fx-drawer__actions {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+  gap: 0; margin-top: auto;
+}
+.fx-drawer__actions a {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 56px; padding: 0 16px;
+  font-size: 14px; font-weight: 700;
+  box-shadow: var(--fx-hairline);
+}
+
+/* ── BREADCRUMB ── */
+.fx-crumb { background: var(--fx-white); border-bottom: 1px solid var(--fx-line-3); }
+.fx-crumb ol {
+  max-width: var(--fx-max); margin: 0 auto;
+  padding: 10px var(--fx-pad-x);
+  list-style: none;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
+  font-size: 12px;
+}
+.fx-crumb li { display: flex; align-items: center; gap: 7px; min-width: 0; }
+.fx-crumb a { color: var(--fx-muted); }
+.fx-crumb a:hover { color: var(--fx-red); }
+.fx-crumb__sep { color: #B4B9BD; }
+.fx-crumb [aria-current="page"] {
+  color: var(--fx-ink); font-weight: 600;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* ── FOOTER ── */
+.fx-footer {
+  position: relative;
+  background: linear-gradient(90deg, #180C10 0%, #290E17 20%, #4D091D 50%, #760325 80%, #92032A 100%);
+  color: var(--fx-white);
+  overflow: hidden;
+}
+.fx-footer__texture {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(115deg, rgba(0, 0, 0, 0.28) 0 16px, transparent 16px 32px);
+  pointer-events: none;
+}
+.fx-footer__inner {
+  position: relative;
+  max-width: var(--fx-max); margin: 0 auto;
+  padding: clamp(28px, 3.8vw, 40px) var(--fx-pad-x);
+}
+.fx-footer__brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 32px;
+}
+.fx-footer__logo {
+  display: block; height: 32px; width: auto;
+  filter: brightness(0) invert(1);
+}
+.fx-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px clamp(16px, 2.2vw, 32px);
+  min-width: 0;
+}
+.fx-footer nav a {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: opacity var(--fx-t);
+}
+.fx-footer nav a:hover {
+  opacity: 0.82;
+  color: #FFFFFF;
+}
+.fx-footer__legal {
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+}
+

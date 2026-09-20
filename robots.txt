@@ -1,0 +1,11 @@
+# FENIX.COM — robots.txt
+# Production Search Engine Directives
+
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /*?q=
+Disallow: /*?utm_
+
+# Canonical XML Sitemap
+Sitemap: https://www.fenixyangin.com/sitemap.xml
