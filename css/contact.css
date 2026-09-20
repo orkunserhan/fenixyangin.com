@@ -1,0 +1,863 @@
+/* ==========================================================================
+   FENIX YANGIN — İLETİŞİM SAYFASI ÖZEL STİLLERİ (css/contact.css)
+   Modern, kurumsal, mühendislik odaklı premium UI bileşenleri
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GENEL SAYFA VE WRAPPER
+   -------------------------------------------------------------------------- */
+.fx-contact-page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.fx-text-red {
+  color: var(--fx-red, #A90432);
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO BÖLÜMÜ (SPLIT HERO)
+   -------------------------------------------------------------------------- */
+.fx-contact-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 12px 0 20px;
+}
+
+.fx-contact-hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-contact-hero__crumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #6B7280;
+  margin-bottom: 16px;
+}
+
+.fx-contact-hero__crumb a {
+  color: #6B7280;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.fx-contact-hero__crumb a:hover {
+  color: var(--fx-red, #A90432);
+}
+
+.fx-contact-hero__title {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--fx-ink, #121418);
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.fx-contact-hero__title span {
+  display: block;
+}
+
+.fx-contact-hero__desc {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #4B5563;
+  margin: 0;
+  max-width: 540px;
+}
+
+.fx-contact-hero__visual {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #E5E7EB;
+  background: #0F172A;
+  aspect-ratio: 16 / 10;
+  display: flex;
+}
+
+.fx-contact-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fx-contact-hero__badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border-left: 3px solid var(--fx-red, #A90432);
+  max-width: 260px;
+}
+
+.fx-contact-hero__badge-quote {
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 0 0 4px;
+  color: #F3F4F6;
+  font-style: italic;
+}
+
+.fx-contact-hero__badge-author {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. HIZLI İLETİŞİM BANDI (5 KART)
+   -------------------------------------------------------------------------- */
+.fx-quick-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.05fr 1.05fr 1.35fr;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.fx-quick-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.fx-quick-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  border-color: #D1D5DB;
+}
+
+.fx-quick-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: #4B5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.fx-quick-card--tel .fx-quick-card__icon {
+  color: var(--fx-red, #A90432);
+  background: #FDF2F2;
+}
+
+.fx-quick-card--wa .fx-quick-card__icon {
+  color: #16A34A;
+  background: #F0FDF4;
+}
+
+.fx-quick-card--mail .fx-quick-card__icon {
+  color: #2563EB;
+  background: #EFF6FF;
+}
+
+.fx-quick-card--loc .fx-quick-card__icon {
+  color: var(--fx-red, #A90432);
+  background: #FDF2F2;
+}
+
+.fx-quick-card__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.fx-quick-card__label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #6B7280;
+  margin: 0 0 2px;
+  text-transform: capitalize;
+}
+
+.fx-quick-card__value {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--fx-ink, #121418);
+  margin: 0 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fx-quick-card__sub {
+  font-size: 11px;
+  color: #9CA3AF;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ACİL ÇAĞRI KARTI (ÖZEL VURGULU) */
+.fx-quick-card--emergency {
+  background: linear-gradient(135deg, #990028 0%, #BA0E38 100%);
+  border: 1px solid #850022;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.fx-quick-card--emergency:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(169, 4, 50, 0.35);
+  border-color: #A90432;
+}
+
+.fx-quick-card--emergency .fx-quick-card__icon {
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  animation: fx-pulse-alarm 2.5s infinite;
+}
+
+.fx-quick-card--emergency .fx-quick-card__label {
+  color: #FFD2DC;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fx-quick-card--emergency .fx-quick-card__value {
+  color: #FFFFFF;
+  font-size: 13.5px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.fx-quick-card--emergency .fx-quick-card__sub {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.fx-quick-card--emergency .fx-quick-card__arrow {
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: var(--fx-red, #A90432);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fx-pulse-alarm {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+/* --------------------------------------------------------------------------
+   4. ANA İÇERİK GRID (3 KOLON: KONUM, FORM, YAN BİLGİLER)
+   -------------------------------------------------------------------------- */
+.fx-contact-main-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr 0.9fr;
+  gap: 24px;
+  margin-bottom: 36px;
+  align-items: stretch;
+}
+
+/* Kart Kutuları Ortak Yapı */
+.fx-contact-box {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 24px 22px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-contact-box__head {
+  margin-bottom: 18px;
+}
+
+.fx-contact-box__title {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--fx-ink, #121418);
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.fx-contact-box__sub {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* --- SOL KOLON: KONUM & HARİTA --- */
+.fx-map-card {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  background: #F3F4F6;
+  flex: 1;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-map-card iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 0;
+  flex: 1;
+  display: block;
+}
+
+.fx-map-transit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #F3F4F6;
+}
+
+.fx-transit-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: #4B5563;
+  font-weight: 600;
+}
+
+.fx-transit-pill svg {
+  color: #6B7280;
+  flex-shrink: 0;
+}
+
+/* --- ORTA KOLON: İLETİŞİM FORMU --- */
+.fx-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fx-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.fx-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fx-form-group label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.fx-form-group label span.req {
+  color: var(--fx-red, #A90432);
+}
+
+.fx-form-input,
+.fx-form-select,
+.fx-form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #111827;
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.fx-form-input:focus,
+.fx-form-select:focus,
+.fx-form-textarea:focus {
+  outline: none;
+  border-color: var(--fx-red, #A90432);
+  box-shadow: 0 0 0 3px rgba(169, 4, 50, 0.1);
+}
+
+.fx-form-textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.fx-form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.fx-form-checkbox-label input[type="checkbox"] {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--fx-red, #A90432);
+  flex-shrink: 0;
+}
+
+.fx-form-checkbox-label span {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #4B5563;
+}
+
+.fx-form-checkbox-label a {
+  color: var(--fx-red, #A90432);
+  text-decoration: underline;
+}
+
+.fx-form-submit-btn {
+  background: var(--fx-red, #A90432);
+  color: #FFFFFF;
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s ease, transform 0.1s ease;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(169, 4, 50, 0.2);
+}
+
+.fx-form-submit-btn:hover {
+  background: #870327;
+}
+
+.fx-form-submit-btn:active {
+  transform: scale(0.99);
+}
+
+.fx-form-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.fx-form-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 4px 0;
+  color: #9CA3AF;
+  font-size: 11.5px;
+}
+
+.fx-form-divider::before,
+.fx-form-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.fx-form-divider span {
+  padding: 0 10px;
+}
+
+.fx-btn-wa-direct {
+  background: #FFFFFF;
+  color: #15803D;
+  border: 1.5px solid #22C55E;
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fx-btn-wa-direct:hover {
+  background: #F0FDF4;
+  border-color: #16A34A;
+}
+
+/* --- SAĞ KOLON: ÇALIŞMA SAATLERİ & NEDEN FENİX --- */
+.fx-contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fx-side-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 22px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.fx-side-card__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.fx-side-card__head svg {
+  color: var(--fx-red, #A90432);
+}
+
+.fx-side-card__title {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--fx-ink, #121418);
+  margin: 0;
+}
+
+.fx-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fx-hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.fx-hours-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fx-hours-label {
+  color: #6B7280;
+}
+
+.fx-hours-value {
+  font-weight: 700;
+  color: var(--fx-ink, #121418);
+}
+
+.fx-hours-row--emergency {
+  border-top: 1px dashed #FECDD3;
+  margin-top: 6px;
+  padding-top: 10px;
+  background: #FFF1F2;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 6px;
+}
+
+.fx-hours-row--emergency .fx-hours-label {
+  color: #990028;
+  font-weight: 700;
+}
+
+.fx-hours-row--emergency .fx-hours-value a {
+  color: #990028;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* Neden Fenix Yangın maddeleri */
+.fx-why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fx-why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.fx-why-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #FDF2F2;
+  color: var(--fx-red, #A90432);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.fx-why-body h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--fx-ink, #121418);
+  margin: 0 0 2px;
+}
+
+.fx-why-body p {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. SOSYAL MEDYA TANITIM BANDI (PREMIUM DARK BANNER)
+   -------------------------------------------------------------------------- */
+.fx-contact-social-bar {
+  background: #16191D;
+  border-radius: 12px;
+  padding: 30px 36px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.fx-social-bar__left {
+  max-width: 320px;
+}
+
+.fx-social-bar__title {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 19px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+.fx-social-bar__title span {
+  color: #E5251E;
+}
+
+.fx-social-bar__desc {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+.fx-social-bar__tiles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fx-social-tile {
+  background: #22262B;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.fx-social-tile:hover {
+  transform: translateY(-2px);
+  background: #2C3138;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.fx-social-tile__icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fx-social-tile--yt .fx-social-tile__icon { background: #FF0000; color: #FFF; }
+.fx-social-tile--li .fx-social-tile__icon { background: #0A66C2; color: #FFF; }
+.fx-social-tile--ig .fx-social-tile__icon { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: #FFF; }
+.fx-social-tile--fb .fx-social-tile__icon { background: #1877F2; color: #FFF; }
+.fx-social-tile--x  .fx-social-tile__icon { background: #000000; color: #FFF; }
+.fx-social-tile--tk .fx-social-tile__icon { background: #000000; color: #FFF; }
+
+.fx-social-tile__name {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #E5E7EB;
+}
+
+.fx-social-bar__slogan {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 22px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVE KIRILMA NOKTALARI
+   -------------------------------------------------------------------------- */
+
+/* 1200px altı */
+@media (max-width: 1200px) {
+  .fx-quick-contacts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .fx-quick-card--emergency {
+    grid-column: span 2;
+  }
+  .fx-contact-main-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+  .fx-contact-sidebar {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .fx-social-bar__slogan {
+    display: none;
+  }
+}
+
+/* Tablet (1024px altı) */
+@media (max-width: 1024px) {
+  .fx-contact-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .fx-contact-hero__visual {
+    aspect-ratio: 16 / 9;
+    max-height: 320px;
+  }
+  .fx-contact-social-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 24px;
+    gap: 20px;
+  }
+  .fx-social-bar__left {
+    max-width: 100%;
+  }
+}
+
+/* Tablet dikey & Küçük Tablet (768px altı) */
+@media (max-width: 768px) {
+  .fx-contact-page {
+    padding: 16px 14px 48px;
+  }
+  .fx-contact-hero__title {
+    font-size: 30px;
+  }
+  .fx-quick-contacts {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .fx-quick-card--emergency {
+    grid-column: span 2;
+  }
+  .fx-contact-main-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .fx-contact-sidebar {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+  .fx-form-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .fx-social-bar__tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .fx-social-tile {
+    justify-content: flex-start;
+  }
+}
+
+/* Küçük Mobil (480px altı) */
+@media (max-width: 480px) {
+  .fx-quick-contacts {
+    grid-template-columns: 1fr;
+  }
+  .fx-quick-card--emergency {
+    grid-column: span 1;
+  }
+  .fx-contact-box {
+    padding: 20px 16px;
+  }
+  .fx-contact-hero__badge {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-width: none;
+  }
+  .fx-map-transit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .fx-social-bar__tiles {
+    grid-template-columns: 1fr;
+  }
+}

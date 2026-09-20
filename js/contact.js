@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  const form = document.querySelector('section#form form');
+  const form = document.querySelector('form#fx-contact-form') || document.querySelector('form.fx-contact-form') || document.querySelector('section#form form');
   if (!form) return;
 
   // Form elemanları
@@ -12,6 +12,7 @@
   const orgInput = form.querySelector('input[name="kurum"]');
   const emailInput = form.querySelector('input[name="eposta"]');
   const phoneInput = form.querySelector('input[name="telefon"]');
+  const subjectInput = form.querySelector('select[name="konu"]');
   const messageInput = form.querySelector('textarea[name="mesaj"]');
   const kvkkInput = form.querySelector('input[name="kvkk"]');
   const submitBtn = form.querySelector('button[type="submit"]');
@@ -22,7 +23,7 @@
   alertBox.setAttribute('aria-live', 'polite');
   alertBox.style.display = 'none';
   alertBox.style.padding = '12px 16px';
-  alertBox.style.borderRadius = '4px';
+  alertBox.style.borderRadius = '6px';
   alertBox.style.fontSize = '13.5px';
   alertBox.style.lineHeight = '1.5';
   alertBox.style.marginBottom = '14px';
@@ -43,9 +44,9 @@
   function clearError() {
     alertBox.style.display = 'none';
     alertBox.textContent = '';
-    const inputs = form.querySelectorAll('input, textarea');
-    inputs.forEach(inp => {
-      inp.style.borderColor = '#C9CDD0';
+    const inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(function (inp) {
+      inp.style.borderColor = '#D1D5DB';
     });
   }
 
@@ -97,14 +98,14 @@
     clearError();
 
     // 1. Ad Soyad Kontrolü
-    const name = nameInput.value.trim();
+    const name = nameInput ? nameInput.value.trim() : '';
     if (!name || name.length < 2) {
       showError('Lütfen adınızı ve soyadınızı eksiksiz giriniz.', nameInput);
       return;
     }
 
     // 2. E-posta Kontrolü
-    const email = emailInput.value.trim();
+    const email = emailInput ? emailInput.value.trim() : '';
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailPattern.test(email)) {
       showError('Lütfen geçerli bir e-posta adresi giriniz.', emailInput);
@@ -112,34 +113,38 @@
     }
 
     // 3. Mesaj Kontrolü
-    const msg = messageInput.value.trim();
+    const msg = messageInput ? messageInput.value.trim() : '';
     if (!msg || msg.length < 5) {
       showError('Lütfen talep veya mesajınızı kısaca açıklayınız (en az 5 karakter).', messageInput);
       return;
     }
 
     // 4. KVKK Kontrolü
-    if (!kvkkInput.checked) {
+    if (kvkkInput && !kvkkInput.checked) {
       showError('Devam edebilmek için KVKK Aydınlatma Metnini onaylamanız gerekmektedir.', kvkkInput);
       return;
     }
 
     // Çift gönderimi önle
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'İletiliyor...';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'İletiliyor...';
+    }
 
     // WhatsApp iletim metni hazırla
-    const org = orgInput.value.trim();
-    const phone = phoneInput.value.trim();
-    
-    let waText = `*FENIX.COM İletişim / Teklif Talebi*\n\n` +
-      `*Ad Soyad:* ${name}\n` +
-      (org ? `*Kurum:* ${org}\n` : '') +
-      `*E-posta:* ${email}\n` +
-      (phone ? `*Telefon:* ${phone}\n` : '') +
-      `\n*Talep:* ${msg}`;
+    const org = orgInput ? orgInput.value.trim() : '';
+    const phone = phoneInput ? phoneInput.value.trim() : '';
+    const subject = (subjectInput && subjectInput.value && subjectInput.value !== 'Konu seçin') ? subjectInput.value : '';
 
-    const waUrl = `https://wa.me/905327409097?text=${encodeURIComponent(waText)}`;
+    let waText = '*FENIX.COM İletişim / Teklif Talebi*\n\n' +
+      '*Ad Soyad:* ' + name + '\n' +
+      (org ? '*Kurum:* ' + org + '\n' : '') +
+      '*E-posta:* ' + email + '\n' +
+      (phone ? '*Telefon:* ' + phone + '\n' : '') +
+      (subject ? '*Konu:* ' + subject + '\n' : '') +
+      '\n*Talep:* ' + msg;
+
+    const waUrl = 'https://wa.me/905327409097?text=' + encodeURIComponent(waText);
 
     // Yeni sekmede WhatsApp aç ve sayfada başarı durumunu göster
     window.open(waUrl, '_blank', 'noopener,noreferrer');
