@@ -28,33 +28,32 @@
 .fx-nav a:hover { color: var(--fx-red); }
 .fx-nav a[aria-current="page"] { color: var(--fx-red); font-weight: 700; }
 
-.fx-header__tel {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--fx-ink);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.fx-header__tel:hover { color: var(--fx-red); }
-
 .fx-header__cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
   background: var(--fx-red);
   color: var(--fx-white);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 9px 16px;
-  border-radius: 3px;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 6px;
   white-space: nowrap;
   text-decoration: none;
   flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(169, 4, 50, 0.15);
+  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
-.fx-header__cta:hover { background: var(--fx-red-dark); color: var(--fx-white); }
+.fx-header__cta:hover {
+  background: var(--fx-red-dark);
+  color: var(--fx-white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(169, 4, 50, 0.28);
+}
+.fx-header__cta:active {
+  transform: translateY(0);
+}
 
 .fx-burger {
   margin-left: auto;
@@ -75,16 +74,40 @@
   .fx-burger { display: none; }
 }
 
-@media (max-width: 1239px) {
-  .fx-header__tel { display: none !important; }
-}
-
 @media (max-width: 1059px) {
-  .fx-header__cta { display: none !important; }
   .fx-logo img { height: 32px; }
+  .fx-header__cta {
+    display: inline-flex;
+    margin-left: auto;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    gap: 5px;
+  }
+  .fx-burger {
+    margin-left: 8px;
+  }
 }
 @media (max-width: 479px) {
   .fx-logo img { height: 28px; }
+  .fx-header__cta {
+    padding: 5px 11px;
+    font-size: 11.5px;
+    border-radius: 5px;
+    gap: 4px;
+  }
+  .fx-burger {
+    width: 38px;
+    height: 38px;
+    margin-left: 6px;
+  }
+}
+@media (max-width: 340px) {
+  .fx-header__cta {
+    padding: 4px 8px;
+    font-size: 10.5px;
+  }
 }
 
 /* ── MOBİL ÇEKMECE (2026 REDESIGN) ── */

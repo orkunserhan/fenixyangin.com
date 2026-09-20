@@ -62,7 +62,6 @@
 }
 @media (max-width: 1059px) {
   .fx-hero-badge { display: none !important; }
-  .fx-header__cta { display: none !important; }
 }
 
 .fx-hero-btn-primary:hover { background: #C00639 !important; }

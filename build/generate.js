@@ -102,7 +102,7 @@ function header(f, cur) {
     <nav class="fx-nav" aria-label="Ana menü">
       ${links}
     </nav>
-    <a class="fx-header__tel" href="tel:${site.tel[0]}">${site.telDisplay}</a>
+    <a class="fx-header__cta" href="/iletisim/">Teklif Al <span aria-hidden="true">→</span></a>
     <button class="fx-burger" type="button" data-burger aria-label="Menüyü aç" aria-expanded="false" aria-controls="fx-drawer"><span></span></button>
   </div>
 </header>
