@@ -1,0 +1,295 @@
+/* ==========================================================================
+   FENIX.COM — DESKTOP ANA SAYFA ÖZEL FOOTER (2026 REDESIGN)
+   Master Visual Reference: media_1789930655614.png
+   Yalnızca ana sayfa desktop görünümünde (>= 1060px) aktiftir.
+   Mobil / Tablet görünümünde (< 1060px) mevcut mobil footer korunur.
+   ========================================================================== */
+
+/* Varsayılan: Mobilde ve tablette desktop footer gizlidir */
+.fx-home-desktop-footer {
+  display: none;
+}
+.fx-home-mobile-footer {
+  display: block;
+}
+
+/* Masaüstü (>= 1060px): Yeni beyaz zeminli premium footer devreye girer */
+@media (min-width: 1060px) {
+  .fx-home-desktop-footer {
+    display: block;
+    position: relative;
+    background-color: #FFFFFF;
+    background-image: repeating-linear-gradient(
+      135deg,
+      rgba(169, 4, 50, 0.035) 0px,
+      rgba(169, 4, 50, 0.035) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+    border-top: 1px solid #E5E7EB;
+    color: #111827;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+
+  .fx-home-mobile-footer {
+    display: none !important;
+  }
+}
+
+.fx-hdf-container {
+  max-width: var(--fx-max, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--fx-pad-x, 24px);
+  box-sizing: border-box;
+}
+
+/* 6 Kolonlu Ana Grid */
+.fx-hdf-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 0.8fr 0.8fr 1.2fr;
+  gap: clamp(16px, 2.2vw, 36px);
+  align-items: start;
+}
+
+/* Kolon 1: Marka & Sosyal */
+.fx-hdf-brand {
+  display: flex;
+  flex-direction: column;
+}
+.fx-hdf-logo {
+  display: inline-block;
+  text-decoration: none;
+}
+.fx-hdf-logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+.fx-hdf-accent-line {
+  width: 32px;
+  height: 3px;
+  background-color: #A90432;
+  margin: 12px 0 14px;
+  border-radius: 1px;
+}
+.fx-hdf-slogan {
+  font-family: var(--fx-font-display, 'Archivo', sans-serif);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.fx-hdf-slogan__black {
+  color: #111827;
+}
+.fx-hdf-slogan__red {
+  color: #A90432;
+}
+.fx-hdf-desc {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #4B5563;
+  margin: 0 0 16px;
+  max-width: 250px;
+}
+.fx-hdf-social {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.fx-hdf-social-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4B5563;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+.fx-hdf-social-btn:hover {
+  background: #FEE2E2;
+  color: #A90432;
+  transform: translateY(-1px);
+}
+.fx-hdf-social-btn svg {
+  display: block;
+}
+
+/* Kolonlar: SİSTEMLER, HİZMETLER, SEKTÖRLER, KURUMSAL */
+.fx-hdf-col {
+  display: flex;
+  flex-direction: column;
+}
+.fx-hdf-col__title {
+  font-size: 12px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+.fx-hdf-col__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.fx-hdf-col__list a {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #4B5563;
+  text-decoration: none;
+  transition: color 0.15s;
+  line-height: 1.35;
+}
+.fx-hdf-col__list a:hover {
+  color: #A90432;
+}
+.fx-hdf-hub-link {
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #A90432 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.fx-hdf-hub-link:hover {
+  transform: translateX(2px);
+}
+
+/* Kolon 6: İletişim (Dikey Ayırıcı Çizgili) */
+.fx-hdf-contact {
+  border-left: 1px solid #E5E7EB;
+  padding-left: clamp(18px, 2vw, 28px);
+  display: flex;
+  flex-direction: column;
+}
+.fx-hdf-contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.fx-hdf-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.fx-hdf-contact-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FEE2E2;
+  color: #A90432;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.fx-hdf-contact-text {
+  display: flex;
+  flex-direction: column;
+}
+.fx-hdf-contact-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.25;
+  transition: color 0.15s;
+}
+a.fx-hdf-contact-item:hover .fx-hdf-contact-title {
+  color: #A90432;
+}
+.fx-hdf-contact-sub {
+  font-size: 11px;
+  color: #6B7280;
+  margin-top: 2px;
+}
+.fx-hdf-contact-addr {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #4B5563;
+  font-weight: 600;
+}
+
+/* Alt Legal Bar */
+.fx-hdf-bottom {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 11.5px;
+  color: #6B7280;
+}
+.fx-hdf-bottom__left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.fx-hdf-bottom__right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.fx-hdf-bottom__right a {
+  color: #6B7280;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.fx-hdf-bottom__right a:hover {
+  color: #111827;
+}
+.fx-hdf-sep {
+  color: #D1D5DB;
+  font-size: 10px;
+}
+.fx-hdf-back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #111827;
+  margin-left: 6px;
+  transition: color 0.15s;
+}
+.fx-hdf-back-top:hover {
+  color: #A90432;
+}
+.fx-hdf-back-top__icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FEE2E2;
+  color: #A90432;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+}
