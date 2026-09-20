@@ -16,8 +16,8 @@
 .fx-logo { display: block; flex-shrink: 0; }
 .fx-logo img { display: block; height: 38px; width: auto; }
 
-.fx-nav { margin-left: auto; display: none; align-items: center; gap: clamp(12px, 1.6vw, 22px); min-width: 0; }
-.fx-nav a { font-size: 13.5px; font-weight: 600; color: var(--fx-ink); white-space: nowrap; }
+.fx-nav { margin-left: auto; display: none; align-items: center; gap: clamp(8px, 1.2vw, 18px); flex-shrink: 0; }
+.fx-nav a { font-size: 13px; font-weight: 600; color: var(--fx-ink); white-space: nowrap; }
 .fx-nav a:hover { color: var(--fx-red); }
 .fx-nav a[aria-current="page"] { color: var(--fx-red); font-weight: 700; }
 
@@ -39,9 +39,9 @@
   gap: 7px;
   background: var(--fx-red);
   color: var(--fx-white);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
-  padding: 10px 18px;
+  padding: 9px 16px;
   border-radius: 3px;
   white-space: nowrap;
   text-decoration: none;
@@ -68,11 +68,11 @@
   .fx-burger { display: none; }
 }
 
-/* Mobil header: logo 1200x223 oranıyla 38px'te 205px genişler.
-   Üç çocuk da flex-shrink:0 olduğu için satır 402px ister — 320px'te taşar.
-   Telefon bağlantısı çekmecedeki "Ara" ve footer'da zaten erişilebilir. */
-@media (max-width: 1059px) {
+@media (max-width: 1239px) {
   .fx-header__tel { display: none !important; }
+}
+
+@media (max-width: 1059px) {
   .fx-header__cta { display: none !important; }
   .fx-logo img { height: 32px; }
 }
