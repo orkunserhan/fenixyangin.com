@@ -845,6 +845,511 @@
 }
 
 /* ==========================================================================
+   6.1 MASTER TASARIM EK BİLEŞENLERİ (media_1789936018698.png)
+   ========================================================================== */
+
+/* Hero Vurgu Kelimesi */
+.fx-sec-highlight-word {
+  color: var(--fx-sec-red);
+}
+
+/* Hero Görsel Rozeti (Sol Üst) */
+.fx-sec-hero__visual {
+  position: relative;
+}
+
+.fx-sec-hero__badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  padding: 1.125rem 1.25rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.fx-sec-hero__badge-text {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-weight: 800;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  color: var(--fx-sec-dark);
+  text-transform: uppercase;
+  display: block;
+}
+
+.fx-sec-hero__badge-line {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--fx-sec-red);
+  margin-top: 0.65rem;
+  border-radius: 2px;
+}
+
+/* 4'lü Temel Değer Bandı (Hero Altı) */
+.fx-sec-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  padding: 1.25rem 1.75rem;
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius-lg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  margin-bottom: 2.75rem;
+}
+
+.fx-sec-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.fx-sec-highlight-icon {
+  color: var(--fx-sec-red);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.fx-sec-highlight-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.fx-sec-highlight-text strong {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--fx-sec-dark);
+  line-height: 1.25;
+}
+
+.fx-sec-highlight-text span {
+  font-size: 0.775rem;
+  color: var(--fx-sec-gray-soft);
+  line-height: 1.25;
+}
+
+/* Sidebar Broşür Kartı */
+.fx-sec-brochure-card {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius);
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-sec-brochure-icon {
+  color: var(--fx-sec-red);
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+}
+
+.fx-sec-brochure-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--fx-sec-dark);
+  margin: 0 0 0.35rem;
+}
+
+.fx-sec-brochure-desc {
+  font-size: 0.8125rem;
+  color: var(--fx-sec-gray-soft);
+  line-height: 1.45;
+  margin: 0 0 0.875rem;
+}
+
+.fx-sec-brochure-link {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--fx-sec-red);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: gap 0.15s ease;
+}
+
+.fx-sec-brochure-link:hover {
+  gap: 0.55rem;
+}
+
+/* Genel Bakış İki Kolon / Callout */
+.fx-sec-overview-row {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.fx-sec-overview-callout {
+  background: #FAFAFA;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius);
+  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fx-sec-overview-callout__icon {
+  color: var(--fx-sec-red);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fx-sec-overview-callout__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.fx-sec-overview-callout__title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--fx-sec-dark);
+  margin: 0;
+}
+
+.fx-sec-overview-callout__desc {
+  font-size: 0.775rem;
+  color: var(--fx-sec-gray-soft);
+  margin: 0;
+}
+
+/* 4'lü Risk Kartları */
+.fx-sec-risks-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.fx-sec-risk-card {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.fx-sec-risk-card:hover {
+  transform: translateY(-2px);
+  border-color: #CBD5E1;
+}
+
+.fx-sec-risk-card__icon {
+  color: var(--fx-sec-red);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fx-sec-risk-card__title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--fx-sec-dark);
+  margin: 0;
+}
+
+.fx-sec-risk-card__desc {
+  font-size: 0.775rem;
+  color: var(--fx-sec-gray-soft);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* 3'lü Önerilen Sistem Görsel Kartları */
+.fx-sec-systems-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.fx-sec-system-thumb-card {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fx-sec-system-thumb-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--fx-sec-red);
+  box-shadow: 0 6px 16px rgba(169, 4, 50, 0.08);
+}
+
+.fx-sec-system-thumb-card__img-wrap {
+  width: 100%;
+  height: 125px;
+  overflow: hidden;
+  background: #F3F4F6;
+}
+
+.fx-sec-system-thumb-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.fx-sec-system-thumb-card:hover .fx-sec-system-thumb-card__img-wrap img {
+  transform: scale(1.04);
+}
+
+.fx-sec-system-thumb-card__footer {
+  padding: 0.875rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-top: 1px solid var(--fx-sec-border-light);
+  background: #FFFFFF;
+}
+
+.fx-sec-system-thumb-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.fx-sec-system-thumb-card__info strong {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--fx-sec-dark);
+}
+
+.fx-sec-system-thumb-card__info span {
+  font-size: 0.775rem;
+  color: var(--fx-sec-gray-soft);
+}
+
+.fx-sec-system-thumb-card__arrow {
+  color: var(--fx-sec-red);
+  font-size: 1.125rem;
+  font-weight: 800;
+  transition: transform 0.2s ease;
+}
+
+.fx-sec-system-thumb-card:hover .fx-sec-system-thumb-card__arrow {
+  transform: translateX(3px);
+}
+
+/* Uygulama Alanları 2x3 Grid */
+.fx-sec-areas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.fx-sec-area-card {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: 6px;
+  padding: 0.75rem 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.fx-sec-area-card__icon {
+  color: var(--fx-sec-red);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fx-sec-area-card__title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--fx-sec-text);
+  line-height: 1.35;
+}
+
+/* Fayda ve Avantajlar (Checklist) */
+.fx-sec-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.fx-sec-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--fx-sec-text);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.fx-sec-benefit-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--fx-sec-red);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* İlgili Teknik İçerikler Listesi */
+.fx-sec-articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.fx-sec-article-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.875rem;
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--fx-sec-dark);
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.fx-sec-article-row:hover {
+  border-color: var(--fx-sec-red);
+  transform: translateY(-1px);
+}
+
+.fx-sec-article-left {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-width: 0;
+}
+
+.fx-sec-article-icon {
+  color: var(--fx-sec-red);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.fx-sec-article-arrow {
+  color: var(--fx-sec-red);
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  transition: transform 0.15s ease;
+}
+
+.fx-sec-article-row:hover .fx-sec-article-arrow {
+  transform: translateX(3px);
+}
+
+/* İlgili Sektörler 3'lü Kart */
+.fx-sec-sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.875rem;
+  margin-top: 0.75rem;
+}
+
+.fx-sec-sector-card {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-sec-border);
+  border-radius: var(--fx-sec-radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.fx-sec-sector-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--fx-sec-red);
+}
+
+.fx-sec-sector-card__img {
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  background: #E5E7EB;
+}
+
+.fx-sec-sector-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fx-sec-sector-card__body {
+  padding: 0.5rem 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--fx-sec-dark);
+}
+
+.fx-sec-sector-card__arrow {
+  color: var(--fx-sec-red);
+  font-size: 0.875rem;
+  transition: transform 0.2s ease;
+}
+
+.fx-sec-sector-card:hover .fx-sec-sector-card__arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
    7. DUYARLI KIRILMA NOKTALARI (RESPONSIVE)
    ========================================================================== */
 
@@ -866,6 +1371,19 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .fx-sec-systems__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fx-sec-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fx-sec-risks-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fx-sec-overview-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .fx-sec-systems-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -917,6 +1435,27 @@
   .fx-sec-cta-band__btn-secondary {
     width: 100%;
     text-align: center;
+  }
+  .fx-sec-highlights {
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+    padding: 1rem;
+  }
+  .fx-sec-risks-cards {
+    grid-template-columns: 1fr;
+  }
+  .fx-sec-systems-cards {
+    grid-template-columns: 1fr;
+  }
+  .fx-sec-sectors-grid {
+    grid-template-columns: 1fr;
+  }
+  .fx-sec-areas-grid {
+    grid-template-columns: 1fr;
+  }
+  .fx-sec-hero__badge {
+    position: static;
+    margin: 1rem 1rem 0;
   }
 }
 
