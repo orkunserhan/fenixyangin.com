@@ -80,42 +80,320 @@
   .fx-logo img { height: 28px; }
 }
 
-/* ── MOBİL ÇEKMECE ── */
+/* ── MOBİL ÇEKMECE (2026 REDESIGN) ── */
 .fx-drawer {
-  position: fixed; inset: 0; z-index: 90;
-  background: var(--fx-white);
+  position: fixed; inset: 0; z-index: 999;
+  background: #FFFFFF;
   display: flex; flex-direction: column;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: calc(30px + env(safe-area-inset-bottom, 0px));
 }
-.fx-drawer[hidden] { display: none; }
+.fx-drawer[hidden] { display: none !important; }
+
+@media (min-width: 1060px) {
+  .fx-drawer { display: none !important; }
+}
+
 .fx-drawer__top {
-  display: flex; align-items: center; gap: 16px;
-  padding: 14px var(--fx-pad-x);
-  border-bottom: 1px solid var(--fx-line);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  position: sticky; top: 0; z-index: 10;
+  border-bottom: 1px solid #F3F4F6;
+}
+.fx-drawer__brand {
+  display: flex; flex-direction: column; align-items: flex-start;
+  text-decoration: none;
+}
+.fx-drawer__brand img {
+  height: 26px; width: auto; display: block;
+}
+.fx-drawer__tagline {
+  font-family: var(--fx-font-mono, monospace);
+  font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
+  color: #71717A; text-transform: uppercase; margin-top: 3px;
 }
 .fx-drawer__close {
-  margin-left: auto;
-  width: var(--fx-tap); height: var(--fx-tap);
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
   display: inline-flex; align-items: center; justify-content: center;
-  background: none; border: 1px solid var(--fx-line); cursor: pointer;
-  font-size: 18px; color: var(--fx-ink);
+  cursor: pointer;
+  color: #1F2937;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
-.fx-drawer__list { list-style: none; margin: 0; padding: 0; }
-.fx-drawer__list a {
-  display: block; padding: 15px var(--fx-pad-x);
-  font-size: 16px; font-weight: 600; color: var(--fx-ink);
-  border-bottom: 1px solid var(--fx-line-3);
-  min-height: 48px;
+.fx-drawer__close:active {
+  background: #F3F4F6; color: #111827;
 }
-.fx-drawer__actions {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
-  gap: 0; margin-top: auto;
+
+/* Menü listesi */
+.fx-drawer__nav {
+  padding: 8px 20px 0;
 }
-.fx-drawer__actions a {
+.fx-drawer__list {
+  list-style: none; margin: 0; padding: 0;
+}
+.fx-drawer__list li {
+  margin: 0; padding: 0;
+}
+.fx-drawer__item {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 52px; padding: 13px 4px;
+  border-bottom: 1px solid #F3F4F6;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.fx-drawer__item:active {
+  background: #F9FAFB;
+}
+.fx-drawer__item-left {
+  display: flex; align-items: center; gap: 14px;
+}
+.fx-drawer__item-icon {
+  width: 22px; height: 22px;
+  stroke: #A90432; fill: none;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.fx-drawer__item-label {
+  font-size: 15.5px; font-weight: 700; color: #111827;
+  letter-spacing: -0.01em;
+}
+.fx-drawer__chevron {
+  width: 14px; height: 14px;
+  stroke: #A90432; fill: none;
+  stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* Bize Ulaşın Kartı */
+.fx-drawer__contact-card {
+  margin: 16px 20px 0;
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px;
+  background: #FFF7F8;
+  border: 1px solid rgba(169, 4, 50, 0.12);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s;
+  cursor: pointer;
+}
+.fx-drawer__contact-card:active {
+  background: #FEECEF;
+  transform: scale(0.99);
+}
+.fx-drawer__contact-icon {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #A90432; color: #FFFFFF;
   display: flex; align-items: center; justify-content: center;
-  min-height: 56px; padding: 0 16px;
-  font-size: 14px; font-weight: 700;
-  box-shadow: var(--fx-hairline);
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(169, 4, 50, 0.22);
+}
+.fx-drawer__contact-info {
+  display: flex; flex-direction: column; flex: 1; min-width: 0;
+}
+.fx-drawer__contact-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+  color: #71717A; text-transform: uppercase;
+}
+.fx-drawer__contact-title {
+  font-size: 15px; font-weight: 800; color: #111827;
+  line-height: 1.25; margin-top: 2px;
+}
+.fx-drawer__contact-sub {
+  font-size: 12px; color: #71717A; margin-top: 2px;
+}
+.fx-drawer__contact-chevron {
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Sosyal Medya İkonları Sırası */
+.fx-drawer__social-row {
+  margin: 14px 20px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.fx-drawer__social-btn {
+  height: 44px;
+  border-radius: 12px;
+  background: #F4F4F5;
+  border: 1px solid #E4E4E7;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+.fx-drawer__social-btn:active {
+  background: #E4E4E7;
+  transform: scale(0.96);
+}
+
+/* Sosyal Medya Tanıtım Kartı */
+.fx-drawer__promo-card {
+  margin: 14px 20px 24px;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+.fx-drawer__promo-card:active {
+  background: #F3F4F6;
+}
+.fx-drawer__promo-body {
+  flex: 1; min-width: 0;
+}
+.fx-drawer__promo-head {
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.fx-drawer__promo-title {
+  font-size: 12px; font-weight: 800; color: #111827;
+  line-height: 1.25; letter-spacing: 0.02em;
+}
+.fx-drawer__promo-arrow {
+  flex-shrink: 0; margin-top: 1px;
+}
+.fx-drawer__promo-desc {
+  font-size: 11px; line-height: 1.45; color: #6B7280;
+  margin: 6px 0 0;
+}
+.fx-drawer__promo-thumb {
+  width: 80px; height: 75px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.fx-drawer__promo-thumb img {
+  width: 100%; height: 100%; object-fit: contain; object-position: right center;
+}
+
+/* Eski .fx-drawer__actions geri uyumluluğu */
+.fx-drawer__actions { display: none !important; }
+
+/* ── MOBİL ALT BAR (ACTIONBAR) ── */
+.fx-actionbar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 85;
+  background: #111315;
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.fx-actionbar a {
+  flex: 1; min-height: 48px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 700;
+  border-right: 1px solid rgba(255,255,255,0.12);
+  transition: background 0.15s, color 0.15s;
+}
+.fx-actionbar a:last-child { border-right: 0; background: var(--fx-red, #A90432); }
+.fx-actionbar a:hover { color: #fff; }
+.fx-actionbar a:active { opacity: 0.85; }
+@media (min-width: 1060px) {
+  .fx-actionbar { display: none !important; }
+}
+
+/* ── CALL SELECTOR BOTTOM SHEET (MODAL) ── */
+.fx-call-backdrop {
+  position: fixed; inset: 0; z-index: 1050;
+  background: rgba(15, 17, 21, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.fx-call-backdrop.is-open {
+  opacity: 1; pointer-events: auto;
+}
+
+.fx-call-sheet {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 1051;
+  max-width: 480px; margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.22);
+  padding: 8px 20px calc(24px + env(safe-area-inset-bottom, 0px)) 20px;
+  transform: translateY(105%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.fx-call-sheet.is-open {
+  transform: translateY(0);
+}
+.fx-call-sheet__pill {
+  width: 44px; height: 5px; background: #E5E7EB;
+  border-radius: 3px; margin: 6px auto 14px;
+}
+.fx-call-sheet__header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; margin-bottom: 16px;
+}
+.fx-call-sheet__title {
+  font-size: 19px; font-weight: 800; color: #111827;
+  line-height: 1.24; margin: 0; letter-spacing: -0.01em;
+}
+.fx-call-sheet__close {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: #F3F4F6; border: 1px solid #E5E7EB;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: #374151; flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+.fx-call-sheet__close:active {
+  background: #E5E7EB; color: #111827;
+}
+.fx-call-sheet__body {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.fx-call-option {
+  display: flex; align-items: center; gap: 14px;
+  padding: 13px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  background: #FFFFFF;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+.fx-call-option:active {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+  transform: scale(0.99);
+}
+.fx-call-option__icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: #A90432; color: #FFFFFF;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(169, 4, 50, 0.18);
+}
+.fx-call-option__icon--wa {
+  background: #25D366;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.22);
+}
+.fx-call-option__info {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column;
+}
+.fx-call-option__num {
+  font-size: 16.5px; font-weight: 800; color: #111827;
+  line-height: 1.25;
+}
+.fx-call-option__label {
+  font-size: 12.5px; color: #6B7280; margin-top: 2px;
+}
+.fx-call-option__chevron {
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.fx-call-sheet__divider {
+  height: 1px; background: #F3F4F6; margin: 4px 0;
 }
 
 /* ── BREADCRUMB ── */
