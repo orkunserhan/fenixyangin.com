@@ -813,3 +813,48 @@ details[open] .fx-sys-faq-plus {
     grid-template-columns: 1fr;
   }
 }
+
+/* Saha Kurulum / Marka Vitrini */
+.fx-sys-installation-box {
+  margin-top: 24px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+.fx-sys-installation-box__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+.fx-sys-installation-box__media {
+  position: relative;
+  min-height: 240px;
+  background: #121418;
+}
+.fx-sys-installation-box__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.fx-sys-installation-box__body {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .fx-sys-installation-box__grid {
+    grid-template-columns: 1fr !important;
+  }
+  .fx-sys-installation-box__media {
+    min-height: 220px;
+  }
+  .fx-sys-installation-box__body {
+    padding: 16px 18px;
+  }
+}

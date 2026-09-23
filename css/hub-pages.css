@@ -1827,58 +1827,158 @@
   flex-shrink: 0;
 }
 
-/* Kurumsal: Şirket Bilgileri Split */
-.fx-company-split {
+/* Kurumsal: Şirket Bilgileri (Executive Redesign 2026) */
+.fx-corp-split {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  gap: clamp(32px, 4vw, 56px);
   align-items: center;
+  position: relative;
 }
-.fx-company-split__img-wrap {
-  border-radius: 12px;
+
+.fx-corp-visual-wrap {
+  position: relative;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  background: #FAFAFA;
+  box-shadow: 0 16px 36px -8px rgba(18, 20, 24, 0.10), 0 4px 12px -2px rgba(18, 20, 24, 0.04);
+  border: 1px solid #E5E7EB;
+  background: #0F172A;
+  aspect-ratio: 16 / 10.6;
+  display: flex;
 }
-.fx-company-split__img {
+
+.fx-corp-visual-img {
   width: 100%;
-  height: 340px;
+  height: 100%;
   object-fit: cover;
+  object-position: left center;
   display: block;
 }
-.fx-company-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin: 24px 0 28px;
-}
-.fx-company-item {
+
+.fx-corp-content {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  flex-direction: column;
 }
-.fx-company-item__icon {
-  color: var(--fx-red, #E5251E);
-  flex-shrink: 0;
-  margin-top: 2px;
+
+.fx-corp-watermark {
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  width: 260px;
+  height: 260px;
+  opacity: 0.035;
+  color: #A90432;
+  pointer-events: none;
+  z-index: 0;
 }
-.fx-company-item__icon svg {
-  width: 20px;
-  height: 20px;
+
+.fx-corp-inner {
+  position: relative;
+  z-index: 1;
 }
-.fx-company-item__label {
-  font-size: 11px;
-  color: #6B7280;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin: 0 0 2px;
-}
-.fx-company-item__value {
-  font-size: 13.5px;
+
+.fx-corp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 11.5px;
   font-weight: 700;
-  color: var(--fx-ink, #121418);
-  line-height: 1.3;
+  letter-spacing: 0.16em;
+  color: #A90432;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.fx-corp-title {
+  margin: 0 0 14px;
+  font-size: clamp(26px, 2.6vw, 36px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #111827;
+}
+
+.fx-corp-desc {
+  margin: 0 0 24px;
+  font-size: 15px;
+  line-height: 1.62;
+  color: #4B5563;
+  max-width: 530px;
+}
+
+.fx-corp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 28px;
+  margin-bottom: 28px;
+}
+
+.fx-corp-item {
+  border-top: 1px solid #E5E7EB;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fx-corp-item__label {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #8A9095;
+  text-transform: uppercase;
   margin: 0;
+}
+
+.fx-corp-item__value {
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #111827;
+}
+
+.fx-corp-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.fx-corp-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #A90432;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 4px 14px -2px rgba(169, 4, 50, 0.25);
+}
+
+.fx-corp-cta:hover {
+  background: #880327;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.fx-corp-tagline {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* Kurumsal: Sosyal Medya Banner (2026 Executive Digital Showcase) */
@@ -2721,12 +2821,12 @@
   .fx-process-arrow {
     display: none;
   }
-  .fx-company-split {
+  .fx-corp-split {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  .fx-company-split__img {
-    height: 280px;
+  .fx-corp-visual-wrap {
+    max-height: 380px;
   }
   .fx-social-banner__inner {
     grid-template-columns: 1fr 1fr;
@@ -2808,8 +2908,18 @@
   .fx-kurumsal-meta {
     grid-template-columns: 1fr;
   }
-  .fx-company-grid {
+  .fx-corp-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .fx-corp-action-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .fx-corp-cta {
+    width: 100%;
+    justify-content: center;
   }
   .fx-process-flow {
     grid-template-columns: 1fr;
