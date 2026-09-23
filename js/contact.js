@@ -82,6 +82,12 @@
     telLink.style.cssText = 'font-weight:700;color:inherit;text-decoration:underline';
     telLink.textContent = '0212 618 07 01';
     p2.appendChild(telLink);
+    p2.appendChild(document.createTextNode(' / '));
+    var telLink2 = document.createElement('a');
+    telLink2.href = 'tel:+902126180702';
+    telLink2.style.cssText = 'font-weight:700;color:inherit;text-decoration:underline';
+    telLink2.textContent = '0212 618 07 02';
+    p2.appendChild(telLink2);
     p2.appendChild(document.createTextNode(' veya '));
     var waLink = document.createElement('a');
     waLink.href = 'https://wa.me/905327409097';
