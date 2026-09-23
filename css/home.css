@@ -335,3 +335,24 @@ body.has-actionbar { padding-bottom: var(--fx-tap-lg); }
     display: flex !important;
   }
 }
+
+/* ── HİZMET ŞERİDİ (SADECE MOBİLDE 6'LI KUTU & SİMETRİ) ── */
+.fx-strip-item--mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .fx-strip-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .fx-strip-item--mobile-only {
+    display: flex !important;
+  }
+  .fx-strip-grid .fx-strip-item:nth-child(odd) {
+    border-left: none !important;
+  }
+  .fx-strip-grid .fx-strip-item:nth-child(even) {
+    border-left: 1px solid #E9EAEC !important;
+  }
+}
+
