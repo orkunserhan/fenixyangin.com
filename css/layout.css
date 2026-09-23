@@ -28,6 +28,171 @@
 .fx-nav a:hover { color: var(--fx-red); }
 .fx-nav a[aria-current="page"] { color: var(--fx-red); font-weight: 700; }
 
+/* ── DESKTOP NAV DROPDOWN (HİZMETLER) ── */
+.fx-nav-item--dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.fx-nav-link--dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fx-ink);
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.fx-nav-link--dropdown:hover,
+.fx-nav-item--dropdown:hover .fx-nav-link--dropdown,
+.fx-nav-item--dropdown:focus-within .fx-nav-link--dropdown,
+.fx-nav-item--dropdown.is-open .fx-nav-link--dropdown {
+  color: var(--fx-red);
+  background-color: #F9EBEC;
+}
+
+.fx-nav-chevron {
+  width: 9px;
+  height: 6px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.fx-nav-item--dropdown:hover .fx-nav-chevron,
+.fx-nav-item--dropdown:focus-within .fx-nav-chevron,
+.fx-nav-item--dropdown.is-open .fx-nav-chevron {
+  transform: rotate(180deg);
+}
+
+.fx-nav-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 350px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -8px rgba(18, 20, 24, 0.16), 0 6px 16px -4px rgba(18, 20, 24, 0.06);
+  padding: 16px 14px 14px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.2s;
+  z-index: 100;
+}
+
+/* Hover bridge preventing gap flicker */
+.fx-nav-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.fx-nav-item--dropdown:hover .fx-nav-dropdown,
+.fx-nav-item--dropdown:focus-within .fx-nav-dropdown,
+.fx-nav-item--dropdown.is-open .fx-nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.fx-nav-dropdown__header {
+  padding: 4px 8px 10px;
+  border-bottom: 1px solid #F1F5F9;
+  margin-bottom: 6px;
+}
+
+.fx-nav-dropdown__eyebrow {
+  display: block;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--fx-red);
+  text-transform: uppercase;
+}
+
+.fx-nav-dropdown__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fx-nav-dropdown__item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.fx-nav-dropdown__item:hover {
+  background-color: #F8FAFC;
+  transform: translateX(2px);
+}
+
+.fx-nav-dropdown__item-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 2px 0;
+  transition: color 0.15s ease;
+}
+
+.fx-nav-dropdown__item:hover .fx-nav-dropdown__item-title {
+  color: var(--fx-red);
+}
+
+.fx-nav-dropdown__item-desc {
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #64748B;
+  margin: 0;
+}
+
+.fx-nav-dropdown__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 11px 14px;
+  background: #FFF1F2;
+  border: 1px solid #FFE4E6;
+  border-radius: 10px;
+  color: var(--fx-red);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.15s ease;
+}
+
+.fx-nav-dropdown__footer:hover {
+  background: #FEE2E2;
+  color: #880327;
+  transform: translateX(2px);
+}
+
 .fx-header__cta {
   display: inline-flex;
   align-items: center;
@@ -211,6 +376,138 @@
   stroke: #A90432; fill: none;
   stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
   flex-shrink: 0;
+}
+
+/* ── MOBİL ÇEKMECE ALT MENÜSÜ (HİZMETLER AKORDİYON) ── */
+.fx-drawer__group--hizmetler {
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.fx-drawer__group--hizmetler .fx-drawer__item {
+  border-bottom: none;
+}
+
+.fx-drawer__item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.fx-drawer__item-row .fx-drawer__item {
+  flex: 1;
+}
+
+.fx-drawer__sub-toggle {
+  width: 44px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--fx-red);
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.fx-drawer__sub-toggle:active {
+  background-color: rgba(169, 4, 50, 0.08);
+}
+
+.fx-drawer__sub-chevron {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fx-drawer__group--hizmetler.is-open .fx-drawer__sub-chevron {
+  transform: rotate(180deg);
+}
+
+.fx-drawer__sub {
+  background: #F9FAFB;
+  border-radius: 12px;
+  margin: 0 4px 12px;
+  border: 1px solid #F1F5F9;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.fx-drawer__sub[hidden] {
+  display: none;
+}
+
+.fx-drawer__sub-inner {
+  padding: 12px 14px;
+}
+
+.fx-drawer__sub-eyebrow {
+  display: block;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--fx-red);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.fx-drawer__sub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fx-drawer__sub-link {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.fx-drawer__sub-link:active {
+  background: #FFF1F2;
+}
+
+.fx-drawer__sub-title {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.fx-drawer__sub-desc {
+  display: block;
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: #64748B;
+}
+
+.fx-drawer__sub-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #FFF1F2;
+  border: 1px solid #FFE4E6;
+  border-radius: 8px;
+  color: var(--fx-red);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.fx-drawer__sub-footer:active {
+  background: #FEE2E2;
 }
 
 /* Bize Ulaşın Kartı */

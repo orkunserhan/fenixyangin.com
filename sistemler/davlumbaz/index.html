@@ -41,7 +41,52 @@
     <a class="fx-logo" href="/" aria-label="Fenix Yangın ana sayfa"><img src="../../assets/fenix-logo.png" alt="Fenix Yangın" width="1200" height="223" /></a>
     <nav class="fx-nav" aria-label="Ana menü">
       <a href="/sistemler/" aria-current="page">Sistemler</a>
-      <a href="/hizmetler/">Hizmetler</a>
+      <div class="fx-nav-item fx-nav-item--dropdown" data-nav-dropdown>
+        <a href="/hizmetler/" class="fx-nav-link fx-nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>Hizmetler</span>
+          <svg class="fx-nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m1 1 4 4 4-4"/>
+          </svg>
+        </a>
+        <div class="fx-nav-dropdown" role="menu" aria-label="Yangın Söndürme Hizmetleri">
+          <div class="fx-nav-dropdown__header">
+            <span class="fx-nav-dropdown__eyebrow">YANGIN SÖNDÜRME HİZMETLERİ</span>
+          </div>
+          <div class="fx-nav-dropdown__list">
+            <a href="/hizmetler/muhendislik/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Mühendislik</strong>
+              <span class="fx-nav-dropdown__item-desc">Yangın danışmanlığı, hidrolik hesap ve projelendirme</span>
+            </a>
+            <a href="/hizmetler/kurulum/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Kurulum</strong>
+              <span class="fx-nav-dropdown__item-desc">Anahtar teslim sistem kurulumu ve entegrasyon</span>
+            </a>
+            <a href="/hizmetler/montaj/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Montaj</strong>
+              <span class="fx-nav-dropdown__item-desc">Standartlara uygun mekanik ve elektriksel montaj</span>
+            </a>
+            <a href="/hizmetler/tedarik/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Tedarik</strong>
+              <span class="fx-nav-dropdown__item-desc">Onaylı silindir, vana, nozul ve ekipman temini</span>
+            </a>
+            <a href="/hizmetler/dolum/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Dolum</strong>
+              <span class="fx-nav-dropdown__item-desc">FM200 ve Novec 1230 sertifikalı gaz dolumu</span>
+            </a>
+            <a href="/hizmetler/bakim/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Bakım</strong>
+              <span class="fx-nav-dropdown__item-desc">TSE-HYB onaylı periyodik bakım ve kontrol</span>
+            </a>
+          </div>
+          <a href="/hizmetler/" class="fx-nav-dropdown__footer" role="menuitem">
+            <span>Tüm Hizmetleri İnceleyin</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
       <a href="/sektorler/">Sektörler</a>
       <a href="/projeler/">Projeler</a>
       <a href="/referanslar/">Referanslar</a>
@@ -61,7 +106,62 @@
   </div>
   <nav aria-label="Mobil menü bağlantıları"><ul class="fx-drawer__list">
     <li><a href="/sistemler/">Sistemler</a></li>
-    <li><a href="/hizmetler/">Hizmetler</a></li>
+      <li class="fx-drawer__group fx-drawer__group--hizmetler">
+        <div class="fx-drawer__item-row">
+          <a href="/hizmetler/" class="fx-drawer__item">
+            <span class="fx-drawer__item-left">
+              <svg class="fx-drawer__item-icon" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span class="fx-drawer__item-label">Hizmetler</span>
+            </span>
+          </a>
+          <button type="button" class="fx-drawer__sub-toggle" aria-label="Hizmetler alt menüsünü aç" aria-expanded="false" data-drawer-sub-toggle>
+            <svg class="fx-drawer__sub-chevron" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+        </div>
+        <div class="fx-drawer__sub" data-drawer-sub hidden>
+          <div class="fx-drawer__sub-inner">
+            <span class="fx-drawer__sub-eyebrow">YANGIN SÖNDÜRME HİZMETLERİ</span>
+            <div class="fx-drawer__sub-list">
+              <a href="/hizmetler/muhendislik/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Mühendislik</strong>
+                <span class="fx-drawer__sub-desc">Yangın danışmanlığı, hidrolik hesap ve projelendirme</span>
+              </a>
+              <a href="/hizmetler/kurulum/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Kurulum</strong>
+                <span class="fx-drawer__sub-desc">Anahtar teslim sistem kurulumu ve entegrasyon</span>
+              </a>
+              <a href="/hizmetler/montaj/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Montaj</strong>
+                <span class="fx-drawer__sub-desc">Standartlara uygun mekanik ve elektriksel montaj</span>
+              </a>
+              <a href="/hizmetler/tedarik/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Tedarik</strong>
+                <span class="fx-drawer__sub-desc">Onaylı silindir, vana, nozul ve ekipman temini</span>
+              </a>
+              <a href="/hizmetler/dolum/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Dolum</strong>
+                <span class="fx-drawer__sub-desc">FM200 ve Novec 1230 sertifikalı gaz dolumu</span>
+              </a>
+              <a href="/hizmetler/bakim/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Bakım</strong>
+                <span class="fx-drawer__sub-desc">TSE-HYB onaylı periyodik bakım ve kontrol</span>
+              </a>
+            </div>
+            <a href="/hizmetler/" class="fx-drawer__sub-footer">
+              <span>Tüm Hizmetleri İnceleyin</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
     <li><a href="/sektorler/">Sektörler</a></li>
     <li><a href="/projeler/">Projeler</a></li>
     <li><a href="/referanslar/">Referanslar</a></li>
