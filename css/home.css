@@ -210,11 +210,92 @@
 body.has-actionbar { padding-bottom: var(--fx-tap-lg); }
 @media (min-width: 1060px) { body.has-actionbar { padding-bottom: 0; } }
 
-/* ── ÖNE ÇIKAN PROJELER (SADECE MOBİLDE 4'LÜ KUTU & SİMETRİ) ── */
+/* ── ÖNE ÇIKAN PROJELER (KARTLAR & SADECE MOBİLDE 4'LÜ KUTU SİMETRİSİ) ── */
 .fx-home-proj-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+}
+
+.fx-home-proj-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-decoration: none;
+  background: #FFFFFF;
+  border: 1px solid #E6E9EB;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fx-home-proj-card:hover {
+  border-color: #A90432;
+  box-shadow: 0 4px 14px rgba(18, 20, 24, 0.08);
+  transform: translateY(-2px);
+}
+
+.fx-home-proj-card__thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #1B1E21;
+}
+
+.fx-home-proj-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.fx-home-proj-card:hover .fx-home-proj-card__thumb img {
+  transform: scale(1.05);
+}
+
+.fx-home-proj-card__badge {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  background: #A90432;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.fx-home-proj-card__body {
+  padding: 10px 11px 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.fx-home-proj-card__title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #16181A;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.fx-home-proj-card:hover .fx-home-proj-card__title {
+  color: #A90432;
+}
+
+.fx-home-proj-card__sub {
+  margin: 4px 0 0;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #6B7176;
 }
 
 .fx-home-proj-item--mobile-only {
@@ -224,10 +305,19 @@ body.has-actionbar { padding-bottom: var(--fx-tap-lg); }
 @media (max-width: 767px) {
   .fx-home-proj-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
   .fx-home-proj-item--mobile-only {
-    display: block !important;
+    display: flex !important;
+  }
+  .fx-home-proj-card__body {
+    padding: 8px 10px 10px;
+  }
+  .fx-home-proj-card__title {
+    font-size: 12.5px;
+  }
+  .fx-home-proj-card__sub {
+    font-size: 10.5px;
   }
 }
 

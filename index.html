@@ -585,27 +585,54 @@
           <h2 style="margin: 0; display: flex; align-items: center; gap: 14px; font-size: clamp(17px, 1.7vw, 20px); font-weight: 700; color: #16181A;">Öne Çıkan Projeler<span aria-hidden="true" style="display: block; width: 26px; height: 2px; background: #A90432;"></span></h2>
           <a href="/projeler/" style="font-size: 12px; font-weight: 600; color: #A90432; white-space: nowrap; text-decoration: none;">Tüm Projeler →</a>
         </div>
-        <div class="fx-home-proj-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px;">
-          <article style="min-width: 0;">
-            <div aria-hidden="true" style="width: 100%; aspect-ratio: 4 / 3; background: repeating-linear-gradient(135deg, #23262a 0 9px, #1b1e21 9px 18px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-align: center; padding: 8px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; line-height: 1.45; letter-spacing: 0.04em; color: #8B9298;"><span>PROJE FOTOĞRAFI</span><span style="opacity: 0.72;">veri merkezi</span></div>
-            <h3 style="margin: 10px 0 0; font-size: 13px; font-weight: 700; color: #16181A;">Veri Merkezi Projesi</h3>
-            <p style="margin: 3px 0 0; font-size: 11.5px; color: #6B7176;">İstanbul</p>
-          </article>
-          <article style="min-width: 0;">
-            <div aria-hidden="true" style="width: 100%; aspect-ratio: 4 / 3; background: repeating-linear-gradient(135deg, #23262a 0 9px, #1b1e21 9px 18px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-align: center; padding: 8px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; line-height: 1.45; letter-spacing: 0.04em; color: #8B9298;"><span>PROJE FOTOĞRAFI</span><span style="opacity: 0.72;">fabrika uygulaması</span></div>
-            <h3 style="margin: 10px 0 0; font-size: 13px; font-weight: 700; color: #16181A;">Fabrika Yangın Söndürme</h3>
-            <p style="margin: 3px 0 0; font-size: 11.5px; color: #6B7176;">Kocaeli</p>
-          </article>
-          <article style="min-width: 0;">
-            <div aria-hidden="true" style="width: 100%; aspect-ratio: 4 / 3; background: repeating-linear-gradient(135deg, #23262a 0 9px, #1b1e21 9px 18px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-align: center; padding: 8px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; line-height: 1.45; letter-spacing: 0.04em; color: #8B9298;"><span>PROJE FOTOĞRAFI</span><span style="opacity: 0.72;">kurumsal ofis</span></div>
-            <h3 style="margin: 10px 0 0; font-size: 13px; font-weight: 700; color: #16181A;">Kurumsal Ofis</h3>
-            <p style="margin: 3px 0 0; font-size: 11.5px; color: #6B7176;">İstanbul</p>
-          </article>
-          <article class="fx-home-proj-item--mobile-only" style="min-width: 0;">
-            <div aria-hidden="true" style="width: 100%; aspect-ratio: 4 / 3; background: repeating-linear-gradient(135deg, #23262a 0 9px, #1b1e21 9px 18px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-align: center; padding: 8px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; line-height: 1.45; letter-spacing: 0.04em; color: #8B9298;"><span>PROJE FOTOĞRAFI</span><span style="opacity: 0.72;">özel hastane</span></div>
-            <h3 style="margin: 10px 0 0; font-size: 13px; font-weight: 700; color: #16181A;">Özel Hastane Projesi</h3>
-            <p style="margin: 3px 0 0; font-size: 11.5px; color: #6B7176;">Ankara</p>
-          </article>
+        <div class="fx-home-proj-grid">
+          <!-- 1: Kurumsal Veri Merkezi -->
+          <a href="/sektorler/veri-merkezi/" class="fx-home-proj-card" aria-label="Kurumsal Veri Merkezi gazlı söndürme uygulaması">
+            <div class="fx-home-proj-card__thumb">
+              <img src="assets/img/projeler/proje-veri-merkezi.webp" alt="Kurumsal Veri Merkezi gazlı söndürme uygulaması" width="400" height="250" loading="lazy" />
+              <span class="fx-home-proj-card__badge">VERİ MERKEZİ</span>
+            </div>
+            <div class="fx-home-proj-card__body">
+              <h3 class="fx-home-proj-card__title">Kurumsal Veri Merkezi</h3>
+              <p class="fx-home-proj-card__sub">Gazlı söndürme sistemi kurulumu</p>
+            </div>
+          </a>
+
+          <!-- 2: Üretim Tesisi -->
+          <a href="/sektorler/fabrika/" class="fx-home-proj-card" aria-label="Üretim Tesisi yangın koruma sistemi">
+            <div class="fx-home-proj-card__thumb">
+              <img src="assets/img/projeler/proje-uretim-tesisi.webp" alt="Üretim Tesisi yangın koruma sistemi" width="400" height="250" loading="lazy" />
+              <span class="fx-home-proj-card__badge">ENDÜSTRİYEL TESİS</span>
+            </div>
+            <div class="fx-home-proj-card__body">
+              <h3 class="fx-home-proj-card__title">Üretim Tesisi</h3>
+              <p class="fx-home-proj-card__sub">Proses alanı yangın koruma sistemi</p>
+            </div>
+          </a>
+
+          <!-- 3: Genel Müdürlük Binası -->
+          <a href="/sektorler/" class="fx-home-proj-card" aria-label="Genel Müdürlük Binası teknik hacim gazlı sistem">
+            <div class="fx-home-proj-card__thumb">
+              <img src="assets/img/projeler/proje-genel-mudurluk.webp" alt="Genel Müdürlük Binası teknik hacim yangın sistemi" width="400" height="250" loading="lazy" />
+              <span class="fx-home-proj-card__badge">KURUMSAL YAPI</span>
+            </div>
+            <div class="fx-home-proj-card__body">
+              <h3 class="fx-home-proj-card__title">Genel Müdürlük Binası</h3>
+              <p class="fx-home-proj-card__sub">Teknik hacimler için gazlı sistem</p>
+            </div>
+          </a>
+
+          <!-- 4: Özel Hastane (Sadece Mobilde 2x2 Simetri için) -->
+          <a href="/sektorler/hastane/" class="fx-home-proj-card fx-home-proj-item--mobile-only" aria-label="Özel Hastane hassas alan yangın koruma">
+            <div class="fx-home-proj-card__thumb">
+              <img src="assets/img/projeler/proje-ozel-hastane.webp" alt="Özel Hastane yangın koruma sistemi" width="400" height="250" loading="lazy" />
+              <span class="fx-home-proj-card__badge">SAĞLIK YAPISI</span>
+            </div>
+            <div class="fx-home-proj-card__body">
+              <h3 class="fx-home-proj-card__title">Özel Hastane</h3>
+              <p class="fx-home-proj-card__sub">Hassas alanlar için yangın koruma</p>
+            </div>
+          </a>
         </div>
       </div>
 
