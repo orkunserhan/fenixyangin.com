@@ -230,3 +230,18 @@ body.has-actionbar { padding-bottom: var(--fx-tap-lg); }
     display: block !important;
   }
 }
+
+/* ── HİZMET VERDİĞİMİZ SEKTÖRLER (SADECE MOBİLDE 9'LU KUTU & SİMETRİ) ── */
+.fx-sector-card--mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .fx-home-sectors-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+  }
+  .fx-sector-card--mobile-only {
+    display: flex !important;
+  }
+}
