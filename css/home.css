@@ -209,3 +209,24 @@
 @media (min-width: 1060px) { .fx-actionbar { display: none; } }
 body.has-actionbar { padding-bottom: var(--fx-tap-lg); }
 @media (min-width: 1060px) { body.has-actionbar { padding-bottom: 0; } }
+
+/* ── ÖNE ÇIKAN PROJELER (SADECE MOBİLDE 4'LÜ KUTU & SİMETRİ) ── */
+.fx-home-proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.fx-home-proj-item--mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .fx-home-proj-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  .fx-home-proj-item--mobile-only {
+    display: block !important;
+  }
+}
