@@ -39,14 +39,14 @@
           '</button>' +
         '</div>' +
         '<div class="fx-call-sheet__body">' +
-          '<a href="tel:02126180702" class="fx-call-option">' +
+          '<a href="tel:02126180701" class="fx-call-option">' +
             '<span class="fx-call-option__icon" aria-hidden="true">' +
               '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
                 '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>' +
               '</svg>' +
             '</span>' +
             '<span class="fx-call-option__info">' +
-              '<strong class="fx-call-option__num">0212 618 07 02</strong>' +
+              '<strong class="fx-call-option__num">0212 618 07 01</strong>' +
               '<span class="fx-call-option__label">Satış ve Proje</span>' +
             '</span>' +
             '<span class="fx-call-option__chevron" aria-hidden="true">' +
@@ -74,18 +74,17 @@
           '</a>' +
         '</div>';
       document.body.appendChild(callSheet);
+    }
 
-      var closeBtn = callSheet.querySelector('[data-call-close]');
-      if (closeBtn) closeBtn.addEventListener('click', closeCallSheet);
-      var pill = callSheet.querySelector('.fx-call-sheet__pill');
-      if (pill) pill.addEventListener('click', closeCallSheet);
-      callSheetBackdrop.addEventListener('click', closeCallSheet);
+    if (!callSheetBackdrop) {
+      callSheetBackdrop = document.getElementById('fx-call-backdrop');
     }
   }
 
   function openCallSheet(e) {
     if (e && e.preventDefault) e.preventDefault();
     ensureCallSheet();
+    if (!callSheet || !callSheetBackdrop) return;
     callSheetBackdrop.hidden = false;
     callSheet.hidden = false;
     // Force layout reflow before triggering transition
@@ -96,26 +95,47 @@
   }
 
   function closeCallSheet() {
-    if (!callSheet || callSheet.hidden) return;
-    callSheetBackdrop.classList.remove('is-open');
+    if (!callSheet) return;
+    if (callSheetBackdrop) {
+      callSheetBackdrop.classList.remove('is-open');
+    }
     callSheet.classList.remove('is-open');
     setTimeout(function () {
       if (callSheet && !callSheet.classList.contains('is-open')) {
         callSheet.hidden = true;
-        callSheetBackdrop.hidden = true;
+        if (callSheetBackdrop) {
+          callSheetBackdrop.hidden = true;
+        }
         if (!drawer || drawer.hidden) {
           document.body.style.overflow = '';
         }
       }
-    }, 300);
+    }, 280);
   }
 
-  // Delegated click listener for all call triggers
+  // Delegated click listener for both closing and opening call sheet
   document.addEventListener('click', function (e) {
+    // 1. Close call sheet trigger (Close button X, backdrop, or pill)
+    var closeTrigger = e.target.closest('[data-call-close], #fx-call-backdrop, .fx-call-sheet__pill');
+    if (closeTrigger) {
+      e.preventDefault();
+      closeCallSheet();
+      return;
+    }
+
+    // 2. Open call sheet trigger
     var trigger = e.target.closest('[data-call-trigger], .fx-actionbar a[href^="tel:"], .fx-drawer__contact-card, .fx-drawer__actions a[href^="tel:"]');
     if (trigger) {
       e.preventDefault();
       openCallSheet();
+      return;
+    }
+  });
+
+  // Escape key closes modal
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      closeCallSheet();
     }
   });
 
