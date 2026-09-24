@@ -644,70 +644,80 @@
   <section class="fx-corp-showcase" aria-labelledby="kurumsal-baslik">
     <!-- Precision Vector SVG Background Geometry -->
     <div class="fx-corp-showcase__bg" aria-hidden="true">
-      <svg viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1440 500" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <!-- Dark Burgundy Gradient Plane -->
+          <!-- Deep Dark Charcoal to Crimson Base Gradient -->
           <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#0B0D10" />
-            <stop offset="38%" stop-color="#121418" />
-            <stop offset="68%" stop-color="#360110" />
-            <stop offset="100%" stop-color="#640220" />
+            <stop offset="0%" stop-color="#08090B" />
+            <stop offset="42%" stop-color="#0F1115" />
+            <stop offset="75%" stop-color="#24020B" />
+            <stop offset="100%" stop-color="#460215" />
           </linearGradient>
 
-          <!-- Red Polygon Shard Gradient 1 -->
-          <linearGradient id="shardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#7B0222" stop-opacity="0.85" />
-            <stop offset="50%" stop-color="#440012" stop-opacity="0.95" />
-            <stop offset="100%" stop-color="#120004" stop-opacity="0.98" />
+          <!-- Backplate Bordeaux Polygon -->
+          <linearGradient id="shardBack" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5C021A" stop-opacity="0.9" />
+            <stop offset="60%" stop-color="#32000E" stop-opacity="0.95" />
+            <stop offset="100%" stop-color="#140005" stop-opacity="0.98" />
           </linearGradient>
 
-          <!-- Red Polygon Shard Gradient 2 (Bright Facet) -->
-          <linearGradient id="shardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#B20635" stop-opacity="0.8" />
-            <stop offset="55%" stop-color="#6A021F" stop-opacity="0.88" />
-            <stop offset="100%" stop-color="#200009" stop-opacity="0.96" />
+          <!-- Main Angled 3D Crimson Plate -->
+          <linearGradient id="shardMain" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#9E042A" stop-opacity="0.92" />
+            <stop offset="50%" stop-color="#6E021D" stop-opacity="0.95" />
+            <stop offset="100%" stop-color="#28000A" stop-opacity="0.98" />
           </linearGradient>
 
-          <!-- Razor Edge Red Glow -->
-          <linearGradient id="razorEdge" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#E51D4B" stop-opacity="0.1" />
+          <!-- Bottom Right Folded Chamfer Wedge -->
+          <linearGradient id="shardWedge" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#BD0634" stop-opacity="0.95" />
+            <stop offset="60%" stop-color="#73021E" stop-opacity="0.9" />
+            <stop offset="100%" stop-color="#38000E" stop-opacity="0.85" />
+          </linearGradient>
+
+          <!-- Razor Edge Glowing Red Gradient -->
+          <linearGradient id="razorGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#E51D4B" stop-opacity="0.2" />
             <stop offset="35%" stop-color="#E51D4B" stop-opacity="0.95" />
-            <stop offset="70%" stop-color="#FFA4B5" stop-opacity="1" />
-            <stop offset="100%" stop-color="#E51D4B" stop-opacity="0.4" />
+            <stop offset="65%" stop-color="#FF99AD" stop-opacity="1" />
+            <stop offset="100%" stop-color="#E51D4B" stop-opacity="0.5" />
           </linearGradient>
 
           <!-- Dot Matrix Pattern -->
-          <pattern id="dotGrid" width="14" height="14" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1.1" fill="#E51D4B" fill-opacity="0.32" />
+          <pattern id="dotGridRed" width="16" height="16" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.15" fill="#E51D4B" fill-opacity="0.3" />
           </pattern>
         </defs>
 
-        <!-- Base Canvas -->
-        <rect width="1440" height="600" fill="url(#bgGrad)" />
+        <!-- Base Background -->
+        <rect width="1440" height="500" fill="url(#bgGrad)" />
 
-        <!-- Dot Grid Matrix Clusters -->
-        <path d="M 680 0 L 1020 0 L 880 340 L 540 340 Z" fill="url(#dotGrid)" opacity="0.6" />
-        <path d="M 1080 200 L 1440 200 L 1440 520 L 1220 520 Z" fill="url(#dotGrid)" opacity="0.5" />
+        <!-- Dot Grid Clusters -->
+        <rect x="0" y="280" width="360" height="220" fill="url(#dotGridRed)" opacity="0.55" />
+        <rect x="980" y="0" width="460" height="220" fill="url(#dotGridRed)" opacity="0.45" />
 
-        <!-- Deep Shard 1 (Background facet) -->
-        <path d="M 940 0 L 1440 0 L 1440 600 L 1120 600 Z" fill="url(#shardGrad1)" />
+        <!-- Backplate Bordeaux Shard -->
+        <path d="M 800 0 L 1440 0 L 1440 500 L 1060 500 Z" fill="url(#shardBack)" />
+        <line x1="799" y1="0" x2="1059" y2="500" stroke="#E51D4B" stroke-width="1.2" stroke-opacity="0.3" />
 
-        <!-- Razor Line behind main shard -->
-        <line x1="939" y1="0" x2="1119" y2="600" stroke="#E51D4B" stroke-width="1.5" stroke-opacity="0.35" />
+        <!-- Main Angled 3D Crimson Plate -->
+        <path d="M 940 0 L 1440 0 L 1440 500 L 1210 500 L 760 175 Z" fill="url(#shardMain)" />
 
-        <!-- Prominent Main Shard (Foreground facet cutting from top-right to center-bottom) -->
-        <path d="M 1060 0 L 1440 0 L 1440 600 L 1280 600 L 850 170 Z" fill="url(#shardGrad2)" />
+        <!-- Specular Razor Highlight on Main Plate -->
+        <path d="M 940 0 L 760 175 L 1210 500" stroke="url(#razorGlow)" stroke-width="2.5" />
 
-        <!-- Main Razor Edge (Bright angled line) -->
-        <path d="M 1060 0 L 850 170 L 1280 600" stroke="url(#razorEdge)" stroke-width="2" />
+        <!-- Bottom Right Corner Wedge -->
+        <path d="M 1180 500 L 1440 370 L 1440 500 Z" fill="url(#shardWedge)" />
+        <line x1="1180" y1="500" x2="1440" y2="370" stroke="#E51D4B" stroke-width="2" />
 
-        <!-- Secondary geometry guidelines -->
-        <line x1="720" y1="0" x2="1160" y2="600" stroke="#A90432" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6 4" />
-        <line x1="600" y1="120" x2="1440" y2="120" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
-        <line x1="750" y1="240" x2="1440" y2="240" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+        <!-- Precision Construction Grid Lines -->
+        <line x1="680" y1="0" x2="1080" y2="500" stroke="#E51D4B" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="5 4" />
+        <line x1="880" y1="0" x2="1280" y2="500" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+        <line x1="640" y1="90" x2="1440" y2="90" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+        <line x1="740" y1="200" x2="1440" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
 
-        <!-- Bottom ambient glow -->
-        <circle cx="100" cy="550" r="300" fill="#A90432" fill-opacity="0.06" />
+        <!-- Architectural Stepped Line above Metrics -->
+        <path d="M 0 350 L 320 350 L 340 344 L 780 344" stroke="rgba(229, 29, 75, 0.45)" stroke-width="1.2" />
       </svg>
     </div>
 
@@ -776,6 +786,7 @@
           <div class="fx-corp-metric__info">
             <span class="fx-corp-metric__val">13+</span>
             <span class="fx-corp-metric__lbl">Yıllık Deneyim</span>
+            <span class="fx-corp-metric__accent" aria-hidden="true"></span>
           </div>
         </div>
 
@@ -783,16 +794,16 @@
         <div class="fx-corp-metric">
           <div class="fx-corp-metric__badge" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <line x1="10" y1="9" x2="8" y2="9"></line>
+              <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+              <line x1="8" y1="8" x2="16" y2="8"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+              <line x1="8" y1="16" x2="13" y2="16"></line>
             </svg>
           </div>
           <div class="fx-corp-metric__info">
             <span class="fx-corp-metric__val">500+</span>
             <span class="fx-corp-metric__lbl">Tamamlanan Proje</span>
+            <span class="fx-corp-metric__accent" aria-hidden="true"></span>
           </div>
         </div>
 
@@ -807,6 +818,7 @@
           <div class="fx-corp-metric__info">
             <span class="fx-corp-metric__val">7/24</span>
             <span class="fx-corp-metric__lbl">Teknik Destek</span>
+            <span class="fx-corp-metric__accent" aria-hidden="true"></span>
           </div>
         </div>
 
