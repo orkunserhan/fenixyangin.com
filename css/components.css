@@ -39,6 +39,7 @@
 .fx-badge--spec { background: var(--fx-ok-bg); color: var(--fx-ok-ink); }
 .fx-badge--blocked { background: #FFF3CC; color: var(--fx-gate-ink); }
 .fx-badge--hub { background: #EEF0F1; color: var(--fx-ink-3); }
+.fx-badge--pass { background: var(--fx-ok-bg); color: var(--fx-ok-ink); }
 
 /* ── SAYFA IZGARASI + STICKY TOC ── */
 .fx-page {
