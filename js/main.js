@@ -1,4 +1,4 @@
-/* FENIX.COM — GİRİŞ NOKTASI & MERKEZİ ANALİTİK
+/* FENIX.COM — GİRİŞ NOKTASI & MERKEZİ ANALİTİK & GOOGLE ADS ALTYAPISI
    Tüm modüller defer ile yüklenir. Toplam JS hedefi: < 50 KB sıkıştırılmış. */
 (function () {
   'use strict';
@@ -6,24 +6,99 @@
     document.body.classList.add('has-actionbar');
   }
 
-  // Google Analytics 4 (GA4) — Yalnızca geçerli bir Measurement ID girildiğinde çalışır
   var cfg = window.FENIX_CONFIG || {};
+
+  // dataLayer ve gtag temel hazırlığı
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = window.gtag || gtag;
+
+  // Google Tag Manager (GTM) — Opsiyonel
+  var gtmId = cfg.gtmId && typeof cfg.gtmId === 'string' ? cfg.gtmId.trim() : '';
+  if (gtmId && /^GTM-[A-Z0-9]+$/i.test(gtmId)) {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer',gtmId);
+  }
+
+  // Google Analytics 4 (GA4) & Google Ads (AW-)
   var ga4Id = cfg.ga4Id && typeof cfg.ga4Id === 'string' ? cfg.ga4Id.trim() : '';
-  if (ga4Id && /^G-[A-Z0-9]+$/i.test(ga4Id)) {
+  var adsId = cfg.googleAdsId && typeof cfg.googleAdsId === 'string' ? cfg.googleAdsId.trim() : '';
+  var primaryTrackingId = ga4Id || adsId;
+
+  if (primaryTrackingId) {
     var gaScript = document.createElement('script');
     gaScript.async = true;
-    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(ga4Id);
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(primaryTrackingId);
     document.head.appendChild(gaScript);
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { window.dataLayer.push(arguments); }
-    window.gtag = gtag;
     gtag('js', new Date());
-    gtag('config', ga4Id, {
-      send_page_view: true,
-      anonymize_ip: true
-    });
+    if (ga4Id && /^G-[A-Z0-9]+$/i.test(ga4Id)) {
+      gtag('config', ga4Id, {
+        send_page_view: true,
+        anonymize_ip: true
+      });
+    }
+    if (adsId && /^AW-[0-9]+$/i.test(adsId)) {
+      gtag('config', adsId);
+    }
   }
+
+  // Otomatik Dönüşüm & Lead Takibi (Google Ads, GA4 ve GTM Uyumlu)
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+
+    // 1. Telefon Tıklamaları (Call Leads)
+    if (href.startsWith('tel:')) {
+      var tel = href.replace('tel:', '').trim();
+      window.dataLayer.push({
+        event: 'lead_call_click',
+        conversion_type: 'phone_call',
+        target_phone: tel,
+        page_location: window.location.href
+      });
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          event_category: 'Contact',
+          event_label: 'Phone Call: ' + tel,
+          method: 'Phone'
+        });
+      }
+    }
+    // 2. WhatsApp Tıklamaları (Chat Leads)
+    else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) {
+      window.dataLayer.push({
+        event: 'lead_whatsapp_click',
+        conversion_type: 'whatsapp',
+        page_location: window.location.href
+      });
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          event_category: 'Contact',
+          event_label: 'WhatsApp Direct Chat',
+          method: 'WhatsApp'
+        });
+      }
+    }
+    // 3. Teklif Al / İletişim Buton Tıklamaları (Quote CTA)
+    else if (href.indexOf('/iletisim/') !== -1 && (a.innerText.indexOf('Teklif') !== -1 || a.classList.contains('fx-btn') || a.getAttribute('data-action-quote') !== null)) {
+      window.dataLayer.push({
+        event: 'lead_quote_click',
+        conversion_type: 'quote_request',
+        page_location: window.location.href
+      });
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'begin_checkout', {
+          event_category: 'Lead',
+          event_label: 'Quote CTA Click'
+        });
+      }
+    }
+  }, true);
 
   // GitHub Pages Subpath Uyumluluğu
   // github.io/fenixyangin.com/ altında çalışırken tüm root-relative dahili bağlantıları repo köküne yönlendirir

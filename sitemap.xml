@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   FENIX.COM — sitemap.xml
-  DURUM: GELİŞTİRME. Site yayında değil; robots.txt tüm siteyi kapatır.
+  DURUM: ÜRETİM (PRODUCTION). Yayında canonical sitemap.
 
   GİRİŞ KRİTERİ (dördü birlikte):
     1. HTTP 200   2. self-canonical   3. robots index   4. yayında içerik

@@ -9,6 +9,16 @@ window.FENIX_CONFIG = {
      Canlıya çıkarken gerçek Measurement ID buraya girilecektir. */
   ga4Id: "",
 
+  /* Google Ads Dönüşüm / İzleme Kimliği (Opsiyonel)
+     Örnek format: "AW-XXXXXXXXX"
+     Boş ("") bırakıldığında pasiftir. Girildiğinde otomatik Google Ads etiketi yüklenir. */
+  googleAdsId: "",
+
+  /* Google Tag Manager (GTM) Konteyner Kimliği (Opsiyonel)
+     Örnek format: "GTM-XXXXXXX"
+     Boş ("") bırakıldığında pasiftir. */
+  gtmId: "",
+
   /* Google Maps Embed API Anahtarı (Opsiyonel)
      Boş ("") bırakıldığında standart güvenli Google Maps parametrik iframe embed'i kullanılır.
      Özel Google Cloud API anahtarı kullanılmak istenirse buraya eklenebilir. */
