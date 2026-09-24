@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="assets/fenix-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/layout.css" />
@@ -40,7 +40,52 @@
   <div class="fx-header__inner">
     <a class="fx-logo" href="/" aria-label="Fenix Yangın ana sayfa"><img src="assets/fenix-logo.png" alt="Fenix Yangın" width="1200" height="223" /></a>
     <nav class="fx-nav" aria-label="Ana menü">
-      <a href="/sistemler/">Sistemler</a>
+      <div class="fx-nav-item fx-nav-item--dropdown" data-nav-dropdown>
+        <a href="/sistemler/" class="fx-nav-link fx-nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>Sistemler</span>
+          <svg class="fx-nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m1 1 4 4 4-4"/>
+          </svg>
+        </a>
+        <div class="fx-nav-dropdown" role="menu" aria-label="Yangın Söndürme Sistemleri">
+          <div class="fx-nav-dropdown__header">
+            <span class="fx-nav-dropdown__eyebrow">YANGIN SÖNDÜRME SİSTEMLERİ</span>
+          </div>
+          <div class="fx-nav-dropdown__list">
+            <a href="/sistemler/fm200/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">FM200</strong>
+              <span class="fx-nav-dropdown__item-desc">Kolay gazlı yangın söndürme</span>
+            </a>
+            <a href="/sistemler/novec-1230/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">NOVEC 1230</strong>
+              <span class="fx-nav-dropdown__item-desc">Kalıntı bırakmayan temiz gaz</span>
+            </a>
+            <a href="/sistemler/co2/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">CO₂</strong>
+              <span class="fx-nav-dropdown__item-desc">Trafo, jeneratör ve kablo galerisi</span>
+            </a>
+            <a href="/sistemler/pano-ici/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Pano İçi</strong>
+              <span class="fx-nav-dropdown__item-desc">Elektrik panosu mikro hacim söndürme</span>
+            </a>
+            <a href="/sistemler/davlumbaz/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Davlumbaz</strong>
+              <span class="fx-nav-dropdown__item-desc">Endüstriyel mutfak yangın güvenliği</span>
+            </a>
+            <a href="/sistemler/aerosol/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Aerosol</strong>
+              <span class="fx-nav-dropdown__item-desc">Kompakt teknik hacim söndürme</span>
+            </a>
+          </div>
+          <a href="/sistemler/" class="fx-nav-dropdown__footer" role="menuitem">
+            <span>Tüm Sistemleri İnceleyin</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
       <div class="fx-nav-item fx-nav-item--dropdown" data-nav-dropdown>
         <a href="/hizmetler/" class="fx-nav-link fx-nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
           <span>Hizmetler</span>
@@ -114,18 +159,60 @@
   </div>
   <nav class="fx-drawer__nav" aria-label="Mobil menü bağlantıları">
     <ul class="fx-drawer__list">
-      <li>
-        <a href="/sistemler/" class="fx-drawer__item">
-          <span class="fx-drawer__item-left">
-            <svg class="fx-drawer__item-icon" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+      <li class="fx-drawer__group fx-drawer__group--sistemler">
+        <div class="fx-drawer__item-row">
+          <a href="/sistemler/" class="fx-drawer__item">
+            <span class="fx-drawer__item-left">
+              <svg class="fx-drawer__item-icon" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+              </svg>
+              <span class="fx-drawer__item-label">Sistemler</span>
+            </span>
+          </a>
+          <button type="button" class="fx-drawer__sub-toggle" aria-label="Sistemler alt menüsünü aç" aria-expanded="false" data-drawer-sub-toggle>
+            <svg class="fx-drawer__sub-chevron" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
             </svg>
-            <span class="fx-drawer__item-label">Sistemler</span>
-          </span>
-          <svg class="fx-drawer__chevron" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="9 18 15 12 9 6"/>
-          </svg>
-        </a>
+          </button>
+        </div>
+        <div class="fx-drawer__sub" data-drawer-sub hidden>
+          <div class="fx-drawer__sub-inner">
+            <span class="fx-drawer__sub-eyebrow">YANGIN SÖNDÜRME SİSTEMLERİ</span>
+            <div class="fx-drawer__sub-list">
+              <a href="/sistemler/fm200/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">FM200</strong>
+                <span class="fx-drawer__sub-desc">Kolay gazlı yangın söndürme</span>
+              </a>
+              <a href="/sistemler/novec-1230/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">NOVEC 1230</strong>
+                <span class="fx-drawer__sub-desc">Kalıntı bırakmayan temiz gaz</span>
+              </a>
+              <a href="/sistemler/co2/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">CO₂</strong>
+                <span class="fx-drawer__sub-desc">Trafo, jeneratör ve kablo galerisi</span>
+              </a>
+              <a href="/sistemler/pano-ici/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Pano İçi</strong>
+                <span class="fx-drawer__sub-desc">Elektrik panosu mikro hacim söndürme</span>
+              </a>
+              <a href="/sistemler/davlumbaz/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Davlumbaz</strong>
+                <span class="fx-drawer__sub-desc">Endüstriyel mutfak yangın güvenliği</span>
+              </a>
+              <a href="/sistemler/aerosol/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Aerosol</strong>
+                <span class="fx-drawer__sub-desc">Kompakt teknik hacim söndürme</span>
+              </a>
+            </div>
+            <a href="/sistemler/" class="fx-drawer__sub-footer">
+              <span>Tüm Sistemleri İnceleyin</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
       </li>
       <li class="fx-drawer__group fx-drawer__group--hizmetler">
         <div class="fx-drawer__item-row">
@@ -284,7 +371,7 @@
   </nav>
 
   <div class="fx-drawer__extra">
-    <a href="tel:02126180701" class="fx-drawer__contact-card" data-call-trigger aria-label="Bize Ulaşın, Hemen arayın">
+    <a href="tel:02126180702" class="fx-drawer__contact-card" data-call-trigger aria-label="Bize Ulaşın, Hemen arayın">
       <span class="fx-drawer__contact-icon" aria-hidden="true">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -551,31 +638,193 @@
     </div>
   </section>
 
-  <section aria-labelledby="kurumsal-baslik" style="position: relative; background: #7A0125; overflow: hidden;">
-    <div aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; background: repeating-linear-gradient(135deg, #23262a 0 9px, #1b1e21 9px 18px);"></div>
-    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, #15171A 0%, rgba(21,23,26,0.94) 32%, rgba(126,2,38,0.86) 72%, rgba(150,3,44,0.82) 100%);"></div>
-    <div style="position: relative; max-width: 1200px; margin: 0 auto; padding: clamp(34px, 4.5vw, 56px) clamp(16px, 3vw, 28px); display: flex; flex-wrap: wrap; gap: clamp(28px, 4vw, 56px); align-items: center;">
-      <div style="flex: 1 1 320px; min-width: 0;">
-        <h2 id="kurumsal-baslik" style="margin: 0; font-size: clamp(21px, 2.6vw, 31px); line-height: 1.16; font-weight: 800; letter-spacing: -0.01em; color: #fff;"><span style="display: block; font-weight: 400; opacity: 0.92;">2011'DEN BUGÜNE</span>DAHA GÜVENLİ YARINLAR İÇİN</h2>
-        <p style="margin: 16px 0 0; max-width: 520px; font-size: clamp(13.5px, 1.1vw, 15px); line-height: 1.65; color: #EBE3E6;">Fenix Yangın olarak, 2011 yılından bu yana yangın güvenliği alanında mühendislik odaklı çözümler sunuyor, kritik alanların korunması için çalışıyoruz.</p>
-        <a href="/kurumsal/" class="fx-kurumsal-btn" style="display: inline-flex; align-items: center; gap: 8px; margin-top: clamp(20px, 2.4vw, 28px); padding: 13px 22px; border: 1px solid rgba(255,255,255,0.6); border-radius: 3px; font-size: 14px; font-weight: 600; color: #fff; text-decoration: none; transition: background 0.2s, color 0.2s, border-color 0.2s;">Kurumsalımız <span aria-hidden="true">→</span></a>
+  <!-- ===================================================
+       FENIX KURUMSAL SHOWCASE (2011'DEN BUGÜNE)
+       =================================================== -->
+  <section class="fx-corp-showcase" aria-labelledby="kurumsal-baslik">
+    <!-- Precision Vector SVG Background Geometry -->
+    <div class="fx-corp-showcase__bg" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Dark Burgundy Gradient Plane -->
+          <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0B0D10" />
+            <stop offset="38%" stop-color="#121418" />
+            <stop offset="68%" stop-color="#360110" />
+            <stop offset="100%" stop-color="#640220" />
+          </linearGradient>
+
+          <!-- Red Polygon Shard Gradient 1 -->
+          <linearGradient id="shardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7B0222" stop-opacity="0.85" />
+            <stop offset="50%" stop-color="#440012" stop-opacity="0.95" />
+            <stop offset="100%" stop-color="#120004" stop-opacity="0.98" />
+          </linearGradient>
+
+          <!-- Red Polygon Shard Gradient 2 (Bright Facet) -->
+          <linearGradient id="shardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#B20635" stop-opacity="0.8" />
+            <stop offset="55%" stop-color="#6A021F" stop-opacity="0.88" />
+            <stop offset="100%" stop-color="#200009" stop-opacity="0.96" />
+          </linearGradient>
+
+          <!-- Razor Edge Red Glow -->
+          <linearGradient id="razorEdge" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#E51D4B" stop-opacity="0.1" />
+            <stop offset="35%" stop-color="#E51D4B" stop-opacity="0.95" />
+            <stop offset="70%" stop-color="#FFA4B5" stop-opacity="1" />
+            <stop offset="100%" stop-color="#E51D4B" stop-opacity="0.4" />
+          </linearGradient>
+
+          <!-- Dot Matrix Pattern -->
+          <pattern id="dotGrid" width="14" height="14" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.1" fill="#E51D4B" fill-opacity="0.32" />
+          </pattern>
+        </defs>
+
+        <!-- Base Canvas -->
+        <rect width="1440" height="600" fill="url(#bgGrad)" />
+
+        <!-- Dot Grid Matrix Clusters -->
+        <path d="M 680 0 L 1020 0 L 880 340 L 540 340 Z" fill="url(#dotGrid)" opacity="0.6" />
+        <path d="M 1080 200 L 1440 200 L 1440 520 L 1220 520 Z" fill="url(#dotGrid)" opacity="0.5" />
+
+        <!-- Deep Shard 1 (Background facet) -->
+        <path d="M 940 0 L 1440 0 L 1440 600 L 1120 600 Z" fill="url(#shardGrad1)" />
+
+        <!-- Razor Line behind main shard -->
+        <line x1="939" y1="0" x2="1119" y2="600" stroke="#E51D4B" stroke-width="1.5" stroke-opacity="0.35" />
+
+        <!-- Prominent Main Shard (Foreground facet cutting from top-right to center-bottom) -->
+        <path d="M 1060 0 L 1440 0 L 1440 600 L 1280 600 L 850 170 Z" fill="url(#shardGrad2)" />
+
+        <!-- Main Razor Edge (Bright angled line) -->
+        <path d="M 1060 0 L 850 170 L 1280 600" stroke="url(#razorEdge)" stroke-width="2" />
+
+        <!-- Secondary geometry guidelines -->
+        <line x1="720" y1="0" x2="1160" y2="600" stroke="#A90432" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6 4" />
+        <line x1="600" y1="120" x2="1440" y2="120" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+        <line x1="750" y1="240" x2="1440" y2="240" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+
+        <!-- Bottom ambient glow -->
+        <circle cx="100" cy="550" r="300" fill="#A90432" fill-opacity="0.06" />
+      </svg>
+    </div>
+
+    <div class="fx-corp-showcase__inner">
+      <!-- Top Area: Hero (Left) + Tech Ladder (Right) -->
+      <div class="fx-corp-showcase__top">
+        <!-- 1. Hero Block -->
+        <div class="fx-corp-hero">
+          <div class="fx-corp-eyebrow">
+            <span class="fx-corp-eyebrow__line" aria-hidden="true"></span>
+            <span class="fx-corp-eyebrow__text">FENİX YANGIN</span>
+          </div>
+          <h2 id="kurumsal-baslik" class="fx-corp-title">
+            <span class="fx-corp-title__sub">2011’DEN BUGÜNE</span>
+            <span class="fx-corp-title__main">RİSKİ SÖNDÜRÜYORUZ</span>
+          </h2>
+          <p class="fx-corp-desc">
+            Yangın güvenliği alanında mühendislik odaklı çözümler sunuyor, kritik alanların kesintisiz korunması için çalışıyoruz.
+          </p>
+          <a href="/kurumsal/" class="fx-corp-btn">
+            <span>Kurumsalımız</span>
+            <span class="fx-corp-btn__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <!-- 2. Tech Ladder Block -->
+        <div class="fx-corp-ladder-wrap">
+          <div class="fx-corp-ladder">
+            <div class="fx-corp-ladder__item">
+              <span class="fx-corp-ladder__line" aria-hidden="true"></span>
+              <span>MÜHENDİSLİK ODAKLI YAKLAŞIM</span>
+            </div>
+            <div class="fx-corp-ladder__item">
+              <span class="fx-corp-ladder__line" aria-hidden="true"></span>
+              <span>ULUSLARARASI STANDARTLARA UYGUNLUK</span>
+            </div>
+            <div class="fx-corp-ladder__item">
+              <span class="fx-corp-ladder__line" aria-hidden="true"></span>
+              <span>KESİNTİSİZ DESTEK</span>
+            </div>
+            <div class="fx-corp-ladder__item">
+              <span class="fx-corp-ladder__line" aria-hidden="true"></span>
+              <span>SÜRDÜRÜLEBİLİR YANGIN GÜVENLİĞİ</span>
+            </div>
+          </div>
+
+          <div class="fx-corp-watermark" aria-hidden="true">
+            <div class="fx-corp-watermark__text">
+              GÜVENLİ<br>YARINLAR<br>İÇİN
+            </div>
+            <span class="fx-corp-watermark__bar"></span>
+          </div>
+        </div>
       </div>
-      <div style="flex: 1 1 300px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: clamp(18px, 2.4vw, 30px) clamp(16px, 2vw, 24px);">
-        <div style="min-width: 0; display: flex; align-items: center; gap: 12px;">
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" aria-hidden="true" style="flex-shrink: 0;"><circle cx="15" cy="15" r="10.5"></circle><path d="M15 9v6l4.5 2.5"></path></svg>
-          <span><span style="display: block; font-size: clamp(19px, 2vw, 23px); font-weight: 800; color: #fff; line-height: 1.1;">13+</span><span style="display: block; font-size: 12px; color: #EBDDE1; margin-top: 3px;">Yıllık Deneyim</span></span>
+
+      <!-- 3. Metrics Strip -->
+      <div class="fx-corp-metrics" aria-label="Kurumsal Başarı ve Kapasite Göstergeleri">
+        <!-- Metric 1: Deneyim -->
+        <div class="fx-corp-metric">
+          <div class="fx-corp-metric__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9.5"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="fx-corp-metric__info">
+            <span class="fx-corp-metric__val">13+</span>
+            <span class="fx-corp-metric__lbl">Yıllık Deneyim</span>
+          </div>
         </div>
-        <div style="min-width: 0; display: flex; align-items: center; gap: 12px;">
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" aria-hidden="true" style="flex-shrink: 0;"><rect x="5" y="5" width="20" height="20" rx="1.5"></rect><path d="M10 15l3.5 3.5L21 11"></path></svg>
-          <span><span style="display: block; font-size: clamp(19px, 2vw, 23px); font-weight: 800; color: #fff; line-height: 1.1;">500+</span><span style="display: block; font-size: 12px; color: #EBDDE1; margin-top: 3px;">Tamamlanan Proje</span></span>
+
+        <!-- Metric 2: Projeler -->
+        <div class="fx-corp-metric">
+          <div class="fx-corp-metric__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <line x1="10" y1="9" x2="8" y2="9"></line>
+            </svg>
+          </div>
+          <div class="fx-corp-metric__info">
+            <span class="fx-corp-metric__val">500+</span>
+            <span class="fx-corp-metric__lbl">Tamamlanan Proje</span>
+          </div>
         </div>
-        <div style="min-width: 0; display: flex; align-items: center; gap: 12px;">
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" aria-hidden="true" style="flex-shrink: 0;"><circle cx="12" cy="11" r="4"></circle><path d="M5 25c0-4 3.1-6.5 7-6.5s7 2.5 7 6.5"></path><circle cx="22" cy="12" r="3"></circle><path d="M20 18.6c3 .5 5 2.8 5 6.4"></path></svg>
-          <span><span style="display: block; font-size: clamp(19px, 2vw, 23px); font-weight: 800; color: #fff; line-height: 1.1;">1000+</span><span style="display: block; font-size: 12px; color: #EBDDE1; margin-top: 3px;">Mutlu Müşteri</span></span>
+
+        <!-- Metric 3: 7/24 Destek -->
+        <div class="fx-corp-metric">
+          <div class="fx-corp-metric__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+            </svg>
+          </div>
+          <div class="fx-corp-metric__info">
+            <span class="fx-corp-metric__val">7/24</span>
+            <span class="fx-corp-metric__lbl">Teknik Destek</span>
+          </div>
         </div>
-        <div style="min-width: 0; display: flex; align-items: center; gap: 12px;">
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" aria-hidden="true" style="flex-shrink: 0;"><circle cx="15" cy="15" r="10.5"></circle><path d="M15 15h5.5M15 15V9"></path></svg>
-          <span><span style="display: block; font-size: clamp(19px, 2vw, 23px); font-weight: 800; color: #fff; line-height: 1.1;">7/24</span><span style="display: block; font-size: 12px; color: #EBDDE1; margin-top: 3px;">Teknik Destek</span></span>
+
+        <!-- Metric 4: Müşteri -->
+        <div class="fx-corp-metric">
+          <div class="fx-corp-metric__badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="fx-corp-metric__info">
+            <span class="fx-corp-metric__val">1000+</span>
+            <span class="fx-corp-metric__lbl">Mutlu Müşteri</span>
+            <span class="fx-corp-metric__accent" aria-hidden="true"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -672,13 +921,15 @@
           <h2 style="margin: 0; font-size: clamp(17px, 1.7vw, 20px); font-weight: 700; color: #16181A;">Referanslarımız</h2>
           <a href="/referanslar/" style="font-size: 12px; font-weight: 600; color: #A90432; white-space: nowrap; text-decoration: none;">Tüm Referanslar →</a>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 10px;">
+        <div class="fx-home-refs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 10px;">
           <div style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-19-turk-telekom.webp" alt="Türk Telekom" loading="lazy" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
           <div style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-21-aselsan.webp" alt="ASELSAN" loading="lazy" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
           <div style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-01-baykar.webp" alt="Baykar" loading="lazy" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
           <div style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-02-turk-hava-yollari.webp" alt="Türk Hava Yolları" loading="lazy" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
           <div style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-17-is-bankasi.webp" alt="Türkiye İş Bankası" loading="lazy" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
           <div style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-14-turk-havacilik-uzay-sanayii.webp" alt="TUSAŞ" loading="lazy" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
+          <div class="fx-ref-item--mobile-only" style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-10-trendyol.webp" alt="Trendyol" loading="lazy" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
+          <div class="fx-ref-item--mobile-only" style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-29-vodafone.webp" alt="Vodafone" loading="lazy" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
         </div>
         <p style="margin: 12px 0 0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; line-height: 1.5; color: #8A9095;">Kamu kurumları, savunma ve endüstride 80+ doğrulanmış kurumsal referans.</p>
       </div>
@@ -872,7 +1123,7 @@
   </div>
 </footer>
 <nav class="fx-actionbar" data-actionbar aria-label="Hızlı erişim">
-  <a href="tel:+902126180701" data-call-trigger>Ara</a>
+  <a href="tel:+902126180702" data-call-trigger>Ara</a>
   <a href="https://wa.me/905327409097" target="_blank" rel="noopener noreferrer">WhatsApp</a>
   <a href="/iletisim/">Teklif Al</a>
 </nav>
@@ -906,23 +1157,6 @@
     </button>
   </div>
   <div class="fx-call-sheet__body">
-    <a href="tel:02126180701" class="fx-call-option">
-      <span class="fx-call-option__icon" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-      </span>
-      <span class="fx-call-option__info">
-        <strong class="fx-call-option__num">0212 618 07 01</strong>
-        <span class="fx-call-option__label">Genel Müdürlük</span>
-      </span>
-      <span class="fx-call-option__chevron" aria-hidden="true">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="9 18 15 12 9 6"/>
-        </svg>
-      </span>
-    </a>
-
     <a href="tel:02126180702" class="fx-call-option">
       <span class="fx-call-option__icon" aria-hidden="true">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">

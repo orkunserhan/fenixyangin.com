@@ -39,22 +39,6 @@
           '</button>' +
         '</div>' +
         '<div class="fx-call-sheet__body">' +
-          '<a href="tel:02126180701" class="fx-call-option">' +
-            '<span class="fx-call-option__icon" aria-hidden="true">' +
-              '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
-                '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>' +
-              '</svg>' +
-            '</span>' +
-            '<span class="fx-call-option__info">' +
-              '<strong class="fx-call-option__num">0212 618 07 01</strong>' +
-              '<span class="fx-call-option__label">Genel Müdürlük</span>' +
-            '</span>' +
-            '<span class="fx-call-option__chevron" aria-hidden="true">' +
-              '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
-                '<polyline points="9 18 15 12 9 6"/>' +
-              '</svg>' +
-            '</span>' +
-          '</a>' +
           '<a href="tel:02126180702" class="fx-call-option">' +
             '<span class="fx-call-option__icon" aria-hidden="true">' +
               '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
@@ -201,86 +185,153 @@
       }
     });
 
-    // Hizmetler alt menü (akordiyon) zenginleştirmesi
+    // ── Sistemler & Hizmetler alt menü (akordiyon) zenginleştirmesi ──
+    var sistemlerLi = Array.prototype.find.call(drawer.querySelectorAll('.fx-drawer__list > li'), function (li) {
+      var a = li.querySelector('a');
+      var href = a ? (a.getAttribute('href') || '') : '';
+      return href === '/sistemler/' || href.indexOf('/sistemler/') !== -1;
+    });
+
+    if (sistemlerLi && !sistemlerLi.querySelector('.fx-drawer__sub')) {
+      sistemlerLi.className = 'fx-drawer__group fx-drawer__group--sistemler';
+      sistemlerLi.innerHTML =
+        '<div class="fx-drawer__item-row">' +
+          '<a href="/sistemler/" class="fx-drawer__item">' +
+            '<span class="fx-drawer__item-left">' +
+              '<svg class="fx-drawer__item-icon" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                '<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>' +
+              '</svg>' +
+              '<span class="fx-drawer__item-label">Sistemler</span>' +
+            '</span>' +
+          '</a>' +
+          '<button type="button" class="fx-drawer__sub-toggle" aria-label="Sistemler alt menüsünü aç" aria-expanded="false" data-drawer-sub-toggle>' +
+            '<svg class="fx-drawer__sub-chevron" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+              '<polyline points="6 9 12 15 18 9"/>' +
+            '</svg>' +
+          '</button>' +
+        '</div>' +
+        '<div class="fx-drawer__sub" data-drawer-sub hidden>' +
+          '<div class="fx-drawer__sub-inner">' +
+            '<span class="fx-drawer__sub-eyebrow">YANGIN SÖNDÜRME SİSTEMLERİ</span>' +
+            '<div class="fx-drawer__sub-list">' +
+              '<a href="/sistemler/fm200/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">FM200</strong>' +
+                '<span class="fx-drawer__sub-desc">Kolay gazlı yangın söndürme</span>' +
+              '</a>' +
+              '<a href="/sistemler/novec-1230/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">NOVEC 1230</strong>' +
+                '<span class="fx-drawer__sub-desc">Kalıntı bırakmayan temiz gaz</span>' +
+              '</a>' +
+              '<a href="/sistemler/co2/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">CO₂</strong>' +
+                '<span class="fx-drawer__sub-desc">Trafo, jeneratör ve kablo galerisi</span>' +
+              '</a>' +
+              '<a href="/sistemler/pano-ici/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">Pano İçi</strong>' +
+                '<span class="fx-drawer__sub-desc">Elektrik panosu mikro hacim söndürme</span>' +
+              '</a>' +
+              '<a href="/sistemler/davlumbaz/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">Davlumbaz</strong>' +
+                '<span class="fx-drawer__sub-desc">Endüstriyel mutfak yangın güvenliği</span>' +
+              '</a>' +
+              '<a href="/sistemler/aerosol/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">Aerosol</strong>' +
+                '<span class="fx-drawer__sub-desc">Kompakt teknik hacim söndürme</span>' +
+              '</a>' +
+            '</div>' +
+            '<a href="/sistemler/" class="fx-drawer__sub-footer">' +
+              '<span>Tüm Sistemleri İnceleyin</span>' +
+              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                '<line x1="5" y1="12" x2="19" y2="12"></line>' +
+                '<polyline points="12 5 19 12 12 19"></polyline>' +
+              '</svg>' +
+            '</a>' +
+          '</div>' +
+        '</div>';
+    }
+
     var hizmetlerLi = Array.prototype.find.call(drawer.querySelectorAll('.fx-drawer__list > li'), function (li) {
       var a = li.querySelector('a');
       var href = a ? (a.getAttribute('href') || '') : '';
       return href === '/hizmetler/' || href.indexOf('/hizmetler/') !== -1;
     });
 
-    if (hizmetlerLi) {
-      if (!hizmetlerLi.querySelector('.fx-drawer__sub')) {
-        hizmetlerLi.className = 'fx-drawer__group fx-drawer__group--hizmetler';
-        hizmetlerLi.innerHTML =
-          '<div class="fx-drawer__item-row">' +
-            '<a href="/hizmetler/" class="fx-drawer__item">' +
-              '<span class="fx-drawer__item-left">' +
-                '<svg class="fx-drawer__item-icon" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-                  '<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>' +
-                  '<circle cx="12" cy="12" r="3"/>' +
-                '</svg>' +
-                '<span class="fx-drawer__item-label">Hizmetler</span>' +
-              '</span>' +
-            '</a>' +
-            '<button type="button" class="fx-drawer__sub-toggle" aria-label="Hizmetler alt menüsünü aç" aria-expanded="false" data-drawer-sub-toggle>' +
-              '<svg class="fx-drawer__sub-chevron" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-                '<polyline points="6 9 12 15 18 9"/>' +
+    if (hizmetlerLi && !hizmetlerLi.querySelector('.fx-drawer__sub')) {
+      hizmetlerLi.className = 'fx-drawer__group fx-drawer__group--hizmetler';
+      hizmetlerLi.innerHTML =
+        '<div class="fx-drawer__item-row">' +
+          '<a href="/hizmetler/" class="fx-drawer__item">' +
+            '<span class="fx-drawer__item-left">' +
+              '<svg class="fx-drawer__item-icon" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                '<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>' +
+                '<circle cx="12" cy="12" r="3"/>' +
               '</svg>' +
-            '</button>' +
-          '</div>' +
-          '<div class="fx-drawer__sub" data-drawer-sub hidden>' +
-            '<div class="fx-drawer__sub-inner">' +
-              '<span class="fx-drawer__sub-eyebrow">YANGIN SÖNDÜRME HİZMETLERİ</span>' +
-              '<div class="fx-drawer__sub-list">' +
-                '<a href="/hizmetler/muhendislik/" class="fx-drawer__sub-link">' +
-                  '<strong class="fx-drawer__sub-title">Mühendislik</strong>' +
-                  '<span class="fx-drawer__sub-desc">Yangın danışmanlığı, hidrolik hesap ve projelendirme</span>' +
-                '</a>' +
-                '<a href="/hizmetler/kurulum/" class="fx-drawer__sub-link">' +
-                  '<strong class="fx-drawer__sub-title">Kurulum</strong>' +
-                  '<span class="fx-drawer__sub-desc">Anahtar teslim sistem kurulumu ve entegrasyon</span>' +
-                '</a>' +
-                '<a href="/hizmetler/montaj/" class="fx-drawer__sub-link">' +
-                  '<strong class="fx-drawer__sub-title">Montaj</strong>' +
-                  '<span class="fx-drawer__sub-desc">Standartlara uygun mekanik ve elektriksel montaj</span>' +
-                '</a>' +
-                '<a href="/hizmetler/tedarik/" class="fx-drawer__sub-link">' +
-                  '<strong class="fx-drawer__sub-title">Tedarik</strong>' +
-                  '<span class="fx-drawer__sub-desc">Onaylı silindir, vana, nozul ve ekipman temini</span>' +
-                '</a>' +
-                '<a href="/hizmetler/dolum/" class="fx-drawer__sub-link">' +
-                  '<strong class="fx-drawer__sub-title">Dolum</strong>' +
-                  '<span class="fx-drawer__sub-desc">FM200 ve Novec 1230 sertifikalı gaz dolumu</span>' +
-                '</a>' +
-                '<a href="/hizmetler/bakim/" class="fx-drawer__sub-link">' +
-                  '<strong class="fx-drawer__sub-title">Bakım</strong>' +
-                  '<span class="fx-drawer__sub-desc">TSE-HYB onaylı periyodik bakım ve kontrol</span>' +
-                '</a>' +
-              '</div>' +
-              '<a href="/hizmetler/" class="fx-drawer__sub-footer">' +
-                '<span>Tüm Hizmetleri İnceleyin</span>' +
-                '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-                  '<line x1="5" y1="12" x2="19" y2="12"></line>' +
-                  '<polyline points="12 5 19 12 12 19"></polyline>' +
-                '</svg>' +
+              '<span class="fx-drawer__item-label">Hizmetler</span>' +
+            '</span>' +
+          '</a>' +
+          '<button type="button" class="fx-drawer__sub-toggle" aria-label="Hizmetler alt menüsünü aç" aria-expanded="false" data-drawer-sub-toggle>' +
+            '<svg class="fx-drawer__sub-chevron" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+              '<polyline points="6 9 12 15 18 9"/>' +
+            '</svg>' +
+          '</button>' +
+        '</div>' +
+        '<div class="fx-drawer__sub" data-drawer-sub hidden>' +
+          '<div class="fx-drawer__sub-inner">' +
+            '<span class="fx-drawer__sub-eyebrow">YANGIN SÖNDÜRME HİZMETLERİ</span>' +
+            '<div class="fx-drawer__sub-list">' +
+              '<a href="/hizmetler/muhendislik/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">Mühendislik</strong>' +
+                '<span class="fx-drawer__sub-desc">Yangın danışmanlığı, hidrolik hesap ve projelendirme</span>' +
+              '</a>' +
+              '<a href="/hizmetler/kurulum/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">Kurulum</strong>' +
+                '<span class="fx-drawer__sub-desc">Anahtar teslim sistem kurulumu ve entegrasyon</span>' +
+              '</a>' +
+              '<a href="/hizmetler/montaj/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">Montaj</strong>' +
+                '<span class="fx-drawer__sub-desc">Standartlara uygun mekanik ve elektriksel montaj</span>' +
+              '</a>' +
+              '<a href="/hizmetler/tedarik/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">Tedarik</strong>' +
+                '<span class="fx-drawer__sub-desc">Onaylı silindir, vana, nozul ve ekipman temini</span>' +
+              '</a>' +
+              '<a href="/hizmetler/dolum/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">Dolum</strong>' +
+                '<span class="fx-drawer__sub-desc">FM200 ve Novec 1230 sertifikalı gaz dolumu</span>' +
+              '</a>' +
+              '<a href="/hizmetler/bakim/" class="fx-drawer__sub-link">' +
+                '<strong class="fx-drawer__sub-title">Bakım</strong>' +
+                '<span class="fx-drawer__sub-desc">TSE-HYB onaylı periyodik bakım ve kontrol</span>' +
               '</a>' +
             '</div>' +
-          '</div>';
-      }
+            '<a href="/hizmetler/" class="fx-drawer__sub-footer">' +
+              '<span>Tüm Hizmetleri İnceleyin</span>' +
+              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+                '<line x1="5" y1="12" x2="19" y2="12"></line>' +
+                '<polyline points="12 5 19 12 12 19"></polyline>' +
+              '</svg>' +
+            '</a>' +
+          '</div>' +
+        '</div>';
+    }
 
-      var subToggle = hizmetlerLi.querySelector('[data-drawer-sub-toggle]');
-      if (subToggle && !subToggle.hasAttribute('data-bound')) {
+    // Bind all sub-toggles (both Sistemler and Hizmetler)
+    var subToggles = drawer.querySelectorAll('[data-drawer-sub-toggle]');
+    Array.prototype.forEach.call(subToggles, function (subToggle) {
+      if (!subToggle.hasAttribute('data-bound')) {
         subToggle.setAttribute('data-bound', 'true');
         subToggle.addEventListener('click', function (e) {
           e.preventDefault();
           e.stopPropagation();
-          var sub = hizmetlerLi.querySelector('[data-drawer-sub]');
-          var open = hizmetlerLi.classList.toggle('is-open');
+          var group = subToggle.closest('.fx-drawer__group');
+          if (!group) return;
+          var sub = group.querySelector('[data-drawer-sub]');
+          var open = group.classList.toggle('is-open');
           subToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
           if (sub) sub.hidden = !open;
         });
       }
-    }
+    });
 
     // Bize Ulaşın kartı ve Sosyal Medya blokları kontrolü
     if (!drawer.querySelector('.fx-drawer__contact-card')) {
@@ -296,7 +347,7 @@
       var extraContainer = document.createElement('div');
       extraContainer.className = 'fx-drawer__extra';
       extraContainer.innerHTML =
-        '<a href="tel:02126180701" class="fx-drawer__contact-card" data-call-trigger aria-label="Bize Ulaşın, Hemen arayın">' +
+        '<a href="tel:02126180702" class="fx-drawer__contact-card" data-call-trigger aria-label="Bize Ulaşın, Hemen arayın">' +
           '<span class="fx-drawer__contact-icon" aria-hidden="true">' +
             '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
               '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>' +
@@ -354,100 +405,153 @@
     }
   }
 
-  // ── 2.5. DESKTOP DROPDOWN ENTEGRASYONU (HİZMETLER) ──
+  // ── 2.5. DESKTOP DROPDOWN ENTEGRASYONU (SİSTEMLER & HİZMETLER) ──
   function enhanceDesktopNav() {
     var nav = document.querySelector('.fx-nav');
     if (!nav) return;
 
-    var existingDropdown = nav.querySelector('.fx-nav-item--dropdown');
-    if (!existingDropdown) {
-      // Find Hizmetler link in top nav
-      var links = nav.querySelectorAll('a');
-      var hizmetlerLink = null;
-      for (var i = 0; i < links.length; i++) {
-        var href = links[i].getAttribute('href') || '';
-        if (href === '/hizmetler/' || href.indexOf('/hizmetler/') !== -1) {
-          hizmetlerLink = links[i];
-          break;
-        }
-      }
-
-      if (hizmetlerLink) {
-        var isCurrent = hizmetlerLink.hasAttribute('aria-current') || hizmetlerLink.classList.contains('is-active');
-        var dropdownWrapper = document.createElement('div');
-        dropdownWrapper.className = 'fx-nav-item fx-nav-item--dropdown' + (isCurrent ? ' is-active' : '');
-        dropdownWrapper.setAttribute('data-nav-dropdown', '');
-
-        dropdownWrapper.innerHTML =
-          '<a href="/hizmetler/" class="fx-nav-link fx-nav-link--dropdown"' + (isCurrent ? ' aria-current="page"' : '') + ' aria-haspopup="true" aria-expanded="false">' +
-            '<span>Hizmetler</span>' +
-            '<svg class="fx-nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-              '<path d="m1 1 4 4 4-4"/>' +
+    // 1. Sistemler Dropdown
+    var sistemlerLink = nav.querySelector(':scope > a[href="/sistemler/"], :scope > a[href^="/sistemler/"]');
+    if (sistemlerLink) {
+      var isCurSys = sistemlerLink.hasAttribute('aria-current') || sistemlerLink.classList.contains('is-active');
+      var sysWrapper = document.createElement('div');
+      sysWrapper.className = 'fx-nav-item fx-nav-item--dropdown' + (isCurSys ? ' is-active' : '');
+      sysWrapper.setAttribute('data-nav-dropdown', '');
+      sysWrapper.innerHTML =
+        '<a href="/sistemler/" class="fx-nav-link fx-nav-link--dropdown"' + (isCurSys ? ' aria-current="page"' : '') + ' aria-haspopup="true" aria-expanded="false">' +
+          '<span>Sistemler</span>' +
+          '<svg class="fx-nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+            '<path d="m1 1 4 4 4-4"/>' +
+          '</svg>' +
+        '</a>' +
+        '<div class="fx-nav-dropdown" role="menu" aria-label="Yangın Söndürme Sistemleri">' +
+          '<div class="fx-nav-dropdown__header">' +
+            '<span class="fx-nav-dropdown__eyebrow">YANGIN SÖNDÜRME SİSTEMLERİ</span>' +
+          '</div>' +
+          '<div class="fx-nav-dropdown__list">' +
+            '<a href="/sistemler/fm200/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">FM200</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Kolay gazlı yangın söndürme</span>' +
+            '</a>' +
+            '<a href="/sistemler/novec-1230/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">NOVEC 1230</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Kalıntı bırakmayan temiz gaz</span>' +
+            '</a>' +
+            '<a href="/sistemler/co2/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">CO₂</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Trafo, jeneratör ve kablo galerisi</span>' +
+            '</a>' +
+            '<a href="/sistemler/pano-ici/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">Pano İçi</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Elektrik panosu mikro hacim söndürme</span>' +
+            '</a>' +
+            '<a href="/sistemler/davlumbaz/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">Davlumbaz</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Endüstriyel mutfak yangın güvenliği</span>' +
+            '</a>' +
+            '<a href="/sistemler/aerosol/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">Aerosol</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Kompakt teknik hacim söndürme</span>' +
+            '</a>' +
+          '</div>' +
+          '<a href="/sistemler/" class="fx-nav-dropdown__footer" role="menuitem">' +
+            '<span>Tüm Sistemleri İnceleyin</span>' +
+            '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+              '<line x1="5" y1="12" x2="19" y2="12"></line>' +
+              '<polyline points="12 5 19 12 12 19"></polyline>' +
             '</svg>' +
           '</a>' +
-          '<div class="fx-nav-dropdown" role="menu" aria-label="Yangın Söndürme Hizmetleri">' +
-            '<div class="fx-nav-dropdown__header">' +
-              '<span class="fx-nav-dropdown__eyebrow">YANGIN SÖNDÜRME HİZMETLERİ</span>' +
-            '</div>' +
-            '<div class="fx-nav-dropdown__list">' +
-              '<a href="/hizmetler/muhendislik/" class="fx-nav-dropdown__item" role="menuitem">' +
-                '<strong class="fx-nav-dropdown__item-title">Mühendislik</strong>' +
-                '<span class="fx-nav-dropdown__item-desc">Yangın danışmanlığı, hidrolik hesap ve projelendirme</span>' +
-              '</a>' +
-              '<a href="/hizmetler/kurulum/" class="fx-nav-dropdown__item" role="menuitem">' +
-                '<strong class="fx-nav-dropdown__item-title">Kurulum</strong>' +
-                '<span class="fx-nav-dropdown__item-desc">Anahtar teslim sistem kurulumu ve entegrasyon</span>' +
-              '</a>' +
-              '<a href="/hizmetler/montaj/" class="fx-nav-dropdown__item" role="menuitem">' +
-                '<strong class="fx-nav-dropdown__item-title">Montaj</strong>' +
-                '<span class="fx-nav-dropdown__item-desc">Standartlara uygun mekanik ve elektriksel montaj</span>' +
-              '</a>' +
-              '<a href="/hizmetler/tedarik/" class="fx-nav-dropdown__item" role="menuitem">' +
-                '<strong class="fx-nav-dropdown__item-title">Tedarik</strong>' +
-                '<span class="fx-nav-dropdown__item-desc">Onaylı silindir, vana, nozul ve ekipman temini</span>' +
-              '</a>' +
-              '<a href="/hizmetler/dolum/" class="fx-nav-dropdown__item" role="menuitem">' +
-                '<strong class="fx-nav-dropdown__item-title">Dolum</strong>' +
-                '<span class="fx-nav-dropdown__item-desc">FM200 ve Novec 1230 sertifikalı gaz dolumu</span>' +
-              '</a>' +
-              '<a href="/hizmetler/bakim/" class="fx-nav-dropdown__item" role="menuitem">' +
-                '<strong class="fx-nav-dropdown__item-title">Bakım</strong>' +
-                '<span class="fx-nav-dropdown__item-desc">TSE-HYB onaylı periyodik bakım ve kontrol</span>' +
-              '</a>' +
-            '</div>' +
-            '<a href="/hizmetler/" class="fx-nav-dropdown__footer" role="menuitem">' +
-              '<span>Tüm Hizmetleri İnceleyin</span>' +
-              '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-                '<line x1="5" y1="12" x2="19" y2="12"></line>' +
-                '<polyline points="12 5 19 12 12 19"></polyline>' +
-              '</svg>' +
+        '</div>';
+      sistemlerLink.parentNode.replaceChild(sysWrapper, sistemlerLink);
+    }
+
+    // 2. Hizmetler Dropdown
+    var hizmetlerLink = nav.querySelector(':scope > a[href="/hizmetler/"], :scope > a[href^="/hizmetler/"]');
+    if (hizmetlerLink) {
+      var isCurHiz = hizmetlerLink.hasAttribute('aria-current') || hizmetlerLink.classList.contains('is-active');
+      var hizWrapper = document.createElement('div');
+      hizWrapper.className = 'fx-nav-item fx-nav-item--dropdown' + (isCurHiz ? ' is-active' : '');
+      hizWrapper.setAttribute('data-nav-dropdown', '');
+      hizWrapper.innerHTML =
+        '<a href="/hizmetler/" class="fx-nav-link fx-nav-link--dropdown"' + (isCurHiz ? ' aria-current="page"' : '') + ' aria-haspopup="true" aria-expanded="false">' +
+          '<span>Hizmetler</span>' +
+          '<svg class="fx-nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+            '<path d="m1 1 4 4 4-4"/>' +
+          '</svg>' +
+        '</a>' +
+        '<div class="fx-nav-dropdown" role="menu" aria-label="Yangın Söndürme Hizmetleri">' +
+          '<div class="fx-nav-dropdown__header">' +
+            '<span class="fx-nav-dropdown__eyebrow">YANGIN SÖNDÜRME HİZMETLERİ</span>' +
+          '</div>' +
+          '<div class="fx-nav-dropdown__list">' +
+            '<a href="/hizmetler/muhendislik/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">Mühendislik</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Yangın danışmanlığı, hidrolik hesap ve projelendirme</span>' +
             '</a>' +
-          '</div>';
+            '<a href="/hizmetler/kurulum/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">Kurulum</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Anahtar teslim sistem kurulumu ve entegrasyon</span>' +
+            '</a>' +
+            '<a href="/hizmetler/montaj/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">Montaj</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Standartlara uygun mekanik ve elektriksel montaj</span>' +
+            '</a>' +
+            '<a href="/hizmetler/tedarik/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">Tedarik</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">Onaylı silindir, vana, nozul ve ekipman temini</span>' +
+            '</a>' +
+            '<a href="/hizmetler/dolum/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">Dolum</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">FM200 ve Novec 1230 sertifikalı gaz dolumu</span>' +
+            '</a>' +
+            '<a href="/hizmetler/bakim/" class="fx-nav-dropdown__item" role="menuitem">' +
+              '<strong class="fx-nav-dropdown__item-title">Bakım</strong>' +
+              '<span class="fx-nav-dropdown__item-desc">TSE-HYB onaylı periyodik bakım ve kontrol</span>' +
+            '</a>' +
+          '</div>' +
+          '<a href="/hizmetler/" class="fx-nav-dropdown__footer" role="menuitem">' +
+            '<span>Tüm Hizmetleri İnceleyin</span>' +
+            '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+              '<line x1="5" y1="12" x2="19" y2="12"></line>' +
+              '<polyline points="12 5 19 12 12 19"></polyline>' +
+            '</svg>' +
+          '</a>' +
+        '</div>';
+      hizmetlerLink.parentNode.replaceChild(hizWrapper, hizmetlerLink);
+    }
 
-        hizmetlerLink.parentNode.replaceChild(dropdownWrapper, hizmetlerLink);
+    // Touch / Click toggle on all dropdown triggers
+    var ddWrappers = nav.querySelectorAll('.fx-nav-item--dropdown');
+    Array.prototype.forEach.call(ddWrappers, function (ddWrapper) {
+      var ddTrigger = ddWrapper.querySelector('.fx-nav-link--dropdown');
+      if (ddTrigger && !ddTrigger.hasAttribute('data-bound')) {
+        ddTrigger.setAttribute('data-bound', 'true');
+        ddTrigger.addEventListener('click', function (e) {
+          if (window.matchMedia('(pointer: coarse)').matches) {
+            e.preventDefault();
+            var isOpen = ddWrapper.classList.toggle('is-open');
+            ddTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            Array.prototype.forEach.call(ddWrappers, function (other) {
+              if (other !== ddWrapper) {
+                other.classList.remove('is-open');
+                var otherTrig = other.querySelector('.fx-nav-link--dropdown');
+                if (otherTrig) otherTrig.setAttribute('aria-expanded', 'false');
+              }
+            });
+          }
+        });
       }
-    }
+    });
 
-    // Touch / Click toggle on dropdown trigger
-    var ddTrigger = nav.querySelector('.fx-nav-link--dropdown');
-    var ddWrapper = nav.querySelector('.fx-nav-item--dropdown');
-    if (ddTrigger && ddWrapper && !ddTrigger.hasAttribute('data-bound')) {
-      ddTrigger.setAttribute('data-bound', 'true');
-      ddTrigger.addEventListener('click', function (e) {
-        if (window.matchMedia('(pointer: coarse)').matches) {
-          e.preventDefault();
-          var isOpen = ddWrapper.classList.toggle('is-open');
-          ddTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        }
-      });
-
-      document.addEventListener('click', function (e) {
-        if (!ddWrapper.contains(e.target)) {
-          ddWrapper.classList.remove('is-open');
-          ddTrigger.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
+    document.addEventListener('click', function (e) {
+      if (!nav.contains(e.target)) {
+        Array.prototype.forEach.call(ddWrappers, function (w) {
+          w.classList.remove('is-open');
+          var tr = w.querySelector('.fx-nav-link--dropdown');
+          if (tr) tr.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
   }
 
   // Sayfa yüklendiğinde nav ve çekmeceyi zenginleştir

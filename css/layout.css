@@ -378,12 +378,16 @@
   flex-shrink: 0;
 }
 
-/* ── MOBİL ÇEKMECE ALT MENÜSÜ (HİZMETLER AKORDİYON) ── */
-.fx-drawer__group--hizmetler {
+/* ── MOBİL ÇEKMECE ALT MENÜSÜ (SİSTEMLER & HİZMETLER AKORDİYON) ── */
+.fx-drawer__group,
+.fx-drawer__group--hizmetler,
+.fx-drawer__group--sistemler {
   border-bottom: 1px solid #F3F4F6;
 }
 
-.fx-drawer__group--hizmetler .fx-drawer__item {
+.fx-drawer__group .fx-drawer__item,
+.fx-drawer__group--hizmetler .fx-drawer__item,
+.fx-drawer__group--sistemler .fx-drawer__item {
   border-bottom: none;
 }
 
@@ -423,7 +427,9 @@
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.fx-drawer__group--hizmetler.is-open .fx-drawer__sub-chevron {
+.fx-drawer__group.is-open .fx-drawer__sub-chevron,
+.fx-drawer__group--hizmetler.is-open .fx-drawer__sub-chevron,
+.fx-drawer__group--sistemler.is-open .fx-drawer__sub-chevron {
   transform: rotate(180deg);
 }
 
