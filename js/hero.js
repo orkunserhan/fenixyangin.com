@@ -92,3 +92,22 @@
   startTimer();
 })();
 
+/* Kurumsal Bölüm Mühendislik Maddeleri Kademeli Giriş Animasyonu */
+(function () {
+  var ladder = document.querySelector('.fx-corp-ladder');
+  if (!ladder) return;
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          ladder.classList.add('is-animated');
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+    obs.observe(ladder);
+  } else {
+    ladder.classList.add('is-animated');
+  }
+})();
+
