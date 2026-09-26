@@ -137,6 +137,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  min-width: 0;
 }
 
 .fx-ref-filters {
@@ -145,8 +146,11 @@
   gap: 6px;
   flex-wrap: nowrap;
   overflow-x: auto;
+  min-width: 0;
+  max-width: 100%;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .fx-ref-filters::-webkit-scrollbar {
@@ -234,7 +238,7 @@
 
 .fx-ref-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   border-top: 1px solid #ededed;
   border-left: 1px solid #ededed;
   background: #ffffff;
@@ -244,6 +248,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
   min-height: 116px;
   padding: 20px 24px;
   background: #ffffff;
@@ -467,7 +472,7 @@
 /* Tablet (1024px altı) */
 @media (max-width: 1024px) {
   .fx-ref-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .fx-ref-toolbar {
@@ -513,10 +518,11 @@
     -webkit-overflow-scrolling: touch;
     padding-bottom: 8px;
     width: 100%;
+    min-width: 0;
   }
 
   .fx-ref-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .fx-ref-card {
