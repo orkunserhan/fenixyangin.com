@@ -9,6 +9,7 @@
   var slides = hero.querySelectorAll('[data-hero-slide]');
   var texts = hero.querySelectorAll('[data-hero-text]');
   var dots = hero.querySelectorAll('[data-hero-dot]');
+  var badges = hero.querySelectorAll('[data-hero-badge]');
 
   if (slides.length < 2) return;
 
@@ -34,6 +35,9 @@
     if (texts[prev]) {
       texts[prev].style.opacity = '0';
     }
+    if (badges[prev]) {
+      badges[prev].style.opacity = '0';
+    }
 
     textTimer = setTimeout(function () {
       texts.forEach(function (t, idx) {
@@ -46,6 +50,18 @@
           t.style.opacity = '0';
         }
       });
+      if (badges.length) {
+        badges.forEach(function (b, idx) {
+          if (idx === next) {
+            b.style.display = 'flex';
+            void b.offsetWidth;
+            b.style.opacity = '1';
+          } else {
+            b.style.display = 'none';
+            b.style.opacity = '0';
+          }
+        });
+      }
       textTimer = null;
     }, 200);
 
