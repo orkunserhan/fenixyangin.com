@@ -63,8 +63,18 @@
   opacity: 0.9;
   transform: translateY(-1px);
 }
+@media (min-width: 1025px) {
+  .fx-hero-certs {
+    padding: clamp(10px, 0.9vw, 12px) clamp(18px, 1.6vw, 22px);
+    gap: clamp(18px, 1.6vw, 22px);
+  }
+  .fx-hero-cert-item svg {
+    height: clamp(34px, 2.6vw, 38px);
+    width: auto;
+  }
+}
 @media (max-width: 1280px) {
-  .fx-hero-text-slider { min-height: 345px; }
+  .fx-hero-text-slider { min-height: 365px; }
 }
 @media (max-width: 1024px) {
   .fx-hero-text-slider { min-height: 320px; }
