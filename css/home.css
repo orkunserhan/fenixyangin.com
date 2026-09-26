@@ -90,13 +90,15 @@
   }
 }
 .fx-home-hero h1,
-.fx-home-hero h2 {
+.fx-home-hero h2,
+.fx-hero-title {
   margin: 0;
   font-family: 'Archivo', sans-serif;
   font-size: clamp(32px, 5.2vw, 54px);
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -0.02em;
+  text-transform: uppercase;
   color: var(--fx-white);
 }
 .fx-home-hero__lede {
