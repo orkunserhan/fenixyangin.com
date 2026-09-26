@@ -42,7 +42,7 @@
     textTimer = setTimeout(function () {
       texts.forEach(function (t, idx) {
         if (idx === next) {
-          t.style.display = 'block';
+          t.style.display = 'flex';
           void t.offsetWidth;
           t.style.opacity = '1';
         } else {
