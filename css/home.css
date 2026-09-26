@@ -4,41 +4,47 @@
   position: relative;
   background: var(--fx-darker);
   overflow: hidden;
-  min-height: 614px;
+  min-height: 668px;
 }
 @media (max-width: 1280px) {
-  .fx-home-hero { min-height: 590px; }
+  .fx-home-hero { min-height: 640px; }
 }
 @media (max-width: 1024px) {
-  .fx-home-hero { min-height: 560px; }
+  .fx-home-hero { min-height: 592px; }
 }
-@media (max-width: 900px) {
-  .fx-home-hero { min-height: 480px; }
+@media (max-width: 768px) {
+  .fx-home-hero { min-height: 490px; }
 }
-@media (max-width: 600px) {
-  .fx-home-hero { min-height: 520px; }
+@media (max-width: 480px) {
+  .fx-home-hero { min-height: 530px; }
+}
+@media (max-width: 360px) {
+  .fx-home-hero { min-height: 552px; }
 }
 
 .fx-hero-text-slider {
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
-  min-height: 356px;
+  min-height: 412px;
 }
 .fx-hero-text-slider > [data-hero-text] {
   grid-area: 1 / 1;
 }
 @media (max-width: 1280px) {
-  .fx-hero-text-slider { min-height: 348px; }
+  .fx-hero-text-slider { min-height: 382px; }
 }
 @media (max-width: 1024px) {
-  .fx-hero-text-slider { min-height: 336px; }
+  .fx-hero-text-slider { min-height: 368px; }
 }
 @media (max-width: 768px) {
-  .fx-hero-text-slider { min-height: 290px; }
+  .fx-hero-text-slider { min-height: 300px; }
 }
 @media (max-width: 480px) {
-  .fx-hero-text-slider { min-height: 275px; }
+  .fx-hero-text-slider { min-height: 285px; }
+}
+@media (max-width: 360px) {
+  .fx-hero-text-slider { min-height: 308px; }
 }
 
 .fx-home-hero__inner {
@@ -90,12 +96,17 @@
     backdrop-filter: blur(4px);
   }
 }
-.fx-home-hero h1 {
-  margin: 0 0 20px; max-width: 16ch;
-  font-size: clamp(30px, 6vw, 62px); font-weight: 800;
-  letter-spacing: var(--fx-ls-tight); line-height: 1.04; color: var(--fx-white);
+.fx-home-hero h1,
+.fx-home-hero h2 {
+  margin: 0;
+  font-family: 'Archivo', sans-serif;
+  font-size: clamp(28px, 4.8vw, 50px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--fx-white);
 }
-.fx-home-hero h1 em { font-style: normal; color: var(--fx-red-on-dark); }
 .fx-home-hero__lede {
   margin: 0 0 28px; max-width: 54ch;
   font-size: var(--fx-lede); line-height: 1.7; color: #C4C9CD; text-wrap: pretty;
