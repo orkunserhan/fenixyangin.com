@@ -97,7 +97,7 @@ function header(f, cur) {
 <header class="fx-header">
   <div class="fx-header__inner">
     <a class="fx-logo" href="/" aria-label="${site.name} ana sayfa">
-      <img src="${site.logo}" alt="${site.name}" width="1200" height="223" />
+      <img src="${site.logo}" alt="${site.name}" width="1200" height="223" decoding="async" />
     </a>
     <nav class="fx-nav" aria-label="Ana menü">
       ${links}
@@ -109,7 +109,7 @@ function header(f, cur) {
 
 <div class="fx-drawer" id="fx-drawer" data-drawer hidden role="dialog" aria-modal="true" aria-label="Mobil menü">
   <div class="fx-drawer__top">
-    <a class="fx-logo" href="/"><img src="${site.logo}" alt="${site.name}" width="1200" height="223" /></a>
+    <a class="fx-logo" href="/"><img src="${site.logo}" alt="${site.name}" width="1200" height="223" loading="lazy" decoding="async" /></a>
     <button class="fx-drawer__close" type="button" data-drawer-close aria-label="Menüyü kapat">×</button>
   </div>
   <nav aria-label="Mobil menü bağlantıları">
@@ -155,7 +155,7 @@ function footer(f, extra) {
   <span class="fx-footer__texture" aria-hidden="true"></span>
   <div class="fx-footer__inner">
     <div class="fx-footer__brand">
-      <img class="fx-footer__logo" src="${site.logo}" alt="${site.name}" width="1200" height="223" />
+      <img class="fx-footer__logo" src="${site.logo}" alt="${site.name}" width="1200" height="223" loading="lazy" decoding="async" />
       <nav aria-label="Alt menü">
         <a href="/sistemler/">Sistemler</a>
         <a href="/hizmetler/">Hizmetler</a>
@@ -169,6 +169,7 @@ function footer(f, extra) {
   </div>
 </footer>
 ${extra || ''}
+<script src="${rel(f,'js/config.js')}" defer></script>
 <script src="${rel(f,'js/main.js')}" defer></script>
 <script src="${rel(f,'js/nav.js')}" defer></script>
 ${'</bo' + 'dy>'}
