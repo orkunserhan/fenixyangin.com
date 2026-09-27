@@ -7,7 +7,7 @@ window.FENIX_CONFIG = {
      Örnek format: "G-XXXXXXXXXX"
      Boş ("") bırakıldığında GA4 tracking tamamen pasiftir; sıfır ağ isteği ve sıfır çerez üretir.
      Canlıya çıkarken gerçek Measurement ID buraya girilecektir. */
-  ga4Id: "",
+  ga4Id: "G-92DL43Q3D7",
 
   /* Google Ads Dönüşüm / İzleme Kimliği (Opsiyonel)
      Örnek format: "AW-XXXXXXXXX"

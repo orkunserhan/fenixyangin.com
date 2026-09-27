@@ -29,17 +29,20 @@
   var primaryTrackingId = ga4Id || adsId;
 
   if (primaryTrackingId) {
-    var gaScript = document.createElement('script');
-    gaScript.async = true;
-    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(primaryTrackingId);
-    document.head.appendChild(gaScript);
+    var hasHeadGtag = !!document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
+    if (!hasHeadGtag) {
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(primaryTrackingId);
+      document.head.appendChild(gaScript);
 
-    gtag('js', new Date());
-    if (ga4Id && /^G-[A-Z0-9]+$/i.test(ga4Id)) {
-      gtag('config', ga4Id, {
-        send_page_view: true,
-        anonymize_ip: true
-      });
+      gtag('js', new Date());
+      if (ga4Id && /^G-[A-Z0-9]+$/i.test(ga4Id)) {
+        gtag('config', ga4Id, {
+          send_page_view: true,
+          anonymize_ip: true
+        });
+      }
     }
     if (adsId && /^AW-[0-9]+$/i.test(adsId)) {
       gtag('config', adsId);
