@@ -7,6 +7,16 @@
       "source": "/hakkimizda",
       "destination": "/kurumsal/hakkimizda/",
       "permanent": true
+    },
+    {
+      "source": "/hakkimizda/",
+      "destination": "/kurumsal/hakkimizda/",
+      "permanent": true
+    },
+    {
+      "source": "/hakkimizda/(.*)",
+      "destination": "/kurumsal/hakkimizda/",
+      "permanent": true
     }
   ],
   "headers": [
