@@ -89,6 +89,43 @@
   .fx-hero-text-slider { min-height: 300px; }
 }
 
+/* Hero carousel dots: WCAG 2.2 SC 2.5.8 touch target (min 36x36px target area) */
+.fx-hero-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.fx-hero-dot-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.fx-hero-dot-btn .fx-hero-dot-line {
+  display: block;
+  width: 7px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: width 0.2s ease, background 0.2s ease;
+  pointer-events: none;
+}
+.fx-hero-dot-btn[aria-current="true"] .fx-hero-dot-line {
+  width: 22px;
+  background: #ffffff;
+}
+
 .fx-home-hero__inner {
   position: relative; z-index: 2;
   max-width: var(--fx-max); margin: 0 auto;
@@ -1016,5 +1053,7 @@ body.has-actionbar { padding-bottom: var(--fx-tap-lg); }
   }
 }
 
-
-
+/* Default hidden for desktop footer (activated by home-footer.css on >= 1060px) */
+.fx-home-desktop-footer {
+  display: none;
+}

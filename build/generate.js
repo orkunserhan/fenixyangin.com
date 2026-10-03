@@ -44,9 +44,8 @@ function head(p, f) {
 <meta name="twitter:image" content="${og}" />
 <link rel="icon" href="${site.logo}" />
 <link rel="apple-touch-icon" href="${site.logo}" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="preload" as="font" type="font/woff2" href="${rel(f,'assets/fonts/archivo-700-latin.woff2')}" crossorigin />
+<link rel="stylesheet" href="${rel(f,'css/fonts.css')}" />
 <link rel="stylesheet" href="${rel(f,'css/tokens.css')}" />
 <link rel="stylesheet" href="${rel(f,'css/base.css')}" />
 <link rel="stylesheet" href="${rel(f,'css/layout.css')}" />

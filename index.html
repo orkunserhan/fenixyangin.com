@@ -3,14 +3,26 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-92DL43Q3D7"></script>
+<!-- Google tag (gtag.js) - Buffered immediately, deferred to idle -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-92DL43Q3D7');
+  (function() {
+    function loadGtag() {
+      if (document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-92DL43Q3D7';
+      document.head.appendChild(s);
+    }
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadGtag, { timeout: 3500 });
+    } else {
+      window.addEventListener('load', function() { setTimeout(loadGtag, 1000); });
+    }
+  })();
 </script>
 <title>Fenix Yangın | Yangın Güvenlik Sistemleri ve Mühendislik Çözümleri</title>
 <meta name="description" content="Fenix Yangın; gazlı yangın söndürme, yangın algılama, özel risk koruması ve mühendislik çözümleri sunar." />
@@ -34,16 +46,17 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
 <link rel="icon" href="favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-192x192.png" />
-<link rel="preload" as="image" href="assets/img/yangin-sondurme-sistemleri-fenix-hero.webp" fetchpriority="high" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/img/yangin-sondurme-sistemleri-fenix-hero-640.webp" media="(max-width: 640px)" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/img/yangin-sondurme-sistemleri-fenix-hero.webp" media="(min-width: 641px)" fetchpriority="high" />
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-800-latin.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-400-latin.woff2" crossorigin />
+<link rel="stylesheet" href="css/fonts.css" />
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/layout.css" />
 <link rel="stylesheet" href="css/components.css" />
 <link rel="stylesheet" href="css/home.css" />
-<link rel="stylesheet" href="css/home-footer.css" />
+<link rel="stylesheet" href="css/home-footer.css" media="(min-width: 1060px)" />
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness"],"@id":"https://www.fenixyangin.com/#organization","name":"Fenix Yangın","legalName":"Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş.","foundingDate":"2011","url":"https://www.fenixyangin.com/","logo":{"@type":"ImageObject","url":"https://www.fenixyangin.com/assets/fenix-logo.png","width":1200,"height":223},"image":"https://www.fenixyangin.com/assets/img/hero-fenix-yangin.webp","priceRange":"$$","telephone":"+902126180701","email":"info@fenixyangin.com.tr","areaServed":{"@type":"Country","name":"Türkiye"},"geo":{"@type":"GeoCoordinates","latitude":41.0564,"longitude":28.8986},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"18:00"}],"contactPoint":[{"@type":"ContactPoint","telephone":"+902126180701","contactType":"customer service","areaServed":"TR","availableLanguage":"Turkish"},{"@type":"ContactPoint","telephone":"+902126180702","contactType":"customer service","areaServed":"TR","availableLanguage":"Turkish"},{"@type":"ContactPoint","telephone":"+905327409097","contactType":"technical support","areaServed":"TR","availableLanguage":"Turkish"}],"address":{"@type":"PostalAddress","streetAddress":"Yıldırım Mah. Buğday Sok. No:16","addressLocality":"Bayrampaşa","addressRegion":"İstanbul","postalCode":"34405","addressCountry":"TR"}},{"@type":"WebSite","@id":"https://www.fenixyangin.com/#website","url":"https://www.fenixyangin.com/","name":"Fenix Yangın","publisher":{"@id":"https://www.fenixyangin.com/#organization"},"inLanguage":"tr-TR"},{"@type":"WebPage","@id":"https://www.fenixyangin.com/#webpage","url":"https://www.fenixyangin.com/","name":"Fenix Yangın | Yangın Güvenlik Sistemleri ve Mühendislik Çözümleri","isPartOf":{"@id":"https://www.fenixyangin.com/#website"},"about":{"@id":"https://www.fenixyangin.com/#organization"},"inLanguage":"tr-TR"}]}</script>
 </head>
 <body>
@@ -430,7 +443,7 @@
         <p class="fx-drawer__promo-desc">Saha çalışmalarımız, ürün tanıtımlarımız ve daha fazlası için bizi takip edin.</p>
       </div>
       <div class="fx-drawer__promo-thumb">
-        <img src="assets/img/kurumsal/social-phones.webp" alt="Fenix Yangın Sosyal Medya" width="180" height="180" loading="lazy" />
+        <img src="assets/img/kurumsal/social-phones-240.webp" alt="Fenix Yangın Sosyal Medya" width="180" height="180" loading="lazy" decoding="async" />
       </div>
     </a>
   </div>
@@ -439,9 +452,21 @@
 
   <section class="fx-home-hero" data-hero aria-label="Öne çıkan" style="position: relative; background: #0D0E10; overflow: hidden;">
     <div class="fx-home-hero__media" style="position: absolute; inset: 0; z-index: 1;">
-      <img src="assets/img/yangin-sondurme-sistemleri-fenix-hero.webp" srcset="assets/img/yangin-sondurme-sistemleri-fenix-hero.webp 1024w, assets/img/yangin-sondurme-sistemleri-fenix-hero-1920.webp 1920w" sizes="100vw" alt="Fenix yangın söndürme sistemleri ve endüstriyel gazlı yangın söndürme çözümü" width="1024" height="367" fetchpriority="high" decoding="async" data-hero-slide style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: contrast(1.04) brightness(1); opacity: 1; transition: opacity 0.6s ease;" />
-      <img src="assets/img/hero-fm200-veri-merkezi.webp" srcset="assets/img/hero-fm200-veri-merkezi.webp 1024w, assets/img/hero-fm200-veri-merkezi-1920.webp 1920w" sizes="100vw" alt="Veri merkezi için FM-200 temiz gazlı yangın söndürme sistemi" width="1024" height="367" loading="lazy" decoding="async" data-hero-slide style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: contrast(1.04) brightness(1); opacity: 0; transition: opacity 0.6s ease;" />
-      <img src="assets/img/endustriyel-tesis-yangin-sondurme-sistemleri.webp" srcset="assets/img/endustriyel-tesis-yangin-sondurme-sistemleri.webp 1024w, assets/img/endustriyel-tesis-yangin-sondurme-sistemleri-1920.webp 1920w" sizes="100vw" alt="Endüstriyel tesiste yangın söndürme sistemleri ve FM-200 tüpleri" width="1024" height="366" loading="lazy" decoding="async" data-hero-slide style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: contrast(1.04) brightness(1); opacity: 0; transition: opacity 0.6s ease;" />
+      <picture>
+        <source media="(max-width: 640px)" srcset="assets/img/yangin-sondurme-sistemleri-fenix-hero-640.webp" />
+        <source media="(max-width: 1024px)" srcset="assets/img/yangin-sondurme-sistemleri-fenix-hero.webp" />
+        <img src="assets/img/yangin-sondurme-sistemleri-fenix-hero.webp" srcset="assets/img/yangin-sondurme-sistemleri-fenix-hero-1920.webp 1920w" alt="Fenix yangın söndürme sistemleri ve endüstriyel gazlı yangın söndürme çözümü" width="1024" height="367" fetchpriority="high" decoding="async" data-hero-slide style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: contrast(1.04) brightness(1); opacity: 1; transition: opacity 0.6s ease;" />
+      </picture>
+      <picture>
+        <source media="(max-width: 640px)" srcset="assets/img/hero-fm200-veri-merkezi-640.webp" />
+        <source media="(max-width: 1024px)" srcset="assets/img/hero-fm200-veri-merkezi.webp" />
+        <img src="assets/img/hero-fm200-veri-merkezi.webp" srcset="assets/img/hero-fm200-veri-merkezi-1920.webp 1920w" alt="Veri merkezi için FM-200 temiz gazlı yangın söndürme sistemi" width="1024" height="367" loading="lazy" decoding="async" data-hero-slide style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: contrast(1.04) brightness(1); opacity: 0; transition: opacity 0.6s ease;" />
+      </picture>
+      <picture>
+        <source media="(max-width: 640px)" srcset="assets/img/endustriyel-tesis-yangin-sondurme-sistemleri-640.webp" />
+        <source media="(max-width: 1024px)" srcset="assets/img/endustriyel-tesis-yangin-sondurme-sistemleri.webp" />
+        <img src="assets/img/endustriyel-tesis-yangin-sondurme-sistemleri.webp" srcset="assets/img/endustriyel-tesis-yangin-sondurme-sistemleri-1920.webp 1920w" alt="Endüstriyel tesiste yangın söndürme sistemleri ve FM-200 tüpleri" width="1024" height="366" loading="lazy" decoding="async" data-hero-slide style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: contrast(1.04) brightness(1); opacity: 0; transition: opacity 0.6s ease;" />
+      </picture>
     </div>
     <div class="fx-home-hero__overlay" aria-hidden="true"></div>
 
@@ -522,10 +547,10 @@
       </div>
     </div>
 
-    <div class="fx-hero-dots" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 16px; z-index: 10; display: flex; align-items: center; gap: 7px;">
-      <button type="button" aria-label="Görsel 1" data-hero-dot="0" aria-current="true" style="width: 22px; height: 3px; padding: 0; border: 0; border-radius: 2px; cursor: pointer; background: #fff; transition: width .2s ease, background .2s ease;"></button>
-      <button type="button" aria-label="Görsel 2" data-hero-dot="1" style="width: 7px; height: 3px; padding: 0; border: 0; border-radius: 2px; cursor: pointer; background: rgba(255,255,255,0.4); transition: width .2s ease, background .2s ease;"></button>
-      <button type="button" aria-label="Görsel 3" data-hero-dot="2" style="width: 7px; height: 3px; padding: 0; border: 0; border-radius: 2px; cursor: pointer; background: rgba(255,255,255,0.4); transition: width .2s ease, background .2s ease;"></button>
+    <div class="fx-hero-dots">
+      <button type="button" class="fx-hero-dot-btn" aria-label="Görsel 1" data-hero-dot="0" aria-current="true"><span class="fx-hero-dot-line"></span></button>
+      <button type="button" class="fx-hero-dot-btn" aria-label="Görsel 2" data-hero-dot="1"><span class="fx-hero-dot-line"></span></button>
+      <button type="button" class="fx-hero-dot-btn" aria-label="Görsel 3" data-hero-dot="2"><span class="fx-hero-dot-line"></span></button>
     </div>
   </section>
 
@@ -567,7 +592,7 @@
     <div data-rail="sistemler" data-rail role="region" aria-label="Yangın söndürme sistemleri karuseli" tabindex="0" style="display: flex; gap: clamp(12px, 1.4vw, 20px); overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: clamp(16px, 3vw, 28px); padding: 4px clamp(16px, 3vw, 28px) 10px; -webkit-overflow-scrolling: touch; scroll-behavior: smooth;">
 
       <article data-rail-item style="flex: 0 0 clamp(268px, 30vw, 372px); scroll-snap-align: start; position: relative; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; background: #0D0E10;">
-        <img src="assets/img/hero-fenix-yangin.webp" alt="FM200 gazlı söndürme silindir bataryası ve dağıtım borulaması" width="1920" height="1062" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+        <img src="assets/img/sistemler/card-fm200.webp" srcset="assets/img/sistemler/card-fm200.webp 480w, assets/img/sistemler/card-fm200-640.webp 640w" sizes="(max-width: 640px) 300px, 372px" alt="FM200 gazlı söndürme silindir bataryası ve dağıtım borulaması" width="480" height="640" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
         <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,11,13,0.62) 0%, rgba(10,11,13,0.18) 38%, rgba(10,11,13,0.88) 100%);"></span>
         <span style="position: absolute; top: 20px; right: 22px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.16em; color: rgba(255,255,255,0.78);">GAZLI SİSTEM</span>
         <span style="position: absolute; left: 22px; right: 22px; bottom: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px;">
@@ -580,7 +605,7 @@
       </article>
 
       <article data-rail-item style="flex: 0 0 clamp(268px, 30vw, 372px); scroll-snap-align: start; position: relative; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; background: #0D0E10;">
-        <img src="assets/img/sistemler/hero-novec-1230.webp" alt="NOVEC 1230 temiz gazlı yangın söndürme silindir bataryası" width="1024" height="682" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+        <img src="assets/img/sistemler/card-novec-1230.webp" srcset="assets/img/sistemler/card-novec-1230.webp 480w, assets/img/sistemler/card-novec-1230-640.webp 640w" sizes="(max-width: 640px) 300px, 372px" alt="NOVEC 1230 temiz gazlı yangın söndürme silindir bataryası" width="480" height="640" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
         <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,11,13,0.62) 0%, rgba(10,11,13,0.18) 38%, rgba(10,11,13,0.88) 100%);"></span>
         <span style="position: absolute; top: 20px; right: 22px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.16em; color: rgba(255,255,255,0.78);">TEMİZ GAZ</span>
         <span style="position: absolute; left: 22px; right: 22px; bottom: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px;">
@@ -593,7 +618,7 @@
       </article>
 
       <article data-rail-item style="flex: 0 0 clamp(268px, 30vw, 372px); scroll-snap-align: start; position: relative; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; background: #0D0E10;">
-        <img src="assets/img/sistemler/hero-co2.webp" alt="CO₂ karbondioksit gazlı yangın söndürme silindirleri ve kontrol paneli" width="1024" height="683" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+        <img src="assets/img/sistemler/card-co2.webp" srcset="assets/img/sistemler/card-co2.webp 480w, assets/img/sistemler/card-co2-640.webp 640w" sizes="(max-width: 640px) 300px, 372px" alt="CO₂ karbondioksit gazlı yangın söndürme silindirleri ve kontrol paneli" width="480" height="640" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
         <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,11,13,0.62) 0%, rgba(10,11,13,0.18) 38%, rgba(10,11,13,0.88) 100%);"></span>
         <span style="position: absolute; top: 20px; right: 22px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.16em; color: rgba(255,255,255,0.78);">İNSANSIZ HACİM</span>
         <span style="position: absolute; left: 22px; right: 22px; bottom: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px;">
@@ -606,7 +631,7 @@
       </article>
 
       <article data-rail-item style="flex: 0 0 clamp(268px, 30vw, 372px); scroll-snap-align: start; position: relative; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; background: #0D0E10;">
-        <img src="assets/img/sistemler/rail-pano-ici.webp" alt="Elektrik panosu içi modüler yangın söndürme tüpleri ve algılama hattı" width="1024" height="575" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+        <img src="assets/img/sistemler/card-pano-ici.webp" srcset="assets/img/sistemler/card-pano-ici.webp 480w, assets/img/sistemler/card-pano-ici-640.webp 640w" sizes="(max-width: 640px) 300px, 372px" alt="Elektrik panosu içi modüler yangın söndürme tüpleri ve algılama hattı" width="480" height="640" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
         <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,11,13,0.62) 0%, rgba(10,11,13,0.18) 38%, rgba(10,11,13,0.88) 100%);"></span>
         <span style="position: absolute; top: 20px; right: 22px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.16em; color: rgba(255,255,255,0.78);">MİKRO HACİM</span>
         <span style="position: absolute; left: 22px; right: 22px; bottom: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px;">
@@ -619,7 +644,7 @@
       </article>
 
       <article data-rail-item style="flex: 0 0 clamp(268px, 30vw, 372px); scroll-snap-align: start; position: relative; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; background: #0D0E10;">
-        <img src="assets/img/sistemler/hero-davlumbaz.webp" alt="Endüstriyel mutfak davlumbaz yangın söndürme sistemi nozul püskürtme ve tüp ünitesi" width="1024" height="682" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+        <img src="assets/img/sistemler/card-davlumbaz.webp" srcset="assets/img/sistemler/card-davlumbaz.webp 480w, assets/img/sistemler/card-davlumbaz-640.webp 640w" sizes="(max-width: 640px) 300px, 372px" alt="Endüstriyel mutfak davlumbaz yangın söndürme sistemi nozul püskürtme ve tüp ünitesi" width="480" height="640" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
         <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,11,13,0.62) 0%, rgba(10,11,13,0.18) 38%, rgba(10,11,13,0.88) 100%);"></span>
         <span style="position: absolute; top: 20px; right: 22px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.16em; color: rgba(255,255,255,0.78);">UL 300</span>
         <span style="position: absolute; left: 22px; right: 22px; bottom: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px;">
@@ -632,7 +657,7 @@
       </article>
 
       <article data-rail-item style="flex: 0 0 clamp(268px, 30vw, 372px); scroll-snap-align: start; position: relative; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; background: #0D0E10;">
-        <img src="assets/img/sistemler/hero-aerosol.webp" alt="Aerosol gazlı yangın söndürme jeneratörü tavan montajı ve algılama ünitesi" width="1024" height="682" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+        <img src="assets/img/sistemler/card-aerosol.webp" srcset="assets/img/sistemler/card-aerosol.webp 480w, assets/img/sistemler/card-aerosol-640.webp 640w" sizes="(max-width: 640px) 300px, 372px" alt="Aerosol gazlı yangın söndürme jeneratörü tavan montajı ve algılama ünitesi" width="480" height="640" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
         <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,11,13,0.62) 0%, rgba(10,11,13,0.18) 38%, rgba(10,11,13,0.88) 100%);"></span>
         <span style="position: absolute; top: 20px; right: 22px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; letter-spacing: 0.16em; color: rgba(255,255,255,0.78);">BORUSUZ</span>
         <span style="position: absolute; left: 22px; right: 22px; bottom: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px;">
@@ -647,7 +672,7 @@
     </div>
 
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 28px); margin-top: clamp(14px, 1.6vw, 20px); display: flex; align-items: center; justify-content: center; gap: 16px; position: relative;">
-      <p data-rail-count aria-live="polite" style="margin: 0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: 0.14em; color: #8A9095;">01 / 06</p>
+      <p data-rail-count aria-live="polite" style="margin: 0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: 0.14em; color: #5A6065;">01 / 06</p>
       <span style="position: absolute; right: clamp(16px, 3vw, 28px); display: flex; align-items: center; gap: 8px;">
         <button type="button" aria-label="Önceki sistem" data-rail-prev class="fx-rail-btn-round" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: #F0F1F2; border: 0; border-radius: 50%; font-size: 14px; color: #33383D; cursor: pointer; transition: background 0.2s, color 0.2s;">←</button>
         <button type="button" aria-label="Sonraki sistem" data-rail-next class="fx-rail-btn-round" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: #F0F1F2; border: 0; border-radius: 50%; font-size: 14px; color: #33383D; cursor: pointer; transition: background 0.2s, color 0.2s;">→</button>
@@ -979,19 +1004,19 @@
             <a href="/sistemler/fm200/" style="width: 68px; height: 50px; flex-shrink: 0; border-radius: 6px; overflow: hidden; display: block; border: 1px solid #E4E6E8; background: #F3F4F6;" aria-label="FM200 Gazının Özellikleri ve Kullanım Alanları">
               <img src="assets/img/blog/thumb-fm200.webp" alt="FM200 Gazlı Söndürme Sistemi" width="68" height="50" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </a>
-            <span style="min-width: 0;"><a href="/sistemler/fm200/" class="fx-blog-title" style="display: block; font-size: 12.5px; font-weight: 600; line-height: 1.4; color: #16181A; text-decoration: none; transition: color 0.2s;">FM200 Gazının Özellikleri ve Kullanım Alanları</a><span style="display: block; font-size: 11px; color: #8A9095; margin-top: 4px;">20 Eylül 2026</span></span>
+            <span style="min-width: 0;"><a href="/sistemler/fm200/" class="fx-blog-title" style="display: block; font-size: 12.5px; font-weight: 600; line-height: 1.4; color: #16181A; text-decoration: none; transition: color 0.2s;">FM200 Gazının Özellikleri ve Kullanım Alanları</a><span style="display: block; font-size: 11px; color: #5A6065; margin-top: 4px;">20 Eylül 2026</span></span>
           </article>
           <article style="display: flex; gap: 12px; align-items: flex-start;">
             <a href="/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/" style="width: 68px; height: 50px; flex-shrink: 0; border-radius: 6px; overflow: hidden; display: block; border: 1px solid #E4E6E8; background: #F3F4F6;" aria-label="Yangın Söndürme Sistemlerinde Oda Sızdırmazlık Testi">
               <img src="assets/img/blog/thumb-oda-sizdirmazlik.webp" alt="Yangın Söndürme Sistemlerinde Oda Sızdırmazlık Testi" width="68" height="50" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </a>
-            <span style="min-width: 0;"><a href="/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/" class="fx-blog-title" style="display: block; font-size: 12.5px; font-weight: 600; line-height: 1.4; color: #16181A; text-decoration: none; transition: color 0.2s;">Yangın Söndürme Sistemlerinde Oda Sızdırmazlık Testi</a><span style="display: block; font-size: 11px; color: #8A9095; margin-top: 4px;">20 Eylül 2026</span></span>
+            <span style="min-width: 0;"><a href="/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/" class="fx-blog-title" style="display: block; font-size: 12.5px; font-weight: 600; line-height: 1.4; color: #16181A; text-decoration: none; transition: color 0.2s;">Yangın Söndürme Sistemlerinde Oda Sızdırmazlık Testi</a><span style="display: block; font-size: 11px; color: #5A6065; margin-top: 4px;">20 Eylül 2026</span></span>
           </article>
           <article style="display: flex; gap: 12px; align-items: flex-start;">
             <a href="/sektorler/endustriyel-mutfak/" style="width: 68px; height: 50px; flex-shrink: 0; border-radius: 6px; overflow: hidden; display: block; border: 1px solid #E4E6E8; background: #F3F4F6;" aria-label="Endüstriyel Mutfaklarda Yangın Güvenliği">
               <img src="assets/img/blog/thumb-davlumbaz.webp" alt="Endüstriyel Mutfaklarda Yangın Güvenliği" width="68" height="50" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </a>
-            <span style="min-width: 0;"><a href="/sektorler/endustriyel-mutfak/" class="fx-blog-title" style="display: block; font-size: 12.5px; font-weight: 600; line-height: 1.4; color: #16181A; text-decoration: none; transition: color 0.2s;">Endüstriyel Mutfaklarda Yangın Güvenliği</a><span style="display: block; font-size: 11px; color: #8A9095; margin-top: 4px;">20 Eylül 2026</span></span>
+            <span style="min-width: 0;"><a href="/sektorler/endustriyel-mutfak/" class="fx-blog-title" style="display: block; font-size: 12.5px; font-weight: 600; line-height: 1.4; color: #16181A; text-decoration: none; transition: color 0.2s;">Endüstriyel Mutfaklarda Yangın Güvenliği</a><span style="display: block; font-size: 11px; color: #5A6065; margin-top: 4px;">20 Eylül 2026</span></span>
           </article>
         </div>
       </div>
@@ -1011,7 +1036,7 @@
           <div class="fx-ref-item--mobile-only" style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-10-trendyol.webp" alt="Trendyol" width="160" height="38" loading="lazy" decoding="async" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
           <div class="fx-ref-item--mobile-only" style="min-width: 0; aspect-ratio: 5 / 2.6; border: 1px solid #E4E6E8; background: #fff; display: flex; align-items: center; justify-content: center; padding: 8px;"><img src="assets/img/referanslar/ref-29-vodafone.webp" alt="Vodafone" width="160" height="38" loading="lazy" decoding="async" style="max-width: 86%; max-height: 38px; object-fit: contain;" /></div>
         </div>
-        <p style="margin: 12px 0 0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; line-height: 1.5; color: #8A9095;">Kamu kurumları, savunma ve endüstride 80+ doğrulanmış kurumsal referans.</p>
+        <p style="margin: 12px 0 0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 9.5px; line-height: 1.5; color: #5A6065;">Kamu kurumları, savunma ve endüstride 80+ doğrulanmış kurumsal referans.</p>
       </div>
 
     </div>

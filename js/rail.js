@@ -12,12 +12,20 @@
   var total = items.length;
   if (!total) return;
 
-  function step() {
-    return items[0] ? items[0].getBoundingClientRect().width + 14 : 300;
+  var cachedStep = 0;
+  function getStep() {
+    if (!cachedStep) {
+      cachedStep = items[0] ? items[0].offsetWidth + 14 : 300;
+    }
+    return cachedStep;
   }
 
+  window.addEventListener('resize', function () {
+    cachedStep = 0;
+  }, { passive: true });
+
   function index() {
-    return Math.min(total - 1, Math.max(0, Math.round(rail.scrollLeft / step())));
+    return Math.min(total - 1, Math.max(0, Math.round(rail.scrollLeft / getStep())));
   }
 
   function paint() {
@@ -30,7 +38,7 @@
     var i = index() + dir;
     if (i < 0) i = total - 1;
     if (i > total - 1) i = 0;
-    rail.scrollTo({ left: i * step() });
+    rail.scrollTo({ left: i * getStep() });
   }
 
   if (prev) prev.addEventListener('click', function () { go(-1); });
@@ -47,7 +55,7 @@
     if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
     else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
     else if (e.key === 'Home') { e.preventDefault(); rail.scrollTo({ left: 0 }); }
-    else if (e.key === 'End') { e.preventDefault(); rail.scrollTo({ left: (total - 1) * step() }); }
+    else if (e.key === 'End') { e.preventDefault(); rail.scrollTo({ left: (total - 1) * getStep() }); }
   });
 
   paint();

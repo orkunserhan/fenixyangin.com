@@ -23,6 +23,7 @@ yarn-error.log*
 dist/
 build/.state
 build/.qa.json
+build/.crawl_results.json
 coverage/
 .cache/
 .parcel-cache/

@@ -43,8 +43,9 @@
       texts.forEach(function (t, idx) {
         if (idx === next) {
           t.style.display = 'flex';
-          void t.offsetWidth;
-          t.style.opacity = '1';
+          requestAnimationFrame(function () {
+            t.style.opacity = '1';
+          });
         } else {
           t.style.display = 'none';
           t.style.opacity = '0';
@@ -54,8 +55,9 @@
         badges.forEach(function (b, idx) {
           if (idx === next) {
             b.style.display = 'flex';
-            void b.offsetWidth;
-            b.style.opacity = '1';
+            requestAnimationFrame(function () {
+              b.style.opacity = '1';
+            });
           } else {
             b.style.display = 'none';
             b.style.opacity = '0';
@@ -65,15 +67,11 @@
       textTimer = null;
     }, 200);
 
-    // Gösterge noktaları
+    // Gösterge noktaları (aria-current güncellemesi)
     dots.forEach(function (dot, idx) {
       if (idx === next) {
-        dot.style.width = '22px';
-        dot.style.background = '#fff';
         dot.setAttribute('aria-current', 'true');
       } else {
-        dot.style.width = '7px';
-        dot.style.background = 'rgba(255,255,255,0.4)';
         dot.removeAttribute('aria-current');
       }
     });
