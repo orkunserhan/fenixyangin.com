@@ -17,6 +17,76 @@
       "source": "/hakkimizda/(.*)",
       "destination": "/kurumsal/hakkimizda/",
       "permanent": true
+    },
+    {
+      "source": "/mutfak-davlumbaz-yangin-sondurme-sistemleri-3",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-yangin-sondurme-sistemleri-3/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aerosol-gazli-yangin-sondurme-sistemi-nedir",
+      "destination": "/sistemler/aerosol/",
+      "statusCode": 301
+    },
+    {
+      "source": "/aerosol-gazli-yangin-sondurme-sistemi-nedir/",
+      "destination": "/sistemler/aerosol/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-yangin-sondurme-sistemleri-6",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-yangin-sondurme-sistemleri-6/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-5",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-5/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gas-extinguishing-systems",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gas-extinguishing-systems/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/elektrik-odalari-yangin-sondurme-sistemi",
+      "destination": "/elektrik-panosu-otomatik-yangin-sondurme-sistemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/elektrik-odalari-yangin-sondurme-sistemi/",
+      "destination": "/elektrik-panosu-otomatik-yangin-sondurme-sistemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gaz-dolumu-hfc-227ea",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gaz-dolumu-hfc-227ea/",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
     }
   ],
   "headers": [
