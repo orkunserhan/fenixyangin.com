@@ -1284,6 +1284,179 @@ html, body {
   color: #FFFFFF;
 }
 
+/* ── Direct Engineering Answer Box ── */
+.fx-tech-answer {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-left: 4px solid var(--fx-red, #A90432);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 0 0 32px;
+}
+.fx-tech-answer__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.fx-tech-answer__icon {
+  color: var(--fx-red, #A90432);
+  display: flex;
+  align-items: center;
+}
+.fx-tech-answer__icon svg {
+  width: 18px;
+  height: 18px;
+}
+.fx-tech-answer__title {
+  font-family: var(--fx-sans, "Archivo", sans-serif);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fx-red, #A90432);
+  margin: 0;
+}
+.fx-tech-answer__text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--fx-ink, #16181A);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ── Authorship & Engineering Review Card ── */
+.fx-tech-author {
+  background: #FFFFFF;
+  border: 1px solid var(--fx-line, #E4E6E8);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 40px 0 32px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+.fx-tech-author__seal {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--fx-red, #A90432);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.fx-tech-author__seal svg {
+  width: 22px;
+  height: 22px;
+}
+.fx-tech-author__body {
+  min-width: 0;
+  flex: 1;
+}
+.fx-tech-author__name {
+  font-family: var(--fx-sans, "Archivo", sans-serif);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--fx-ink, #16181A);
+  margin: 0 0 2px;
+}
+.fx-tech-author__role {
+  font-size: 12px;
+  color: var(--fx-muted, #5A626F);
+  margin: 0 0 6px;
+}
+.fx-tech-author__desc {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #4B5563;
+  margin: 0 0 8px;
+}
+.fx-tech-author__meta {
+  font-size: 11.5px;
+  color: var(--fx-muted, #6B7176);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px dashed var(--fx-line, #E4E6E8);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+.fx-tech-author__meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Engineering FAQ Accordion (Semantic HTML5 details/summary) ── */
+.fx-tech-faq {
+  margin: 48px 0 32px;
+}
+.fx-tech-faq__title {
+  font-family: var(--fx-sans, "Archivo", sans-serif);
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--fx-ink, #16181A);
+  margin: 0 0 20px;
+  border-left: 3px solid var(--fx-red, #A90432);
+  padding-left: 14px;
+  letter-spacing: -0.015em;
+}
+.fx-tech-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.fx-tech-faq__item {
+  border: 1px solid var(--fx-line, #E4E6E8);
+  border-radius: 8px;
+  background: #FFFFFF;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.fx-tech-faq__item[open] {
+  border-color: var(--fx-red, #A90432);
+  box-shadow: 0 4px 12px rgba(169, 4, 50, 0.05);
+}
+.fx-tech-faq__question {
+  padding: 16px 20px;
+  font-family: var(--fx-sans, "Archivo", sans-serif);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--fx-ink, #16181A);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+.fx-tech-faq__question::-webkit-details-marker {
+  display: none;
+}
+.fx-tech-faq__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--fx-muted, #5A626F);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.fx-tech-faq__item[open] .fx-tech-faq__icon {
+  transform: rotate(180deg);
+  color: var(--fx-red, #A90432);
+}
+.fx-tech-faq__answer {
+  padding: 14px 20px 18px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #374151;
+  border-top: 1px solid #F3F4F6;
+  margin: 0;
+}
+
 /* ── Responsive Behavior (Zero Overflow-x) ── */
 @media (max-width: 1100px) {
   .fx-tech-layout {
@@ -1467,4 +1640,22 @@ html, body {
     padding: 12px 18px;
     font-size: 13.5px;
   }
+  .fx-tech-answer {
+    padding: 16px 18px;
+    margin-bottom: 24px;
+  }
+  .fx-tech-author {
+    flex-direction: column;
+    padding: 16px 18px;
+    gap: 12px;
+  }
+  .fx-tech-faq__question {
+    padding: 14px 16px;
+    font-size: 13.5px;
+  }
+  .fx-tech-faq__answer {
+    padding: 12px 16px 16px;
+    font-size: 13px;
+  }
 }
+
