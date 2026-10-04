@@ -18,7 +18,8 @@ const files = [
   'fm-200-gazli-sondurme-sistemleri-teknik-sartnamesi/index.html',
   'teknik-icerikler/gazli-sondurme-ajanlari-insanlara-zararli-mi/index.html',
   'yangin-sondurucu-siniflari-nelerdir/index.html',
-  'teknik-icerikler/inert-gazli-sondurme-sistemleri/index.html'
+  'teknik-icerikler/inert-gazli-sondurme-sistemleri/index.html',
+  'teknik-icerikler/lityum-iyon-bess-yangin-koruma/index.html'
 ];
 
 let issues = [];

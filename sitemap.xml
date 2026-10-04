@@ -12,7 +12,7 @@
   changefreq ve priority KULLANILMAZ — Google yok sayar.
   lastmod yalnızca gerçek içerik güncellemesinde değişir.
 
-  TOPLAM: 54 canonical URL
+  TOPLAM: 55 canonical URL
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -205,6 +205,10 @@
   </url>
   <url>
     <loc>https://www.fenixyangin.com/teknik-icerikler/inert-gazli-sondurme-sistemleri/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.fenixyangin.com/teknik-icerikler/lityum-iyon-bess-yangin-koruma/</loc>
     <lastmod>2026-10-04</lastmod>
   </url>
   <url>
