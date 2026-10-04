@@ -87,6 +87,156 @@
       "source": "/fm-200-gaz-dolumu-hfc-227ea/",
       "destination": "/hizmetler/dolum/",
       "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-sistemi",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-sistemi/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/novec-1230-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/novec-1230/",
+      "statusCode": 301
+    },
+    {
+      "source": "/novec-1230-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/novec-1230/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/novec-1230-gazli-sondurme-sistemi",
+      "destination": "/sistemler/novec-1230/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/novec-1230-gazli-sondurme-sistemi/",
+      "destination": "/sistemler/novec-1230/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/co2-gazli-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/co2-gazli-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/karbondioksit-gazli-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/karbondioksit-gazli-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/elektrik-panosu-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/elektrik-panosu-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/davlumbaz-sondurme-sistemi-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/davlumbaz-sondurme-sistemi-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/su-sisi-sondurme-sistemleri",
+      "destination": "/sistemler/aerosol/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/su-sisi-sondurme-sistemleri/",
+      "destination": "/sistemler/aerosol/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/fm200-yangin-sondurme-sistemleri-dolumu",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/fm200-yangin-sondurme-sistemleri-dolumu/",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/novec-1230-gazli-sondurme-sistemi-dolumu",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/novec-1230-gazli-sondurme-sistemi-dolumu/",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/gazli-yangin-sondurme-sistemleri-bakimi",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/gazli-yangin-sondurme-sistemleri-bakimi/",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/door-fan-test-oda-sizdirmazlik-testi",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/door-fan-test-oda-sizdirmazlik-testi/",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/gazli-sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hizmetler/gazli-sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/galeri",
+      "destination": "/projeler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/galeri/",
+      "destination": "/projeler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/referans",
+      "destination": "/referanslar/",
+      "statusCode": 301
+    },
+    {
+      "source": "/referans/",
+      "destination": "/referanslar/",
+      "statusCode": 301
     }
   ],
   "headers": [
