@@ -17,7 +17,8 @@ const files = [
   'elektrik-panosu-otomatik-yangin-sondurme-sistemi/index.html',
   'fm-200-gazli-sondurme-sistemleri-teknik-sartnamesi/index.html',
   'teknik-icerikler/gazli-sondurme-ajanlari-insanlara-zararli-mi/index.html',
-  'yangin-sondurucu-siniflari-nelerdir/index.html'
+  'yangin-sondurucu-siniflari-nelerdir/index.html',
+  'teknik-icerikler/inert-gazli-sondurme-sistemleri/index.html'
 ];
 
 let errors = 0;
