@@ -14,7 +14,8 @@ const urls = [
   'https://www.fenixyangin.com/elektrik-panosu-otomatik-yangin-sondurme-sistemi/',
   'https://www.fenixyangin.com/fm-200-gazli-sondurme-sistemleri-teknik-sartnamesi/',
   'https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-ajanlari-insanlara-zararli-mi/',
-  'https://www.fenixyangin.com/yangin-sondurucu-siniflari-nelerdir/'
+  'https://www.fenixyangin.com/yangin-sondurucu-siniflari-nelerdir/',
+  'https://www.fenixyangin.com/teknik-icerikler/inert-gazli-sondurme-sistemleri/'
 ];
 
 async function check() {
