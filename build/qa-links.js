@@ -23,6 +23,9 @@ const files = [
 let errors = 0;
 let results = [];
 
+// ISO 8601 regex: YYYY-MM-DD or YYYY-MM-DDTHH:mm:ss...
+const isoRegex = /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}([+-]\d{2}:\d{2}|Z))?$/;
+
 for (const relPath of files) {
   const filePath = path.resolve(relPath);
   if (!fs.existsSync(filePath)) {
@@ -42,6 +45,21 @@ for (const relPath of files) {
   } else {
     try {
       parsedJson = JSON.parse(jsonMatch[1]);
+      // Verify date format in Article if present
+      if (parsedJson['@graph']) {
+        for (const item of parsedJson['@graph']) {
+          if (item['@type'] === 'Article') {
+            if (item.datePublished && !isoRegex.test(item.datePublished)) {
+              console.error(`Invalid datePublished format in ${relPath}: "${item.datePublished}"`);
+              errors++;
+            }
+            if (item.dateModified && !isoRegex.test(item.dateModified)) {
+              console.error(`Invalid dateModified format in ${relPath}: "${item.dateModified}"`);
+              errors++;
+            }
+          }
+        }
+      }
     } catch(e) {
       console.error('Invalid JSON-LD in', relPath, e.message);
       errors++;
@@ -64,7 +82,6 @@ for (const relPath of files) {
   let brokenLinks = [];
   for (const match of linkMatches) {
     const dest = match[1];
-    // check physical file: dest + 'index.html' or dest
     let localFile = dest.replace(/^\//, '');
     if (localFile.endsWith('/')) {
       localFile += 'index.html';
@@ -74,6 +91,12 @@ for (const relPath of files) {
     if (!fs.existsSync(path.resolve(localFile)) && !fs.existsSync(path.resolve(dest.replace(/^\//, '')))) {
       brokenLinks.push(dest);
     }
+  }
+
+  // 6. Semantic Link Integrity Check (No inert gas linking to CO2)
+  if (html.includes('href="/sistemler/co2/">İnert') || html.includes('href="/sistemler/co2/">inert')) {
+    console.error(`Semantic mismatch in ${relPath}: "İnert gaz" points to /sistemler/co2/`);
+    errors++;
   }
 
   const schemaTypes = parsedJson && parsedJson['@graph'] ? parsedJson['@graph'].map(g => g['@type']) : [];
@@ -99,5 +122,5 @@ for (const relPath of files) {
 }
 
 console.log(JSON.stringify(results, null, 2));
-console.log('Total files checked:', files.length, 'Errors:', errors);
+console.log('Total files checked:', results.length, 'Errors:', errors);
 if (errors > 0) process.exit(1);
