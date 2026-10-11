@@ -452,10 +452,20 @@ html, body {
 }
 .fx-tech-step__icon {
   color: var(--fx-red, #A90432);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
 }
 .fx-tech-step__icon svg {
   width: 16px;
   height: 16px;
+  max-width: 16px;
+  max-height: 16px;
+  display: block;
+  flex-shrink: 0;
 }
 .fx-tech-step h3 {
   font-size: 12.5px;
@@ -1296,17 +1306,25 @@ html, body {
 .fx-tech-answer__header {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 10px;
 }
 .fx-tech-answer__icon {
   color: var(--fx-red, #A90432);
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
 }
 .fx-tech-answer__icon svg {
   width: 18px;
   height: 18px;
+  max-width: 18px;
+  max-height: 18px;
+  display: block;
+  flex-shrink: 0;
 }
 .fx-tech-answer__title {
   font-family: var(--fx-sans, "Archivo", sans-serif);

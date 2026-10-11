@@ -20,6 +20,7 @@ a:hover { color: var(--fx-red-deep); }
 button { font-family: inherit; }
 
 img { max-width: 100%; height: auto; }
+svg { max-width: 100%; vertical-align: middle; }
 
 table { border-collapse: collapse; }
 
