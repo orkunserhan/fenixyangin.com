@@ -50,7 +50,7 @@
     });
   }
 
-  function showSuccess(name) {
+  function showSuccess(name, waUrl, mailtoUrl) {
     form.style.display = 'none';
     alertBox.style.display = 'block';
     alertBox.style.background = '#DEF7EC';
@@ -62,17 +62,39 @@
 
     var title = document.createElement('strong');
     title.style.cssText = 'display:block;font-size:15px;margin-bottom:6px';
-    title.textContent = '✓ Talebiniz Alındı';
+    title.textContent = '✓ Talebiniz Alındı ve Hazırlandı';
     alertBox.appendChild(title);
 
     var p1 = document.createElement('p');
-    p1.style.margin = '0 0 10px';
+    p1.style.margin = '0 0 12px';
     p1.appendChild(document.createTextNode('Sayın '));
     var nameStrong = document.createElement('strong');
     nameStrong.textContent = name;
     p1.appendChild(nameStrong);
-    p1.appendChild(document.createTextNode(', talebiniz yetkili teknik ekibimize iletilmek üzere WhatsApp üzerinden açılmıştır. Mühendislerimiz en kısa sürede tarafınıza dönüş sağlayacaktır.'));
+    p1.appendChild(document.createTextNode(', mesajınız teknik ekibimize iletilmek üzere yapılandırıldı. Tarayıcınızda otomatik pencere açılmadıysa talebinizi aşağıdaki butonlardan dilediğiniz kanalla anında iletebilirsiniz:'));
     alertBox.appendChild(p1);
+
+    var btnRow = document.createElement('div');
+    btnRow.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px';
+
+    if (waUrl) {
+      var waBtn = document.createElement('a');
+      waBtn.href = waUrl;
+      waBtn.target = '_blank';
+      waBtn.rel = 'noopener noreferrer';
+      waBtn.style.cssText = 'display:inline-flex;align-items:center;background:#25D366;color:#fff;padding:8px 14px;border-radius:5px;font-weight:700;font-size:13px;text-decoration:none';
+      waBtn.textContent = 'WhatsApp ile İlet →';
+      btnRow.appendChild(waBtn);
+    }
+
+    if (mailtoUrl) {
+      var mailBtn = document.createElement('a');
+      mailBtn.href = mailtoUrl;
+      mailBtn.style.cssText = 'display:inline-flex;align-items:center;background:#A90432;color:#fff;padding:8px 14px;border-radius:5px;font-weight:700;font-size:13px;text-decoration:none';
+      mailBtn.textContent = 'E-posta Olarak Gönder →';
+      btnRow.appendChild(mailBtn);
+    }
+    alertBox.appendChild(btnRow);
 
     var p2 = document.createElement('p');
     p2.style.cssText = 'margin:0;font-size:12.5px';
@@ -137,7 +159,7 @@
       submitBtn.textContent = 'İletiliyor...';
     }
 
-    // WhatsApp iletim metni hazırla
+    // İletim metinlerini hazırla
     const org = orgInput ? orgInput.value.trim() : '';
     const phone = phoneInput ? phoneInput.value.trim() : '';
     const subject = (subjectInput && subjectInput.value && subjectInput.value !== 'Konu seçin') ? subjectInput.value : '';
@@ -151,9 +173,13 @@
       '\n*Talep:* ' + msg;
 
     const waUrl = 'https://wa.me/905327409097?text=' + encodeURIComponent(waText);
+    const mailtoUrl = 'mailto:info@fenixyangin.com.tr?subject=' + encodeURIComponent('İletişim / Teklif Talebi: ' + (subject || name)) + '&body=' + encodeURIComponent(waText.replace(/\*/g, ''));
 
-    // Yeni sekmede WhatsApp aç ve sayfada başarı durumunu göster
-    window.open(waUrl, '_blank', 'noopener,noreferrer');
-    showSuccess(name);
+    try {
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    } catch (err) {
+      // Popup engellenmişse hata vermeden devam et
+    }
+    showSuccess(name, waUrl, mailtoUrl);
   });
 })();

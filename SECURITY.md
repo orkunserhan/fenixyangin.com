@@ -20,7 +20,7 @@ Aşağıdaki tabloda güvenlik güncellemeleri ve yamaları alan aktif sürümle
 Web sitemizde veya altyapımızda herhangi bir güvenlik zafiyeti (XSS, hassas veri ifşası, yapılandırma hatası vb.) tespit etmeniz durumunda, lütfen **sorumlu bildirim (responsible disclosure)** ilkeleri doğrultusunda hareket ediniz.
 
 ### İletişim Kanalları:
-- **Güvenlik E-Posta**: [guvenlik@fenixyangin.com](mailto:guvenlik@fenixyangin.com) / [info@fenixyangin.com](mailto:info@fenixyangin.com)
+- **Güvenlik E-Posta**: [guvenlik@fenixyangin.com.tr](mailto:guvenlik@fenixyangin.com.tr) / [info@fenixyangin.com.tr](mailto:info@fenixyangin.com.tr)
 - **Kurumsal Telefon**: +90 (212) 618 07 01
 - **Acil İletişim**: WhatsApp [+90 532 740 90 97](https://wa.me/905327409097)
 
