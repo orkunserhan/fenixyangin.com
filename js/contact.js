@@ -62,7 +62,7 @@
 
     var title = document.createElement('strong');
     title.style.cssText = 'display:block;font-size:15px;margin-bottom:6px';
-    title.textContent = '✓ Talebiniz Alındı ve Hazırlandı';
+    title.textContent = '✓ Talebiniz Başarıyla Alındı ve İletildi';
     alertBox.appendChild(title);
 
     var p1 = document.createElement('p');
@@ -71,8 +71,13 @@
     var nameStrong = document.createElement('strong');
     nameStrong.textContent = name;
     p1.appendChild(nameStrong);
-    p1.appendChild(document.createTextNode(', mesajınız teknik ekibimize iletilmek üzere yapılandırıldı. Tarayıcınızda otomatik pencere açılmadıysa talebinizi aşağıdaki butonlardan dilediğiniz kanalla anında iletebilirsiniz:'));
+    p1.appendChild(document.createTextNode(', talebiniz sunucumuz üzerinden teknik mühendislik ekibimize iletilmiştir. Uzmanlarımız en kısa sürede tarafınıza dönüş sağlayacaktır.'));
     alertBox.appendChild(p1);
+
+    var pAlt = document.createElement('p');
+    pAlt.style.cssText = 'margin:0 0 8px;font-size:13px;color:#046C4E';
+    pAlt.textContent = 'Dilerseniz talebinizi WhatsApp üzerinden de anında iletebilir veya doğrudan görüşebilirsiniz:';
+    alertBox.appendChild(pAlt);
 
     var btnRow = document.createElement('div');
     btnRow.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px';
@@ -83,7 +88,7 @@
       waBtn.target = '_blank';
       waBtn.rel = 'noopener noreferrer';
       waBtn.style.cssText = 'display:inline-flex;align-items:center;background:#25D366;color:#fff;padding:8px 14px;border-radius:5px;font-weight:700;font-size:13px;text-decoration:none';
-      waBtn.textContent = 'WhatsApp ile İlet →';
+      waBtn.textContent = 'WhatsApp ile Görüş →';
       btnRow.appendChild(waBtn);
     }
 
@@ -91,7 +96,7 @@
       var mailBtn = document.createElement('a');
       mailBtn.href = mailtoUrl;
       mailBtn.style.cssText = 'display:inline-flex;align-items:center;background:#A90432;color:#fff;padding:8px 14px;border-radius:5px;font-weight:700;font-size:13px;text-decoration:none';
-      mailBtn.textContent = 'E-posta Olarak Gönder →';
+      mailBtn.textContent = 'E-posta Kopyası Aç →';
       btnRow.appendChild(mailBtn);
     }
     alertBox.appendChild(btnRow);
@@ -121,7 +126,7 @@
     alertBox.appendChild(p2);
   }
 
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
     clearError();
 
@@ -175,11 +180,28 @@
     const waUrl = 'https://wa.me/905327409097?text=' + encodeURIComponent(waText);
     const mailtoUrl = 'mailto:info@fenixyangin.com.tr?subject=' + encodeURIComponent('İletişim / Teklif Talebi: ' + (subject || name)) + '&body=' + encodeURIComponent(waText.replace(/\*/g, ''));
 
+    // Sunucu tarafı Formspree iletimi
     try {
-      window.open(waUrl, '_blank', 'noopener,noreferrer');
+      await fetch('https://formspree.io/f/xeqyagjb', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ad: name,
+          kurum: org,
+          eposta: email,
+          telefon: phone,
+          konu: subject,
+          mesaj: msg,
+          _subject: 'Fenix.com Yeni İletişim / Teklif Talebi: ' + (subject || name)
+        })
+      });
     } catch (err) {
-      // Popup engellenmişse hata vermeden devam et
+      console.warn('Formspree sunucu iletim uyarısı:', err);
     }
+
     showSuccess(name, waUrl, mailtoUrl);
   });
 })();
