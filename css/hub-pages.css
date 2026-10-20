@@ -829,6 +829,30 @@
   text-decoration: none;
   transition: border-color var(--fx-t), background var(--fx-t);
 }
+.fx-hub-cta__btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 6px;
+  background: #25D366;
+  color: #FFFFFF !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.fx-hub-cta__btn-wa:hover {
+  background: #20BD5A;
+  color: #FFFFFF !important;
+}
+.fx-hub-cta__btn-wa svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
 .fx-hub-cta__btn-phone:hover {
   border-color: #FFFFFF;
   background: rgba(255,255,255,0.06);

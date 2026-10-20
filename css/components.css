@@ -203,6 +203,22 @@
 .fx-btn--ghost-dark:hover { border-color: var(--fx-white); color: var(--fx-white); }
 .fx-btn--ghost { border: 1px solid #C9CDD0; color: var(--fx-ink); }
 .fx-btn--ghost:hover { border-color: var(--fx-ink); color: var(--fx-ink); }
+.fx-btn--whatsapp {
+  background: #25D366;
+  color: #FFFFFF !important;
+  border: 1px solid #25D366;
+}
+.fx-btn--whatsapp:hover {
+  background: #20BD5A;
+  border-color: #20BD5A;
+  color: #FFFFFF !important;
+}
+.fx-btn--whatsapp svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
 
 /* ── GÖRSEL YER TUTUCU ── */
 .fx-ph {
