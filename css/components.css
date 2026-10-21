@@ -388,363 +388,55 @@
   }
 }
 
-/* ── GERÇEK SAHA / PROJE VAKA KARTLARI (E-E-A-T CASE STUDIES — GÜRKAN DANACI, FENIX MÜHENDİSLİK) ── */
-.fx-saha-author-banner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 18px 22px;
-  margin-bottom: 26px;
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-  color: #FFFFFF;
-  border-radius: 12px;
-  border-left: 4px solid var(--fx-red, #A90432);
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
-}
-.fx-saha-author-banner__left {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.fx-saha-author-avatar {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: var(--fx-red, #A90432);
-  color: #FFFFFF;
-  font-family: var(--fx-sans, sans-serif);
-  font-size: 15px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border: 2px solid rgba(255,255,255,0.22);
-}
-.fx-saha-author-info strong {
-  display: block;
-  font-size: 15px;
-  font-weight: 800;
-  color: #FFFFFF;
-  margin-bottom: 3px;
-}
-.fx-saha-author-info span {
-  display: block;
-  font-size: 12.5px;
-  color: #CBD5E1;
-}
-.fx-saha-author-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 7px 14px;
-  background: rgba(255, 255, 255, 0.09);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-  font-family: var(--fx-mono, monospace);
-  font-size: 11px;
-  font-weight: 600;
-  color: #F8FAFC;
-}
-
-.fx-saha-list {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-bottom: 44px;
-}
-.fx-saha-card {
-  background: #FFFFFF;
-  border: 1px solid #CBD5E1;
-  border-radius: 14px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 350px minmax(0, 1fr);
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  scroll-margin-top: 100px;
-}
-.fx-saha-card:hover {
-  border-color: #94A3B8;
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.09);
-}
-.fx-saha-card__aside {
-  background: #F8FAFC;
-  border-right: 1px solid #E2E8F0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.fx-saha-card__media {
-  position: relative;
-  background: #0F172A;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.fx-saha-card__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.fx-saha-card:hover .fx-saha-card__media img {
-  transform: scale(1.03);
-}
-.fx-saha-card__media--portrait {
-  background: radial-gradient(circle at center, #1E293B 0%, #0F172A 100%);
-  padding: 12px;
-  height: 330px;
-}
-.fx-saha-card__media--portrait img {
-  width: auto;
-  height: 100%;
-  max-width: 100%;
-  max-height: 306px;
-  object-fit: contain;
-  border-radius: 6px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-}
-.fx-saha-card__caption {
-  padding: 9px 14px;
-  background: #0F172A;
-  color: #CBD5E1;
-  font-size: 11px;
-  line-height: 1.4;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  font-family: var(--fx-mono, monospace);
-}
-.fx-saha-card__tag {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 3;
-  background: rgba(15, 23, 42, 0.92);
-  backdrop-filter: blur(6px);
-  color: #FFFFFF;
-  border-left: 3px solid var(--fx-red, #A90432);
-  padding: 5px 10px;
-  font-family: var(--fx-mono, monospace);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  text-transform: uppercase;
-}
-.fx-saha-specs {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  padding: 16px;
-  background: #F8FAFC;
-  flex-grow: 1;
-  align-content: start;
-}
-.fx-saha-specs > div {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 7px;
-  padding: 8px 10px;
-}
-.fx-saha-spec__lbl {
-  display: block;
-  font-family: var(--fx-mono, monospace);
-  font-size: 9.5px;
-  font-weight: 700;
-  color: #64748B;
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-.fx-saha-spec__val {
-  display: block;
-  font-size: 12px;
-  font-weight: 700;
-  color: #0F172A;
-  line-height: 1.3;
-}
-.fx-saha-card__body {
-  padding: 26px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 0;
-}
-.fx-saha-card__meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-.fx-saha-card__pill {
-  font-family: var(--fx-mono, monospace);
-  font-size: 10.5px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 4px;
-  background: #F1F5F9;
-  color: #334155;
-}
-.fx-saha-card__pill--red {
-  background: rgba(169, 4, 50, 0.1);
-  color: var(--fx-red, #A90432);
-}
-.fx-saha-card__title {
-  margin: 0 0 8px;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1.3;
-  color: #0F172A;
-  letter-spacing: -0.015em;
-}
-.fx-saha-card__byline {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  font-size: 12.5px;
-  color: #475569;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #E2E8F0;
-}
-.fx-saha-card__byline strong {
-  color: #0F172A;
-  font-weight: 700;
-}
-.fx-saha-card__desc {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #334155;
-  margin: 0 0 12px;
-}
-.fx-saha-card__desc strong {
-  color: #0F172A;
-  font-weight: 700;
-}
-.fx-saha-card__desc a {
-  color: var(--fx-red, #A90432);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.fx-saha-deliverables {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px 14px;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  border-left: 3px solid #0F172A;
-  border-radius: 8px;
-  padding: 12px 14px;
-  margin: 14px 0 16px;
-}
-.fx-saha-deliv-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: #1E293B;
-  line-height: 1.4;
-}
-.fx-saha-deliv-item span {
-  color: #16A34A;
-  font-weight: 800;
-  flex-shrink: 0;
-}
-.fx-saha-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  padding-top: 14px;
-  border-top: 1px dashed #CBD5E1;
-}
-.fx-saha-links__lbl {
-  font-size: 11.5px;
-  font-weight: 700;
-  color: #475569;
-  margin-right: 2px;
-}
-.fx-saha-link-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 5px 11px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  background: #F8FAFC;
-  border: 1px solid #CBD5E1;
-  color: #0F172A;
-  text-decoration: none;
-  transition: all 0.18s ease;
-}
-.fx-saha-link-chip:hover {
-  border-color: var(--fx-red, #A90432);
-  color: var(--fx-red, #A90432);
-  background: rgba(169, 4, 50, 0.04);
-}
-.fx-saha-link-chip--wa {
-  background: #128C7E;
-  border-color: #128C7E;
-  color: #FFFFFF !important;
-  margin-left: auto;
-}
-.fx-saha-link-chip--wa:hover {
-  background: #075E54;
-  border-color: #075E54;
-  color: #FFFFFF !important;
-}
-
-@media (max-width: 980px) {
-  .fx-saha-card {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .fx-saha-card__aside {
-    border-right: none;
-    border-bottom: 1px solid #E2E8F0;
-  }
-  .fx-saha-card__media,
-  .fx-saha-card__media--portrait {
-    height: auto;
-    min-height: 260px;
-    max-height: 380px;
-  }
-  .fx-saha-card__media--portrait img {
-    max-height: 340px;
-  }
-  .fx-saha-specs {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .fx-saha-card__body {
-    padding: 20px 16px;
-  }
-  .fx-saha-card__title {
-    font-size: 17.5px;
-  }
-  .fx-saha-specs {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 12px;
-  }
-  .fx-saha-deliverables {
-    grid-template-columns: 1fr;
-  }
-  .fx-saha-link-chip--wa {
-    margin-left: 0;
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-
-
+/* === GERÇEK SAHA & PROJE VERİLERİ (İNFOGRAFİK MÜHENDİSLİK VAKA KARTLARI — GÜRKAN DANACI, FENIX MÜHENDİSLİK) === */
+.fx-hub-main,.fx-sys-main,.fx-svc-main,.fx-sec-content,.fx-tech-article,.fx-saha-list,.fx-saha-card,.fx-saha-card__main,.fx-saha-card__summary,.fx-saha-kpi,.fx-saha-step{min-width:0;max-width:100%;box-sizing:border-box}
+.fx-saha-author-banner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:16px 20px;background:linear-gradient(135deg,#0F172A 0%,#1E293B 100%);color:#F8FAFC;border-radius:12px;border-left:4px solid #A90432;margin-bottom:22px;box-shadow:0 6px 20px rgba(15,23,42,.1)}
+.fx-saha-author-banner__left{display:flex;align-items:center;gap:12px;min-width:0}
+.fx-saha-author-avatar{width:42px;height:42px;border-radius:50%;background:#A90432;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;letter-spacing:.04em;flex-shrink:0;border:2px solid rgba(255,255,255,.22)}
+.fx-saha-author-info{min-width:0}
+.fx-saha-author-info strong{display:block;font-size:14px;color:#fff;font-weight:800;line-height:1.3}
+.fx-saha-author-info span{display:block;font-size:12px;color:#CBD5E1;margin-top:2px}
+.fx-saha-author-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);color:#F8FAFC;font-size:11px;font-weight:600}
+.fx-saha-list{display:flex;flex-direction:column;gap:26px;margin-bottom:28px}
+.fx-saha-card{background:#fff;border:1px solid #CBD5E1;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(15,23,42,.05);transition:border-color .2s ease,box-shadow .2s ease;scroll-margin-top:100px}
+.fx-saha-card:hover{border-color:#94A3B8;box-shadow:0 10px 28px rgba(15,23,42,.09)}
+.fx-saha-card__head{padding:18px 22px 14px;background:#F8FAFC;border-bottom:1px solid #E2E8F0}
+.fx-saha-card__toprow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.fx-saha-card__meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.fx-saha-card__pill{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:5px;background:#E2E8F0;color:#1E293B;letter-spacing:.02em}
+.fx-saha-card__pill--red{background:#A90432;color:#fff}
+.fx-saha-card__status{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:#15803D;background:#DCFCE7;border:1px solid #BBF7D0;padding:3px 10px;border-radius:999px}
+.fx-saha-card__title{font-size:18px;font-weight:800;color:#0F172A;line-height:1.32;margin:0 0 6px 0}
+.fx-saha-card__byline{font-size:12px;color:#475569;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.fx-saha-card__byline strong{color:#0F172A;font-weight:700}
+.fx-saha-card__main{display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;padding:18px 22px 14px;align-items:center}
+.fx-saha-card__figure{display:flex;flex-direction:column;border-radius:10px;overflow:hidden;border:1px solid #CBD5E1;background:#0F172A;margin:0}
+.fx-saha-card__media{position:relative;width:100%;height:175px;background:#0F172A;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.fx-saha-card__media img{width:100%;height:100%;max-height:175px;object-fit:cover;display:block}
+.fx-saha-card__media--portrait{background:radial-gradient(circle at center,#1E293B 0%,#0F172A 100%);padding:6px}
+.fx-saha-card__media--portrait img{width:auto;max-width:100%;height:100%;max-height:163px;object-fit:contain;border-radius:6px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.fx-saha-card__caption{padding:6px 10px;background:#0F172A;color:#CBD5E1;font-size:10px;line-height:1.35;border-top:1px solid rgba(255,255,255,.08);text-align:center}
+.fx-saha-card__summary{display:flex;flex-direction:column;justify-content:center;gap:12px;min-width:0}
+.fx-saha-card__desc{font-size:13.8px;line-height:1.65;color:#334155;margin:0}
+.fx-saha-card__desc strong{color:#0F172A;font-weight:700}
+.fx-saha-card__desc a{color:#A90432;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.fx-saha-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0 22px 18px}
+.fx-saha-kpi{background:#F8FAFC;border:1px solid #E2E8F0;border-left:3px solid #A90432;border-radius:8px;padding:8px 11px}
+.fx-saha-kpi__lbl{display:block;font-size:9.5px;font-weight:700;text-transform:uppercase;color:#64748B;letter-spacing:.03em;margin-bottom:2px}
+.fx-saha-kpi__val{display:block;font-size:12px;font-weight:800;color:#0F172A;line-height:1.28}
+.fx-saha-infographic{padding:14px 22px 16px;background:#F8FAFC;border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0}
+.fx-saha-infographic__title{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#475569;margin:0 0 10px 0;display:flex;align-items:center;gap:6px}
+.fx-saha-infographic__title::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#A90432;flex-shrink:0}
+.fx-saha-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.fx-saha-step{background:#fff;border:1px solid #CBD5E1;border-radius:8px;padding:10px 12px;position:relative}
+.fx-saha-step__num{display:inline-block;font-size:10px;font-weight:800;color:#A90432;background:rgba(169,4,50,.09);padding:2px 7px;border-radius:4px;margin-bottom:4px}
+.fx-saha-step__t{display:block;font-size:12.5px;font-weight:800;color:#0F172A;margin-bottom:2px;line-height:1.25}
+.fx-saha-step__d{display:block;font-size:11.5px;color:#475569;line-height:1.35}
+.fx-saha-card__foot{padding:12px 22px;background:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.fx-saha-links__lbl{font-size:11.5px;font-weight:700;color:#475569;margin-right:2px}
+.fx-saha-link-chip{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;border-radius:6px;font-size:11.5px;font-weight:600;background:#F8FAFC;border:1px solid #CBD5E1;color:#0F172A;text-decoration:none;transition:all .15s}
+.fx-saha-link-chip:hover{border-color:#A90432;color:#A90432;background:rgba(169,4,50,.04)}
+.fx-saha-link-chip--wa{background:#128C7E;border-color:#128C7E;color:#fff !important;margin-left:auto}
+.fx-saha-link-chip--wa:hover{background:#075E54;border-color:#075E54;color:#fff !important}
+@media (max-width:860px){.fx-saha-card__main{grid-template-columns:1fr}.fx-saha-card__figure{max-width:360px;margin:0 auto;width:100%}.fx-saha-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.fx-saha-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.fx-saha-card__head,.fx-saha-card__main,.fx-saha-kpis,.fx-saha-infographic,.fx-saha-card__foot{padding-left:14px;padding-right:14px}.fx-saha-card__title{font-size:16px}.fx-saha-steps{grid-template-columns:1fr}.fx-saha-link-chip--wa{margin-left:0;width:100%;justify-content:center}}
