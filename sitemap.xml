@@ -12,7 +12,7 @@
   changefreq ve priority KULLANILMAZ — Google yok sayar.
   lastmod yalnızca gerçek içerik güncellemesinde değişir.
 
-  TOPLAM: 55 canonical URL
+  TOPLAM: 59 canonical URL
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://www.fenixyangin.com/sistemler/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://www.fenixyangin.com/sistemler/fm200/</loc>
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://www.fenixyangin.com/hizmetler/tedarik/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://www.fenixyangin.com/hizmetler/dolum/</loc>
@@ -77,7 +77,7 @@
   </url>
   <url>
     <loc>https://www.fenixyangin.com/sektorler/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://www.fenixyangin.com/sektorler/veri-merkezi/</loc>
@@ -233,6 +233,22 @@
   </url>
   <url>
     <loc>https://www.fenixyangin.com/site-haritasi/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.fenixyangin.com/sistemler/yangin-algilama/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.fenixyangin.com/sektorler/gemi-tekne-yat/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.fenixyangin.com/hizmetler/tedarik/kidde/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.fenixyangin.com/hizmetler/tedarik/siex/</loc>
+    <lastmod>2026-10-26</lastmod>
   </url>
 </urlset>
