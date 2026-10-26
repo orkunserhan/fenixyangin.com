@@ -260,12 +260,12 @@
     },
     {
       "source": "/c-tec-teknik-servisi",
-      "destination": "/hizmetler/bakim/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/c-tec-teknik-servisi/",
-      "destination": "/hizmetler/bakim/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -450,12 +450,12 @@
     },
     {
       "source": "/kidde-fm200-yangin-sondurme-sistemleri",
-      "destination": "/sistemler/fm200/",
+      "destination": "/hizmetler/tedarik/kidde/",
       "statusCode": 301
     },
     {
       "source": "/kidde-fm200-yangin-sondurme-sistemleri/",
-      "destination": "/sistemler/fm200/",
+      "destination": "/hizmetler/tedarik/kidde/",
       "statusCode": 301
     },
     {
@@ -490,12 +490,12 @@
     },
     {
       "source": "/gemi-yat-tekne-yangin-alarm-sistemi",
-      "destination": "/sistemler/",
+      "destination": "/sektorler/gemi-tekne-yat/",
       "statusCode": 301
     },
     {
       "source": "/gemi-yat-tekne-yangin-alarm-sistemi/",
-      "destination": "/sistemler/",
+      "destination": "/sektorler/gemi-tekne-yat/",
       "statusCode": 301
     },
     {
@@ -580,12 +580,12 @@
     },
     {
       "source": "/yangin-gaz-algilama-sistemleri",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-gaz-algilama-sistemleri/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -730,12 +730,12 @@
     },
     {
       "source": "/yangin-algilama-ve-ihbar-sistemleri-2",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-algilama-ve-ihbar-sistemleri-2/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -780,12 +780,12 @@
     },
     {
       "source": "/rotarex-vana",
-      "destination": "/sistemler/fm200/",
+      "destination": "/hizmetler/tedarik/",
       "statusCode": 301
     },
     {
       "source": "/rotarex-vana/",
-      "destination": "/sistemler/fm200/",
+      "destination": "/hizmetler/tedarik/",
       "statusCode": 301
     },
     {
@@ -840,12 +840,12 @@
     },
     {
       "source": "/kidde-fm200-gazli-yangin-sondurme-sistemleri",
-      "destination": "/sistemler/fm200/",
+      "destination": "/hizmetler/tedarik/kidde/",
       "statusCode": 301
     },
     {
       "source": "/kidde-fm200-gazli-yangin-sondurme-sistemleri/",
-      "destination": "/sistemler/fm200/",
+      "destination": "/hizmetler/tedarik/kidde/",
       "statusCode": 301
     },
     {
@@ -910,12 +910,12 @@
     },
     {
       "source": "/kivilcim-algilama-sistemleri",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/kivilcim-algilama-sistemleri/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -980,12 +980,12 @@
     },
     {
       "source": "/yangin-ihbar-sistemleri-2",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-ihbar-sistemleri-2/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -1080,12 +1080,12 @@
     },
     {
       "source": "/adreslenebilir-yangin-alarm-sistemleri",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/adreslenebilir-yangin-alarm-sistemleri/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -1110,12 +1110,12 @@
     },
     {
       "source": "/global-yangin-alarm-sistemleri-teknik-servisi",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/global-yangin-alarm-sistemleri-teknik-servisi/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -1160,12 +1160,12 @@
     },
     {
       "source": "/yangin-algilama-ve-ihbar",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-algilama-ve-ihbar/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -1320,12 +1320,12 @@
     },
     {
       "source": "/gemi-yat-tekne-yangin-alarm-sistemleri",
-      "destination": "/sistemler/",
+      "destination": "/sektorler/gemi-tekne-yat/",
       "statusCode": 301
     },
     {
       "source": "/gemi-yat-tekne-yangin-alarm-sistemleri/",
-      "destination": "/sistemler/",
+      "destination": "/sektorler/gemi-tekne-yat/",
       "statusCode": 301
     },
     {
@@ -1350,22 +1350,22 @@
     },
     {
       "source": "/teletek-yangin-alarm-sistemleri-teknik-servisi",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/teletek-yangin-alarm-sistemleri-teknik-servisi/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/adresli-yangin-ihbar-sistemi",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/adresli-yangin-ihbar-sistemi/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -1580,12 +1580,12 @@
     },
     {
       "source": "/yangin-algilama-ve-sondurme-sistemi",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-algilama-ve-sondurme-sistemi/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -1780,22 +1780,22 @@
     },
     {
       "source": "/yangin-alarm-sistemi",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-alarm-sistemi/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-algilama-ve-uyari-sistemleri",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-algilama-ve-uyari-sistemleri/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -2150,22 +2150,22 @@
     },
     {
       "source": "/hava-orneklemeli-yangin-algilama-sistemi",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/hava-orneklemeli-yangin-algilama-sistemi/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/hava-orneklemeli-yangin-algilama",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/hava-orneklemeli-yangin-algilama/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -2220,12 +2220,12 @@
     },
     {
       "source": "/konvansiyonel-yangin-ihbar-sistemi",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/konvansiyonel-yangin-ihbar-sistemi/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -2380,32 +2380,32 @@
     },
     {
       "source": "/yangin-algilama-ve-sondurme-sistemi-2",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-algilama-ve-sondurme-sistemi-2/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-algilama-ve-sondurme-sistemleri-5",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-algilama-ve-sondurme-sistemleri-5/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-ihbar-sistemleri",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
       "source": "/yangin-ihbar-sistemleri/",
-      "destination": "/sistemler/",
+      "destination": "/sistemler/yangin-algilama/",
       "statusCode": 301
     },
     {
@@ -2437,6 +2437,1926 @@
       "source": "/category/yangin-sondurme-cihazlari/",
       "destination": "/sistemler/",
       "permanent": true
+    },
+    {
+      "source": "/kidde-turkiye",
+      "destination": "/hizmetler/tedarik/kidde/",
+      "statusCode": 301
+    },
+    {
+      "source": "/kidde-turkiye/",
+      "destination": "/hizmetler/tedarik/kidde/",
+      "statusCode": 301
+    },
+    {
+      "source": "/siex-gazli-yangin-sondurme-sistemi",
+      "destination": "/hizmetler/tedarik/siex/",
+      "statusCode": 301
+    },
+    {
+      "source": "/siex-gazli-yangin-sondurme-sistemi/",
+      "destination": "/hizmetler/tedarik/siex/",
+      "statusCode": 301
+    },
+    {
+      "source": "/elektrik-odasi-yangin-sondurme-sistemleri",
+      "destination": "/sektorler/ups-enerji/",
+      "statusCode": 301
+    },
+    {
+      "source": "/elektrik-odasi-yangin-sondurme-sistemleri/",
+      "destination": "/sektorler/ups-enerji/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-ve-tekne-yangin-sondurme-sistemleri",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-ve-tekne-yangin-sondurme-sistemleri/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/rotarex-turkiye",
+      "destination": "/hizmetler/tedarik/",
+      "statusCode": 301
+    },
+    {
+      "source": "/rotarex-turkiye/",
+      "destination": "/hizmetler/tedarik/",
+      "statusCode": 301
+    },
+    {
+      "source": "/c-tec-yangin-sondurme-paneli",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/c-tec-yangin-sondurme-paneli/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/retrotec-oda-sizdirmazlik-testi",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/retrotec-oda-sizdirmazlik-testi/",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/konteyner-yangin-sondurme-sistemi",
+      "destination": "/teknik-icerikler/lityum-iyon-bess-yangin-koruma/",
+      "statusCode": 301
+    },
+    {
+      "source": "/konteyner-yangin-sondurme-sistemi/",
+      "destination": "/teknik-icerikler/lityum-iyon-bess-yangin-koruma/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fike-gazli-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fike-gazli-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-yat-ve-tekne-yangin-sondurme-sistemleri",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-yat-ve-tekne-yangin-sondurme-sistemleri/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cnc-yangin-sondurme-sistemleri",
+      "destination": "/sektorler/fabrika/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cnc-yangin-sondurme-sistemleri/",
+      "destination": "/sektorler/fabrika/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tekne-yat-gemi-sondurme-sistemleri",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tekne-yat-gemi-sondurme-sistemleri/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vesda-hava-orneklemeli-yangin-algilama-sistemi",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vesda-hava-orneklemeli-yangin-algilama-sistemi/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-bakimi",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-bakimi/",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/inert-gazli-yangin-sondurme-sistemleri",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/inert-gazli-yangin-sondurme-sistemleri/",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-bakimi",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-bakimi/",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gazli-yangin-sondurme-sistemi",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gazli-yangin-sondurme-sistemi/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-yangin-sondurme-sistemleri",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-yangin-sondurme-sistemleri/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-turkiye",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-turkiye/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/konteyner-gazli-yangin-sondurme-sistemi",
+      "destination": "/teknik-icerikler/lityum-iyon-bess-yangin-koruma/",
+      "statusCode": 301
+    },
+    {
+      "source": "/konteyner-gazli-yangin-sondurme-sistemi/",
+      "destination": "/teknik-icerikler/lityum-iyon-bess-yangin-koruma/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-yangin-sondurme-sistemi",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-yangin-sondurme-sistemi/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-gaz-alarm-sistemi",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-gaz-alarm-sistemi/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-sondurme-sistemleri-bakimi",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-sondurme-sistemleri-bakimi/",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/konvansiyonel-yangin-algilamasi-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/konvansiyonel-yangin-algilamasi-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-yangin-sondurme-sistemi",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-yangin-sondurme-sistemi/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mavigard-teknik-servisi",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mavigard-teknik-servisi/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-danismanligi",
+      "destination": "/hizmetler/muhendislik/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-danismanligi/",
+      "destination": "/hizmetler/muhendislik/",
+      "statusCode": 301
+    },
+    {
+      "source": "/akilli-adresli-yangin-alarm-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/akilli-adresli-yangin-alarm-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/elektrikli-arac-sarj-istasyonlari-yangin-sondurme-sistemi",
+      "destination": "/teknik-icerikler/lityum-iyon-bess-yangin-koruma/",
+      "statusCode": 301
+    },
+    {
+      "source": "/elektrikli-arac-sarj-istasyonlari-yangin-sondurme-sistemi/",
+      "destination": "/teknik-icerikler/lityum-iyon-bess-yangin-koruma/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gazli-sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gazli-sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-bakimi",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-bakimi/",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/novec-1230-gazli-sondurme-sistemleri",
+      "destination": "/sistemler/novec-1230/",
+      "statusCode": 301
+    },
+    {
+      "source": "/novec-1230-gazli-sondurme-sistemleri/",
+      "destination": "/sistemler/novec-1230/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-dolumu",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-dolumu/",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-muhendisi",
+      "destination": "/hizmetler/muhendislik/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-muhendisi/",
+      "destination": "/hizmetler/muhendislik/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-dolumu",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-dolumu/",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-yangin-sondurme",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-yangin-sondurme/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-dolumu-bakimi-2",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-dolumu-bakimi-2/",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gazli-sondurme",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gazli-sondurme/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-sondurme-sisteml",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-sondurme-sisteml/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/kentec-yangin-sondurme-paneli",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/kentec-yangin-sondurme-paneli/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-fiyatlari",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-fiyatlari/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri-2",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri-2/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-yangin-sondurme-sistemleri-2",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-yangin-sondurme-sistemleri-2/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/door-fan-test",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/door-fan-test/",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-cihazlari",
+      "destination": "/yangin-sondurucu-siniflari-nelerdir/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-cihazlari/",
+      "destination": "/yangin-sondurucu-siniflari-nelerdir/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-bakim",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-bakim/",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/referans/gazli-sondurme-sistemleri",
+      "destination": "/referanslar/",
+      "statusCode": 301
+    },
+    {
+      "source": "/referans/gazli-sondurme-sistemleri/",
+      "destination": "/referanslar/",
+      "statusCode": 301
+    },
+    {
+      "source": "/door-fan-test-oda-sizdirmazlik-testi",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/door-fan-test-oda-sizdirmazlik-testi/",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fire-fighting-systems",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fire-fighting-systems/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-ici-angin-sondurme-sistemleri-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-ici-angin-sondurme-sistemleri-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-gazli-sondurme-sistemi",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-gazli-sondurme-sistemi/",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-alarm-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-alarm-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-sondurme-sistemleri-fiyati",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-sondurme-sistemleri-fiyati/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-gazli-sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-gazli-sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-alarm-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-alarm-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksitli-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksitli-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-yangin-sondurme",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-yangin-sondurme/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-yangin-sondurme-sistemi-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-yangin-sondurme-sistemi-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemi-fiyati",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemi-fiyati/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/co2-yangin-sondurme-sistemi",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/co2-yangin-sondurme-sistemi/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gazli-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gazli-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/urun/fk5112-gazli-sondurme-sistemi",
+      "destination": "/sistemler/novec-1230/",
+      "statusCode": 301
+    },
+    {
+      "source": "/urun/fk5112-gazli-sondurme-sistemi/",
+      "destination": "/sistemler/novec-1230/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-yangin-sondurme-sistemi",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-yangin-sondurme-sistemi/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-tupu-dolumu-bakimi",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-tupu-dolumu-bakimi/",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri-fiyati",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri-fiyati/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri-4",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri-4/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-sondurme-sistemi",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-sondurme-sistemi/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200yangin-sondurme-sistemleri",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-fiyati",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-fiyati/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-gazli-yangin-sondurme",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-gazli-yangin-sondurme/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-yangin-sondurme",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-yangin-sondurme/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/oda-sizdirmazlik-testi",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/oda-sizdirmazlik-testi/",
+      "destination": "/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemi",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemi/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-4",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-4/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-9",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-9/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/kentec-teknik-servisi",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/kentec-teknik-servisi/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200yangin-sondurme",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200yangin-sondurme/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pano-sondurme-sistemleri",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pano-sondurme-sistemleri/",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-gazli-yangin-sondurme-sistemleri",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-gazli-yangin-sondurme-sistemleri/",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-sondurme",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-sondurme/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pano-ici-mikro-sondurme-sistemleri",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pano-ici-mikro-sondurme-sistemleri/",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-sistemleri-2",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-sistemleri-2/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-sistemleri-3",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-sistemleri-3/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-yangin-sondurme-sistemleri",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/gemi-yangin-sondurme-sistemleri/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-11",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-11/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-gazli-sondurme-sistemleri",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-gazli-sondurme-sistemleri/",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri-3",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri-3/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-turkiye-2",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-turkiye-2/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pano-ici-yangin-sondurme-sisteml",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pano-ici-yangin-sondurme-sisteml/",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vesda-hava-orneklemeli-yangin-algilama-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vesda-hava-orneklemeli-yangin-algilama-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-sondurme-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-sondurme-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/haber/yangin-sondurme-sistemi",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/haber/yangin-sondurme-sistemi/",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/server-odasi-yangin-sondurme-sistemleri-2",
+      "destination": "/sektorler/server-odasi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/server-odasi-yangin-sondurme-sistemleri-2/",
+      "destination": "/sektorler/server-odasi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/algilama-ve-sondurme-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/algilama-ve-sondurme-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-ig01-inert-gazli-yangin-sondurme-sistemleri",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-ig01-inert-gazli-yangin-sondurme-sistemleri/",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-ve-algilama-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-ve-algilama-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-13",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-13/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/12",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/12/",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-dolumu",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-dolumu/",
+      "destination": "/hizmetler/dolum/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-gazli-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-gazli-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-8",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-8/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/7",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/7/",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-23",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-23/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-2",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-2/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-yangin-sondurme-sistemleri-4",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-yangin-sondurme-sistemleri-4/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-16",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-16/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/denizci-tipi-akilli-adresli-yangin-alarm-sistemleri",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/denizci-tipi-akilli-adresli-yangin-alarm-sistemleri/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-yangin-sondurme",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-yangin-sondurme/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-sistemleri",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-sistemleri/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-gazli-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-gazli-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-sondurme",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-sondurme/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-sistemleri",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-sondurme-sistemleri/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-6",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-6/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemi-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemi-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbazsistemi",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbazsistemi/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-sondurme-sistemi-2",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-sondurme-sistemi-2/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-18",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-18/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sondurme",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sondurme/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-22",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-22/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/muhendislikproje",
+      "destination": "/hizmetler/muhendislik/",
+      "statusCode": 301
+    },
+    {
+      "source": "/muhendislikproje/",
+      "destination": "/hizmetler/muhendislik/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-sondurme-sistemleri-7",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-sondurme-sistemleri-7/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-yangin-sondurme",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-yangin-sondurme/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-sistemleri-2",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-sistemleri-2/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/2",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/2/",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/akutgurkan1/page/26",
+      "destination": "/kurumsal/ekibimiz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/akutgurkan1/page/26/",
+      "destination": "/kurumsal/ekibimiz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/urun/pano-ici-yangin-",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/urun/pano-ici-yangin-/",
+      "destination": "/sistemler/pano-ici/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-yangin-sondurme-sistemleri-3",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-yangin-sondurme-sistemleri-3/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-gazli-yangin-sondurme-sistemi",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/argon-gazli-yangin-sondurme-sistemi/",
+      "destination": "/teknik-icerikler/inert-gazli-sondurme-sistemleri/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-14",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemleri-14/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksitli-co2-gazli-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksitli-co2-gazli-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemi",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemi/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-sondurme-sistemleri",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-sondurme-sistemleri/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-gazli-yangin",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-co2-gazli-yangin/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbazyanginsondurme",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbazyanginsondurme/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-sondurme-sistemleri-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-sondurme-sistemleri-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-3",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-3/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-sondurme-sistemleri-3",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-sondurme-sistemleri-3/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-alarm-sistemi-2",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-alarm-sistemi-2/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/konvansiyonel-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/konvansiyonel-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-4",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-4/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yanginsondurme",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yanginsondurme/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-3",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-3/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/15",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/15/",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-gazli-sondurme-sistemi",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-gazli-sondurme-sistemi/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-gazli-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-gazli-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-ici-yangin-sondurme-sistemleri-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-ici-yangin-sondurme-sistemleri-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cnc-makina-yangin-sondurme-sistemi",
+      "destination": "/sektorler/fabrika/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cnc-makina-yangin-sondurme-sistemi/",
+      "destination": "/sektorler/fabrika/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-hfc-227-ea-gasli-sondurme-sistemi",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-hfc-227-ea-gasli-sondurme-sistemi/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/novec-1230-fm200-farki",
+      "destination": "/novec-1230-ve-fm200-farki/",
+      "statusCode": 301
+    },
+    {
+      "source": "/novec-1230-fm200-farki/",
+      "destination": "/novec-1230-ve-fm200-farki/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-yangin-sondurme-sistemleri-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/otomatik-davlumbaz-yangin-sondurme-sistemleri-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sistem-odas-yangin-sondurme-sistemleri",
+      "destination": "/sektorler/server-odasi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sistem-odas-yangin-sondurme-sistemleri/",
+      "destination": "/sektorler/server-odasi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemi-4",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemi-4/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-12",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sondurme-sistemleri-12/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-2",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-yangin-sondurme-sistemleri-2/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-sondurme-sistemleri-3",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-sondurme-sistemleri-3/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm-200-gazli-yangin-sondurme/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-sondurme-sistemleri-4",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-ve-sondurme-sistemleri-4/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemi",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-gazli-yangin-sondurme-sistemi/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-sondurmeler",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-sondurmeler/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-yangin-algilama-ve-sondurme-sistemleri",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fireboy-yangin-algilama-ve-sondurme-sistemleri/",
+      "destination": "/sektorler/gemi-tekne-yat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-sistemleri",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-algilama-sistemleri/",
+      "destination": "/sistemler/yangin-algilama/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sistemleri",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-yangin-sistemleri/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/temiz-gazli-sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/temiz-gazli-sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-sistemi-bakim",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/yangin-sondurme-sistemi-bakim/",
+      "destination": "/hizmetler/bakim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-yangin-sondurme-sistemi-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-ici-yangin-sondurme-sistemi-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-yangin-sondurme-sistemleri-4",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-yangin-sondurme-sistemleri-4/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/temiz-gazli-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/temiz-gazli-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/co2-karbondioksitgazli-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/co2-karbondioksitgazli-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-sistemleri",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fm200-sistemleri/",
+      "destination": "/sistemler/fm200/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-sondurme-sistemleri-2",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/davlumbaz-sondurme-sistemleri-2/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-gazli-yangin-sondurme",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/karbondioksit-gazli-yangin-sondurme/",
+      "destination": "/sistemler/co2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-ici-yangin-sondurme-sistemleri",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mutfak-davlumbaz-ici-yangin-sondurme-sistemleri/",
+      "destination": "/sistemler/davlumbaz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/:n*/",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/page/:n*",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/:path*/",
+      "destination": "/kurumsal/ekibimiz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/kurumsal/ekibimiz/",
+      "statusCode": 301
+    },
+    {
+      "source": "/referans/:path*/",
+      "destination": "/referanslar/",
+      "statusCode": 301
+    },
+    {
+      "source": "/referans/:path*",
+      "destination": "/referanslar/",
+      "statusCode": 301
+    },
+    {
+      "source": "/haber/:path*/",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/haber/:path*",
+      "destination": "/teknik-icerikler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/urun/:path*/",
+      "destination": "/sistemler/",
+      "statusCode": 301
+    },
+    {
+      "source": "/urun/:path*",
+      "destination": "/sistemler/",
+      "statusCode": 301
     },
     {
       "source": "/tag/:slug*/",
