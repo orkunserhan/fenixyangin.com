@@ -137,9 +137,7 @@
       a.target = '_blank';
       a.rel = 'noopener';
     }
-    document.body.appendChild(a);
     a.click();
-    document.body.removeChild(a);
   }
 
   function trackLead(method) {
