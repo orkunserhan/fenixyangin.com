@@ -1,0 +1,685 @@
+# -*- coding: utf-8 -*-
+import sys, re
+sys.stdout.reconfigure(encoding='utf-8')
+
+html_content = '''<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gemi, Tekne ve Yat Yangın Söndürme Sistemleri | Fenix</title>
+<meta name="description" content="Gemi makine dairesi, tekne ve yat motor bölmesi için otomatik yangın söndürme ve algılama: gaz seçimi, SOLAS ve FSS Kodu gereklilikleri, bakım ve dolum." />
+<link rel="canonical" href="https://www.fenixyangin.com/sektorler/gemi-tekne-yat/" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.fenixyangin.com/sektorler/gemi-tekne-yat/" />
+<meta property="og:title" content="Gemi, Tekne ve Yat Yangın Söndürme Sistemleri | Fenix" />
+<meta property="og:description" content="Gemi makine dairesi, tekne ve yat motor bölmesi için otomatik yangın söndürme ve algılama: gaz seçimi, SOLAS ve FSS Kodu gereklilikleri, bakım ve dolum." />
+<meta property="og:image" content="https://www.fenixyangin.com/assets/img/hero-fenix-yangin.webp" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Gemi, tekne ve yat otomatik yangın söndürme sistemleri" />
+<meta property="og:locale" content="tr_TR" />
+<meta property="og:site_name" content="Fenix Yangın" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gemi, Tekne ve Yat Yangın Söndürme Sistemleri | Fenix" />
+<meta name="twitter:description" content="Gemi makine dairesi, tekne ve yat motor bölmesi için otomatik yangın söndürme ve algılama: gaz seçimi, SOLAS ve FSS Kodu gereklilikleri, bakım ve dolum." />
+<meta name="twitter:image" content="https://www.fenixyangin.com/assets/img/hero-fenix-yangin.webp" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png" />
+<link rel="icon" href="../../favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/favicon-192x192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../../css/tokens.css?v=bc9c5d2e" />
+<link rel="stylesheet" href="../../css/base.css?v=1a6dfb87" />
+<link rel="stylesheet" href="../../css/layout.css?v=8111c226" />
+<link rel="stylesheet" href="../../css/components.css?v=705f136b" />
+<link rel="stylesheet" href="../../css/sector-detail.css?v=af3dad11" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.fenixyangin.com/#organization","name":"Fenix Yangın","legalName":"Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş.","foundingDate":"2011","url":"https://www.fenixyangin.com/","logo":{"@type":"ImageObject","url":"https://www.fenixyangin.com/assets/fenix-logo.png","width":1200,"height":223},"telephone":"+902126180701","email":"info@fenixyangin.com.tr","areaServed":{"@type":"Country","name":"Türkiye"},"contactPoint":[{"@type":"ContactPoint","telephone":"+902126180701","contactType":"customer service","areaServed":"TR","availableLanguage":"Turkish"},{"@type":"ContactPoint","telephone":"+902126180702","contactType":"customer service","areaServed":"TR","availableLanguage":"Turkish"},{"@type":"ContactPoint","telephone":"+905327409097","contactType":"technical support","areaServed":"TR","availableLanguage":"Turkish"}],"address":{"@type":"PostalAddress","streetAddress":"Yıldırım Mah. Buğday Sok. No:16","addressLocality":"Bayrampaşa","addressRegion":"İstanbul","postalCode":"34405","addressCountry":"TR"},"sameAs":["https://www.youtube.com/channel/UCJOlJcpl9AGOz0U1Rsq9wbA","https://www.linkedin.com/in/fenix-yang%C4%B1n-m%C3%BChendislik-a-%C5%9F-926914b6/","https://www.instagram.com/fenixyangin/","https://www.facebook.com/fenixyangin","https://x.com/fenixyangin","https://www.tiktok.com/@fenixyangin"]},{"@type":"WebSite","@id":"https://www.fenixyangin.com/#website","url":"https://www.fenixyangin.com/","name":"Fenix Yangın","publisher":{"@id":"https://www.fenixyangin.com/#organization"},"inLanguage":"tr-TR"},{"@type":"WebPage","@id":"https://www.fenixyangin.com/sektorler/gemi-tekne-yat/#webpage","url":"https://www.fenixyangin.com/sektorler/gemi-tekne-yat/","name":"Gemi, Tekne ve Yat Yangın Söndürme Sistemleri | Fenix","isPartOf":{"@id":"https://www.fenixyangin.com/#website"},"about":{"@id":"https://www.fenixyangin.com/#organization"},"inLanguage":"tr-TR"},{"@type":"BreadcrumbList","@id":"https://www.fenixyangin.com/sektorler/gemi-tekne-yat/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://www.fenixyangin.com/"},{"@type":"ListItem","position":2,"name":"Sektörler","item":"https://www.fenixyangin.com/sektorler/"},{"@type":"ListItem","position":3,"name":"Gemi, Tekne ve Yat"}]},{"@type":"FAQPage","@id":"https://www.fenixyangin.com/sektorler/gemi-tekne-yat/#faq","mainEntity":[{"@type":"Question","name":"Tekne ve yatlarda motor bölmesi yangın söndürme sistemi nasıl çalışır?","acceptedAnswer":{"@type":"Answer","text":"Motor bölmesi tavanına monte edilen otomatik silindirler ortam sıcaklığı 79°C veya 93°C eşiğine ulaştığında cam tüplü termal vana vasıtasıyla kaptan müdahalesine gerek kalmadan kendiliğinden patlar ve temiz gazı 10 saniye içinde bölmeye boşaltarak yangını boğar."}},{"@type":"Question","name":"Gemi makine dairelerinde CO₂ mi yoksa FM200/Novec temiz gaz mı tercih edilmelidir?","acceptedAnswer":{"@type":"Answer","text":"Büyük ticari gemilerde yüksek hacim ve açık güverte silindir dairesi uygunluğu nedeniyle sabit CO₂ sistemleri yaygın olarak kullanılır. Ancak personelin bulunduğu yatlar, servis tekneleri ve sınırlı alanlarda can güvenliğini tehlikeye atmayan ve kalıntı bırakmayan FM200 veya Novec 1230 temiz gaz sistemleri tercih edilir."}},{"@type":"Question","name":"Fireboy otomatik söndürme tüplerinin bakımı ve dolumu Türkiye'de nerede yapılır?","acceptedAnswer":{"@type":"Answer","text":"Fireboy marka tekne söndürme tüplerinin periyodik manometre basınç kontrolleri, sızdırmazlık testleri ve boşalma sonrası sertifikalı gaz dolumları Fenix Yangın teknik servis istasyonunda gerçekleştirilmektedir."}},{"@type":"Question","name":"Gemilerde yangın söndürme sistemleri hangi mevzuata tabidir?","acceptedAnswer":{"@type":"Answer","text":"Uluslararası sefer yapan gemiler IMO SOLAS Bölüm II-2 ve FSS Kodu (Fire Safety Systems Code) hükümlerine; Türk bayraklı gemi ve küçük tekneler ise Gemilerin Teknik Yönetmeliği ile ilgili liman başkanlığı kurallarına tabidir."}},{"@type":"Question","name":"Denizci tipi (marine approved) yangın alarm dedektörlerinin farkı nedir?","acceptedAnswer":{"@type":"Answer","text":"Deniz tipi dedektörler tuzlu su korozyonuna, yüksek neme, sürekli titreşime ve gemi yalpa hareketlerine karşı özel sızdırmazlık contaları ve korozyon dirençli devre kartlarıyla üretilir ve klas kuruluşu tip onay sertifikasına sahiptir."}}]}]}</script>
+</head>
+<body>
+<a class="fx-skip" href="#icerik">İçeriğe geç</a>
+<header class="fx-header">
+  <div class="fx-header__inner">
+    <a class="fx-logo" href="/" aria-label="Fenix Yangın ana sayfa"><img src="../../assets/fenix-logo.png" alt="Fenix Yangın" width="1200" height="223" decoding="async"></a>
+    <nav class="fx-nav" aria-label="Ana menü">
+      <a href="/sistemler/">Sistemler</a>
+      <div class="fx-nav-item fx-nav-item--dropdown" data-nav-dropdown>
+        <a href="/hizmetler/" class="fx-nav-link fx-nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>Hizmetler</span>
+          <svg class="fx-nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m1 1 4 4 4-4"/>
+          </svg>
+        </a>
+        <div class="fx-nav-dropdown" role="menu" aria-label="Yangın Söndürme Hizmetleri">
+          <div class="fx-nav-dropdown__header">
+            <span class="fx-nav-dropdown__eyebrow">YANGIN SÖNDÜRME HİZMETLERİ</span>
+          </div>
+          <div class="fx-nav-dropdown__list">
+            <a href="/hizmetler/muhendislik/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Mühendislik</strong>
+              <span class="fx-nav-dropdown__item-desc">Yangın danışmanlığı, hidrolik hesap ve projelendirme</span>
+            </a>
+            <a href="/hizmetler/kurulum/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Kurulum</strong>
+              <span class="fx-nav-dropdown__item-desc">Anahtar teslim sistem kurulumu ve entegrasyon</span>
+            </a>
+            <a href="/hizmetler/montaj/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Montaj</strong>
+              <span class="fx-nav-dropdown__item-desc">Standartlara uygun mekanik ve elektriksel montaj</span>
+            </a>
+            <a href="/hizmetler/tedarik/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Tedarik</strong>
+              <span class="fx-nav-dropdown__item-desc">Onaylı silindir, vana, nozul ve ekipman temini</span>
+            </a>
+            <a href="/hizmetler/dolum/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Dolum</strong>
+              <span class="fx-nav-dropdown__item-desc">FM200 ve Novec 1230 sertifikalı gaz dolumu</span>
+            </a>
+            <a href="/hizmetler/bakim/" class="fx-nav-dropdown__item" role="menuitem">
+              <strong class="fx-nav-dropdown__item-title">Bakım</strong>
+              <span class="fx-nav-dropdown__item-desc">TSE-HYB onaylı periyodik bakım ve kontrol</span>
+            </a>
+          </div>
+          <a href="/hizmetler/" class="fx-nav-dropdown__footer" role="menuitem">
+            <span>Tüm Hizmetleri İnceleyin</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <a href="/sektorler/" aria-current="page">Sektörler</a>
+      <a href="/projeler/">Projeler</a>
+      <a href="/referanslar/">Referanslar</a>
+      <a href="/teknik-icerikler/">Teknik İçerikler</a>
+      <a href="/kurumsal/">Kurumsal</a>
+      <a href="/iletisim/">İletişim</a>
+    </nav>
+    <a class="fx-header__cta" href="/iletisim/">Teklif Al <span aria-hidden="true">→</span></a>
+    <button class="fx-burger" type="button" data-burger aria-label="Menüyü aç" aria-expanded="false" aria-controls="fx-drawer"><span></span></button>
+  </div>
+</header>
+
+<div class="fx-drawer" id="fx-drawer" data-drawer hidden role="dialog" aria-modal="true" aria-label="Mobil menü">
+  <div class="fx-drawer__top">
+    <a class="fx-logo" href="/" aria-label="Fenix Yangın ana sayfa"><img src="../../assets/fenix-logo.png" alt="Fenix Yangın" width="1200" height="223" loading="lazy" decoding="async"></a>
+    <button class="fx-drawer__close" type="button" data-drawer-close aria-label="Menüyü kapat">×</button>
+  </div>
+  <nav aria-label="Mobil menü bağlantıları"><ul class="fx-drawer__list">
+    <li><a href="/sistemler/">Sistemler</a></li>
+      <li class="fx-drawer__group fx-drawer__group--hizmetler">
+        <div class="fx-drawer__item-row">
+          <a href="/hizmetler/" class="fx-drawer__item">
+            <span class="fx-drawer__item-left">
+              <svg class="fx-drawer__item-icon" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span class="fx-drawer__item-label">Hizmetler</span>
+            </span>
+          </a>
+          <button type="button" class="fx-drawer__sub-toggle" aria-label="Hizmetler alt menüsünü aç" aria-expanded="false" data-drawer-sub-toggle>
+            <svg class="fx-drawer__sub-chevron" viewBox="0 0 24 24" fill="none" stroke="#A90432" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+        </div>
+        <div class="fx-drawer__sub" data-drawer-sub hidden>
+          <div class="fx-drawer__sub-inner">
+            <span class="fx-drawer__sub-eyebrow">YANGIN SÖNDÜRME HİZMETLERİ</span>
+            <div class="fx-drawer__sub-list">
+              <a href="/hizmetler/muhendislik/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Mühendislik</strong>
+                <span class="fx-drawer__sub-desc">Yangın danışmanlığı, hidrolik hesap ve projelendirme</span>
+              </a>
+              <a href="/hizmetler/kurulum/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Kurulum</strong>
+                <span class="fx-drawer__sub-desc">Anahtar teslim sistem kurulumu ve entegrasyon</span>
+              </a>
+              <a href="/hizmetler/montaj/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Montaj</strong>
+                <span class="fx-drawer__sub-desc">Standartlara uygun mekanik ve elektriksel montaj</span>
+              </a>
+              <a href="/hizmetler/tedarik/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Tedarik</strong>
+                <span class="fx-drawer__sub-desc">Onaylı silindir, vana, nozul ve ekipman temini</span>
+              </a>
+              <a href="/hizmetler/dolum/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Dolum</strong>
+                <span class="fx-drawer__sub-desc">FM200 ve Novec 1230 sertifikalı gaz dolumu</span>
+              </a>
+              <a href="/hizmetler/bakim/" class="fx-drawer__sub-link">
+                <strong class="fx-drawer__sub-title">Bakım</strong>
+                <span class="fx-drawer__sub-desc">TSE-HYB onaylı periyodik bakım ve kontrol</span>
+              </a>
+            </div>
+            <a href="/hizmetler/" class="fx-drawer__sub-footer">
+              <span>Tüm Hizmetleri İnceleyin</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+    <li><a href="/sektorler/">Sektörler</a></li>
+    <li><a href="/projeler/">Projeler</a></li>
+    <li><a href="/referanslar/">Referanslar</a></li>
+    <li><a href="/teknik-icerikler/">Teknik İçerikler</a></li>
+    <li><a href="/kurumsal/">Kurumsal</a></li>
+    <li><a href="/iletisim/">İletişim</a></li>
+  </ul></nav>
+  <div class="fx-drawer__actions">
+    <a href="tel:+902126180701" data-call-trigger>Ara</a>
+    <a href="https://wa.me/905327409097">WhatsApp</a>
+    <a href="/iletisim/" style="background:var(--fx-sec-red);color:#fff">Teklif Al</a>
+  </div>
+</div>
+
+<nav class="fx-crumb" aria-label="Breadcrumb"><ol>
+  <li><a href="/">Ana Sayfa</a></li>
+  <li><span class="fx-crumb__sep" aria-hidden="true">/</span><a href="/sektorler/">Sektörler</a></li>
+  <li><span class="fx-crumb__sep" aria-hidden="true">/</span><span aria-current="page">Gemi, Tekne ve Yat</span></li>
+</ol></nav>
+
+<main id="icerik" class="fx-sec-page">
+  <!-- 1. HERO BÖLÜMÜ -->
+  <section class="fx-sec-hero" aria-labelledby="hero-title">
+    <div class="fx-sec-hero__content">
+      <p class="fx-sec-hero__tag">DENİZCİLİK SEKTÖRÜ</p>
+      <h1 id="hero-title" class="fx-sec-hero__title">
+        Gemi, Tekne ve Yat Yangın
+        <span>Söndürme Sistemleri</span>
+      </h1>
+      <p class="fx-sec-hero__desc">
+        Gemi, tekne ve yat yangın söndürme sistemleri; açık denizde seyir halindeki deniz araçlarının makine dairesi, motor bölmesi ve elektrik panolarında başlayan yangınları kaptan veya mürettebat müdahalesine gerek kalmaksızın otomatik olarak algılayıp saniyeler içinde söndüren, SOLAS, FSS Kodu ve denizcilik regülasyonlarına tam uyumlu can ve tekne güvenliği altyapısıdır.
+      </p>
+      <div class="fx-sec-hero__actions">
+        <a class="fx-sec-btn--primary" href="/iletisim/">
+          Teklif Al <span aria-hidden="true">→</span>
+        </a>
+        <a class="fx-sec-btn--secondary" href="tel:+902126180701" data-call-trigger>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+          0212 618 07 01
+        </a>
+      </div>
+    </div>
+
+    <div class="fx-sec-hero__visual">
+      <img class="fx-sec-hero__img" src="../../assets/img/hero-fenix-yangin.webp" alt="Gemi, tekne ve yat otomatik yangın söndürme ve algılama sistemleri" width="800" height="500" loading="eager" />
+      <div class="fx-sec-hero__bar">
+        <div class="fx-sec-hero__bar-item">
+          <span class="fx-sec-hero__bar-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <span>79°C Otomatik Aktivasyon</span>
+        </div>
+        <div class="fx-sec-hero__bar-item">
+          <span class="fx-sec-hero__bar-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </span>
+          <span>SOLAS &amp; FSS Kodu Uyumu</span>
+        </div>
+        <div class="fx-sec-hero__bar-item">
+          <span class="fx-sec-hero__bar-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <span>Fireboy Bakım &amp; Dolum</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ANA DÜZEN (STICKY SIDEBAR + İÇERİK) -->
+  <div class="fx-sec-layout">
+    <!-- SOL STICKY SIDEBAR -->
+    <aside class="fx-sec-sidebar" aria-label="Sayfa içi gezinme">
+      <nav class="fx-sec-toc">
+        <p class="fx-sec-toc__label">Bu Sayfada</p>
+        <ul class="fx-sec-toc__list">
+          <li><a class="fx-sec-toc__link" href="#genel-bakis">Genel Bakış</a></li>
+          <li><a class="fx-sec-toc__link" href="#riskler">Başlıca Riskler</a></li>
+          <li><a class="fx-sec-toc__link" href="#sistemler">Önerilen Sistemler</a></li>
+          <li><a class="fx-sec-toc__link" href="#mevzuat">Mevzuat ve Onay</a></li>
+          <li><a class="fx-sec-toc__link" href="#surec">Mühendislik Süreci</a></li>
+          <li><a class="fx-sec-toc__link" href="#kaynaklar">Kaynaklar ve Standartlar</a></li>
+          <li><a class="fx-sec-toc__link" href="#sss">Sıkça Sorulan Sorular</a></li>
+          <li><a class="fx-sec-toc__link" href="#iletisim">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="fx-sec-mini-cta">
+        <span class="fx-sec-mini-cta__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+        </span>
+        <p class="fx-sec-mini-cta__title">Denizcilik Yangın Uzmanı</p>
+        <p class="fx-sec-mini-cta__desc">Tekne veya geminiz için onaylı yangın söndürme ve dolum çözümleri.</p>
+        <a class="fx-sec-mini-cta__btn" href="/iletisim/">Keşif Al <span aria-hidden="true">→</span></a>
+      </div>
+    </aside>
+
+    <!-- SAĞ İÇERİK AKIŞI -->
+    <div class="fx-sec-content">
+      <!-- 1. GENEL BAKIŞ -->
+      <section class="fx-sec-section" id="genel-bakis">
+        <h2 class="fx-sec-section__title">Deniz Araçlarında Yangın Güvenliğine Genel Bakış</h2>
+        <p class="fx-sec-section__lead">
+          Açık denizde meydana gelen bir yangın, karadaki yangınlardan çok daha kritik bir acil durum senaryosudur. İtfaiye erişiminin bulunmadığı açık sularda teknenin ve mürettebatın güvenliği, gemide kurulu olan otomatik algılama ve söndürme sistemlerinin saniyeler içindeki tepkisine bağlıdır.
+        </p>
+        <p class="fx-sec-section__lead">
+          Gemi ve yatlarda makine dairesi sıcaklıkları, titreşim, tuzlu deniz suyu buharı ve kısıtlı hacim şartları standart endüstriyel yangın ekipmanlarının kullanımını imkansız kılar. Fenix Yangın; denizcilik standartlarına (SOLAS, FSS Kodu ve klas kuruluşları genel kuralları) tam uyumlu, makine dairesi otomatik gazlı söndürme, deniz tipi adresli yangın algılama ve Fireboy tekne tipi otomatik tüplerin periyodik bakım ve dolum hizmetlerini yürütmektedir.
+        </p>
+
+        <div class="fx-sec-overview__grid">
+          <div class="fx-sec-card">
+            <span class="fx-sec-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <p class="fx-sec-card__title">Otomatik Aktivasyon</p>
+            <p class="fx-sec-card__desc">Personel müdahalesi gerekmeksizin termal tetikleme</p>
+          </div>
+          <div class="fx-sec-card">
+            <span class="fx-sec-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </span>
+            <p class="fx-sec-card__title">Sıfır Kalıntı</p>
+            <p class="fx-sec-card__desc">Motor ve elektronik aksamda korozyon veya tortu bırakmaz</p>
+          </div>
+          <div class="fx-sec-card">
+            <span class="fx-sec-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </span>
+            <p class="fx-sec-card__title">Marine Onaylı Ekipman</p>
+            <p class="fx-sec-card__desc">Titreşim, tuz ve neme dayanıklı denizcilik donanımları</p>
+          </div>
+          <div class="fx-sec-card">
+            <span class="fx-sec-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </span>
+            <p class="fx-sec-card__title">Hızlı Dolum &amp; Servis</p>
+            <p class="fx-sec-card__desc">Tersane ve marinalarda yerinde test, tartım ve sertifikalı dolum</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. BAŞLICA RİSKLER -->
+      <section class="fx-sec-section" id="riskler">
+        <h2 class="fx-sec-section__title">Gemi ve Teknelerde Başlıca Yangın Riskleri</h2>
+        <p class="fx-sec-section__lead">
+          Deniz araçlarında yangın istatistiklerinin büyük bölümü dar hacimlerde yüksek termal yük ve yanıcı akışkanların bir arada bulunduğu noktalarda yoğunlaşır:
+        </p>
+        <div class="fx-sec-risks__grid">
+          <div class="fx-sec-risk-item">
+            <span class="fx-sec-risk-icon" aria-hidden="true">✓</span>
+            <span><strong>Makine Dairesi ve Motor Bölmesi:</strong> Dizel veya benzin motorları, turboşarj yüzeyleri ve egzoz manifoldlarının yüksek sıcaklığı.</span>
+          </div>
+          <div class="fx-sec-risk-item">
+            <span class="fx-sec-risk-icon" aria-hidden="true">✓</span>
+            <span><strong>Yakıt ve Hidrolik Hat Kaçakları:</strong> Titreşim nedeniyle gevşeyen boru bağlantılarından sıcak motor bloklarına yakıt veya yağ püskürmesi.</span>
+          </div>
+          <div class="fx-sec-risk-item">
+            <span class="fx-sec-risk-icon" aria-hidden="true">✓</span>
+            <span><strong>Ana Dağıtım ve Kumanda Panoları:</strong> Seyir elektriği, jeneratör senkronizasyonu ve sahil besleme hatlarındaki arklar ve aşırı yükler.</span>
+          </div>
+          <div class="fx-sec-risk-item">
+            <span class="fx-sec-risk-icon" aria-hidden="true">✓</span>
+            <span><strong>Akü Bölmeleri ve Şarj Alanları:</strong> Şarj sırasında hidrojen gazı birikimi ve lityum servis bataryalarının termal kaçak riski.</span>
+          </div>
+          <div class="fx-sec-risk-item">
+            <span class="fx-sec-risk-icon" aria-hidden="true">✓</span>
+            <span><strong>Mutfak (Galley) ve Yaşam Mahalli:</strong> Kuzine ocakları, kızgın yağlar, egzoz davlumbaz kanalları ve kabin içi elektrikli ısıtıcılar.</span>
+          </div>
+          <div class="fx-sec-risk-item">
+            <span class="fx-sec-risk-icon" aria-hidden="true">✓</span>
+            <span><strong>Sintine Alanları:</strong> Yağ, sintine suyu ve yakıt kalıntılarının kapalı dip hacimlerde birikerek buharlaşması.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. ÖNERİLEN SİSTEMLER -->
+      <section class="fx-sec-section" id="sistemler">
+        <h2 class="fx-sec-section__title">Önerilen Yangın Söndürme ve Algılama Sistemleri</h2>
+        <p class="fx-sec-section__lead">
+          Deniz aracının tipine, bayrak kurallarına ve korunacak kompartımanın hacmine göre projelendirilen başlıca denizcilik sistemleri:
+        </p>
+
+        <div class="fx-sec-systems__grid">
+          <a class="fx-sec-system-card" href="/sistemler/fm200/">
+            <div class="fx-sec-system-card__body">
+              <p class="fx-sec-system-card__title">Tekne &amp; Yat Motor Bölmesi Temiz Gazlı Söndürme</p>
+              <p class="fx-sec-system-card__desc">Motor dairesi tavanına monte edilen, 79°C sıcaklıkta otomatik patlayan ve personelin bulunduğu mahallerde güvenle uygulanabilen HFC-227ea / FM200 temiz gazlı sistemler. Fenix Yangın, Fireboy marka söndürücü tüplerin montaj, periyodik kontrol ve sertifikalı gaz dolumunu gerçekleştirmektedir.</p>
+            </div>
+            <span class="fx-sec-system-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="fx-sec-system-card" href="/sistemler/co2/">
+            <div class="fx-sec-system-card__body">
+              <p class="fx-sec-system-card__title">Gemilerde Sabit Karbondioksit (CO₂) Sistemleri</p>
+              <p class="fx-sec-system-card__desc">Ticari gemiler, kuru yük gemileri ve büyük makine dairelerinde toplam hacim koruma sağlayan sabit CO₂ bataryaları. Oksijen seviyesini hızla düşürerek derin yangınları dahi söndüren SOLAS uyumlu deşarj altyapısı.</p>
+            </div>
+            <span class="fx-sec-system-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="fx-sec-system-card" href="/sistemler/novec-1230/">
+            <div class="fx-sec-system-card__body">
+              <p class="fx-sec-system-card__title">Novec 1230 Çevre Dostu Marine Söndürme</p>
+              <p class="fx-sec-system-card__desc">Sıfır ozon tüketme potansiyeli ve düşük sera gazı etkisiyle lüks mega yatlarda, kaptan köşklerinde ve hassas elektronik seyrüsefer kabinlerinde tercih edilen FK-5-1-12 teknolojisi.</p>
+            </div>
+            <span class="fx-sec-system-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="fx-sec-system-card" href="/sistemler/yangin-algilama/">
+            <div class="fx-sec-system-card__body">
+              <p class="fx-sec-system-card__title">Denizci Tipi Yangın Algılama ve Alarm</p>
+              <p class="fx-sec-system-card__desc">Tuz, nem ve sürekli sarsıntıya dayanıklı marine onaylı optik duman, ısı ve alev dedektörleri. Kaptan köprüsündeki ana kontrol paneli üzerinden noktasal adresleme ve otomatik damper kapatma röleleri.</p>
+            </div>
+            <span class="fx-sec-system-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 4. MEVZUAT VE ONAY -->
+      <section class="fx-sec-section" id="mevzuat">
+        <h2 class="fx-sec-section__title">Mevzuat, Klas Kuruluşu ve Bayrak Uyumu</h2>
+        <p class="fx-sec-section__lead">
+          Denizcilik sektöründe kullanılan tüm yangın güvenlik donanımları, uluslararası sözleşmeler ve yerel denizcilik idarelerinin onay zincirine tabidir:
+        </p>
+
+        <div class="fx-sec-standards__list">
+          <div class="fx-sec-standard-item">
+            <span class="fx-sec-standard-icon" aria-hidden="true">✓</span>
+            <span><strong>IMO SOLAS Bölüm II-2:</strong> Denizde Can Emniyeti Uluslararası Sözleşmesi – Yangın önleme, yangın algılama ve söndürme hükümleri.</span>
+          </div>
+          <div class="fx-sec-standard-item">
+            <span class="fx-sec-standard-icon" aria-hidden="true">✓</span>
+            <span><strong>FSS Kodu (International Code for Fire Safety Systems):</strong> Sabit gazlı söndürme sistemleri, CO₂ silindir kapasiteleri ve dedektör yerleşim kuralları.</span>
+          </div>
+          <div class="fx-sec-standard-item">
+            <span class="fx-sec-standard-icon" aria-hidden="true">✓</span>
+            <span><strong>Gemilerin Teknik Yönetmeliği:</strong> T.C. Ulaştırma ve Altyapı Bakanlığı tarafından yayımlanan, Türk bayraklı gemi ve küçük deniz araçlarının yangın teçhizatı gereksinimleri.</span>
+          </div>
+          <div class="fx-sec-standard-item">
+            <span class="fx-sec-standard-icon" aria-hidden="true">✓</span>
+            <span><strong>Klas Kuruluşu Tip Onayları:</strong> Deniz araçlarında kullanılan silindir, vana, nozul ve alarm panellerinin uluslararası akredite klas kuruluşları (marine classification societies) tip onay belgelerine sahip olması esastır.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. SÜREÇ -->
+      <section class="fx-sec-section" id="surec">
+        <h2 class="fx-sec-section__title">Mühendislik, Montaj ve Dolum Süreci</h2>
+        <p class="fx-sec-section__lead">
+          Tersane yeni inşa projelerinde veya aktif teknelerin periyodik survey bakımlarında izlenen mühendislik adımları:
+        </p>
+        <div class="fx-sec-process">
+          <div class="fx-sec-process__line" aria-hidden="true"></div>
+          <div class="fx-sec-process__grid">
+            <a class="fx-sec-process__step" href="/hizmetler/muhendislik/">
+              <span class="fx-sec-process__num">1</span>
+              <p class="fx-sec-process__title">Keşif ve Hacim Ölçümü</p>
+              <p class="fx-sec-process__desc">Makine dairesi net hacmi ve hava menfezi analizi</p>
+            </a>
+            <a class="fx-sec-process__step" href="/hizmetler/muhendislik/">
+              <span class="fx-sec-process__num">2</span>
+              <p class="fx-sec-process__title">Hidrolik Hesap &amp; Proje</p>
+              <p class="fx-sec-process__desc">Denizcilik kurallarına uygun gaz miktarı tasarımı</p>
+            </a>
+            <a class="fx-sec-process__step" href="/hizmetler/montaj/">
+              <span class="fx-sec-process__num">3</span>
+              <p class="fx-sec-process__title">Mekanik Montaj</p>
+              <p class="fx-sec-process__desc">Boru tesisatı, nozullar ve silindir braketleri</p>
+            </a>
+            <a class="fx-sec-process__step" href="/hizmetler/kurulum/">
+              <span class="fx-sec-process__num">4</span>
+              <p class="fx-sec-process__title">Entegrasyon ve Test</p>
+              <p class="fx-sec-process__desc">Yakıt kesme valfi ve havalandırma kapatma testi</p>
+            </a>
+            <a class="fx-sec-process__step" href="/hizmetler/bakim/">
+              <span class="fx-sec-process__num">5</span>
+              <p class="fx-sec-process__title">Periyodik Bakım</p>
+              <p class="fx-sec-process__desc">Survey öncesi basınç ve ağırlık kontrolleri</p>
+            </a>
+            <a class="fx-sec-process__step" href="/hizmetler/dolum/">
+              <span class="fx-sec-process__num">6</span>
+              <p class="fx-sec-process__title">Sertifikalı Dolum</p>
+              <p class="fx-sec-process__desc">Boşalan tüplerin onaylı gazlarla yeniden dolumu</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. KAYNAKLAR VE STANDARTLAR -->
+      <section class="fx-sec-section" id="kaynaklar">
+        <h2 class="fx-sec-section__title">Kaynaklar ve Standartlar</h2>
+        <p class="fx-sec-section__lead">
+          Gemi ve yat yangın güvenliği tasarımlarımızda referans alınan resmî uluslararası ve ulusal mevzuat kaynakları:
+        </p>
+        <div class="fx-sec-standards__list">
+          <div class="fx-sec-standard-item">
+            <span class="fx-sec-standard-icon" aria-hidden="true">✓</span>
+            <span><a href="https://www.imo.org" target="_blank" rel="noopener">IMO — International Maritime Organization (SOLAS ve FSS Kodu)</a></span>
+          </div>
+          <div class="fx-sec-standard-item">
+            <span class="fx-sec-standard-icon" aria-hidden="true">✓</span>
+            <span><a href="https://www.mevzuat.gov.tr" target="_blank" rel="noopener">T.C. Ulaştırma ve Altyapı Bakanlığı — Gemilerin Teknik Yönetmeliği</a></span>
+          </div>
+          <div class="fx-sec-standard-item">
+            <span class="fx-sec-standard-icon" aria-hidden="true">✓</span>
+            <span><a href="https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=302" target="_blank" rel="noopener">NFPA 302 — Fire Protection Standard for Pleasure and Commercial Motor Craft</a></span>
+          </div>
+          <div class="fx-sec-standard-item">
+            <span class="fx-sec-standard-icon" aria-hidden="true">✓</span>
+            <span><a href="https://standards.cencenelec.eu" target="_blank" rel="noopener">EN ISO 9094 — Small Craft - Fire Protection</a></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. SIKÇA SORULAN SORULAR -->
+      <section class="fx-sec-section" id="sss">
+        <div class="fx-sec-split-grid">
+          <div>
+            <h3 class="fx-sec-section__title">Sıkça Sorulan Sorular</h3>
+            <div class="fx-sec-faq-list">
+              <details class="fx-sec-faq">
+                <summary>
+                  <span>Tekne ve yatlarda motor bölmesi sistemi nasıl çalışır?</span>
+                  <span class="fx-sec-faq__toggle" aria-hidden="true">+</span>
+                </summary>
+                <p class="fx-sec-faq__ans">
+                  Motor bölmesi tavanına monte edilen otomatik silindirler ortam sıcaklığı 79°C veya 93°C eşiğine ulaştığında cam tüplü termal vana vasıtasıyla kaptan müdahalesine gerek kalmadan kendiliğinden patlar ve temiz gazı 10 saniye içinde bölmeye boşaltarak yangını boğar.
+                </p>
+              </details>
+
+              <details class="fx-sec-faq">
+                <summary>
+                  <span>Gemi makine dairelerinde CO₂ mi temiz gaz mı seçilmelidir?</span>
+                  <span class="fx-sec-faq__toggle" aria-hidden="true">+</span>
+                </summary>
+                <p class="fx-sec-faq__ans">
+                  Büyük ticari gemilerde yüksek hacim ve açık güverte silindir dairesi uygunluğu nedeniyle sabit CO₂ sistemleri yaygın olarak kullanılır. Ancak personelin bulunduğu yatlar, servis tekneleri ve sınırlı alanlarda can güvenliğini tehlikeye atmayan ve kalıntı bırakmayan FM200 veya Novec 1230 temiz gaz sistemleri tercih edilir.
+                </p>
+              </details>
+
+              <details class="fx-sec-faq">
+                <summary>
+                  <span>Fireboy otomatik söndürme tüplerinin dolumu nerede yapılır?</span>
+                  <span class="fx-sec-faq__toggle" aria-hidden="true">+</span>
+                </summary>
+                <p class="fx-sec-faq__ans">
+                  Fireboy marka tekne söndürme tüplerinin periyodik manometre basınç kontrolleri, sızdırmazlık testleri ve boşalma sonrası sertifikalı gaz dolumları Fenix Yangın teknik servis istasyonunda gerçekleştirilmektedir.
+                </p>
+              </details>
+
+              <details class="fx-sec-faq">
+                <summary>
+                  <span>Gemilerde yangın söndürme hangi mevzuata tabidir?</span>
+                  <span class="fx-sec-faq__toggle" aria-hidden="true">+</span>
+                </summary>
+                <p class="fx-sec-faq__ans">
+                  Uluslararası sefer yapan gemiler IMO SOLAS Bölüm II-2 ve FSS Kodu (Fire Safety Systems Code) hükümlerine; Türk bayraklı gemi ve küçük tekneler ise Gemilerin Teknik Yönetmeliği ile ilgili liman başkanlığı kurallarına tabidir.
+                </p>
+              </details>
+
+              <details class="fx-sec-faq">
+                <summary>
+                  <span>Denizci tipi (marine approved) yangın alarmının farkı nedir?</span>
+                  <span class="fx-sec-faq__toggle" aria-hidden="true">+</span>
+                </summary>
+                <p class="fx-sec-faq__ans">
+                  Deniz tipi dedektörler tuzlu su korozyonuna, yüksek neme, sürekli titreşime ve gemi yalpa hareketlerine karşı özel sızdırmazlık contaları ve korozyon dirençli devre kartlarıyla üretilir ve klas kuruluşu tip onay sertifikasına sahiptir.
+                </p>
+              </details>
+            </div>
+            <a class="fx-sec-all-faq-link" href="/iletisim/">Denizcilik Uzmanımıza Soru Sorun <span aria-hidden="true">→</span></a>
+          </div>
+
+          <div id="iletisim">
+            <h3 class="fx-sec-section__title">İlgili Hizmetler &amp; Sistemler</h3>
+            <div class="fx-sec-related__list">
+              <a class="fx-sec-related-item" href="/sistemler/fm200/">
+                <div class="fx-sec-related-item__left">
+                  <span class="fx-sec-related-item__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </span>
+                  <span>FM200 Gazlı Yangın Söndürme</span>
+                </div>
+                <span class="fx-sec-related-item__arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="fx-sec-related-item" href="/sistemler/co2/">
+                <div class="fx-sec-related-item__left">
+                  <span class="fx-sec-related-item__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  <span>CO₂ Gazlı Yangın Söndürme Sistemi</span>
+                </div>
+                <span class="fx-sec-related-item__arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="fx-sec-related-item" href="/sistemler/yangin-algilama/">
+                <div class="fx-sec-related-item__left">
+                  <span class="fx-sec-related-item__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </span>
+                  <span>Yangın Algılama ve Alarm Sistemleri</span>
+                </div>
+                <span class="fx-sec-related-item__arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="fx-sec-related-item" href="/hizmetler/dolum/">
+                <div class="fx-sec-related-item__left">
+                  <span class="fx-sec-related-item__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  </span>
+                  <span>Gaz Dolumu ve Periyodik Test</span>
+                </div>
+                <span class="fx-sec-related-item__arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="fx-footer">
+  <span class="fx-footer__texture" aria-hidden="true"></span>
+  <div class="fx-footer__inner">
+    <div class="fx-footer__brand">
+      <div class="fx-footer__brand-left">
+        <img class="fx-footer__logo" src="../../assets/fenix-logo.png" alt="Fenix Yangın" width="1200" height="223" loading="lazy" decoding="async">
+        <span class="fx-footer__tagline-sep" aria-hidden="true"></span>
+        <span class="fx-footer__tagline">Daha Güvenli Yapılar İçin Mühendislik Çözümleri</span>
+      </div>
+      <div class="fx-footer__brand-right">
+        <nav aria-label="Alt menü">
+        <a href="/sistemler/">Sistemler</a>
+        <a href="/hizmetler/">Hizmetler</a>
+        <a href="/sektorler/" aria-current="page">Sektörler</a>
+        <a href="/projeler/">Projeler</a>
+        <a href="/referanslar/">Referanslar</a>
+        <a href="/teknik-icerikler/">Teknik İçerikler</a>
+        <a href="/kurumsal/">Kurumsal</a>
+        <a href="/iletisim/">İletişim</a>
+        </nav>
+        <div class="fx-footer__social" aria-label="Sosyal medya bağlantıları">
+          <a href="https://linkedin.com/company/fenixyangin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          <a href="https://youtube.com/@fenixyangin" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://instagram.com/fenixyangin" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="fx-footer__bottom">
+      <p class="fx-footer__legal">© 2026 Fenix Yangın. Tüm hakları saklıdır. · Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş.</p>
+      <div class="fx-footer__legal-links">
+        <a href="/kvkk/">KVKK</a>
+        <a href="/gizlilik-politikasi/">Gizlilik</a>
+        <a href="/cerez-politikasi/">Çerez Politikası</a>
+        <a href="/kullanim-kosullari/">Kullanım Koşulları</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/config.js?v=339e5335" defer></script>
+<script src="../../js/main.js?v=4884665f" defer></script>
+<script src="../../js/nav.js?v=f31c7b14" defer></script>
+
+<aside class="fx-whatsapp-floating" aria-label="Doğrudan İletişim">
+  <a href="https://wa.me/905327409097" class="fx-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp üzerinden 7/24 ulaşın">
+    <span class="fx-whatsapp-tooltip" role="tooltip">7/24 Ulaşabilirsiniz</span>
+    <span class="fx-whatsapp-icon" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.89 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.952 3.71 1.453 5.711 1.454h.005c6.554 0 11.89-5.336 11.893-11.893a11.82 11.82 0 00-3.48-8.413z" fill="currentColor"/>
+      </svg>
+    </span>
+  </a>
+</aside>
+
+<script>
+(function() {
+  var navLinks = document.querySelectorAll('.fx-sec-toc__link');
+  var sections = [];
+  navLinks.forEach(function(link) {
+    var id = link.getAttribute('href');
+    if (id && id.startsWith('#')) {
+      var sec = document.querySelector(id);
+      if (sec) sections.push({ link: link, sec: sec });
+    }
+  });
+  if (!sections.length) return;
+  function updateActive() {
+    var scrollPos = window.scrollY + 130;
+    var current = sections[0];
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].sec.offsetTop <= scrollPos) {
+        current = sections[i];
+      }
+    }
+    navLinks.forEach(function(l) { l.classList.remove('is-active'); });
+    if (current) current.link.classList.add('is-active');
+  }
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+})();
+</script>
+</body>
+</html>
+'''
+
+target_path = 'C:/Users/orkun/.gemini/antigravity/scratch/FENIX.COM/fenix-com/sektorler/gemi-tekne-yat/index.html'
+with open(target_path, 'w', encoding='utf-8') as f:
+    f.write(html_content.strip() + '\n')
+
+text = re.sub(r'<script.*?</script>', ' ', html_content, flags=re.DOTALL)
+text = re.sub(r'<style.*?</style>', ' ', text, flags=re.DOTALL)
+text = re.sub(r'<header.*?</header>', ' ', text, flags=re.DOTALL)
+text = re.sub(r'<footer.*?</footer>', ' ', text, flags=re.DOTALL)
+text = re.sub(r'<nav.*?</nav>', ' ', text, flags=re.DOTALL)
+text = re.sub(r'<[^>]+>', ' ', text)
+words = len(text.split())
+print(f'sektorler/gemi-tekne-yat/index.html created successfully. Visible words: {words}')
