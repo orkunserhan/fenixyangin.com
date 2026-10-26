@@ -308,9 +308,26 @@
           <p class="fx-contact-box__sub">Aşağıdaki formu doldurun, ekibimiz en kısa sürede sizinle iletişime geçsin. Dilerseniz doğrudan WhatsApp üzerinden de yazabilirsiniz.</p>
         </div>
 
-        <form id="fx-contact-form" class="fx-contact-form" action="https://formspree.io/f/xeqyagjb" method="POST" novalidate>
-          <input type="hidden" name="_subject" value="fenixyangin.com — İletişim Formu" />
-          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <noscript>
+          <style>#fx-contact-form{display:none !important}</style>
+          <div class="fx-contact-noscript">
+            <p><strong>JavaScript kapalı olduğu için form kullanılamıyor.</strong> Bize aşağıdaki doğrudan kanallardan hemen ulaşabilirsiniz:</p>
+            <div class="fx-contact-noscript__links">
+              <a href="https://wa.me/905327409097" class="fx-btn-wa-direct" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.89 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.952 3.71 1.453 5.711 1.454h.005c6.554 0 11.89-5.336 11.893-11.893a11.82 11.82 0 00-3.48-8.413z"/></svg>
+                WhatsApp'tan Yazın: +90 532 740 90 97
+              </a>
+              <a href="tel:+902126180701" class="fx-form-submit-btn" style="text-decoration:none;margin-top:10px;">
+                Telefon ile Arayın: 0212 618 07 01
+              </a>
+              <a href="mailto:info@fenixyangin.com.tr" class="fx-btn-wa-direct" style="margin-top:10px;border-color:#A90432;color:#A90432;">
+                E-posta Gönderin: info@fenixyangin.com.tr
+              </a>
+            </div>
+          </div>
+        </noscript>
+
+        <form id="fx-contact-form" class="fx-contact-form" novalidate>
           <div class="fx-form-row">
             <div class="fx-form-group">
               <label for="inp-ad">Ad Soyad <span class="req">*</span></label>
@@ -347,7 +364,7 @@
 
           <div class="fx-form-group">
             <label for="inp-mesaj">Mesajınız <span class="req">*</span></label>
-            <textarea id="inp-mesaj" name="mesaj" class="fx-form-textarea" rows="3" required placeholder="Talebinizi detaylı olarak yazabilirsiniz..."></textarea>
+            <textarea id="inp-mesaj" name="mesaj" class="fx-form-textarea" rows="3" required maxlength="1000" placeholder="Talebinizi detaylı olarak yazabilirsiniz..."></textarea>
           </div>
 
           <label class="fx-form-checkbox-label">
@@ -355,20 +372,39 @@
             <span>KVKK kapsamında verilerimin işlenmesini kabul ediyorum. <a href="/kvkk/" target="_blank">KVKK Aydınlatma Metni</a> <span class="req">*</span></span>
           </label>
 
-          <button type="submit" class="fx-form-submit-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-            Mesajımı Gönder
+          <button type="submit" class="fx-form-submit-btn fx-form-submit-btn--wa">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.89 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.952 3.71 1.453 5.711 1.454h.005c6.554 0 11.89-5.336 11.893-11.893a11.82 11.82 0 00-3.48-8.413z"/></svg>
+            WhatsApp'tan Gönder
           </button>
 
-          <div class="fx-form-divider" aria-hidden="true">
-            <span>veya</span>
-          </div>
+          <p class="fx-form-note">Gönder'e bastığınızda mesajınız WhatsApp'ta hazırlanır. Bilgileriniz sitemizde saklanmaz.</p>
 
-          <a href="https://wa.me/905327409097" target="_blank" rel="noopener noreferrer" class="fx-btn-wa-direct">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.89 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.952 3.71 1.453 5.711 1.454h.005c6.554 0 11.89-5.336 11.893-11.893a11.82 11.82 0 00-3.48-8.413z"/></svg>
-            WhatsApp'tan Direkt Yazın
-          </a>
+          <div class="fx-form-email-alt">
+            <button type="button" class="fx-form-email-btn" id="fx-btn-send-email">WhatsApp kullanmıyorum, e-posta ile göndereceğim</button>
+          </div>
         </form>
+
+        <div id="fx-contact-confirmation" class="fx-contact-confirmation" hidden role="region" aria-live="polite">
+          <div class="fx-confirm-card">
+            <h3 class="fx-confirm-title" id="fx-confirm-title" tabindex="-1">Mesajınız WhatsApp'ta hazır</h3>
+            <p class="fx-confirm-text" id="fx-confirm-text">Göndermek için WhatsApp'ta Gönder'e basın. WhatsApp açılmadıysa aşağıdaki seçeneklerden birini kullanın.</p>
+            <div class="fx-confirm-actions">
+              <a href="#" id="fx-confirm-wa" class="fx-confirm-btn fx-confirm-btn--wa" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.89 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.952 3.71 1.453 5.711 1.454h.005c6.554 0 11.89-5.336 11.893-11.893a11.82 11.82 0 00-3.48-8.413z"/></svg>
+                WhatsApp'ı Tekrar Aç
+              </a>
+              <a href="#" id="fx-confirm-mail" class="fx-confirm-btn fx-confirm-btn--mail">
+                E-posta ile Gönder
+              </a>
+              <a href="tel:+902126180701" class="fx-confirm-btn fx-confirm-btn--tel">
+                Bizi Arayın: 0212 618 07 01
+              </a>
+            </div>
+            <div class="fx-confirm-foot">
+              <button type="button" id="fx-confirm-reset" class="fx-confirm-reset-btn">← Yeni mesaj yaz</button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- SAĞ KOLON: ÇALIŞMA SAATLERİ & NEDEN FENİX -->

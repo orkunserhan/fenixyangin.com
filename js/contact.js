@@ -1,10 +1,11 @@
-/* FENIX.COM — İLETİŞİM FORMU DOĞRULAMA VE İLETİM
-   Tam erişilebilir, istemci taraflı doğrulama ve sunucu taraflı Formspree iletimi */
+/* FENIX.COM — İLETİŞİM FORMU (WHATSAPP & E-POSTA DOĞRUDAN BAĞLANTI)
+   Sıfır sunucu iletimi; ziyaretçinin WhatsApp veya e-posta istemcisinde
+   doğrulanmış ve biçimlendirilmiş mesaj şablonunu anında hazırlar. */
 
 (function () {
   'use strict';
 
-  var form = document.querySelector('form#fx-contact-form') || document.querySelector('form.fx-contact-form') || document.querySelector('section#form form');
+  var form = document.getElementById('fx-contact-form') || document.querySelector('form.fx-contact-form');
   if (!form) return;
 
   var nameInput = form.querySelector('input[name="ad"]');
@@ -14,15 +15,21 @@
   var subjectInput = form.querySelector('select[name="konu"]');
   var messageInput = form.querySelector('textarea[name="mesaj"]');
   var kvkkInput = form.querySelector('input[name="kvkk"]');
-  var gotchaInput = form.querySelector('input[name="_gotcha"]');
-  var submitBtn = form.querySelector('button[type="submit"]');
+  var emailFallbackBtn = document.getElementById('fx-btn-send-email');
 
-  // Hata ve bildirim kutusu oluştur
+  var confirmationEl = document.getElementById('fx-contact-confirmation');
+  var confirmTitle = document.getElementById('fx-confirm-title');
+  var confirmText = document.getElementById('fx-confirm-text');
+  var confirmWaBtn = document.getElementById('fx-confirm-wa');
+  var confirmMailBtn = document.getElementById('fx-confirm-mail');
+  var confirmResetBtn = document.getElementById('fx-confirm-reset');
+
+  // Hata bildirim kutusu oluştur
   var alertBox = document.createElement('div');
   alertBox.setAttribute('role', 'alert');
   alertBox.setAttribute('aria-live', 'polite');
   alertBox.style.display = 'none';
-  alertBox.style.padding = '14px 18px';
+  alertBox.style.padding = '12px 16px';
   alertBox.style.borderRadius = '8px';
   alertBox.style.fontSize = '13.5px';
   alertBox.style.lineHeight = '1.5';
@@ -50,216 +57,176 @@
     });
   }
 
-  function showSuccess(name) {
-    form.style.display = 'none';
-    alertBox.style.display = 'block';
-    alertBox.style.background = '#DEF7EC';
-    alertBox.style.color = '#03543F';
-    alertBox.style.border = '1px solid #BCF0DA';
-    while (alertBox.firstChild) {
-      alertBox.removeChild(alertBox.firstChild);
-    }
-
-    var title = document.createElement('strong');
-    title.style.cssText = 'display:block;font-size:16px;margin-bottom:8px';
-    title.textContent = '✓ Talebiniz Başarıyla Alındı ve İletildi';
-    alertBox.appendChild(title);
-
-    var p1 = document.createElement('p');
-    p1.style.margin = '0 0 12px';
-    p1.appendChild(document.createTextNode('Sayın '));
-    var nameStrong = document.createElement('strong');
-    nameStrong.textContent = name;
-    p1.appendChild(nameStrong);
-    p1.appendChild(document.createTextNode(', talebiniz sunucumuz üzerinden teknik mühendislik ekibimize iletilmiştir. Uzmanlarımız en kısa sürede tarafınıza dönüş sağlayacaktır.'));
-    alertBox.appendChild(p1);
-
-    var pAlt = document.createElement('p');
-    pAlt.style.cssText = 'margin:0 0 10px;font-size:13px;color:#046C4E';
-    pAlt.textContent = 'Dilerseniz talebinizi WhatsApp veya telefon üzerinden de doğrudan iletebilirsiniz:';
-    alertBox.appendChild(pAlt);
-
-    var btnRow = document.createElement('div');
-    btnRow.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px';
-
-    var waBtn = document.createElement('a');
-    waBtn.href = 'https://wa.me/905327409097';
-    waBtn.target = '_blank';
-    waBtn.rel = 'noopener noreferrer';
-    waBtn.style.cssText = 'display:inline-flex;align-items:center;background:#25D366;color:#fff;padding:8px 14px;border-radius:6px;font-weight:700;font-size:13px;text-decoration:none';
-    waBtn.textContent = 'WhatsApp ile Görüş →';
-    btnRow.appendChild(waBtn);
-
-    var mailBtn = document.createElement('a');
-    mailBtn.href = 'mailto:info@fenixyangin.com.tr';
-    mailBtn.style.cssText = 'display:inline-flex;align-items:center;background:#A90432;color:#fff;padding:8px 14px;border-radius:6px;font-weight:700;font-size:13px;text-decoration:none';
-    mailBtn.textContent = 'E-posta Gönder →';
-    btnRow.appendChild(mailBtn);
-
-    alertBox.appendChild(btnRow);
-
-    var p2 = document.createElement('p');
-    p2.style.cssText = 'margin:0;font-size:12.5px';
-    p2.appendChild(document.createTextNode('Doğrudan aramak isterseniz: '));
-    var telLink = document.createElement('a');
-    telLink.href = 'tel:+902126180701';
-    telLink.style.cssText = 'font-weight:700;color:inherit;text-decoration:underline';
-    telLink.textContent = '0212 618 07 01';
-    p2.appendChild(telLink);
-    p2.appendChild(document.createTextNode(' / '));
-    var telLink2 = document.createElement('a');
-    telLink2.href = 'tel:+902126180702';
-    telLink2.style.cssText = 'font-weight:700;color:inherit;text-decoration:underline';
-    telLink2.textContent = '0212 618 07 02';
-    p2.appendChild(telLink2);
-    alertBox.appendChild(p2);
-  }
-
-  function showServerError(statusText) {
-    alertBox.style.display = 'block';
-    alertBox.style.background = '#FDE8E8';
-    alertBox.style.color = '#9B1C1C';
-    alertBox.style.border = '1px solid #F8B4B4';
-    while (alertBox.firstChild) {
-      alertBox.removeChild(alertBox.firstChild);
-    }
-
-    var title = document.createElement('strong');
-    title.style.cssText = 'display:block;font-size:15px;margin-bottom:6px';
-    title.textContent = 'Mesaj İletilemedi';
-    alertBox.appendChild(title);
-
-    var p = document.createElement('p');
-    p.style.margin = '0 0 10px';
-    p.textContent = 'Sunucu bağlantısında bir sorun oluştu' + (statusText ? ' (' + statusText + ')' : '') + '. Lütfen doğrudan telefon veya WhatsApp hattımız üzerinden bize ulaşın:';
-    alertBox.appendChild(p);
-
-    var btnRow = document.createElement('div');
-    btnRow.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px';
-
-    var waBtn = document.createElement('a');
-    waBtn.href = 'https://wa.me/905327409097';
-    waBtn.target = '_blank';
-    waBtn.rel = 'noopener noreferrer';
-    waBtn.style.cssText = 'display:inline-flex;align-items:center;background:#25D366;color:#fff;padding:8px 14px;border-radius:6px;font-weight:700;font-size:13px;text-decoration:none';
-    waBtn.textContent = 'WhatsApp ile İletişime Geç →';
-    btnRow.appendChild(waBtn);
-
-    var telBtn = document.createElement('a');
-    telBtn.href = 'tel:+902126180701';
-    telBtn.style.cssText = 'display:inline-flex;align-items:center;background:#A90432;color:#fff;padding:8px 14px;border-radius:6px;font-weight:700;font-size:13px;text-decoration:none';
-    telBtn.textContent = '0212 618 07 01 Ara →';
-    btnRow.appendChild(telBtn);
-
-    alertBox.appendChild(btnRow);
-  }
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
+  function validateForm() {
     clearError();
 
-    // Spam honeypot kontrolü
-    if (gotchaInput && gotchaInput.value.trim() !== '') {
-      showSuccess('Ziyaretçi');
-      return;
-    }
-
-    // 1. Ad Soyad Kontrolü
+    // 1. Ad Soyad Kontrolü (En az 2 karakter)
     var name = nameInput ? nameInput.value.trim() : '';
     if (!name || name.length < 2) {
       showError('Lütfen adınızı ve soyadınızı eksiksiz giriniz.', nameInput);
-      return;
+      return null;
     }
 
-    // 2. E-posta Kontrolü
+    // 2. E-posta Kontrolü (Geçerli format)
     var email = emailInput ? emailInput.value.trim() : '';
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailPattern.test(email)) {
       showError('Lütfen geçerli bir e-posta adresi giriniz.', emailInput);
-      return;
+      return null;
     }
 
-    // 3. Mesaj Kontrolü
+    // 3. Mesaj Kontrolü (En az 5 karakter)
     var msg = messageInput ? messageInput.value.trim() : '';
     if (!msg || msg.length < 5) {
       showError('Lütfen talep veya mesajınızı kısaca açıklayınız (en az 5 karakter).', messageInput);
-      return;
+      return null;
     }
 
     // 4. KVKK Kontrolü (Zorunlu)
     if (kvkkInput && !kvkkInput.checked) {
       showError('Devam edebilmek için KVKK Aydınlatma Metnini onaylamanız gerekmektedir.', kvkkInput);
-      return;
+      return null;
     }
 
     var org = orgInput ? orgInput.value.trim() : '';
     var phone = phoneInput ? phoneInput.value.trim() : '';
     var subject = (subjectInput && subjectInput.value && subjectInput.value !== 'Konu seçin') ? subjectInput.value : '';
 
-    // Çift gönderimi önle
-    var origBtnText = submitBtn ? submitBtn.textContent : 'Mesajımı Gönder';
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'İletiliyor...';
-    }
-
-    var endpoint = form.getAttribute('action') || 'https://formspree.io/f/xeqyagjb';
-    var payload = {
-      ad: name,
-      kurum: org,
-      eposta: email,
-      telefon: phone,
-      konu: subject,
-      mesaj: msg,
-      _subject: 'fenixyangin.com — İletişim Formu'
+    return {
+      name: name,
+      org: org,
+      email: email,
+      phone: phone,
+      subject: subject,
+      msg: msg
     };
+  }
 
-    var isSuccess = false;
-    var statusInfo = '';
+  // Mesaj Şablonu Oluşturucu (Boş bırakılan alanlar mesaja eklenmez)
+  function buildMessageText(data) {
+    var lines = [];
+    lines.push('Merhaba Fenix Yangın, web sitenizden yazıyorum.');
+    lines.push('');
+    if (data.name) lines.push('Ad Soyad: ' + data.name);
+    if (data.org) lines.push('Firma: ' + data.org);
+    if (data.phone) lines.push('Telefon: ' + data.phone);
+    if (data.email) lines.push('E-posta: ' + data.email);
+    if (data.subject) lines.push('Konu: ' + data.subject);
+    lines.push('');
+    lines.push('Mesaj:');
+    lines.push(data.msg);
+    lines.push('');
+    lines.push('— fenixyangin.com iletişim formu');
+    return lines.join('\n');
+  }
 
-    try {
-      var res = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
+  function buildWaUrl(msgText) {
+    return 'https://wa.me/905327409097?text=' + encodeURIComponent(msgText);
+  }
 
-      if (res.ok) {
-        isSuccess = true;
+  function buildMailtoUrl(data, msgText) {
+    var subjectLine = 'Web sitesi talebi: ' + (data.subject || data.name);
+    return 'mailto:info@fenixyangin.com.tr?subject=' + encodeURIComponent(subjectLine) + '&body=' + encodeURIComponent(msgText);
+  }
+
+  // Senkron Bağlantı Açıcı (Tarayıcı açılır pencere engelleyicisine takılmaz)
+  function openLinkSync(targetUrl, isNewTab) {
+    var a = document.createElement('a');
+    a.href = targetUrl;
+    if (isNewTab) {
+      a.target = '_blank';
+      a.rel = 'noopener';
+    }
+    a.click();
+  }
+
+  function trackLead(method) {
+    if (typeof window.fxHasAnalyticsConsent === 'function' && window.fxHasAnalyticsConsent()) {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          method: method
+        });
+      }
+    }
+  }
+
+  function showConfirmationPanel(mode, waUrl, mailtoUrl) {
+    form.style.display = 'none';
+    clearError();
+    if (confirmationEl) {
+      confirmationEl.hidden = false;
+      if (mode === 'email') {
+        if (confirmTitle) confirmTitle.textContent = 'E-postanız hazır';
+        if (confirmText) confirmText.textContent = 'Göndermek için e-posta uygulamanızda Gönder\'e basın. E-posta açılmadıysa aşağıdaki seçeneklerden birini kullanın.';
       } else {
-        statusInfo = 'HTTP ' + res.status;
-        try {
-          var errData = await res.json();
-          if (errData && errData.error) {
-            statusInfo += ': ' + errData.error;
-          }
-        } catch (e) {}
+        if (confirmTitle) confirmTitle.textContent = 'Mesajınız WhatsApp\'ta hazır';
+        if (confirmText) confirmText.textContent = 'Göndermek için WhatsApp\'ta Gönder\'e basın. WhatsApp açılmadıysa aşağıdaki seçeneklerden birini kullanın.';
       }
-    } catch (networkErr) {
-      statusInfo = networkErr && networkErr.message ? networkErr.message : 'Ağ hatası';
+      if (confirmWaBtn) confirmWaBtn.href = waUrl;
+      if (confirmMailBtn) confirmMailBtn.href = mailtoUrl;
+      if (confirmTitle) confirmTitle.focus();
     }
+  }
 
-    if (isSuccess) {
-      // Görev 2'de kullanıcı onay verdiyse lead event gönder
-      if (typeof window.fxHasAnalyticsConsent === 'function' && window.fxHasAnalyticsConsent()) {
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', 'generate_lead', {
-            event_category: 'Contact',
-            event_label: 'Contact Form Submission',
-            method: 'Formspree'
-          });
-        }
-      }
-      showSuccess(name);
-    } else {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = origBtnText;
-      }
-      showServerError(statusInfo);
+  function resetToForm() {
+    form.reset();
+    clearError();
+    if (confirmationEl) {
+      confirmationEl.hidden = true;
     }
+    form.style.display = 'block';
+    if (nameInput) {
+      nameInput.focus();
+    }
+  }
+
+  // 1. Ana Gönder Butonu (WhatsApp)
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = validateForm();
+    if (!data) return;
+
+    var msgText = buildMessageText(data);
+    var waUrl = buildWaUrl(msgText);
+    var mailtoUrl = buildMailtoUrl(data, msgText);
+
+    // Senkron olarak WhatsApp açılır
+    openLinkSync(waUrl, true);
+
+    // Çerez izni varsa analitik tetiklenir
+    trackLead('whatsapp');
+
+    // Onay paneli gösterilir
+    showConfirmationPanel('whatsapp', waUrl, mailtoUrl);
   });
+
+  // 2. Alternatif Buton ("WhatsApp kullanmıyorum, e-posta ile göndereceğim")
+  if (emailFallbackBtn) {
+    emailFallbackBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var data = validateForm();
+      if (!data) return;
+
+      var msgText = buildMessageText(data);
+      var waUrl = buildWaUrl(msgText);
+      var mailtoUrl = buildMailtoUrl(data, msgText);
+
+      // Senkron olarak Mailto açılır
+      openLinkSync(mailtoUrl, false);
+
+      // Çerez izni varsa analitik tetiklenir
+      trackLead('email');
+
+      // Onay paneli gösterilir
+      showConfirmationPanel('email', waUrl, mailtoUrl);
+    });
+  }
+
+  // 3. "Yeni mesaj yaz" butonu
+  if (confirmResetBtn) {
+    confirmResetBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      resetToForm();
+    });
+  }
 })();
