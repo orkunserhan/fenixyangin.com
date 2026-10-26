@@ -499,6 +499,12 @@
   z-index: 1;
 }
 
+@media (min-width: 901px) {
+  .fx-sec-process__grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .fx-sec-process__step {
   display: flex;
   flex-direction: column;
