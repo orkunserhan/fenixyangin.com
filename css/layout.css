@@ -1040,3 +1040,112 @@
   }
 }
 
+/* ── ÇEREZ ONAY BANNERI (CONSENT MODE V2) ── */
+.fx-consent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1060;
+  background: var(--fx-dark, #15171A);
+  color: var(--fx-white, #FFFFFF);
+  border-top: 2px solid var(--fx-red, #A90432);
+  box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.28);
+  font-family: var(--fx-sans, 'Archivo', Helvetica, Arial, sans-serif);
+  box-sizing: border-box;
+}
+.fx-consent[hidden] {
+  display: none !important;
+}
+.fx-consent__inner {
+  max-width: var(--fx-max, 1200px);
+  margin: 0 auto;
+  padding: 14px var(--fx-pad-x, 16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-sizing: border-box;
+}
+.fx-consent__text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.fx-consent__link {
+  color: var(--fx-white, #FFFFFF);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--fx-t, 160ms);
+}
+.fx-consent__link:hover {
+  color: var(--fx-yellow, #FDB912);
+}
+.fx-consent__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.fx-consent__btn {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  min-width: 104px;
+  padding: 8px 18px;
+  font-family: var(--fx-sans, 'Archivo', Helvetica, Arial, sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--fx-white, #FFFFFF);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background var(--fx-t, 160ms), border-color var(--fx-t, 160ms), color var(--fx-t, 160ms);
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.fx-consent__btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--fx-white, #FFFFFF);
+}
+.fx-consent__btn:focus-visible,
+.fx-consent__link:focus-visible,
+.fx-footer__cookie-prefs:focus-visible {
+  outline: 2px solid var(--fx-yellow, #FDB912);
+  outline-offset: 2px;
+}
+@media (max-width: 680px) {
+  .fx-consent__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 14px calc(12px + env(safe-area-inset-bottom, 0px));
+  }
+  .fx-consent__text {
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+  .fx-consent__actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .fx-consent__btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 40px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
