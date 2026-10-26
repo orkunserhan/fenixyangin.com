@@ -1,0 +1,20 @@
+# Vercel deployment exclusions
+# Exclude sensitive documentation, build scripts, audit tools, and non-production files
+
+*.md
+build/
+qa/
+content/
+schema/
+scratch_audit/
+__pycache__/
+*.csv
+*.log
+package*.json
+package.json
+package-lock.json
+node_modules/
+.htaccess
+nginx_redirects.conf
+_headers
+_redirects
