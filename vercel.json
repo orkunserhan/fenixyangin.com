@@ -2439,8 +2439,18 @@
       "permanent": true
     },
     {
+      "source": "/tag/:slug*/",
+      "destination": "/teknik-icerikler/",
+      "permanent": true
+    },
+    {
       "source": "/tag/:slug*",
       "destination": "/teknik-icerikler/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug*/",
+      "destination": "/sistemler/",
       "permanent": true
     },
     {
