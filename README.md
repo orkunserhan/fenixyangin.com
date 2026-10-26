@@ -74,6 +74,8 @@ fenix-com/
 
 ## 3. YEREL ÖNİZLEME VE ÇALIŞTIRMA
 
+CSS veya JS dosyası değiştiğinde commit'ten önce node build/version-assets.js çalıştırın.
+
 Node.js kurulu ortamda (harici kurulum gerekmez):
 
 ```bash
