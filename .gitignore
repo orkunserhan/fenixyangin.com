@@ -43,6 +43,9 @@ desktop.ini
 *.log
 
 # Local Audit, Browser Testing & Headless Profiles
+qa/
+gsc-404.csv
+*.csv
 scratch_audit/
 scratch_*/
 cdp_tmp*/

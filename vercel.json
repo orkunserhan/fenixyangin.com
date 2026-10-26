@@ -2407,6 +2407,46 @@
       "source": "/yangin-ihbar-sistemleri/",
       "destination": "/sistemler/",
       "statusCode": 301
+    },
+    {
+      "source": "/cnc-makina-yangin-sondurme-sistemleri",
+      "destination": "/sektorler/fabrika/",
+      "permanent": true
+    },
+    {
+      "source": "/cnc-makina-yangin-sondurme-sistemleri/",
+      "destination": "/sektorler/fabrika/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/yangin",
+      "destination": "/teknik-icerikler/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/yangin/",
+      "destination": "/teknik-icerikler/",
+      "permanent": true
+    },
+    {
+      "source": "/category/yangin-sondurme-cihazlari",
+      "destination": "/sistemler/",
+      "permanent": true
+    },
+    {
+      "source": "/category/yangin-sondurme-cihazlari/",
+      "destination": "/sistemler/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:slug*",
+      "destination": "/teknik-icerikler/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug*",
+      "destination": "/sistemler/",
+      "permanent": true
     }
   ],
   "headers": [
