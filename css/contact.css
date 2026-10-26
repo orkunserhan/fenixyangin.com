@@ -538,6 +538,171 @@
   border-color: #16A34A;
 }
 
+/* --- WHATSAPP GÖNDER BUTONU, BİLGİ NOTU & ONAY PANELİ --- */
+.fx-form-submit-btn--wa {
+  background: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.25);
+}
+
+.fx-form-submit-btn--wa:hover {
+  background: #1EBE5B;
+}
+
+.fx-form-note {
+  font-size: 12px;
+  color: #64748B;
+  margin: 10px 0 6px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.fx-form-email-alt {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.fx-form-email-btn {
+  background: transparent;
+  border: none;
+  color: #64748B;
+  font-size: 12.5px;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-family: inherit;
+  transition: color 0.15s ease;
+}
+
+.fx-form-email-btn:hover {
+  color: var(--fx-red, #A90432);
+}
+
+.fx-contact-confirmation {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 24px 20px;
+  margin-top: 6px;
+}
+
+.fx-confirm-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-confirm-title {
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 8px;
+}
+
+.fx-confirm-text {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+
+.fx-confirm-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.fx-confirm-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 6px;
+  font-family: var(--fx-font-display, "Archivo", sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.fx-confirm-btn--wa {
+  background: #25D366;
+  color: #FFFFFF;
+}
+
+.fx-confirm-btn--wa:hover {
+  background: #1EBE5B;
+}
+
+.fx-confirm-btn--mail {
+  background: #FFFFFF;
+  color: var(--fx-red, #A90432);
+  border: 1.5px solid var(--fx-red, #A90432);
+}
+
+.fx-confirm-btn--mail:hover {
+  background: #FFF1F2;
+}
+
+.fx-confirm-btn--tel {
+  background: #FFFFFF;
+  color: #1E293B;
+  border: 1.5px solid #CBD5E1;
+}
+
+.fx-confirm-btn--tel:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+}
+
+.fx-confirm-foot {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid #E2E8F0;
+}
+
+.fx-confirm-reset-btn {
+  background: transparent;
+  border: none;
+  color: #64748B;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 4px 8px;
+  font-family: inherit;
+  transition: color 0.15s ease;
+}
+
+.fx-confirm-reset-btn:hover {
+  color: #0F172A;
+}
+
+.fx-contact-noscript {
+  padding: 16px;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 13.5px;
+  color: #92400E;
+}
+
+.fx-contact-noscript p {
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.fx-contact-noscript__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* --- SAĞ KOLON: ÇALIŞMA SAATLERİ & NEDEN FENİX --- */
 .fx-contact-sidebar {
   display: flex;
