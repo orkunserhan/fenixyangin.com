@@ -1,0 +1,82 @@
+# Fenix Yangın
+
+> Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş. — 2011'den bu yana gazlı yangın söndürme sistemleri, yangın algılama ve ihbar sistemleri, mühendislik, periyodik bakım, sertifikalı gaz dolumu ve oda sızdırmazlık testi (Door Fan Test) çözümleri.
+
+## Sistemler
+- [Otomatik & Gazlı Yangın Söndürme Sistemleri](https://www.fenixyangin.com/sistemler/): Otomatik yangın söndürme ve gazlı söndürme sistemleri. FM200, Novec 1230, CO₂ ve pano içi sistemlerde hidrolik hesap, montaj ve periyodik bakım.
+- [FM200 Yangın Söndürme Sistemi (HFC-227ea)](https://www.fenixyangin.com/sistemler/fm200/): FM200 yangın söndürme ve gazlı söndürme sistemleri. Keşif, hidrolik hesap, dolum ve montaj. NFPA 2001 ve ISO 14520 standartlarına tam uyumlu çözümler.
+- [Novec 1230 Gazlı Söndürme Sistemi (FK-5-1-12)](https://www.fenixyangin.com/sistemler/novec-1230/): Novec 1230 (FK-5-1-12) gazlı yangın söndürme sistemleri. 0 ODP, GWP 1 çevre dostu, 10 saniyede hızlı söndürme, NFPA 2001 ve EN 15004 uyumlu mühendislik.
+- [CO₂ Gazlı Yangın Söndürme Sistemi](https://www.fenixyangin.com/sistemler/co2/): Karbondioksitli (CO₂) gazlı yangın söndürme sistemleri. Trafo, jeneratör odaları ve kablo kanallarında NFPA 12 ve ISO 14520 onaylı mühendislik.
+- [Pano İçi Yangın Söndürme Sistemi](https://www.fenixyangin.com/sistemler/pano-ici/): Elektrik panoları ve MCC kabinleri için mikro algılama borulu otomatik pano içi yangın söndürme sistemleri. Kaynağında doğrudan ve hızlı müdahale.
+- [Davlumbaz Söndürme Sistemi (UL 300, Ansul, Amerex)](https://www.fenixyangin.com/sistemler/davlumbaz/): Endüstriyel mutfak davlumbaz söndürme sistemi nedir, Ansul nedir? UL 300 ıslak kimyasal, NFPA 96, itfaiye ruhsatı, montaj, bakım ve dolum için keşif.
+- [Aerosol Yangın Söndürme Sistemi Nedir ve Nasıl Çalışır?](https://www.fenixyangin.com/sistemler/aerosol/): Aerosol yangın söndürme sistemi nedir? Kondanse aerosol jeneratörü, g/m³ tasarım yoğunluğu; pano, trafo ve türbin uygulamaları, avantajları ve sınırları.
+- [Yangın Algılama Sistemleri: Adresli, Konvansiyonel](https://www.fenixyangin.com/sistemler/yangin-algilama/): Yangın algılama ve ihbar sistemi nedir, adresli ile konvansiyonel farkı ne? Dedektör seçimi, VESDA, gazlı söndürme paneli entegrasyonu, EN 54 ve BYKHY.
+
+## Hizmetler ve Marka Servis Çözümleri
+- [Yangın Güvenliği Hizmetleri](https://www.fenixyangin.com/hizmetler/): Mühendislik, kurulum, montaj, ekipman tedariki, gaz dolumu ve periyodik bakım. Yangın söndürme sistemlerinde uçtan uca uzman hizmet.
+- [Yangın Söndürme Mühendisliği ve Projelendirme](https://www.fenixyangin.com/hizmetler/muhendislik/): Mahal riskinin tespitinden sistem tasarımına, hidrolik hesaplardan onaylı uygulama projelerine kadar NFPA ve EN standartlarına tam uyumlu mühendislik çözümleri.
+- [Kurulum ve Devreye Alma Hizmetleri](https://www.fenixyangin.com/hizmetler/kurulum/): Gazlı söndürme sistemlerinin elektriksel entegrasyonu, azot basınç testleri, çapraz zon simülasyonu, Door Fan sızdırmazlık testi ve anahtar teslim devreye alma.
+- [Mekanik ve Elektriksel Montaj Hizmetleri](https://www.fenixyangin.com/hizmetler/montaj/): Gazlı söndürme sistemleri için dikişsiz çelik borulama, nozul montajı, silindir sabitleme ve yangına dayanıklı algılama kablolaması montaj hizmetleri.
+- [Yangın Söndürme Sistemleri Ekipman Tedariki](https://www.fenixyangin.com/hizmetler/tedarik/): UL listeli, FM onaylı ve TPED/CE sertifikalı gazlı söndürme silindirleri, vana grupları, nozullar ve yangın algılama panelleri tedarik hizmeti.
+- [FM200 ve Novec 1230 Gaz Dolumu ve Tartım](https://www.fenixyangin.com/hizmetler/dolum/): FM200, Novec 1230 ve CO2 söndürme tüpleri için sertifikalı gaz dolumu, 10 yıllık hidrostatik test, hassas kalibre tartım ve ikame tüp desteği.
+- [Gazlı Söndürme Periyodik Bakım ve Teknik Servis](https://www.fenixyangin.com/hizmetler/bakim/): Gazlı söndürme sistemleri için TSE-HYB 13345 yetkili periyodik bakım, ultrasonik gaz seviye ölçümü, kontrol testleri ve 7/24 teknik servis hizmeti.
+- [Kidde Yangın Söndürme Sistemleri: Bakım ve Dolum](https://www.fenixyangin.com/hizmetler/tedarik/kidde/): Kidde marka gazlı söndürme ve davlumbaz sistemleri için İstanbul merkezli ekiple keşif, periyodik bakım, gaz dolumu ve uyumlu ekipman tedariki.
+- [SIEX Gazlı Söndürme Sistemi: Servis ve Tedarik](https://www.fenixyangin.com/hizmetler/tedarik/siex/): SIEX gazlı yangın söndürme sistemleri için keşif, kurulum desteği, periyodik bakım, dolum ve uyumlu ekipman tedariki; sistem tipi ve uygulama alanları.
+
+## Sektörel Uygulamalar
+- [Hizmet Verdiğimiz Sektörler](https://www.fenixyangin.com/sektorler/): Veri merkezi, server odası, UPS, telekomünikasyon, fabrika, endüstriyel mutfak, trafo odası ve hastane için yangın koruma çözümleri.
+- [Veri Merkezi Yangın Söndürme ve Koruma Tasarımı](https://www.fenixyangin.com/sektorler/veri-merkezi/): Veri merkezi yangın söndürme sistemi: beyaz alan ve UPS odaları için kesintisiz çalışmayı koruyan temiz gazlı söndürme, erken algılama, NFPA 75/76.
+- [Server Odası Yangın Söndürme: Temiz Gaz Tasarımı](https://www.fenixyangin.com/sektorler/server-odasi/): Server ve sistem odası yangın söndürme sistemi: donanıma zarar vermeyen FM200 ve Novec 1230 temiz gaz, 10 saniyede boşalma, door fan testi ve NFPA 2001.
+- [UPS ve Elektrik Odası Yangın Söndürme Tasarımı](https://www.fenixyangin.com/sektorler/ups-enerji/): UPS, akü ve elektrik odası yangın söndürme sistemi: kalıntı bırakmayan, iletken olmayan temiz gazlı söndürme, lityum akü riski ve NFPA uyumlu tasarım.
+- [Telekom Tesisi Yangın Söndürme: Personelsiz Mahal](https://www.fenixyangin.com/sektorler/telekomunikasyon/): Telekomünikasyon tesisleri ve baz istasyonları için personelsiz mahallerde otomatik devreye giren, NFPA 76 uyumlu gazlı yangın söndürme sistemleri.
+- [Fabrika Yangın Söndürme: Proses ve Pano Koruması](https://www.fenixyangin.com/sektorler/fabrika/): Fabrika ve üretim tesisi yangın söndürme sistemleri: üretim hattı, CNC, elektrik dağıtım ve pano odaları için gazlı ve lokal söndürme çözümleri.
+- [Endüstriyel Mutfak Davlumbaz Söndürme Sistemleri](https://www.fenixyangin.com/sektorler/endustriyel-mutfak/): Restoran ve otel mutfakları için UL 300 ve NFPA 96 uyumlu Amerex davlumbaz söndürme, otomatik gaz kesme ve yangın koruma sistemleri.
+- [Trafo Odası Yangın Söndürme: Gaz Seçimi ve Tasarım](https://www.fenixyangin.com/sektorler/trafo-odasi/): Trafo ve jeneratör odası yangın söndürme sistemi: yağlı ve kuru tip transformatörler için iletken olmayan gazlı söndürme, algılama ve NFPA uyumlu tasarım.
+- [Hastane Teknik Hacim Yangın Söndürme Tasarımı](https://www.fenixyangin.com/sektorler/hastane/): Hastane yangın söndürme sistemleri: MR/BT, UPS ve ameliyathane teknik hacimleri için insanlı mahale uygun, kalıntısız temiz gazlı söndürme, NFPA 99.
+- [Gemi, Tekne ve Yat Yangın Söndürme Sistemleri](https://www.fenixyangin.com/sektorler/gemi-tekne-yat/): Gemi makine dairesi, tekne ve yat motor bölmesi için otomatik yangın söndürme ve algılama: gaz seçimi, SOLAS ve FSS Kodu gereklilikleri, bakım ve dolum.
+
+## Teknik İçerikler ve Mühendislik Rehberleri
+- [Gazlı Söndürme Teknik Rehberler ve Makaleler](https://www.fenixyangin.com/teknik-icerikler/): Gazlı yangın söndürme ajanları, hidrolik hesaplama, oda sızdırmazlık testi, devreye alma ve bakım standartları üzerine Fenix teknik mühendislik rehberleri.
+- [FM200 ve Novec 1230 Farkı (HFC-227ea vs FK-5-1-12)](https://www.fenixyangin.com/novec-1230-ve-fm200-farki/): FM200 ile Novec 1230 farkı: tasarım konsantrasyonu, NOAEL güvenlik payı, depolama basıncı, GWP ve F-gaz mevzuatı, 3M sonrası tedarik. Karşılaştırma tablosu.
+- [FM200 Yasaklandı mı? F-Gaz Mevzuatı ve HFC Durumu](https://www.fenixyangin.com/teknik-icerikler/fm200-f-gaz-mevzuati/): FM200 gazı yasaklandı mı? HFC-227ea söndürme ajanının F-Gaz mevzuatı, AB regülasyonları ve Türkiye standartlarındaki yasal durumunu teknik detaylarla inceleyin.
+- [Gazlı Söndürme ve FM200 Gazı Hesaplama Rehberi](https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-ajan-miktari-hesabi/): FM200 ve temiz gazlı söndürmede ajan miktarı ve gaz hesaplama yöntemi: NFPA 2001 formülü, tasarım konsantrasyonu, sıcaklık ve hacim hesabı.
+- [Gazlı Söndürme Standartları ve Onaylar](https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-standartlari-ve-onaylar/): Gazlı yangın söndürme sistemlerinde NFPA 2001, ISO 14520, TS EN 15004 standartları, UL/FM onay mekanizmaları ve sertifikasyon gereklilikleri rehberi.
+- [Hangi Mahale Hangi Gazlı Söndürme Sistemi?](https://www.fenixyangin.com/teknik-icerikler/mahal-bazli-sondurme-sistemi-secimi/): Sistem seçimi risk, mahal, insan varlığı, kesinti toleransı ve mevzuat kısıtının birlikte değerlendirilmesidir. Karar ağacı ve karar matrisi.
+- [Oda Sızdırmazlık (Door Fan) Testi — Yöntem ve Kabul](https://www.fenixyangin.com/teknik-icerikler/oda-sizdirmazlik-testi-yontemi/): Oda sızdırmazlık (door fan) testi uygulama adımları, EN 15004 ve NFPA standartlarında kabul kriterleri ile minimum tutma süresi hesaplama rehberi.
+- [Gazlı Söndürmede Devreye Alma ve Kabul Testleri](https://www.fenixyangin.com/teknik-icerikler/devreye-alma-ve-kabul-testleri/): Gazlı yangın söndürme sistemlerinde devreye alma dizisi, kabul test kriterleri, kilitleme doğrulaması, teknik dokümantasyon ve devir teslim şartları.
+- [Gazlı Söndürmede Periyodik Kontrol Programı](https://www.fenixyangin.com/teknik-icerikler/periyodik-kontrol-programi/): Gazlı söndürme sistemlerinde haftalık, aylık, 6 aylık ve yıllık periyodik kontrol programı, TSE-HYB gereklilikleri ve yasal bakım kayıt yükümlülükleri.
+- [Gazlı Söndürme Sistemi Arızaları ve İlk Teşhis](https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-ariza-rehberi/): Gazlı söndürme sistemlerinde yaygın arıza kodları, basınç kaybı belirtileri, operatörün yapabileceği ilk kontroller ve teknik servis müdahale adımları.
+- [Veri Merkezi ve Server Odası Yangın Koruma Tasarımı](https://www.fenixyangin.com/teknik-icerikler/veri-merkezi-yangin-koruma-tasarimi/): Veri merkezleri ve sistem odaları için gazlı yangın söndürme tasarımı, yükseltilmiş döşeme koruması, erken algılama ve standartlara uygun projelendirme.
+- [Söndürme Sistemi Ne Zaman Zorunlu?](https://www.fenixyangin.com/teknik-icerikler/yangin-sondurme-sistemi-zorunlulugu/): Binaların Yangından Korunması Hakkında Yönetmelik kapsamında otomatik gazlı söndürme sistemi zorunluluğu olan mahaller ve yasal tasarım şartları.
+- [Elektrik Panosu Yangın Söndürme Sistemi ve Tüpü](https://www.fenixyangin.com/elektrik-panosu-otomatik-yangin-sondurme-sistemi/): Elektrik panosu için otomatik yangın söndürme: pano tipi tüp mü, borulu sistem mi? Elektrik yangını neyle söndürülür, gaz seçimi, fiyatı belirleyenler.
+- [Gazlı Söndürme Teknik Şartnamesi Hazırlama Rehberi](https://www.fenixyangin.com/fm-200-gazli-sondurme-sistemleri-teknik-sartnamesi/): Gazlı söndürme sistemlerinde 15 bölümlü teknik şartname mimarisi, sık yapılan şartname hataları, kritik denetim soruları ve standart atıf kontrolü.
+- [Gazlı Söndürme Ajanları İnsanlara Zararlı mı?](https://www.fenixyangin.com/teknik-icerikler/gazli-sondurme-ajanlari-insanlara-zararli-mi/): Temiz söndürme ajanlarının insan güvenliği açısından niteliksel değerlendirmesi, toksikolojik emniyet marjları ve tahliye protokolleri.
+- [İnert Gazlı Söndürme Sistemleri (IG-541, IG-55)](https://www.fenixyangin.com/teknik-icerikler/inert-gazli-sondurme-sistemleri/): İnert gazlı söndürme sistemleri (IG-541, IG-55) çalışma prensibi, 300 bar teknolojisi, oksijen hesabı ve basınç tahliye damperi tasarımı rehberi.
+- [Lityum-İyon ve BESS Yangın Koruması](https://www.fenixyangin.com/teknik-icerikler/lityum-iyon-bess-yangin-koruma/): Lityum-iyon batarya ve BESS enerji depolama yangın güvenliği: Termal kaçak mekanizması, off-gas algılama, NFPA 855 standartları ve çok katmanlı koruma rehberi.
+- [Yangın Söndürücü Çeşitleri: Hangi Yangına Hangi Tüp?](https://www.fenixyangin.com/yangin-sondurucu-siniflari-nelerdir/): ABC kuru kimyevi tozlu, CO₂, köpüklü, sulu ve F sınıfı ıslak kimyasal söndürücüler: hangi yangında hangisi kullanılır, nerede kullanılmaz? Seçim tablosu.
+
+## Kurumsal, Projeler ve Yasal
+- [Fenix Yangın | Gazlı Yangın Söndürme ve Mühendislik](https://www.fenixyangin.com/): Fenix Yangın; gazlı yangın söndürme sistemleri, FM200, Novec 1230, CO2, davlumbaz ve pano içi sistemlerde uzman mühendislik ve montaj sunar.
+- [Tamamlanan Saha Projelerimiz & Vaka Analizi](https://www.fenixyangin.com/projeler/): Dışişleri Bakanlığı, Gölcük Donanma MİLGEM, Baykar, Aksa Jeneratör, ELK Motor, Hilton, KFC ve hastanelerde tamamladığımız gerçek yangın söndürme projeleri.
+- [Referanslarımız: 80+ Kurumsal Müşteri](https://www.fenixyangin.com/referanslar/): Türk Telekom, ASELSAN, Baykar, Türk Hava Yolları ve Trendyol dahil olmak üzere kamu ve özel sektörde 80'in üzerinde doğrulanmış kurumsal referansımız.
+- [Fenix Yangın Kurumsal | 2011'den Beri Gazlı Söndürme](https://www.fenixyangin.com/kurumsal/): Fenix Yangın; FM200, Novec 1230 ve inert gazlı söndürme sistemlerinde uzman mühendislik kadrosuyla anahtar teslim çözümler sunmaktadır.
+- [Hakkımızda — Yangın Söndürme Sistemleri Firması](https://www.fenixyangin.com/kurumsal/hakkimizda/): Fenix Yangın; 2011'den bu yana gazlı yangın söndürme sistemlerinde mühendislik, hidrolik hesap, anahtar teslim montaj ve periyodik bakım hizmeti sunar.
+- [Ekibimiz: Yangın Söndürme Mühendislik Kadrosu](https://www.fenixyangin.com/kurumsal/ekibimiz/): Fenix Yangın mühendislik, saha montaj ve TSE-HYB onaylı teknik servis ekibi. NFPA ve ISO normlarında gazlı yangın söndürme projelendirme ve servis kadrosu.
+- [Belgelerimiz: TSE-HYB, F-Gaz ve ISO 9001](https://www.fenixyangin.com/kurumsal/belgelerimiz/): TSE-HYB Hizmet Yeterlilik Belgesi, F-Gaz yetki sertifikası ve uluslararası standart uygunluk belgelerimizle yangın güvenliği çözümleri sunuyoruz.
+- [Kariyer: Fenix Yangın Mühendislik Ekibine Katılın](https://www.fenixyangin.com/kurumsal/kariyer/): Fenix Yangın bünyesinde yangın söndürme sistemleri projelendirme, hidrolik hesap ve saha montaj ekiplerimizde yer almak için genel başvuruda bulunabilirsiniz.
+- [İletişim — Yangın Söndürme Sistemleri](https://www.fenixyangin.com/iletisim/): Fenix Yangın iletişim: 0212 618 07 01 · Yıldırım Mah. Buğday Sok. No:16, Bayrampaşa / İstanbul. Yangın söndürme sistemleri keşif ve teklif hattı.
+- [KVKK Aydınlatma Metni](https://www.fenixyangin.com/kvkk/): 6698 sayılı Kişisel Verilerin Korunması Kanunu uyarınca veri sorumlusu Fenix Yangın tarafından hazırlanan resmi aydınlatma metni.
+- [Gizlilik Politikası](https://www.fenixyangin.com/gizlilik-politikasi/): Fenix Yangın gizlilik politikası: Web sitemizde toplanan veriler, veri güvenliği standartları ve gizlilik taahhütlerimiz.
+- [Çerez Politikası](https://www.fenixyangin.com/cerez-politikasi/): Fenix Yangın web sitesinde kullanılan çerezler, teknik oturum depolama mekanizmaları ve tercih yönetimi hakkında bilgilendirme.
+- [Kullanım Koşulları](https://www.fenixyangin.com/kullanim-kosullari/): Fenix Yangın web sitesi kullanım koşulları, teknik içerik sorumluluk sınırları, fikri mülkiyet hakları ve yasal bilgilendirmeleri inceleyin.
+- [Site Haritası ve Sayfa Dizini](https://www.fenixyangin.com/site-haritasi/): Fenix Yangın web sitesinin tüm bölümleri, sistemleri, hizmetleri, sektörel çözümleri ve teknik rehberleri içeren tam dizin.
+
+## İletişim
+- Ticari Unvan: Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş.
+- Merkez Adres: Yıldırım Mah. Buğday Sok. No:16, 34405 Bayrampaşa / İstanbul, Türkiye
+- Telefon: +90 212 618 07 01 / +90 212 618 07 02
+- Teknik Destek & WhatsApp: +90 532 740 90 97
+- E-posta: info@fenixyangin.com.tr
+- Web: https://www.fenixyangin.com/
+- Hesaplama ve Uzmanlık Portalı: https://fenixyangin.com.tr/
+- Site Haritası (XML): https://www.fenixyangin.com/sitemap.xml
