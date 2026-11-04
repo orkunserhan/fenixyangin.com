@@ -2,6 +2,12 @@
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/google0b421da90b6ebfb3.html",
+      "destination": "/google0b421da90b6ebfb3.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/hakkimizda",
