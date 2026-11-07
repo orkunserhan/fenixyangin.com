@@ -107,7 +107,7 @@ Fenix Yangın dolum istasyonunda uygulanan standart prosedürler:
 ## 4. İLETİŞİM, TEKLİF VE SATIŞ MÜHENDİSLİĞİ POLİTİKASI
 
 - **Fiyatlandırma İlkesi:** Fenix Yangın ekosistemindeki hiçbir platformda tahmini veya sabit paket fiyat verilmez. Her proje; korunacak hacmin metreküpü, mahalin sızdırmazlığı, yangın yükü ve uluslararası standart formüllerine göre özel hidrolik hesap yapılarak fiyatlandırılır.
-- **İletişim Terminolojisi:** "Ücretsiz teklif al" gibi yanıltıcı pazarlama dili kullanılmaz; daima "Teklif Al", "Mühendislik Keşfi İsteyin" veya "Uzman Görüşü Alın" kullanılır.
+- **İletişim Terminolojisi:** "Ücretsiz teklif al" gibi yanıltıcı pazarlama dili kullanılmaz; daima "Teklif Al", "Hızlı Teklif Alın" veya "Uzman Görüşü Alın" kullanılır.
 - **WhatsApp Satış Köprüsü:** Kullanıcılar mobil ve masaüstü arayüzlerde doğrudan yetkili yangın mühendisleriyle canlı teknik sohbete yönlendirilir.
 
 ---
