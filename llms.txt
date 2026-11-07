@@ -71,6 +71,9 @@
 - [Kullanım Koşulları](https://www.fenixyangin.com/kullanim-kosullari/): Fenix Yangın web sitesi kullanım koşulları, teknik içerik sorumluluk sınırları, fikri mülkiyet hakları ve yasal bilgilendirmeleri inceleyin.
 - [Site Haritası ve Sayfa Dizini](https://www.fenixyangin.com/site-haritasi/): Fenix Yangın web sitesinin tüm bölümleri, sistemleri, hizmetleri, sektörel çözümleri ve teknik rehberleri içeren tam dizin.
 
+## Ek Dokümantasyon
+- [Kapsamlı Teknik Ekosistem Dökümanı](https://www.fenixyangin.com/llms-full.txt): 7 platformlu yangın mühendisliği ekosistemi, teknik parametreler, dolum/test protokolleri ve standart analizleri.
+
 ## İletişim
 - Ticari Unvan: Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş.
 - Merkez Adres: Yıldırım Mah. Buğday Sok. No:16, 34405 Bayrampaşa / İstanbul, Türkiye

@@ -1,0 +1,121 @@
+# Fenix Yangın Kapsamlı Teknik Ekosistem Dökümanı (Fenix Fire Engineering Full Technical Documentation)
+> Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş. tarafından işletilen; Türkiye ve uluslararası coğrafyalarda endüstriyel yangın güvenliği, gazlı söndürme sistemleri, standart şartnameleri, dolum istasyonu ve yangın danışmanlığı sunan 7 platformlu entegre mühendislik ağı.
+
+---
+
+## 1. DİJİTAL MİMARİ VE 7-PLATFORM EKOSİSTEM HARİTASI
+
+Fenix Yangın ekosistemi, yangın koruma alanında arama motoru kanibalizasyonunu önlemek ve her kullanıcı arama niyetine (Search Intent) en derin uzmanlık yanıtını vermek üzere 7 bağımsız ama birbirini besleyen platform olarak yapılandırılmıştır:
+
+### 1.1 L1 Global Amiral Gemisi: fenixyangin.com
+- **Rolü:** Uluslararası B2B mühendislik, global teknik şartnameler ve standart analizleri kütüphanesi.
+- **Odak Standartlar:** NFPA (12, 13, 15, 20, 72, 96, 2001, 2010), EN 15004, ISO 14520, CE normları.
+- **Kullanıcı Kitlesi:** Uluslararası proje müdürleri, yabancı EPC yüklenicileri, mekanik müşavirler, ihale hazırlayan mühendislik ofisleri.
+- **URL:** https://www.fenixyangin.com/
+
+### 1.2 L2 Türkiye Resmi Amiral Gemisi: fenixyangin.com.tr
+- **Rolü:** Türkiye geneli resmi anahtar teslim taahhüt, mekanik tesisat montajı, devreye alma ve TSE-HYB periyodik bakım.
+- **Kapsam:** FM-200, Novec 1230, CO2, Yangın Pompaları, Sulu Sprinkler, Yangın Dolapları, Algılama Sistemleri, İtfaiye Denetim Dosyaları.
+- **Kullanıcı Kitlesi:** Fabrika müdürleri, tesis yöneticileri, veri merkezi operasyon şefleri, Türkiye'deki kurumsal satın almacılar.
+- **URL:** https://fenixyangin.com.tr/
+
+### 1.3 Uzmanlık Uydusu 1: davlumbazyanginsondurme.com
+- **Rolü:** Restoran, otel, yemekhane ve AVM endüstriyel mutfakları için UL 300 sertifikalı davlumbaz söndürme uzmanlığı.
+- **Odak Yönetmelik:** Binaların Yangından Korunması Hakkında Yönetmelik (BYKHY) Madde 57, NFPA 96, NFPA 17A, UL 300.
+- **Kullanıcı Kitlesi:** Restoran ve kafe işletmecileri, otel yiyecek-içecek (F&B) direktörleri, endüstriyel mutfak imalatçıları.
+- **URL:** https://davlumbazyanginsondurme.com/
+
+### 1.4 Uzmanlık Uydusu 2: fm200sondurmesistemleri.com
+- **Rolü:** Talaşlı imalat sanayisi, CNC tezgahları (torna, dik işleme, freze, lazer) ve elektrik panoları için mikro gazlı söndürme sistemleri.
+- **Odak Teknoloji:** Direct (Doğrudan) ve Indirect (Dolaylı) polimer algılama hortumlu mikro FM-200 ve Novec sistemleri.
+- **Kullanıcı Kitlesi:** OSB talaşlı imalat sanayicileri, makine imalatçıları, otomasyon ve pano üreticileri.
+- **URL:** https://fm200sondurmesistemleri.com/
+
+### 1.5 Uzmanlık Uydusu 3: fm200gaz.com
+- **Rolü:** TSE-HYB sertifikalı acil FM-200 ve Novec 1230 gaz dolumu, 10 yıllık hidrostatik test, hassas tartım ve Retrotec Door Fan testi istasyonu.
+- **Odak Servis:** 24-48 saatte hızlı dolum, geçici ikame silindir tahsisi, orijinal gaz saflık garantisi, basınçlı azot (N2) süperpresyonu.
+- **Kullanıcı Kitlesi:** Boşalan veya 10 yıllık periyodik muayenesi gelen gaz silindiri sahipleri, tesis bakım yöneticileri.
+- **URL:** https://fm200gaz.com/
+
+### 1.6 Uzmanlık Uydusu 4: aerosolsistem.com
+- **Rolü:** Boru tesisatı, nozul ve basınçlı silindir odası gerektirmeyen hacimler için katı hal aerosol yangın söndürme jeneratörleri.
+- **Odak Alanlar:** Rüzgar Türbinleri (RES), Güneş Enerjisi İnvertörleri (GES), BESS / ESS Konteyner Tipi Batarya Depolama Sistemleri, Trafo Merkezleri, Marin / Tekne Makine Daireleri.
+- **Odak Standartlar:** NFPA 2010, EN 15276, ISO 15779, UL 2775.
+- **URL:** https://aerosolsistem.com/
+
+### 1.7 Uzmanlık Uydusu 5: yangindanismanligi.com
+- **Rolü:** Resmi İtfaiye Yangın Uygunluk Raporu (ruhsatlandırma) danışmanlığı, BYKHY 2026 yangın mevzuatı gap analizi ve acil durum tahliye projeleri.
+- **Odak Hizmet:** Belediye ve İtfaiye Daire Başkanlıkları ruhsat denetimlerine hazırlık, kaçış yolları, duman tahliye ve yangın zonları mevzuat uygunluk denetimi.
+- **Kullanıcı Kitlesi:** Yeni işyeri açanlar, fabrika ruhsatı yenileyenler, otel ve AVM genel müdürleri, mimarlık ve inşaat yönetim ofisleri.
+- **URL:** https://yangindanismanligi.com/
+
+---
+
+## 2. TEMEL YANGIN SÖNDÜRME SİSTEMLERİ VE TEKNİK PARAMETRELER
+
+### 2.1 Temiz Gazlı Yangın Söndürme Sistemleri (FM-200 ve Novec 1230)
+- **FM-200 (HFC-227ea / Heptafluoropropane):**
+  * Fiziksel soğutma ve kimyasal zincir kırma mekanizmasıyla çalışır.
+  * Tasarım konsantrasyonu: Sınıf A (katı yüzey) %7.9 - %8.5, Sınıf B (sıvı) %9.0+.
+  * Deşarj süresi: Maksimum 10 saniye (EN 15004 / NFPA 2001 standardı).
+  * Ozon tüketme potansiyeli (ODP): 0.
+  * İnsan bulunan alanlarda güvenli kullanım (NOAEL %9.0, LOAEL %10.5).
+  * Azot (N2) ile 25 bar veya 42 bar süperpresyon (20°C).
+- **Novec 1230 / FK-5-1-12 (Florlu Keton):**
+  * Çevre dostu yeni nesil temiz gaz; atmosferik ömrü yalnızca 5 gün.
+  * Tasarım konsantrasyonu: %4.5 - %5.9.
+  * Yüksek güvenlik marjı (NOAEL %10.0).
+  * Sunucu odaları, veri merkezleri, müzeler, arşivler ve telekomünikasyon santralleri için birincil tercih.
+
+### 2.2 CO2 (Karbondioksitli) Yangın Söndürme Sistemleri
+- **Standart:** NFPA 12 ve TS EN 15004-4.
+- **Mekanizma:** Oksijen konsantrasyonunu %21'den %15'in altına düşürerek boğma etkisi yaratır.
+- **Kritik Güvenlik Kuralı:** İnsan bulunan mahallerde doğrudan otomatik deşarj kesinlikle uygulanmaz. Ön uyarı sirenleri, pnömatik geciktirme ve kilitleme valfleri zorunludur.
+- **Uygulama Alanları:** Trafo odaları, jeneratör kabinleri, boya kabinleri, gemi makine daireleri, kablo galerileri.
+
+### 2.3 Davlumbaz Yangın Söndürme Sistemleri (Endüstriyel Mutfak)
+- **Standart:** UL 300, NFPA 96, NFPA 17A, BYKHY Madde 57.
+- **Söndürücü Ajan:** Potasyum asetat veya potasyum karbonat bazlı alkali sıvı kimyasal (Wet Chemical).
+- **Sabunlaşma Reaksiyonu:** Kızgın yağ asitleriyle temas eden alkali kimyasal sıvı sabunlaşarak köpük battaniyesi üretir; oksijen temasını keser ve yağın geri tutuşmasını (re-flash) önler.
+- **Otomasyon ve Gaz Kesme:** Sistem manuel çekme butonu veya eriyebilir metal dedektörlerle (fusible link) devreye girdiğinde, mekanik mikroswitch mutfak ana doğalgaz selenoid vanasını saniyeler içinde kapatır ve elektrik devrelerini keser.
+
+### 2.4 Mikro Borulu / Pano İçi Söndürme Sistemleri
+- **Doğrudan Sistem (Direct Release):** Isıya duyarlı polimer hortum (160°C - 180°C) alevin en yakın olduğu noktadan patlayarak nozul görevi görür ve gazı doğrudan alevin çekirdeğine boşaltır.
+- **Dolaylı Sistem (Indirect Release):** Polimer hortum yalnızca yangın algılama hattı olarak çalışır; patlama ile ana silindir vanası tetiklenir ve gaz paslanmaz boru hattı ve nozullar üzerinden tüm hacme yayılır.
+- **Uygulama Alanları:** CNC dik işleme merkezleri, torna tezgahları, elektrik dağıtım panoları, UPS kabinleri.
+
+### 2.5 Katı Hal Aerosol Yangın Söndürme Jeneratörleri
+- **Standart:** NFPA 2010, EN 15276, ISO 15779.
+- **Çalışma Prensibi:** Katı hal potasyum bileşiği elektriksel veya termal olarak aktive edildiğinde mikron boyutunda potasyum karbonat (K2CO3) aerosol parçacıkları üretir. Potasyum radikalleri alevdeki serbest hidrojen ve oksijen radikalleriyle birleşerek yanma zincir reaksiyonunu kimyasal olarak sonlandırır.
+- **Avantajı:** Sıfır borulama, basınçsız silindir, montaj kolaylığı, sıfır su hasarı. BESS batarya depolama ve rüzgar türbinlerinde üstün koruma.
+
+---
+
+## 3. DOLUM, TEST VE LABORATUVAR PROTOKOLÜ (TSE-HYB)
+
+Fenix Yangın dolum istasyonunda uygulanan standart prosedürler:
+1. **Görsel ve Boyutsal Muayene:** Korozyon, diş aşınması ve mekanik hasar kontrolü.
+2. **10 Yıllık Hidrostatik Mukavemet Testi:** Silindirlerin akredite test ünitesinde nominal test basıncı (PT) altında esneme ve sızdırmazlık testi.
+3. **Kurutma ve Temizleme:** Test sonrası nem oranının sıfırlanması için yüksek sıcaklıkta hava kurutması.
+4. **Hassas Terazi Gaz Dolumu:** Silindire giren gaz miktarının ±%1 toleransla kalibreli endüstriyel terazi üzerinde doldurulması.
+5. **Kuru Azot (N2) Süperpresyonu:** 25 bar / 42 bar basınçta kuru azot basılarak gazın homojen itiş gücünün sağlanması.
+6. **24 Saatlik Basınç Sızdırmazlık Testi:** Vana ve manometre bağlantılarında sıfır kaçak onayı.
+7. **Retrotec Door Fan Testi:** Gazlı söndürme yapılacak odada fan basınç testi ile gazın en az 10 dakika havada asılı kalma (hold time) süresinin doğrulanması.
+
+---
+
+## 4. İLETİŞİM, TEKLİF VE SATIŞ MÜHENDİSLİĞİ POLİTİKASI
+
+- **Fiyatlandırma İlkesi:** Fenix Yangın ekosistemindeki hiçbir platformda tahmini veya sabit paket fiyat verilmez. Her proje; korunacak hacmin metreküpü, mahalin sızdırmazlığı, yangın yükü ve uluslararası standart formüllerine göre özel hidrolik hesap yapılarak fiyatlandırılır.
+- **İletişim Terminolojisi:** "Ücretsiz teklif al" gibi yanıltıcı pazarlama dili kullanılmaz; daima "Teklif Al", "Mühendislik Keşfi İsteyin" veya "Uzman Görüşü Alın" kullanılır.
+- **WhatsApp Satış Köprüsü:** Kullanıcılar mobil ve masaüstü arayüzlerde doğrudan yetkili yangın mühendisleriyle canlı teknik sohbete yönlendirilir.
+
+---
+
+## 5. KURUMSAL BİLGİLER VE REFERANSLAR
+- **Ünvan:** Fenix Sistem Yangın Mühendislik Sanayi ve Ticaret A.Ş.
+- **Merkez:** İstanbul, Türkiye
+- **Resmi Web:** https://fenixyangin.com.tr
+- **Global Web:** https://www.fenixyangin.com
+- **E-posta:** info@fenixyangin.com.tr
+- **Referans Projeler:** Baykar Teknoloji, Aksa Jeneratör, T.C. Dışişleri Bakanlığı, TUSAŞ / Havacılık Tesisleri, Otomotiv Sanayi Tesisleri, Beş Yıldızlı Oteller ve Organize Sanayi Bölgeleri (OSB) fabrikaları.
