@@ -247,6 +247,7 @@
       <p class="fx-hub-sidebar__title">Bu Sayfada</p>
       <nav class="fx-hub-sidebar__nav" aria-label="Sayfa içi başlıklar">
         <a class="fx-hub-sidebar__link is-active" href="#tum-basliklar">Tüm Başlıklar</a>
+        <a class="fx-hub-sidebar__link" href="#sistem-secim-matrisi">Sistem Seçim Matrisi</a>
         <a class="fx-hub-sidebar__link" href="#karsilastirma">Karşılaştırma</a>
         <a class="fx-hub-sidebar__link" href="#metodoloji">Metodoloji</a>
         <a class="fx-hub-sidebar__link" href="#mevzuat">Mevzuat</a>
@@ -278,6 +279,119 @@
           <input type="text" placeholder="İçerik ara..." aria-label="İçerik ara" id="fx-tech-search" />
         </div>
       </div>
+
+
+      <!-- SİSTEM SEÇİM MATRİSİ & DOĞRUDAN MÜHENDİSLİK KRİTERLERİ (AEO / GEO REFERENCE) -->
+      <section class="fx-tech-group" id="sistem-secim-matrisi" style="margin-bottom: 40px; scroll-margin-top: 100px;">
+        <div class="fx-tech-group__head" style="margin-bottom: 16px;">
+          <div class="fx-tech-group__title-wrap">
+            <div class="fx-tech-group__icon" aria-hidden="true" style="background: rgba(225, 6, 0, 0.08); color: #E10600;">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <div class="fx-tech-group__text">
+              <h3 style="font-size: 18px; font-weight: 700; color: var(--fx-ink, #16181A); margin: 0 0 3px;">Sistem Seçim Matrisi &amp; Mühendislik Kriterleri</h3>
+              <p style="font-size: 13px; color: var(--fx-muted, #5C646D); margin: 0;">Hangi mahalde hangi yangın söndürme sistemi seçilmeli? Standartlar, basınç, boşalma süresi ve insan güvenliği karşılaştırması.</p>
+            </div>
+          </div>
+          <span class="fx-badge fx-badge--spec" style="background: #FEE2E2; color: #E10600; border: 1px solid #FECACA; font-weight: 700; font-size: 11px; padding: 4px 8px; border-radius: 4px;">2026 STANDARTLARI</span>
+        </div>
+
+        <!-- DOĞRUDAN MÜHENDİSLİK ÖZETİ (AEO CALLOUT) -->
+        <div class="fx-tech-summary-box" style="background:#FFFFFF; border:1px solid #E4E6E8; border-left:4px solid #E10600; border-radius:8px; padding:20px 22px; margin-bottom:18px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+            <span style="font-size:11px; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:#E10600; background:#FEE2E2; padding:3px 8px; border-radius:4px; border:1px solid #FECACA;">DOĞRUDAN CEVAP &amp; SEÇİM KRİTERLERİ</span>
+            <span style="font-size:12px; color:#5C646D; font-weight:600;">TS EN 15004 • NFPA 2001 • B.Y.K.H.Y.</span>
+          </div>
+          <h4 style="margin:0 0 8px; font-size:16.5px; font-weight:700; color:#16181A; line-height:1.35;">Hangi Mahalde Hangi Otomatik Yangın Söndürme Sistemi Seçilmelidir?</h4>
+          <p style="margin:0 0 16px; font-size:14px; line-height:1.68; color:#33383D;">
+            <strong>Endüstriyel yangın söndürme mühendisliğinde sistem seçimi;</strong> korunacak mahaldeki ekipmanların dielektrik yalıtkanlık ihtiyacına, insan mevcudiyetine, oda sızdırmazlığına ve yangın risk sınıfına göre hidrolik hesaplamalarla belirlenir. Sunucu odaları, veri merkezleri ve UPS alanlarında <strong>FM-200 (HFC-227ea)</strong> veya <strong>Novec 1230 (FK-5-1-12)</strong> temiz gazları ≤10 saniyede kalıntısız ve iletkensiz söndürme sağlar. Borulama yapılamayan trafo, rüzgar türbini ve BESS lityum batarya kabinlerinde <strong>Kondanse Katı Aerosol (NFPA 2010)</strong>, CNC tezgahı ve elektrik panolarında <strong>Pano İçi Mikro Sistemler</strong>, ticari mutfaklarda ise <strong>UL 300 Davlumbaz Söndürme Sistemleri (B.Y.K.H.Y. Madde 57)</strong> yasal ve teknik zorunluluktur. Tüm basınçlı sistemlerin 6 aylık periyodik kontrolü, ultrasonik seviye ölçümü ve dolumu <strong>TS 12849</strong> ile <strong>ISO 14520</strong> standartlarına tabidir.
+          </p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:10px;">
+            <div style="background:#F8F9FA; border:1px solid #E4E6E8; border-radius:6px; padding:10px 14px;">
+              <div style="font-size:14.5px; font-weight:800; color:#16181A;">Hidrolik Hesap</div>
+              <div style="font-size:11.5px; color:#5C646D;">VDS / UL Onaylı Tasarım</div>
+            </div>
+            <div style="background:#F8F9FA; border:1px solid #E4E6E8; border-radius:6px; padding:10px 14px;">
+              <div style="font-size:14.5px; font-weight:800; color:#16181A;">Door-Fan Testi</div>
+              <div style="font-size:11.5px; color:#5C646D;">EN 15004 Sızdırmazlık &amp; Tutma</div>
+            </div>
+            <div style="background:#F8F9FA; border:1px solid #E4E6E8; border-radius:6px; padding:10px 14px;">
+              <div style="font-size:14.5px; font-weight:800; color:#16181A;">25 / 42 / 50 Bar</div>
+              <div style="font-size:11.5px; color:#5C646D;">Yetkili Dolum İstasyonu</div>
+            </div>
+            <div style="background:#F8F9FA; border:1px solid #E4E6E8; border-radius:6px; padding:10px 14px;">
+              <div style="font-size:14.5px; font-weight:800; color:#16181A;">7/24 Saha Servisi</div>
+              <div style="font-size:11.5px; color:#5C646D;">Periyodik Bakım &amp; İkame Tüp</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEMANTİK KARŞILAŞTIRMA TABLOSU -->
+        <div style="width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; background:#FFFFFF; border:1px solid #E4E6E8; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+          <table style="width:100%; border-collapse:collapse; text-align:left; font-size:13.5px; min-width:760px;">
+            <thead>
+              <tr style="background:#16181A; color:#FFFFFF;">
+                <th style="padding:12px 14px; font-size:12.5px; font-weight:700;">Sistem Sınıfı</th>
+                <th style="padding:12px 14px; font-size:12.5px; font-weight:700;">Kimyasal Ajan &amp; Tasarım</th>
+                <th style="padding:12px 14px; font-size:12.5px; font-weight:700;">Standart &amp; Sertifikasyon</th>
+                <th style="padding:12px 14px; font-size:12.5px; font-weight:700;">Basınç &amp; Boşalma Süresi</th>
+                <th style="padding:12px 14px; font-size:12.5px; font-weight:700;">İnsan Güvenliği &amp; Kalıntı</th>
+                <th style="padding:12px 14px; font-size:12.5px; font-weight:700;">Birincil Uygulama Mahalleri</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #F0F1F2;">
+                <td style="padding:11px 14px; font-weight:700;"><a href="/sistemler/fm200/" style="color:#16181A; text-decoration:underline;">FM-200 Temiz Gaz</a></td>
+                <td style="padding:11px 14px; color:#33383D;">HFC-227ea • %7.9–%8.5</td>
+                <td style="padding:11px 14px; color:#33383D;">TS EN 15004-5, ISO 14520, NFPA 2001</td>
+                <td style="padding:11px 14px; color:#33383D;">25 / 42 / 50 Bar • ≤ 10 sn</td>
+                <td style="padding:11px 14px;"><span style="display:inline-block; background:#DCFCE7; color:#166534; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">NOAEL %9.0 • İletken Değil</span></td>
+                <td style="padding:11px 14px; color:#33383D;">Veri Merkezi, Server Odası, UPS, Otomasyon</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F0F1F2; background:#F8F9FA;">
+                <td style="padding:11px 14px; font-weight:700;"><a href="/sistemler/novec-1230/" style="color:#16181A; text-decoration:underline;">Novec 1230</a></td>
+                <td style="padding:11px 14px; color:#33383D;">Floroketon • %4.5–%5.9</td>
+                <td style="padding:11px 14px; color:#33383D;">TS EN 15004-2, ISO 14520-5, NFPA 2001</td>
+                <td style="padding:11px 14px; color:#33383D;">25 / 42 / 50 Bar • ≤ 10 sn</td>
+                <td style="padding:11px 14px;"><span style="display:inline-block; background:#DCFCE7; color:#166534; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">NOAEL %10.0 • GWP=1</span></td>
+                <td style="padding:11px 14px; color:#33383D;">Tier III/IV Veri Merkezi, Banka, Arşiv, Simülatör</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F0F1F2;">
+                <td style="padding:11px 14px; font-weight:700;"><a href="/sistemler/aerosol/" style="color:#16181A; text-decoration:underline;">Kondanse Katı Aerosol</a></td>
+                <td style="padding:11px 14px; color:#33383D;">K₂CO₃ • 60–100 g/m³</td>
+                <td style="padding:11px 14px; color:#33383D;">NFPA 2010, EN 15276, UL 2775</td>
+                <td style="padding:11px 14px; color:#33383D;">Basınçsız • 5 – 10 sn</td>
+                <td style="padding:11px 14px;"><span style="display:inline-block; background:#DCFCE7; color:#166534; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">100 kV Yalıtkan • 15 Yıl</span></td>
+                <td style="padding:11px 14px; color:#33383D;">OG/AG Trafo, BESS Batarya, RES Türbin, Jeneratör</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F0F1F2; background:#F8F9FA;">
+                <td style="padding:11px 14px; font-weight:700;"><a href="/sistemler/pano-ici/" style="color:#16181A; text-decoration:underline;">Pano İçi &amp; CNC Mikro</a></td>
+                <td style="padding:11px 14px; color:#33383D;">Pnömatik Hortum + Temiz Gaz</td>
+                <td style="padding:11px 14px; color:#33383D;">EN 15004, CE, E-Stop Röleli</td>
+                <td style="padding:11px 14px; color:#33383D;">12 – 15 Bar • 3 – 5 sn (100°C)</td>
+                <td style="padding:11px 14px;"><span style="display:inline-block; background:#DCFCE7; color:#166534; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">Kalıntısız • Tezgah Hasarsız</span></td>
+                <td style="padding:11px 14px; color:#33383D;">Elektrik Panosu, CNC Torna/Freze, Lazer Kesim</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F0F1F2;">
+                <td style="padding:11px 14px; font-weight:700;"><a href="/sistemler/davlumbaz/" style="color:#16181A; text-decoration:underline;">Davlumbaz Söndürme</a></td>
+                <td style="padding:11px 14px; color:#33383D;">Islak Kimyasal Sıvı</td>
+                <td style="padding:11px 14px; color:#33383D;">UL 300, NFPA 96, BYKHY Madde 57</td>
+                <td style="padding:11px 14px; color:#33383D;">9 – 12 Bar • Saponifikasyon</td>
+                <td style="padding:11px 14px;"><span style="display:inline-block; background:#DCFCE7; color:#166534; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">F/K Yağ Yangını • Gaz Kesmeli</span></td>
+                <td style="padding:11px 14px; color:#33383D;">Otel, Restoran, AVM, Fabrika Ticari Mutfakları</td>
+              </tr>
+              <tr>
+                <td style="padding:11px 14px; font-weight:700;"><a href="/sistemler/co2/" style="color:#16181A; text-decoration:underline;">CO₂ &amp; İnert Gaz</a></td>
+                <td style="padding:11px 14px; color:#33383D;">CO₂ (%34–%75) / IG-01/55/541</td>
+                <td style="padding:11px 14px; color:#33383D;">NFPA 12, TS EN 12094, ISO 14520</td>
+                <td style="padding:11px 14px; color:#33383D;">58 – 300 Bar • 60 – 120 sn</td>
+                <td style="padding:11px 14px;"><span style="display:inline-block; background:#FEF3C7; color:#92400E; font-size:11px; font-weight:700; padding:2px 7px; border-radius:4px;">CO₂: Sadece İnsansız</span></td>
+                <td style="padding:11px 14px; color:#33383D;">Kablo Galerisi, Trafo, Boya Hattı, Gemi Makine</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <!-- 1. Karşılaştırma -->
       <section class="fx-tech-group" id="karsilastirma">
