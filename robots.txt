@@ -1,5 +1,4 @@
-# FENIX.COM — robots.txt
-# Production Search Engine Directives & Google Ads Crawler Configuration
+# FENIX.COM — Production Search Engine, Google Ads & AI Search (GEO/AEO) Directives
 
 # Google Ads Bot & Quality Score Crawlers (Full Unrestricted Access)
 User-agent: AdsBot-Google
@@ -10,8 +9,52 @@ Allow: /
 # General Search Engine Crawlers
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /404.html
 Disallow: /*?q=
+
+# Google Search & Gemini AI Overviews
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# OpenAI ChatGPT Live Search & GPT Crawlers
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Anthropic Claude AI Search
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Bing & Apple Intelligence
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 # Canonical XML Sitemap
 Sitemap: https://www.fenixyangin.com/sitemap.xml
