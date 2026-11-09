@@ -367,6 +367,10 @@
     trackFenixConv('form_gonderimi', { form_id: e.target.id || 'contact_form' }, false);
   }, true);
 
+    window.addEventListener('calculator_used', function(e) {
+    trackFenixConv('hesaplayici_kullanildi', e.detail || {}, false);
+  });
+
   // GitHub Pages Subpath Uyumluluğu
   (function () {
     var isGhPages = window.location.hostname.endsWith('github.io') && window.location.pathname.startsWith('/fenixyangin.com');
