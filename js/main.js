@@ -278,6 +278,20 @@
   }
 
   // Footer "Çerez tercihleri" tıklama dinleyicisi
+    function trackFenixConv(eventName, params, oncePerSession) {
+    if (oncePerSession) {
+      try {
+        if (sessionStorage.getItem('fenix_conv_' + eventName)) return;
+        sessionStorage.setItem('fenix_conv_' + eventName, '1');
+      } catch(e) {}
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params || {});
+    }
+  }
+
   document.addEventListener('click', function (e) {
     var prefTrigger = e.target.closest('[data-cookie-prefs]');
     if (prefTrigger) {
@@ -299,6 +313,7 @@
       window.dataLayer.push({
         event: 'lead_call_click',
         conversion_type: 'phone_call',
+        track_fenix: trackFenixConv('telefon_tikla', { phone_number: tel }, true),
         target_phone: tel,
         page_location: window.location.href
       });
@@ -315,6 +330,7 @@
       window.dataLayer.push({
         event: 'lead_whatsapp_click',
         conversion_type: 'whatsapp',
+        track_fenix: trackFenixConv('whatsapp_tikla', { link_url: href }, true),
         page_location: window.location.href
       });
       if (typeof window.gtag === 'function') {
@@ -325,11 +341,16 @@
         });
       }
     }
+    
+    else if (href.indexOf('mailto:') === 0) {
+      trackFenixConv('eposta_tikla', { email: href.replace('mailto:', '') }, true);
+    }
     // 3. Teklif Al / İletişim Buton Tıklamaları (Quote CTA)
     else if (href.indexOf('/iletisim/') !== -1 && (a.innerText.indexOf('Teklif') !== -1 || a.classList.contains('fx-btn') || a.getAttribute('data-action-quote') !== null)) {
       window.dataLayer.push({
         event: 'lead_quote_click',
         conversion_type: 'quote_request',
+        track_fenix: trackFenixConv('form_gonderimi', { cta: a.innerText.trim() }, false),
         page_location: window.location.href
       });
       if (typeof window.gtag === 'function') {
@@ -339,6 +360,11 @@
         });
       }
     }
+  }, true);
+
+  
+  document.addEventListener('submit', function (e) {
+    trackFenixConv('form_gonderimi', { form_id: e.target.id || 'contact_form' }, false);
   }, true);
 
   // GitHub Pages Subpath Uyumluluğu

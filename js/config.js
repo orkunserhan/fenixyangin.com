@@ -17,7 +17,7 @@ window.FENIX_CONFIG = {
   /* Google Tag Manager (GTM) Konteyner Kimliği (Opsiyonel)
      Örnek format: "GTM-XXXXXXX"
      Boş ("") bırakıldığında pasiftir. */
-  gtmId: "",
+  gtmId: "GTM-KTGC9GPZ",
 
   /* Google Maps Embed API Anahtarı (Opsiyonel)
      Boş ("") bırakıldığında standart güvenli Google Maps parametrik iframe embed'i kullanılır.
