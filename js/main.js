@@ -278,144 +278,58 @@
   }
 
   // Footer "Çerez tercihleri" tıklama dinleyicisi
-    function trackFenixConv(eventName, params, oncePerSession) {
-    if (oncePerSession) {
-      try {
-        if (sessionStorage.getItem('fenix_conv_' + eventName)) return;
-        sessionStorage.setItem('fenix_conv_' + eventName, '1');
-      } catch(e) {}
-    }
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', eventName, params || {});
-    }
-  }
-
-  document.addEventListener('click', function (e) {
-    var prefTrigger = e.target.closest('[data-cookie-prefs]');
-    if (prefTrigger) {
-      e.preventDefault();
-      showConsentBanner(true);
-    }
-  });
-
-  // Otomatik Dönüşüm & Lead Takibi (Yalnızca kullanıcı çerez onayı verdiyse çalışır)
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('a');
-    if (!a) return;
-    if (!window.fxHasAnalyticsConsent()) return;
-    var href = a.getAttribute('href') || '';
-
-    // 1. Telefon Tıklamaları (Call Leads)
-    if (href.startsWith('tel:')) {
-      var tel = href.replace('tel:', '').trim();
-      window.dataLayer.push({
-        event: 'lead_call_click',
-        conversion_type: 'phone_call',
-        track_fenix: trackFenixConv('telefon_tikla', { phone_number: tel }, true),
-        target_phone: tel,
-        page_location: window.location.href
-      });
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'generate_lead', {
-          event_category: 'Contact',
-          event_label: 'Phone Call: ' + tel,
-          method: 'Phone'
-        });
-      }
-    }
-    // 2. WhatsApp Tıklamaları (Chat Leads)
-    else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp.com') !== -1) {
-      window.dataLayer.push({
-        event: 'lead_whatsapp_click',
-        conversion_type: 'whatsapp',
-        track_fenix: trackFenixConv('whatsapp_tikla', { link_url: href }, true),
-        page_location: window.location.href
-      });
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'generate_lead', {
-          event_category: 'Contact',
-          event_label: 'WhatsApp Direct Chat',
-          method: 'WhatsApp'
-        });
-      }
-    }
-    
-    else if (href.indexOf('mailto:') === 0) {
-      trackFenixConv('eposta_tikla', { email: href.replace('mailto:', '') }, true);
-    }
-    // 3. Teklif Al / İletişim Buton Tıklamaları (Quote CTA)
-    else if (href.indexOf('/iletisim/') !== -1 && (a.innerText.indexOf('Teklif') !== -1 || a.classList.contains('fx-btn') || a.getAttribute('data-action-quote') !== null)) {
-      window.dataLayer.push({
-        event: 'lead_quote_click',
-        conversion_type: 'quote_request',
-        track_fenix: trackFenixConv('form_gonderimi', { cta: a.innerText.trim() }, false),
-        page_location: window.location.href
-      });
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'begin_checkout', {
-          event_category: 'Lead',
-          event_label: 'Quote CTA Click'
-        });
-      }
-    }
-  }, true);
-
-  
-  document.addEventListener('submit', function (e) {
-    trackFenixConv('form_gonderimi', { form_id: e.target.id || 'contact_form' }, false);
-  }, true);
-
-    window.addEventListener('calculator_used', function(e) {
-    trackFenixConv('hesaplayici_kullanildi', e.detail || {}, false);
-  });
-
-  // GitHub Pages Subpath Uyumluluğu
-  (function () {
-    var isGhPages = window.location.hostname.endsWith('github.io') && window.location.pathname.startsWith('/fenixyangin.com');
-    if (!isGhPages) return;
-
-    var PREFIX = '/fenixyangin.com';
+    /* --------------------------------------------------------------------------
+     CANONICAL CONVERSION TRACKING (SADECE dataLayer.push - TEK KAYNAK)
+     -------------------------------------------------------------------------- */
+  if (!window.__fenix_tracking_attached) {
+    window.__fenix_tracking_attached = true;
 
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a');
       if (!a) return;
-      var href = a.getAttribute('href');
+      var href = a.getAttribute('href') || '';
       if (!href) return;
 
-      if (href.startsWith('/') && !href.startsWith(PREFIX) && !href.startsWith('//')) {
-        e.preventDefault();
-        window.location.href = PREFIX + href;
+      if (/wa\.me|whatsapp\.com|api\.whatsapp\.com/i.test(href)) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'whatsapp_tikla',
+          click_url: a.href
+        });
+      } else if (/^tel:/i.test(href)) {
+        var phoneNum = href.replace(/^tel:/i, '').trim();
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'telefon_tikla',
+          phone_number: phoneNum,
+          click_url: a.href
+        });
+      } else if (/^mailto:/i.test(href)) {
+        var email = href.replace(/^mailto:/i, '').split('?')[0].trim();
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'eposta_tikla',
+          email: email,
+          click_url: a.href
+        });
       }
     }, true);
 
-    function adaptDom() {
-      document.querySelectorAll('a[href^="/"]').forEach(function (a) {
-        var h = a.getAttribute('href');
-        if (h && h.startsWith('/') && !h.startsWith(PREFIX) && !h.startsWith('//')) {
-          a.setAttribute('href', PREFIX + h);
-        }
+    document.addEventListener('submit', function (e) {
+      var form = e.target;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'form_gonderimi',
+        form_id: (form && form.id) || 'contact_form'
       });
-      document.querySelectorAll('img[src^="/"]').forEach(function (img) {
-        var s = img.getAttribute('src');
-        if (s && s.startsWith('/') && !s.startsWith(PREFIX) && !s.startsWith('//')) {
-          img.setAttribute('src', PREFIX + s);
-        }
-      });
-      document.querySelectorAll('img[src*="fenixyangin.com/assets/"]').forEach(function (img) {
-        var s = img.getAttribute('src');
-        var path = s.split('fenixyangin.com')[1];
-        if (path) {
-          img.setAttribute('src', PREFIX + path);
-        }
-      });
-    }
+    }, true);
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', adaptDom);
-    } else {
-      adaptDom();
-    }
-  })();
+    window.addEventListener('calculator_used', function (e) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({
+        event: 'hesaplayici_kullanildi'
+      }, (e && e.detail) || {}));
+    });
+  }
+
 })();
